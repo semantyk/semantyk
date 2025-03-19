@@ -15,9 +15,6 @@
  # @copyright: Semantyk © 2025. All rights reserved.
  # –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
-### NX ###
-*.nx/*
-
 # Created by https://www.toptal.com/developers/gitignore/api/git,macos,node,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=git,macos,node,visualstudiocode
 
@@ -229,3 +226,7 @@ dist
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/git,macos,node,visualstudiocode
+
+### NX ###
+*.nx/*
+!tsconfig.base.json
