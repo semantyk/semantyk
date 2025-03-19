@@ -47,7 +47,7 @@ jobs:
         name: 4. Install Dependencies
       # 5. Build the Project
       - name: 5. Build the Project
-        run: nx build client
+        run: pnpm exec nx build client
       # 5. Cloud SDK Configuration
       - uses: google-github-actions/setup-gcloud@v1
         name: 5. Cloud SDK Configuration
