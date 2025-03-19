@@ -1,0 +1,80 @@
+# –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+# # `dev.yaml`
+# @organization: Semantyk
+# @project: Client
+#
+# @file: This file contains the GitHub Actions workflow for the development CI.
+#
+# @created: Mar 18, 2025
+# @modified: Mar 18, 2025
+#
+# @author: Semantyk Team
+# @maintainer: Daniel Bakas <https://id.danielbakas.com>
+#
+# @copyright: Semantyk © 2025. All rights reserved.
+# –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+name: Development CI Workflow
+
+on:
+  push:
+    branches:
+      - dev
+  pull_request:
+    branches:
+      - dev
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 21.x ]
+    steps:
+      # 1. Checkout the Repository
+      - uses: actions/checkout@v4
+        name: 1. Repository Checkout
+      # 2. Setup pnpm
+      - uses: pnpm/action-setup@v2
+        name: 2. Setup pnpm
+        with:
+          version: 8
+      # 3. Setup Node.js
+      - uses: actions/setup-node@v4
+        name: 3. Setup Node.js (v${{ matrix.node-version }})
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+      # 4. Install Dependencies
+      - run: pnpm install
+        name: 4. Install Dependencies
+      # 5. Run Tests
+      - run: pnpm test
+        name: 5. Run Tests
+  build:
+    runs-on: ubuntu-latest
+    needs: test
+    strategy:
+      matrix:
+        node-version: [ 21.x ]
+    steps:
+      # 1. Checkout the Repository
+      - uses: actions/checkout@v4
+        name: 1. Repository Checkout
+      # 2. Setup pnpm
+      - uses: pnpm/action-setup@v2
+        name: 2. Setup pnpm
+        with:
+          version: 8
+      # 3. Setup Node.js
+      - uses: actions/setup-node@v4
+        name: 3. Setup Node.js (v${{ matrix.node-version }})
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+      # 4. Install Dependencies
+      - run: pnpm install
+        name: 4. Install Dependencies
+      # 5. Build
+      - run: pnpm run build
+        name: 5. Build
