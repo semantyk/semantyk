@@ -1,0 +1,28 @@
+{
+    "name": "client",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "targets": {
+        "dev": {
+            "executor": "@nx/next:server",
+            "options": {
+                "buildTarget": "client:build",
+                "dev": true
+            }
+        },
+        "build": {
+            "executor": "@nx/next:build"
+        },
+        "start": {
+            "executor": "@nx/next:server",
+            "options": {
+                "buildTarget": "client:build"
+            }
+        },
+        "lint": {
+            "executor": "@nx/linter:eslint"
+        },
+        "test": {
+            "executor": "@nx/vite:test"
+        }
+    }
+}
