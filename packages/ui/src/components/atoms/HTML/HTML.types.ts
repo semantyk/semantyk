@@ -22,7 +22,7 @@ import type { HTMLAttributes } from 'react';
 
 //* Main
 type HTMLProps = HTMLAttributes<HTMLHtmlElement> & {
-    children?: ReactNode;
+    children?: ReactNode | undefined;
 };
 
 //* Exports
