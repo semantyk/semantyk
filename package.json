@@ -1,5 +1,7 @@
 {
   "name": "semantyk",
+  "private": true,
+  "type": "module",
   "author": "Daniel Bakas <daniel@semantyk.com>",
   "bugs": "https://github.com/semantyk/semantyk/issues",
   "description": "Our Ecosystem | Semantyk",
@@ -10,16 +12,33 @@
     "Daniel Bakas <daniel@semantyk.com>"
   ],
   "packageManager": "pnpm@10.6.3",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/semantyk/semantyk.git"
   },
-  "devDependencies": {
-    "nx": "20.6.1"
-  },
   "engines": {
     "node": "23.10.0",
     "pnpm": "10.6.3"
+  },
+  "scripts": {
+    "dev": "nx run-many --target=dev --all",
+    "build": "nx run-many --target=build --all",
+    "test": "nx run-many --target=test --all",
+    "lint": "nx run-many --target=lint --all",
+    "start": "nx run-many --target=start --all"
+  },
+  "devDependencies": {
+    "@nx/next": "^20.6.1",
+    "@nx/vite": "^20.6.1",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "jsdom": "^26.0.0",
+    "nx": "20.6.1",
+    "vitest": "^3.0.9"
+  },
+  "dependencies": {
+    "next": "^15.2.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   }
 }

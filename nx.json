@@ -1,4 +1,21 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "nxCloudId": "67d9ef01be178943babd4c71"
+  "namedInputs": {
+    "default": [
+      "{projectRoot}/**/*",
+      "sharedGlobals"
+    ],
+    "production": [
+      "default"
+    ],
+    "sharedGlobals": [
+      "{workspaceRoot}/.github/workflows/*.yaml",
+      "{workspaceRoot}/package.json",
+      "{workspaceRoot}/pnpm-lock.yaml"
+    ]
+  },
+  "nxCloudId": "67d9ef01be178943babd4c71",
+  "projects": {
+    "client": "apps/client"
+  }
 }
