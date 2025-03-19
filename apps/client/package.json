@@ -1,5 +1,5 @@
 {
-  "name": "client",
+  "name": "@semantyk/client",
   "private": true,
   "type": "module",
   "author": "Daniel Bakas <daniel@semantyk.com>",
