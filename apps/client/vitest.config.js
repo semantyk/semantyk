@@ -4,8 +4,7 @@
  * @organization: Semantyk
  * @project: Client
  *
- * @file: This file contains global configurations for Vitest, setting up how
- * tests are run across the entire project.
+ * @file: This file contains the configuration for the Vitest test runner.
  *
  * @created: Mar 18, 2025
  * @modified: Mar 18, 2025
@@ -17,11 +16,16 @@
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  */
 
+//* Imports
 import { defineConfig } from 'vitest/config';
 
-export default defineConfig({
+//* Main
+const config = defineConfig({
     test: {
         globals: true,
         environment: 'jsdom'
     }
 });
+
+//* Exports
+export default config;
