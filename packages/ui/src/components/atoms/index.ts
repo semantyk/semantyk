@@ -18,5 +18,8 @@
 
 //* Exports
 export * from './Body';
+export * from './Footer';
+export * from './Head';
+export * from './Header';
 export * from './HTML';
 export * from './Main';
