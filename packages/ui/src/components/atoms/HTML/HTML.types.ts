@@ -21,9 +21,7 @@ import { ReactNode } from 'react';
 import type { HTMLAttributes } from 'react';
 
 //* Main
-type HTMLProps = HTMLAttributes<HTMLHtmlElement> & {
-    children?: ReactNode | undefined;
-};
+type HTMLProps = HTMLAttributes<HTMLHtmlElement>;
 
 //* Exports
 export type { HTMLProps };
