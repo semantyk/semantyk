@@ -18,3 +18,4 @@
 
 //* Exports
 export * from './atoms';
+export * from './molecules';
