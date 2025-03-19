@@ -30,6 +30,8 @@
   "devDependencies": {
     "@nx/next": "^20.6.1",
     "@nx/vite": "^20.6.1",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
     "jsdom": "^26.0.0",
     "nx": "20.6.1",
     "vitest": "^3.0.9"
