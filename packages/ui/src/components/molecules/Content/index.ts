@@ -4,7 +4,7 @@
  * @organization: Semantyk
  * @project: UI
  *
- * @file: This file contains the index for the molecules components.
+ * @file: This file contains the index for the Content component.
  *
  * @created: Mar 19, 2025
  * @modified: Mar 19, 2025
@@ -18,3 +18,4 @@
 
 //* Exports
 export * from './Content';
+export * from './Content.types';
