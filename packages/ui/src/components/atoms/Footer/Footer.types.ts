@@ -21,9 +21,7 @@ import { ReactNode } from 'react';
 import type { HTMLAttributes } from 'react';
 
 //* Main
-type FooterProps = HTMLAttributes<HTMLElement> & {
-    children?: ReactNode | undefined;
-};
+type FooterProps = HTMLAttributes<HTMLElement>;
 
 //* Exports
 export type { FooterProps };
