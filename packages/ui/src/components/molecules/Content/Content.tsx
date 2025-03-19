@@ -1,10 +1,10 @@
 /**
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
- * # `index.ts`
+ * # `Content.tsx`
  * @organization: Semantyk
  * @project: UI
  *
- * @file: This file contains the index for the molecules components.
+ * @file: This file contains the Content component.
  *
  * @created: Mar 19, 2025
  * @modified: Mar 19, 2025
@@ -16,5 +16,24 @@
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  */
 
+//* Imports
+import { Footer, Header, Main } from '../../atoms';
+import { ContentProps } from './Content.types';
+
+//* Main
+function Content({ children, ...props }: ContentProps) {
+    // Return
+    return (
+        <div id='content' {...props}>
+            <Header />
+            <Main>
+                {children}
+            </Main>
+            <Footer />
+        </div>
+    );
+}
+
 //* Exports
-export * from './Content';
+export default Content;
+export { Content };
