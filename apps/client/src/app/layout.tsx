@@ -17,17 +17,20 @@
  */
 
 //* Imports
-import { Body, HTML, HTMLProps, Main } from '@semantyk/ui';
+import { Body, HTML, HTMLProps, Main, Header, Footer, Head } from '@semantyk/ui';
 
 //* Main
 function RootLayout({ children }: HTMLProps) {
     // Return
     return (
         <HTML>
+            <Head />
             <Body>
+                <Header />
                 <Main>
                     {children}
                 </Main>
+                <Footer />
             </Body>
         </HTML>
     );
