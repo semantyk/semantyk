@@ -1,10 +1,11 @@
 /**
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  * # `index.ts`
+ *
  * @organization: Semantyk
  * @project: UI
  *
- * @file: This file contains the index for the UI package.
+ * @file: This file contains the index for the models.
  *
  * @created: Mar 19, 2025
  * @modified: Mar 19, 2025
@@ -17,5 +18,4 @@
  */
 
 //* Exports
-export * from './components';
-export * from './models';
+export { }
