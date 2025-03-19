@@ -10,7 +10,13 @@
             }
         },
         "build": {
-            "executor": "@nx/next:build"
+            "executor": "@nx/next:build",
+            "outputs": [
+                "{options.outputPath}"
+            ],
+            "options": {
+                "outputPath": "dist/apps/client"
+            }
         },
         "start": {
             "executor": "@nx/next:server",
