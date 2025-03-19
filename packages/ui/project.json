@@ -2,30 +2,30 @@
   "name": "ui",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "sourceRoot": "src",
-  "tags": [
-    "type:ui",
-    "scope:shared"
-  ],
   "targets": {
     "build": {
-      "executor": "@nx/vite:build",
+      "executor": "@nx/rollup:rollup",
       "outputs": [
         "{options.outputPath}"
       ],
       "options": {
-        "outputPath": "dist/packages/ui"
+        "outputPath": "dist/packages/ui",
+        "main": "packages/ui/src/index.ts",
+        "tsConfig": "packages/ui/tsconfig.json",
+        "external": [
+          "react",
+          "react-dom"
+        ],
+        "compiler": "swc",
+        "format": [
+          "esm",
+          "cjs"
+        ],
+        "generateExportsField": true
       }
     },
     "test": {
-      "executor": "@nx/vite:test",
-      "outputs": [
-        "{options.reportsDirectory}"
-      ],
-      "options": {
-        "reportsDirectory": "../../coverage/packages/ui",
-        "passWithNoTests": true
-      }
+      "executor": "@nx/vite:test"
     }
   }
 }
