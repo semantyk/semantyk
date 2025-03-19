@@ -1,0 +1,21 @@
+{
+  "name": "client",
+  "private": true,
+  "author": "Daniel Bakas <daniel@semantyk.com>",
+  "bugs": "https://github.com/semantyk/semantyk/issues",
+  "description": "Our Client | Semantyk",
+  "version": "0.0.0",
+  "homepage": "https://www.semantyk.com",
+  "license": "CC-BY-NC-SA-4.0",
+  "maintainers": [
+    "Daniel Bakas <daniel@semantyk.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/semantyk/semantyk.git"
+  },
+  "engines": {
+    "node": "23.10.0",
+    "pnpm": "10.6.3"
+  }
+}
