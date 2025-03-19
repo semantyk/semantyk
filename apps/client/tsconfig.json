@@ -1,7 +1,11 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "target": "ES2017",
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "incremental": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
     "lib": [
       "dom",
       "dom.iterable",
@@ -9,25 +13,24 @@
     ],
     "module": "esnext",
     "moduleResolution": "node",
-    "jsx": "preserve",
     "noEmit": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "baseUrl": ".",
     "paths": {
       "@semantyk/client/*": [
         "./src/*"
       ]
     },
-    "strict": false,
-    "incremental": true,
-    "esModuleInterop": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "strict": false,
+    "target": "ES2017"
   },
+  "exclude": [
+    "node_modules"
+  ],
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
@@ -35,8 +38,5 @@
     "**/*.jsx",
     "**/*.ts",
     "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
   ]
 }
