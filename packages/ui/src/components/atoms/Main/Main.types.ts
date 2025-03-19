@@ -1,10 +1,10 @@
 /**
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
- * # `Body.types.ts`
+ * # `Main.types.ts`
  * @organization: Semantyk
  * @project: UI
  *
- * @file: This file contains the types for the Body component.
+ * @file: This file contains the types for the Main component.
  *
  * @created: Mar 19, 2025
  * @modified: Mar 19, 2025
@@ -22,7 +22,7 @@ import type { HTMLAttributes } from 'react';
 
 //* Main
 type MainProps = HTMLAttributes<HTMLElement> & {
-    children?: ReactNode;
+    children?: ReactNode | undefined;
 };
 
 //* Exports
