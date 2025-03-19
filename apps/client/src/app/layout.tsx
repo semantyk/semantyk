@@ -17,7 +17,7 @@
  */
 
 //* Imports
-import { Body, HTML, HTMLProps } from '@semantyk/ui';
+import { Body, HTML, HTMLProps, Main } from '@semantyk/ui';
 
 //* Main
 function RootLayout({ children }: HTMLProps) {
@@ -25,7 +25,9 @@ function RootLayout({ children }: HTMLProps) {
     return (
         <HTML>
             <Body>
-                {children}
+                <Main>
+                    {children}
+                </Main>
             </Body>
         </HTML>
     );
