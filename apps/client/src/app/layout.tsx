@@ -17,7 +17,7 @@
  */
 
 //* Imports
-import { Body, Footer, Head, Header, HTML, HTMLProps, Main } from '@semantyk/ui';
+import { Body, Content, Head, HTML, HTMLProps } from '@semantyk/ui';
 
 //* Main
 function RootLayout({ children }: HTMLProps) {
@@ -26,11 +26,9 @@ function RootLayout({ children }: HTMLProps) {
         <HTML>
             <Head />
             <Body>
-                <Header />
-                <Main>
+                <Content>
                     {children}
-                </Main>
-                <Footer />
+                </Content>
             </Body>
         </HTML>
     );
