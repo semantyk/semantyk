@@ -4,7 +4,7 @@
  * @organization: Semantyk
  * @project: UI
  *
- * @file: This file contains the index for the atom components.
+ * @file: This file contains the index for the Main component.
  *
  * @created: Mar 19, 2025
  * @modified: Mar 19, 2025
@@ -17,6 +17,5 @@
  */
 
 //* Exports
-export * from './Body';
-export * from './HTML';
 export * from './Main';
+export * from './Main.types';

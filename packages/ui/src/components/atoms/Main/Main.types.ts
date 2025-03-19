@@ -1,10 +1,10 @@
 /**
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
- * # `index.ts`
+ * # `Body.types.ts`
  * @organization: Semantyk
  * @project: UI
  *
- * @file: This file contains the index for the atom components.
+ * @file: This file contains the types for the Body component.
  *
  * @created: Mar 19, 2025
  * @modified: Mar 19, 2025
@@ -16,7 +16,14 @@
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  */
 
+//* Imports
+import { ReactNode } from 'react';
+import type { HTMLAttributes } from 'react';
+
+//* Main
+type MainProps = HTMLAttributes<HTMLElement> & {
+    children?: ReactNode;
+};
+
 //* Exports
-export * from './Body';
-export * from './HTML';
-export * from './Main';
+export type { MainProps };

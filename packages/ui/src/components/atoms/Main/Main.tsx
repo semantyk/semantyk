@@ -1,10 +1,10 @@
 /**
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
- * # `index.ts`
+ * # `Main.tsx`
  * @organization: Semantyk
  * @project: UI
  *
- * @file: This file contains the index for the atom components.
+ * @file: This file contains the Main component.
  *
  * @created: Mar 19, 2025
  * @modified: Mar 19, 2025
@@ -16,7 +16,19 @@
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  */
 
+//* Imports
+import { MainProps } from './Main.types';
+
+//* Main
+function Main({ children, ...props }: MainProps) {
+    // Return
+    return (
+        <main id='main' {...props}>
+            {children}
+        </main>
+    );
+}
+
 //* Exports
-export * from './Body';
-export * from './HTML';
-export * from './Main';
+export default Main;
+export { Main };
