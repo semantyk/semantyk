@@ -27,10 +27,7 @@
             "executor": "@nx/linter:eslint"
         },
         "test": {
-            "executor": "@nx/vite:test",
-            "options": {
-                "passWithNoTests": true
-            }
+            "executor": "@nx/vite:test"
         }
     }
 }
