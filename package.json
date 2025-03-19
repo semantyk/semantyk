@@ -21,7 +21,9 @@
   },
   "devDependencies": {
     "@nx/next": "^20.6.1",
-    "nx": "20.6.1"
+    "@nx/vite": "^20.6.1",
+    "nx": "20.6.1",
+    "vitest": "^3.0.9"
   },
   "dependencies": {
     "next": "^15.2.3",
