@@ -16,9 +16,13 @@
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  */
 
-export default {
+//* Main
+const config = {
     reactStrictMode: true,
     typescript: {
         ignoreBuildErrors: true
     }
 };
+
+//* Exports
+export default config;

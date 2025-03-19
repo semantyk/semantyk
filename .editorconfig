@@ -1,10 +1,25 @@
-# Editor configuration, see http://editorconfig.org
+# ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+# # `.editorconfig`
+# @organization: Semantyk
+# @project: Semantyk
+#
+# @file: This file contains the EditorConfig for the project.
+#
+# @created: Mar 18, 2025
+# @modified: Mar 18, 2025
+#
+# @author: Semantyk Team
+# @maintainer: Daniel Bakas <https://id.danielbakas.com>
+#
+# @copyright: Semantyk © 2025. All rights reserved.
+# ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
 root = true
 
 [*]
 charset = utf-8
-indent_style = space
 indent_size = 2
+indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
 
