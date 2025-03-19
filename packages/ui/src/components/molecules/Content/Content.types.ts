@@ -1,10 +1,10 @@
 /**
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
- * # `index.ts`
+ * # `Content.types.ts`
  * @organization: Semantyk
  * @project: UI
  *
- * @file: This file contains the index for the molecules components.
+ * @file: This file contains the types for the Content component.
  *
  * @created: Mar 19, 2025
  * @modified: Mar 19, 2025
@@ -16,5 +16,11 @@
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  */
 
+//* Imports
+import type { HTMLAttributes } from 'react';
+
+//* Main
+type ContentProps = HTMLAttributes<HTMLDivElement>;
+
 //* Exports
-export * from './Content';
+export type { ContentProps };
