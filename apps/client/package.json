@@ -1,6 +1,7 @@
 {
   "name": "client",
   "private": true,
+  "type": "module",
   "author": "Daniel Bakas <daniel@semantyk.com>",
   "bugs": "https://github.com/semantyk/semantyk/issues",
   "description": "Our Client | Semantyk",
