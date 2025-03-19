@@ -17,6 +17,9 @@
     "paths": {
       "@semantyk/client/*": [
         "./src/*"
+      ],
+      "@semantyk/ui": [
+        "../../packages/ui/src"
       ]
     },
     "plugins": [
