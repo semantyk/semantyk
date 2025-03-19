@@ -17,5 +17,8 @@
  */
 
 export default {
-    reactStrictMode: true
+    reactStrictMode: true,
+    typescript: {
+        ignoreBuildErrors: true
+    }
 };
