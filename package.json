@@ -22,6 +22,7 @@
   "devDependencies": {
     "@nx/next": "^20.6.1",
     "@nx/vite": "^20.6.1",
+    "jsdom": "^26.0.0",
     "nx": "20.6.1",
     "vitest": "^3.0.9"
   },
