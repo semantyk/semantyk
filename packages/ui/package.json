@@ -9,8 +9,7 @@
         ".": {
             "types": "./dist/packages/ui/index.d.ts",
             "import": "./dist/packages/ui/index.mjs",
-            "require": "./dist/packages/ui/index.cjs",
-            "umd": "./dist/packages/ui/index.umd.js"
+            "require": "./dist/packages/ui/index.cjs"
         }
     },
     "sideEffects": false

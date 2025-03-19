@@ -23,7 +23,8 @@ import { defineConfig } from 'vitest/config';
 const config = defineConfig({
     test: {
         globals: true,
-        environment: 'jsdom'
+        environment: 'jsdom',
+        passWithNoTests: true
     }
 });
 
