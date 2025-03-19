@@ -49,7 +49,7 @@ jobs:
       - run: pnpm install
         name: 4. Install Dependencies
       # 5. Run Tests
-      - run: pnpm exec nx test client
+      - run: pnpm test
         name: 5. Run Tests
   build:
     runs-on: ubuntu-latest
@@ -76,5 +76,5 @@ jobs:
       - run: pnpm install
         name: 4. Install Dependencies
       # 5. Build
-      - run: pnpm exec nx build client
+      - run: pnpm build
         name: 5. Build

@@ -47,22 +47,22 @@ jobs:
         name: 4. Install Dependencies
       # 5. Build the Project
       - name: 5. Build the Project
-        run: pnpm exec nx build client
-      # 5. Cloud SDK Configuration
+        run: pnpm build
+      # 6. Cloud SDK Configuration
       - uses: google-github-actions/setup-gcloud@v1
-        name: 5. Cloud SDK Configuration
-      # 6. Google Cloud Authentication
+        name: 6. Cloud SDK Configuration
+      # 7. Google Cloud Authentication
       - uses: google-github-actions/auth@v2
-        name: 6. Google Cloud Authentication
+        name: 7. Google Cloud Authentication
         with:
           credentials_json: ${{secrets.GCP_CREDENTIALS}}
-      # 7. Deploy to Google App Engine
+      # 8. Deploy to Google App Engine
       # - Deployment to 'main' Service
       - if: github.ref == 'refs/heads/main'
-        name: 7. Deployment to 'main' Service
+        name: 8. Deployment to 'main' Service
         run: gcloud app deploy app.yaml --project ${{secrets.GCP_PROJECT_ID}} --promote
       # - Deployment to 'staging' service
       - if: github.ref == 'refs/heads/staging'
-        name: 7. Deployment to 'staging' Service
+        name: 8. Deployment to 'staging' Service
         # TODO: Change to --no-promote
         run: gcloud app deploy app.yaml --project ${{secrets.GCP_PROJECT_ID}} --promote

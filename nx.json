@@ -9,7 +9,9 @@
       "default"
     ],
     "sharedGlobals": [
-      "{workspaceRoot}/.github/workflows/ci.yml"
+      "{workspaceRoot}/.github/workflows/*.yaml",
+      "{workspaceRoot}/package.json",
+      "{workspaceRoot}/pnpm-lock.yaml"
     ]
   },
   "nxCloudId": "67d9ef01be178943babd4c71",
