@@ -1,19 +1,19 @@
- # –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
- # # `.gitignore`
- # @organization: Semantyk
- # @project: Semantyk
- #
- # @file: This file contains the list of files and folders that are ignored by
- # Git.
- #
- # @created: Mar 18, 2025
- # @modified: Mar 18, 2025
- #
- # @author: Semantyk Team
- # @maintainer: Daniel Bakas <https://id.danielbakas.com>
- #
- # @copyright: Semantyk © 2025. All rights reserved.
- # –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+# ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+# # `.gitignore`
+# @organization: Semantyk
+# @project: Semantyk
+#
+# @file: This file contains the list of files and folders that are ignored by
+# Git.
+#
+# @created: Mar 18, 2025
+# @modified: Mar 18, 2025
+#
+# @author: Semantyk Team
+# @maintainer: Daniel Bakas <https://id.danielbakas.com>
+#
+# @copyright: Semantyk © 2025. All rights reserved.
+# ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 # Created by https://www.toptal.com/developers/gitignore/api/git,macos,node,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=git,macos,node,visualstudiocode
