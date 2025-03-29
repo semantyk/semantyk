@@ -1,13 +1,14 @@
 /**
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
- * # `index.ts`
+ * # `Page.tsx`
+ *
  * @organization: Semantyk
  * @project: UI
  *
- * @file: This file contains the index for the molecules components.
+ * @file: This file contains the Page component.
  *
- * @created: Mar 19, 2025
- * @modified: Mar 19, 2025
+ * @created: Mar 20, 2025
+ * @modified: Mar 20, 2025
  *
  * @author: Semantyk Team
  * @maintainer: Daniel Bakas <https://id.danielbakas.com>
@@ -16,6 +17,21 @@
  * –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  */
 
+//* Imports
+import type { PageProps } from './Page.types';
+
+//* Main
+function Page(props: PageProps) {
+    // Props
+    const { children } = props;
+    // Return
+    return (
+        <div id="page">
+            {children}
+        </div>
+    );
+}
+
 //* Exports
-export * from './Content';
-export * from './Page';
+export default Page;
+export { Page };
