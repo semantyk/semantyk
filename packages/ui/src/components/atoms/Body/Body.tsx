@@ -17,6 +17,7 @@
  */
 
 //* Imports
+import './Body.styles.css';
 import { BodyProps } from './Body.types';
 
 //* Main
