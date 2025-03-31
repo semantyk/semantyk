@@ -1,0 +1,291 @@
+@prefix : <http://www.semantyk.com/knowledge/ukg#> .
+@prefix mx: <http://datos.gob.mx/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ukg: <http://www.semantyk.com/knowledge/ukg#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix rdfg: <http://www.w3.org/2004/03/trix/rdfg-1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://www.semantyk.com/knowledge/ukg#> .
+
+<http://www.semantyk.com/knowledge/ukg/core/voc#> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/subject
+dcterms:subject rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2004/03/trix/rdfg-1/subGraphOf
+rdfg:subGraphOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#inCatalog
+dcat:inCatalog rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semantyk.com/knowledge/ukg#b36e331b_7848_439c_a539_c05c049a9f43
+ukg:b36e331b_7848_439c_a539_c05c049a9f43 rdf:type owl:Class .
+
+
+###  http://www.semantyk.com/knowledge/ukg#bd560e81_ec87_4ee2_97f5_d63d8d0b3db9
+ukg:bd560e81_ec87_4ee2_97f5_d63d8d0b3db9 rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://datos.gob.mx/daa6a4eb_ffaf_42e7_90a4_edde1f9286f8
+mx:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 rdf:type owl:NamedIndividual .
+
+
+###  http://datos.gob.mx/core/voc/
+<http://datos.gob.mx/core/voc/> rdf:type owl:NamedIndividual ;
+                                owl:sameAs ukg:d1e95dc1_4dd8_447a_92b9_05020b01c728 .
+
+
+###  http://www.semantyk.com/knowledge/ukg#d1e95dc1_4dd8_447a_92b9_05020b01c728
+
+###  http://www.semantyk.com/knowledge/ukg#
+ukg: rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/ukg#a071928a_b552_46fc_ba97_115ccd0e5130
+ukg:a071928a_b552_46fc_ba97_115ccd0e5130 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme ukg:d1e95dc1_4dd8_447a_92b9_05020b01c728 ;
+                                         rdfs:comment "A 'Concept' labeled 'administration'"@en ,
+                                                      "Un 'Concepto' etiquetado 'administración'"@es ;
+                                         rdfs:isDefinedBy ukg: ;
+                                         rdfs:label "administración (Concepto)"@es ,
+                                                    "administration (Concept)"@en ;
+                                         skos:prefLabel "administración"@es ,
+                                                        "administration"@en .
+
+
+###  http://www.semantyk.com/knowledge/ukg#a33f1a66_b28d_4ffe_a3ee_85b5fdc6a4a0
+ukg:a33f1a66_b28d_4ffe_a3ee_85b5fdc6a4a0 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme ukg:d1e95dc1_4dd8_447a_92b9_05020b01c728 ;
+                                         rdfs:comment "A 'Concept' labeled 'quality'"@en ,
+                                                      "Un 'Concepto' etiquetado 'cualidad'"@es ;
+                                         rdfs:isDefinedBy ukg: ;
+                                         rdfs:label "cualidad (Concepto)"@es ,
+                                                    "quality (Concept)"@en ;
+                                         skos:prefLabel "cualidad"@es ,
+                                                        "cuality"@en .
+
+
+###  http://www.semantyk.com/knowledge/ukg#a54afb44_8ce8_446b_bde2_339f7f01bcc8
+ukg:a54afb44_8ce8_446b_bde2_339f7f01bcc8 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme ukg:d1e95dc1_4dd8_447a_92b9_05020b01c728 ;
+                                         rdfs:comment "A 'Concept' labeled 'mexican'"@en ,
+                                                      "Un 'Concepto' etiquetado 'mexicano' o 'mexicana'"@es ;
+                                         rdfs:isDefinedBy ukg: ;
+                                         rdfs:label "mexican (Concept)"@en ,
+                                                    "mexicana (Concepto)"@es ,
+                                                    "mexicano (Concepto)"@es ;
+                                         skos:prefLabel "mexican"@en ,
+                                                        "mexicana"@es ,
+                                                        "mexicano"@es .
+
+
+###  http://www.semantyk.com/knowledge/ukg#bf4e6b3a_c931_4464_b4a5_e278d8cee8a9
+ukg:bf4e6b3a_c931_4464_b4a5_e278d8cee8a9 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme ukg:d1e95dc1_4dd8_447a_92b9_05020b01c728 ;
+                                         rdfs:comment "A 'Concept' labeled 'gender'"@en ,
+                                                      "Un 'Concepto' etiquetado 'género'"@es ;
+                                         rdfs:isDefinedBy mx: ;
+                                         rdfs:label "gender (Concept)"@en ,
+                                                    "género (Concepto)"@es ;
+                                         skos:prefLabel "gender"@en ,
+                                                        "género"@es .
+
+
+###  http://www.semantyk.com/knowledge/ukg#c1a6d450_4cf3_4af2_8141_75ca165d790d
+ukg:c1a6d450_4cf3_4af2_8141_75ca165d790d rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/ukg#c456155b_dbb7_4c77_af07_c03a9db350b0
+ukg:c456155b_dbb7_4c77_af07_c03a9db350b0 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         rdfs:comment "A 'Concept' labeled 'color'"@en ,
+                                                      "Un 'Concepto' etiquetado 'color'"@es ;
+                                         rdfs:isDefinedBy ukg: ;
+                                         rdfs:label "color (Concept)"@en ,
+                                                    "color (Concepto)"@es ;
+                                         skos:prefLabel "color"@en ,
+                                                        "color"@es .
+
+
+###  http://www.semantyk.com/knowledge/ukg#c6074215_7e91_4130_bc57_e8142f8613f1
+ukg:c6074215_7e91_4130_bc57_e8142f8613f1 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme ukg:d1e95dc1_4dd8_447a_92b9_05020b01c728 ;
+                                         rdfs:comment "A 'Concept' labeled 'agency'"@en ,
+                                                      "Un 'Concepto' etiquetado 'agencia'"@es ;
+                                         rdfs:isDefinedBy ukg: ;
+                                         rdfs:label "agencia (Concepto)"@es ,
+                                                    "agency (Concept)"@en ;
+                                         skos:prefLabel "agencia"@es ,
+                                                        "agency"@en .
+
+
+###  http://www.semantyk.com/knowledge/ukg#c6c110fa_8f7f_4297_b3ab_523ce3966dd9
+ukg:c6c110fa_8f7f_4297_b3ab_523ce3966dd9 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme ukg:d1e95dc1_4dd8_447a_92b9_05020b01c728 ;
+                                         rdfs:comment "A 'Concept' labeled 'organization'"@en ,
+                                                      "Un 'Concepto' etiquetado 'organización'"@es ;
+                                         rdfs:isDefinedBy ukg: ;
+                                         rdfs:label "organización (Concepto)"@es ,
+                                                    "organization (Concept)"@en ;
+                                         skos:prefLabel "organización"@es ,
+                                                        "organization"@en .
+
+
+###  http://www.semantyk.com/knowledge/ukg#cba263e2_24ca_4849_ac58_6ac534083033
+ukg:cba263e2_24ca_4849_ac58_6ac534083033 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme ukg:d1e95dc1_4dd8_447a_92b9_05020b01c728 ;
+                                         rdfs:comment "A 'Concept' labeled 'sex'"@en ,
+                                                      "Un 'Concepto' etiquetado 'sexo'"@es ;
+                                         rdfs:isDefinedBy ukg: ;
+                                         rdfs:label "sex (Concept)"@en ,
+                                                    "sexo (Concepto)"@es ;
+                                         skos:prefLabel "sex"@en ,
+                                                        "sexo"@es .
+
+
+###  http://www.semantyk.com/knowledge/ukg#cff8a44f_b27f_485e_b2f2_210be0df7192
+ukg:cff8a44f_b27f_485e_b2f2_210be0df7192 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme ukg:d1e95dc1_4dd8_447a_92b9_05020b01c728 ;
+                                         rdfs:comment "A 'Concept' labeled 'project'"@en ,
+                                                      "Un 'Concepto' etiquetado 'proyecto'"@es ;
+                                         rdfs:isDefinedBy ukg: ;
+                                         rdfs:label "project (Concept)"@en ,
+                                                    "proyecto (Concepto)"@es ;
+                                         skos:prefLabel "project"@en ,
+                                                        "proyecto"@es .
+
+
+###  http://www.semantyk.com/knowledge/ukg#d1e95dc1_4dd8_447a_92b9_05020b01c728
+ukg:d1e95dc1_4dd8_447a_92b9_05020b01c728 rdf:type owl:NamedIndividual ,
+                                                  ukg:bd560e81_ec87_4ee2_97f5_d63d8d0b3db9 ;
+                                         rdfg:subGraphOf ukg:e3d7296f_d7d8_4136_85ed_921642690f9f ;
+                                         dcat:inCatalog ukg:c1a6d450_4cf3_4af2_8141_75ca165d790d ;
+                                         dcterms:subject ukg:e3d7296f_d7d8_4136_85ed_921642690f9f ;
+                                         rdfs:comment "A 'Concept Scheme' labeled 'The Concept Scheme' of 'The Core' of 'The Knowledge Graph' of 'The Universe'"@en ,
+                                                      "Un 'Esquema de Conceptos' etiquetado 'El Esquema de Conceptos' de 'El Núcleo' de 'El Grafo de Conocimiento' de 'El Universo'"@es ;
+                                         rdfs:isDefinedBy ukg: ;
+                                         rdfs:label "El Esquema de Conceptos de El Núcleo de El Grafo de Conocimiento de El Universo"@es ,
+                                                    "The Concept Scheme of The Core of The Knowledge Graph of The Universe"@en .
+
+
+###  http://www.semantyk.com/knowledge/ukg#d567ba41_6051_4f26_8d4d_2d8a68068531
+ukg:d567ba41_6051_4f26_8d4d_2d8a68068531 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme ukg:d1e95dc1_4dd8_447a_92b9_05020b01c728 ;
+                                         rdfs:comment "A 'Concept' labeled 'nation'"@en ,
+                                                      "Un 'Concepto' etiquetado 'nación'"@es ;
+                                         rdfs:isDefinedBy ukg: ;
+                                         rdfs:label "nación (Concepto)"@es ,
+                                                    "nation (Concept)"@en ;
+                                         skos:prefLabel "nación"@es ,
+                                                        "nation"@en .
+
+
+###  http://www.semantyk.com/knowledge/ukg#e3d7296f_d7d8_4136_85ed_921642690f9f
+ukg:e3d7296f_d7d8_4136_85ed_921642690f9f rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/ukg#e7981e92_c7e2_4a0e_808d_e895b3334f40
+ukg:e7981e92_c7e2_4a0e_808d_e895b3334f40 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme ukg:d1e95dc1_4dd8_447a_92b9_05020b01c728 ;
+                                         rdfs:comment "A 'Concept' labeled 'action'"@en ,
+                                                      "Un 'Concepto' etiquetado 'acción'"@es ;
+                                         rdfs:isDefinedBy ukg: ;
+                                         rdfs:label "acción (Concepto)"@es ,
+                                                    "action (Concept)"@en ;
+                                         skos:prefLabel "acción"@es ,
+                                                        "action"@en .
+
+
+###  http://www.semantyk.com/knowledge/ukg#ed0cfe1a_2cd5_4bb9_af25_df6f93f064c0
+ukg:ed0cfe1a_2cd5_4bb9_af25_df6f93f064c0 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme ukg:d1e95dc1_4dd8_447a_92b9_05020b01c728 ;
+                                         rdfs:comment "A 'Concept' labeled 'state'"@en ,
+                                                      "Un 'Concepto' etiquetado 'estado'"@es ;
+                                         rdfs:isDefinedBy ukg: ;
+                                         rdfs:label "estado (Concepto)"@es ,
+                                                    "state (Concept)"@en ;
+                                         skos:prefLabel "estado"@es ,
+                                                        "state"@en .
+
+
+###  http://www.semantyk.com/knowledge/ukg#f5cf5ec0_2eb1_4fb3_be67_b1431637fde2
+ukg:f5cf5ec0_2eb1_4fb3_be67_b1431637fde2 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme ukg:d1e95dc1_4dd8_447a_92b9_05020b01c728 ;
+                                         rdfs:comment "A 'Concept' labeled 'activity'"@en ,
+                                                      "Un 'Concepto' etiquetado 'actividad'"@es ;
+                                         rdfs:isDefinedBy ukg: ;
+                                         rdfs:label "actividad (Concepto)"@es ,
+                                                    "activity (Concept)"@en ;
+                                         skos:prefLabel "actividad"@es ,
+                                                        "activity"@en .
+
+
+###  http://www.semantyk.com/knowledge/ukg#fc63d740_e040_45cd_b03b_e912abb694ba
+ukg:fc63d740_e040_45cd_b03b_e912abb694ba rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme ukg:d1e95dc1_4dd8_447a_92b9_05020b01c728 ;
+                                         rdfs:comment "A 'Concept' labeled 'enterprise knowledge graph'"@en ,
+                                                      "Un 'Concepto' etiquetado 'grafo de conocimiento empresarial'"@es ;
+                                         rdfs:isDefinedBy ukg: ;
+                                         rdfs:label "enterprise knowledge graph (Concept)"@en ,
+                                                    "grafo de conocimiento empresarial (Concepto)"@es .
+
+
+###  http://www.semantyk.com/knowledge/ukg#ff32cd02_5b28_4b4b_bde1_1a061b4d9c75
+ukg:ff32cd02_5b28_4b4b_bde1_1a061b4d9c75 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme ukg:d1e95dc1_4dd8_447a_92b9_05020b01c728 ;
+                                         rdfs:comment "A 'Concept' labeled 'agent'"@en ,
+                                                      "Un 'Concepto' etiquetado 'agente'"@es ;
+                                         rdfs:isDefinedBy ukg: ;
+                                         rdfs:label "agent (Concept)"@en ,
+                                                    "agente (Concepto)"@es ;
+                                         skos:prefLabel "agent"@en ,
+                                                        "agente"@es .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
