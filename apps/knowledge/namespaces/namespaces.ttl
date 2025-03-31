@@ -1,0 +1,29 @@
+# –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+# # `namespaces.ttl`
+# @organization: Semantyk
+# @project: Knowledge
+#
+# @file: This file contains the list of namespaces used in the knowledge graph.
+#
+# @created: Mar 29, 2025
+# @modified: Mar 29, 2025
+#
+# @author: Semantyk Team
+# @maintainer: Daniel Bakas <https://id.danielbakas.com>
+#
+# @copyright: Semantyk © 2025. All rights reserved.
+# –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+#* Prefixes
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX doap: <http://usefulinc.com/ns/doap#>
+PREFIX mx: <http://datos.gob.mx/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX skg: <http://www.semantyk.com/knowledge/skg#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX ukg: <http://www.semantyk.com/knowledge/ukg#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
