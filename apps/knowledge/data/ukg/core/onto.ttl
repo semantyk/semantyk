@@ -1,4 +1,5 @@
 @prefix : <http://www.semantyk.com/knowledge/ukg#> .
+@prefix mex: <http://www.semantyk.com/knowledge/mex#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ukg: <http://www.semantyk.com/knowledge/ukg#> .
@@ -13,14 +14,14 @@
 @base <http://www.semantyk.com/knowledge/ukg#> .
 
 <http://www.semantyk.com/knowledge/ukg/core/onto#> rdf:type owl:Ontology ;
-                                       owl:imports <http://www.w3.org/ns/dcat3> ,
-                                                   foaf: .
+                                                    owl:imports <http://www.w3.org/ns/dcat3> ,
+                                                                foaf: .
 
 #################################################################
 #    Datatypes
 #################################################################
 
-###  http://data.semantyk.com/a18a9ff7_345e_462b_ac24_cb1315850607
+###  http://www.semantyk.com/knowledge/ukg#a18a9ff7_345e_462b_ac24_cb1315850607
 ukg:a18a9ff7_345e_462b_ac24_cb1315850607 rdf:type rdfs:Datatype ;
                                          rdfs:isDefinedBy ukg: ;
                                          rdfs:label "meter"@en ,
@@ -28,7 +29,7 @@ ukg:a18a9ff7_345e_462b_ac24_cb1315850607 rdf:type rdfs:Datatype ;
                                          owl:equivalentClass xsd:decimal .
 
 
-###  http://data.semantyk.com/c7fdcc8b_9db8_492b_b2b6_bf98d2ef4312
+###  http://www.semantyk.com/knowledge/ukg#c7fdcc8b_9db8_492b_b2b6_bf98d2ef4312
 ukg:c7fdcc8b_9db8_492b_b2b6_bf98d2ef4312 rdf:type rdfs:Datatype ;
                                          rdfs:isDefinedBy ukg: ;
                                          rdfs:label "CURP"@en ,
@@ -36,7 +37,7 @@ ukg:c7fdcc8b_9db8_492b_b2b6_bf98d2ef4312 rdf:type rdfs:Datatype ;
                                          owl:equivalentClass xsd:string .
 
 
-###  http://data.semantyk.com/fe0a00a8_3ced_493b_8711_2023cd46db1a
+###  http://www.semantyk.com/knowledge/ukg#fe0a00a8_3ced_493b_8711_2023cd46db1a
 ukg:fe0a00a8_3ced_493b_8711_2023cd46db1a rdf:type rdfs:Datatype ;
                                          rdfs:isDefinedBy ukg: ;
                                          rdfs:label "RFC"@en ,
@@ -48,7 +49,7 @@ ukg:fe0a00a8_3ced_493b_8711_2023cd46db1a rdf:type rdfs:Datatype ;
 #    Object Properties
 #################################################################
 
-###  http://data.semantyk.com/a278ea71_1682_4765_ad90_979b1c68ce58
+###  http://www.semantyk.com/knowledge/ukg#a278ea71_1682_4765_ad90_979b1c68ce58
 ukg:a278ea71_1682_4765_ad90_979b1c68ce58 rdf:type owl:ObjectProperty ;
                                          owl:inverseOf ukg:e6c26c87_1587_4af0_a72a_bcbb8b90973c ;
                                          rdfs:isDefinedBy ukg: ;
@@ -56,7 +57,7 @@ ukg:a278ea71_1682_4765_ad90_979b1c68ce58 rdf:type owl:ObjectProperty ;
                                                     "tiene género"@es .
 
 
-###  http://data.semantyk.com/a3497142_8f28_4f79_8c43_bc0cb4fcbc17
+###  http://www.semantyk.com/knowledge/ukg#a3497142_8f28_4f79_8c43_bc0cb4fcbc17
 ukg:a3497142_8f28_4f79_8c43_bc0cb4fcbc17 rdf:type owl:ObjectProperty ;
                                          owl:inverseOf ukg:bb5ce225_5e0d_4bea_bd71_68b2dfb9969f ;
                                          rdfs:isDefinedBy ukg: ;
@@ -64,7 +65,7 @@ ukg:a3497142_8f28_4f79_8c43_bc0cb4fcbc17 rdf:type owl:ObjectProperty ;
                                                     "tiene parte"@es .
 
 
-###  http://data.semantyk.com/a4194abe_6ce5_46bd_b32e_1a9b6f3543a4
+###  http://www.semantyk.com/knowledge/ukg#a4194abe_6ce5_46bd_b32e_1a9b6f3543a4
 ukg:a4194abe_6ce5_46bd_b32e_1a9b6f3543a4 rdf:type owl:ObjectProperty ;
                                          owl:inverseOf ukg:ddf2406c_67d2_4619_8e7a_cc9bd5460f69 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -72,7 +73,7 @@ ukg:a4194abe_6ce5_46bd_b32e_1a9b6f3543a4 rdf:type owl:ObjectProperty ;
                                                     "is sex of"@en .
 
 
-###  http://data.semantyk.com/a55a93ef_28dc_41b2_b537_eb916507bfdd
+###  http://www.semantyk.com/knowledge/ukg#a55a93ef_28dc_41b2_b537_eb916507bfdd
 ukg:a55a93ef_28dc_41b2_b537_eb916507bfdd rdf:type owl:ObjectProperty ;
                                          owl:inverseOf ukg:c55f7a9f_8e55_45e2_87c0_f22a089c42d8 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -80,14 +81,14 @@ ukg:a55a93ef_28dc_41b2_b537_eb916507bfdd rdf:type owl:ObjectProperty ;
                                                     "is formal definition of"@en .
 
 
-###  http://data.semantyk.com/ad938c0b_c2bf_4b16_9c27_735ed41dc347
+###  http://www.semantyk.com/knowledge/ukg#ad938c0b_c2bf_4b16_9c27_735ed41dc347
 ukg:ad938c0b_c2bf_4b16_9c27_735ed41dc347 rdf:type owl:ObjectProperty ;
                                          rdfs:isDefinedBy ukg: ;
                                          rdfs:label "has relative"@en ,
                                                     "tiene familiar"@es .
 
 
-###  http://data.semantyk.com/b0c54ceb_ca3f_441e_8f4d_002d8fa7ab25
+###  http://www.semantyk.com/knowledge/ukg#b0c54ceb_ca3f_441e_8f4d_002d8fa7ab25
 ukg:b0c54ceb_ca3f_441e_8f4d_002d8fa7ab25 rdf:type owl:ObjectProperty ;
                                          owl:inverseOf skos:inScheme ;
                                          rdfs:isDefinedBy ukg: ;
@@ -95,7 +96,7 @@ ukg:b0c54ceb_ca3f_441e_8f4d_002d8fa7ab25 rdf:type owl:ObjectProperty ;
                                                     "tiene concepto"@es .
 
 
-###  http://data.semantyk.com/b1732230_46b3_41c0_bf94_ac48a18b903f
+###  http://www.semantyk.com/knowledge/ukg#b1732230_46b3_41c0_bf94_ac48a18b903f
 ukg:b1732230_46b3_41c0_bf94_ac48a18b903f rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:fa29d01c_002b_4064_ac70_3695ce9d20b6 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -103,7 +104,7 @@ ukg:b1732230_46b3_41c0_bf94_ac48a18b903f rdf:type owl:ObjectProperty ;
                                                     "tiene lugar de residencia"@es .
 
 
-###  http://data.semantyk.com/b4564826_2779_4f5b_ba76_7c2a4a99a1b9
+###  http://www.semantyk.com/knowledge/ukg#b4564826_2779_4f5b_ba76_7c2a4a99a1b9
 ukg:b4564826_2779_4f5b_ba76_7c2a4a99a1b9 rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf vcard:hasEmail ,
                                                             foaf:mbox ;
@@ -112,7 +113,7 @@ ukg:b4564826_2779_4f5b_ba76_7c2a4a99a1b9 rdf:type owl:ObjectProperty ;
                                                     "tiene dirección email"@es .
 
 
-###  http://data.semantyk.com/b558af09_dbbf_4cc9_964f_71502b5c9e1a
+###  http://www.semantyk.com/knowledge/ukg#b558af09_dbbf_4cc9_964f_71502b5c9e1a
 ukg:b558af09_dbbf_4cc9_964f_71502b5c9e1a rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:ff001670_4a2b_44e3_bf2f_f27ec9a5d681 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -120,7 +121,7 @@ ukg:b558af09_dbbf_4cc9_964f_71502b5c9e1a rdf:type owl:ObjectProperty ;
                                                     "tiene sobrino político"@es .
 
 
-###  http://data.semantyk.com/b5a0cb5b_d367_4249_a3eb_38974e5ba945
+###  http://www.semantyk.com/knowledge/ukg#b5a0cb5b_d367_4249_a3eb_38974e5ba945
 ukg:b5a0cb5b_d367_4249_a3eb_38974e5ba945 rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:c7324f52_2114_4ee6_9f7a_b5ec1836123e ;
                                          rdfs:isDefinedBy ukg: ;
@@ -128,7 +129,7 @@ ukg:b5a0cb5b_d367_4249_a3eb_38974e5ba945 rdf:type owl:ObjectProperty ;
                                                     "tiene tía"@es .
 
 
-###  http://data.semantyk.com/b5e7df65_a9f2_4372_b595_cbc98e780e29
+###  http://www.semantyk.com/knowledge/ukg#b5e7df65_a9f2_4372_b595_cbc98e780e29
 ukg:b5e7df65_a9f2_4372_b595_cbc98e780e29 rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf vcard:hasTelephone ,
                                                             foaf:phone ;
@@ -137,7 +138,7 @@ ukg:b5e7df65_a9f2_4372_b595_cbc98e780e29 rdf:type owl:ObjectProperty ;
                                                     "tiene número telefónico"@es .
 
 
-###  http://data.semantyk.com/b64ea212_cb7d_473d_9f38_5d1a8911b8ca
+###  http://www.semantyk.com/knowledge/ukg#b64ea212_cb7d_473d_9f38_5d1a8911b8ca
 ukg:b64ea212_cb7d_473d_9f38_5d1a8911b8ca rdf:type owl:ObjectProperty ;
                                          owl:inverseOf ukg:ec815c33_1ca3_4421_b71b_091a628b8b63 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -145,7 +146,7 @@ ukg:b64ea212_cb7d_473d_9f38_5d1a8911b8ca rdf:type owl:ObjectProperty ;
                                                     "tiene cualidad"@es .
 
 
-###  http://data.semantyk.com/b73d2759_edf4_43a7_b1c6_4023ac16772d
+###  http://www.semantyk.com/knowledge/ukg#b73d2759_edf4_43a7_b1c6_4023ac16772d
 ukg:b73d2759_edf4_43a7_b1c6_4023ac16772d rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:e5b26872_7d5d_4d95_933d_d5d5e47dc89e ;
                                          rdfs:isDefinedBy ukg: ;
@@ -153,7 +154,7 @@ ukg:b73d2759_edf4_43a7_b1c6_4023ac16772d rdf:type owl:ObjectProperty ;
                                                     "tiene hijo"@es .
 
 
-###  http://data.semantyk.com/baffaa3c_f3d4_4c58_8de0_2124baba9bfd
+###  http://www.semantyk.com/knowledge/ukg#baffaa3c_f3d4_4c58_8de0_2124baba9bfd
 ukg:baffaa3c_f3d4_4c58_8de0_2124baba9bfd rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:c32f1f6b_b350_49d4_94b9_e36874c0d36b ;
                                          rdfs:isDefinedBy ukg: ;
@@ -161,14 +162,14 @@ ukg:baffaa3c_f3d4_4c58_8de0_2124baba9bfd rdf:type owl:ObjectProperty ;
                                                     "tiene hermanastra"@es .
 
 
-###  http://data.semantyk.com/bb5ce225_5e0d_4bea_bd71_68b2dfb9969f
+###  http://www.semantyk.com/knowledge/ukg#bb5ce225_5e0d_4bea_bd71_68b2dfb9969f
 ukg:bb5ce225_5e0d_4bea_bd71_68b2dfb9969f rdf:type owl:ObjectProperty ;
                                          rdfs:isDefinedBy ukg: ;
                                          rdfs:label "es parte de"@es ,
                                                     "is part of"@en .
 
 
-###  http://data.semantyk.com/bdacdcb9_16b7_4149_b362_69a0007478a7
+###  http://www.semantyk.com/knowledge/ukg#bdacdcb9_16b7_4149_b362_69a0007478a7
 ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 rdf:type owl:ObjectProperty ,
                                                   owl:SymmetricProperty ;
                                          rdfs:isDefinedBy ukg: ;
@@ -176,7 +177,7 @@ ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 rdf:type owl:ObjectProperty ,
                                                     "tiene relación con"@es .
 
 
-###  http://data.semantyk.com/be95add1_e3a8_427a_a944_94e37a2ddbd7
+###  http://www.semantyk.com/knowledge/ukg#be95add1_e3a8_427a_a944_94e37a2ddbd7
 ukg:be95add1_e3a8_427a_a944_94e37a2ddbd7 rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:ad938c0b_c2bf_4b16_9c27_735ed41dc347 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -184,7 +185,7 @@ ukg:be95add1_e3a8_427a_a944_94e37a2ddbd7 rdf:type owl:ObjectProperty ;
                                                     "tiene progenitore"@es .
 
 
-###  http://data.semantyk.com/c0bf2258_70ea_4ae7_b673_0a69fa9ba65f
+###  http://www.semantyk.com/knowledge/ukg#c0bf2258_70ea_4ae7_b673_0a69fa9ba65f
 ukg:c0bf2258_70ea_4ae7_b673_0a69fa9ba65f rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:ca0dd069_6531_4f2c_85d0_38dee95e2f86 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -192,7 +193,7 @@ ukg:c0bf2258_70ea_4ae7_b673_0a69fa9ba65f rdf:type owl:ObjectProperty ;
                                                     "tiene prima"@es .
 
 
-###  http://data.semantyk.com/c234ff51_3e90_4600_8520_1219b6458d49
+###  http://www.semantyk.com/knowledge/ukg#c234ff51_3e90_4600_8520_1219b6458d49
 ukg:c234ff51_3e90_4600_8520_1219b6458d49 rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:cf49c7d5_001f_4256_9e55_fb4f30910395 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -200,7 +201,7 @@ ukg:c234ff51_3e90_4600_8520_1219b6458d49 rdf:type owl:ObjectProperty ;
                                                     "tiene hijastra"@es .
 
 
-###  http://data.semantyk.com/c32f1f6b_b350_49d4_94b9_e36874c0d36b
+###  http://www.semantyk.com/knowledge/ukg#c32f1f6b_b350_49d4_94b9_e36874c0d36b
 ukg:c32f1f6b_b350_49d4_94b9_e36874c0d36b rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:ff001670_4a2b_44e3_bf2f_f27ec9a5d681 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -208,7 +209,7 @@ ukg:c32f1f6b_b350_49d4_94b9_e36874c0d36b rdf:type owl:ObjectProperty ;
                                                     "tiene hermanastre"@es .
 
 
-###  http://data.semantyk.com/c38dfb00_ddc2_45f5_ab84_9c7cc169624b
+###  http://www.semantyk.com/knowledge/ukg#c38dfb00_ddc2_45f5_ab84_9c7cc169624b
 ukg:c38dfb00_ddc2_45f5_ab84_9c7cc169624b rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:ad938c0b_c2bf_4b16_9c27_735ed41dc347 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -216,7 +217,7 @@ ukg:c38dfb00_ddc2_45f5_ab84_9c7cc169624b rdf:type owl:ObjectProperty ;
                                                     "tiene sobrine"@es .
 
 
-###  http://data.semantyk.com/c39be766_2dda_4656_bb1f_1cfba7f87f60
+###  http://www.semantyk.com/knowledge/ukg#c39be766_2dda_4656_bb1f_1cfba7f87f60
 ukg:c39be766_2dda_4656_bb1f_1cfba7f87f60 rdf:type owl:ObjectProperty ;
                                          owl:inverseOf ukg:ddb20028_0da9_4b1a_99b8_f7374592744f ;
                                          rdfs:isDefinedBy ukg: ;
@@ -224,7 +225,7 @@ ukg:c39be766_2dda_4656_bb1f_1cfba7f87f60 rdf:type owl:ObjectProperty ;
                                                     "tiene rol"@es .
 
 
-###  http://data.semantyk.com/c43a799e_c975_4fcc_a743_25c98975a203
+###  http://www.semantyk.com/knowledge/ukg#c43a799e_c975_4fcc_a743_25c98975a203
 ukg:c43a799e_c975_4fcc_a743_25c98975a203 rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:fa29d01c_002b_4064_ac70_3695ce9d20b6 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -232,14 +233,14 @@ ukg:c43a799e_c975_4fcc_a743_25c98975a203 rdf:type owl:ObjectProperty ;
                                                     "tiene lugar de nacimiento"@es .
 
 
-###  http://data.semantyk.com/c55f7a9f_8e55_45e2_87c0_f22a089c42d8
+###  http://www.semantyk.com/knowledge/ukg#c55f7a9f_8e55_45e2_87c0_f22a089c42d8
 ukg:c55f7a9f_8e55_45e2_87c0_f22a089c42d8 rdf:type owl:ObjectProperty ;
                                          rdfs:isDefinedBy ukg: ;
                                          rdfs:label "has formal definition"@en ,
                                                     "tiene definición formal"@es .
 
 
-###  http://data.semantyk.com/c6a447d1_49f6_441d_a374_e307cbc18272
+###  http://www.semantyk.com/knowledge/ukg#c6a447d1_49f6_441d_a374_e307cbc18272
 ukg:c6a447d1_49f6_441d_a374_e307cbc18272 rdf:type owl:ObjectProperty ;
                                          owl:inverseOf ukg:dca9db1b_2f0f_49b7_bb54_223ec90c07cf ;
                                          rdfs:isDefinedBy ukg: ;
@@ -247,7 +248,7 @@ ukg:c6a447d1_49f6_441d_a374_e307cbc18272 rdf:type owl:ObjectProperty ;
                                                     "is code of"@en .
 
 
-###  http://data.semantyk.com/c7324f52_2114_4ee6_9f7a_b5ec1836123e
+###  http://www.semantyk.com/knowledge/ukg#c7324f52_2114_4ee6_9f7a_b5ec1836123e
 ukg:c7324f52_2114_4ee6_9f7a_b5ec1836123e rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:ad938c0b_c2bf_4b16_9c27_735ed41dc347 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -255,7 +256,7 @@ ukg:c7324f52_2114_4ee6_9f7a_b5ec1836123e rdf:type owl:ObjectProperty ;
                                                     "tiene tíe"@es .
 
 
-###  http://data.semantyk.com/ca0dd069_6531_4f2c_85d0_38dee95e2f86
+###  http://www.semantyk.com/knowledge/ukg#ca0dd069_6531_4f2c_85d0_38dee95e2f86
 ukg:ca0dd069_6531_4f2c_85d0_38dee95e2f86 rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:ad938c0b_c2bf_4b16_9c27_735ed41dc347 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -263,7 +264,7 @@ ukg:ca0dd069_6531_4f2c_85d0_38dee95e2f86 rdf:type owl:ObjectProperty ;
                                                     "tiene prime"@es .
 
 
-###  http://data.semantyk.com/cabcae4c_d47e_4c55_bf57_a5c3fd628ad9
+###  http://www.semantyk.com/knowledge/ukg#cabcae4c_d47e_4c55_bf57_a5c3fd628ad9
 ukg:cabcae4c_d47e_4c55_bf57_a5c3fd628ad9 rdf:type owl:ObjectProperty ;
                                          owl:inverseOf ukg:f0b0c790_e005_4539_80b5_263dc433ebc0 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -271,7 +272,7 @@ ukg:cabcae4c_d47e_4c55_bf57_a5c3fd628ad9 rdf:type owl:ObjectProperty ;
                                                     "is conceptual definition of"@en .
 
 
-###  http://data.semantyk.com/ccfcf232_a1b0_4450_aee1_e6e72f8f9ad8
+###  http://www.semantyk.com/knowledge/ukg#ccfcf232_a1b0_4450_aee1_e6e72f8f9ad8
 ukg:ccfcf232_a1b0_4450_aee1_e6e72f8f9ad8 rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:c7324f52_2114_4ee6_9f7a_b5ec1836123e ;
                                          rdfs:isDefinedBy ukg: ;
@@ -279,7 +280,7 @@ ukg:ccfcf232_a1b0_4450_aee1_e6e72f8f9ad8 rdf:type owl:ObjectProperty ;
                                                     "tiene tío"@es .
 
 
-###  http://data.semantyk.com/cd471fc3_febb_4f12_b2a7_40b49d4f0a3a
+###  http://www.semantyk.com/knowledge/ukg#cd471fc3_febb_4f12_b2a7_40b49d4f0a3a
 ukg:cd471fc3_febb_4f12_b2a7_40b49d4f0a3a rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:be95add1_e3a8_427a_a944_94e37a2ddbd7 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -287,7 +288,7 @@ ukg:cd471fc3_febb_4f12_b2a7_40b49d4f0a3a rdf:type owl:ObjectProperty ;
                                                     "tiene madre"@es .
 
 
-###  http://data.semantyk.com/cf49c7d5_001f_4256_9e55_fb4f30910395
+###  http://www.semantyk.com/knowledge/ukg#cf49c7d5_001f_4256_9e55_fb4f30910395
 ukg:cf49c7d5_001f_4256_9e55_fb4f30910395 rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:ff001670_4a2b_44e3_bf2f_f27ec9a5d681 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -295,7 +296,7 @@ ukg:cf49c7d5_001f_4256_9e55_fb4f30910395 rdf:type owl:ObjectProperty ;
                                                     "tiene hijastre"@es .
 
 
-###  http://data.semantyk.com/d2a2a3f1_fe97_4419_a53e_37fd29a9501e
+###  http://www.semantyk.com/knowledge/ukg#d2a2a3f1_fe97_4419_a53e_37fd29a9501e
 ukg:d2a2a3f1_fe97_4419_a53e_37fd29a9501e rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:e5b26872_7d5d_4d95_933d_d5d5e47dc89e ;
                                          rdfs:isDefinedBy ukg: ;
@@ -303,7 +304,7 @@ ukg:d2a2a3f1_fe97_4419_a53e_37fd29a9501e rdf:type owl:ObjectProperty ;
                                                     "tiene hija"@es .
 
 
-###  http://data.semantyk.com/d3057d37_c02d_456b_b34b_7fe28be07520
+###  http://www.semantyk.com/knowledge/ukg#d3057d37_c02d_456b_b34b_7fe28be07520
 ukg:d3057d37_c02d_456b_b34b_7fe28be07520 rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:ff001670_4a2b_44e3_bf2f_f27ec9a5d681 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -311,7 +312,7 @@ ukg:d3057d37_c02d_456b_b34b_7fe28be07520 rdf:type owl:ObjectProperty ;
                                                     "tiene prime político"@es .
 
 
-###  http://data.semantyk.com/d956adb4_ad24_44b6_8a6f_0b43b4a5a565
+###  http://www.semantyk.com/knowledge/ukg#d956adb4_ad24_44b6_8a6f_0b43b4a5a565
 ukg:d956adb4_ad24_44b6_8a6f_0b43b4a5a565 rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:f74f54b3_7388_49ac_9a6f_4e1629561876 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -319,7 +320,7 @@ ukg:d956adb4_ad24_44b6_8a6f_0b43b4a5a565 rdf:type owl:ObjectProperty ;
                                                     "tiene hermana"@es .
 
 
-###  http://data.semantyk.com/daa6d714_eb04_4bb3_8f2a_9765b2b8cfe8
+###  http://www.semantyk.com/knowledge/ukg#daa6d714_eb04_4bb3_8f2a_9765b2b8cfe8
 ukg:daa6d714_eb04_4bb3_8f2a_9765b2b8cfe8 rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:ff001670_4a2b_44e3_bf2f_f27ec9a5d681 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -327,14 +328,14 @@ ukg:daa6d714_eb04_4bb3_8f2a_9765b2b8cfe8 rdf:type owl:ObjectProperty ;
                                                     "tiene pareja"@es .
 
 
-###  http://data.semantyk.com/dca9db1b_2f0f_49b7_bb54_223ec90c07cf
+###  http://www.semantyk.com/knowledge/ukg#dca9db1b_2f0f_49b7_bb54_223ec90c07cf
 ukg:dca9db1b_2f0f_49b7_bb54_223ec90c07cf rdf:type owl:ObjectProperty ;
                                          rdfs:isDefinedBy ukg: ;
                                          rdfs:label "has code"@en ,
                                                     "tiene código"@es .
 
 
-###  http://data.semantyk.com/dcf980a2_5e3b_473f_b201_6ebef83e8242
+###  http://www.semantyk.com/knowledge/ukg#dcf980a2_5e3b_473f_b201_6ebef83e8242
 ukg:dcf980a2_5e3b_473f_b201_6ebef83e8242 rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:c32f1f6b_b350_49d4_94b9_e36874c0d36b ;
                                          rdfs:isDefinedBy ukg: ;
@@ -342,21 +343,21 @@ ukg:dcf980a2_5e3b_473f_b201_6ebef83e8242 rdf:type owl:ObjectProperty ;
                                                     "tiene hermanastro"@es .
 
 
-###  http://data.semantyk.com/ddb20028_0da9_4b1a_99b8_f7374592744f
+###  http://www.semantyk.com/knowledge/ukg#ddb20028_0da9_4b1a_99b8_f7374592744f
 ukg:ddb20028_0da9_4b1a_99b8_f7374592744f rdf:type owl:ObjectProperty ;
                                          rdfs:isDefinedBy ukg: ;
                                          rdfs:label "es rol de"@es ,
                                                     "is role of"@en .
 
 
-###  http://data.semantyk.com/ddf2406c_67d2_4619_8e7a_cc9bd5460f69
+###  http://www.semantyk.com/knowledge/ukg#ddf2406c_67d2_4619_8e7a_cc9bd5460f69
 ukg:ddf2406c_67d2_4619_8e7a_cc9bd5460f69 rdf:type owl:ObjectProperty ;
                                          rdfs:isDefinedBy ukg: ;
                                          rdfs:label "has sex"@en ,
                                                     "tiene sexo"@es .
 
 
-###  http://data.semantyk.com/e5b26872_7d5d_4d95_933d_d5d5e47dc89e
+###  http://www.semantyk.com/knowledge/ukg#e5b26872_7d5d_4d95_933d_d5d5e47dc89e
 ukg:e5b26872_7d5d_4d95_933d_d5d5e47dc89e rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:ad938c0b_c2bf_4b16_9c27_735ed41dc347 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -364,14 +365,14 @@ ukg:e5b26872_7d5d_4d95_933d_d5d5e47dc89e rdf:type owl:ObjectProperty ;
                                                     "tiene hije"@es .
 
 
-###  http://data.semantyk.com/e6c26c87_1587_4af0_a72a_bcbb8b90973c
+###  http://www.semantyk.com/knowledge/ukg#e6c26c87_1587_4af0_a72a_bcbb8b90973c
 ukg:e6c26c87_1587_4af0_a72a_bcbb8b90973c rdf:type owl:ObjectProperty ;
                                          rdfs:isDefinedBy ukg: ;
                                          rdfs:label "es género de"@es ,
                                                     "is gender of"@en .
 
 
-###  http://data.semantyk.com/e8c26232_53a5_49ba_a8cf_c8b86569ee54
+###  http://www.semantyk.com/knowledge/ukg#e8c26232_53a5_49ba_a8cf_c8b86569ee54
 ukg:e8c26232_53a5_49ba_a8cf_c8b86569ee54 rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:c38dfb00_ddc2_45f5_ab84_9c7cc169624b ;
                                          rdfs:isDefinedBy ukg: ;
@@ -379,7 +380,7 @@ ukg:e8c26232_53a5_49ba_a8cf_c8b86569ee54 rdf:type owl:ObjectProperty ;
                                                     "tiene sobrina"@es .
 
 
-###  http://data.semantyk.com/e9f7a6bf_0d3c_40fe_a52e_068839ffed2d
+###  http://www.semantyk.com/knowledge/ukg#e9f7a6bf_0d3c_40fe_a52e_068839ffed2d
 ukg:e9f7a6bf_0d3c_40fe_a52e_068839ffed2d rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:cf49c7d5_001f_4256_9e55_fb4f30910395 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -387,7 +388,7 @@ ukg:e9f7a6bf_0d3c_40fe_a52e_068839ffed2d rdf:type owl:ObjectProperty ;
                                                     "tiene hijastro"@es .
 
 
-###  http://data.semantyk.com/eb4406c5_f414_4be4_8897_68e58cf0d2c2
+###  http://www.semantyk.com/knowledge/ukg#eb4406c5_f414_4be4_8897_68e58cf0d2c2
 ukg:eb4406c5_f414_4be4_8897_68e58cf0d2c2 rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:c38dfb00_ddc2_45f5_ab84_9c7cc169624b ;
                                          rdfs:isDefinedBy ukg: ;
@@ -395,7 +396,7 @@ ukg:eb4406c5_f414_4be4_8897_68e58cf0d2c2 rdf:type owl:ObjectProperty ;
                                                     "tiene sobrino"@es .
 
 
-###  http://data.semantyk.com/ebf00238_fd9a_44ac_b15b_c5a80bb6cb40
+###  http://www.semantyk.com/knowledge/ukg#ebf00238_fd9a_44ac_b15b_c5a80bb6cb40
 ukg:ebf00238_fd9a_44ac_b15b_c5a80bb6cb40 rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:fa29d01c_002b_4064_ac70_3695ce9d20b6 ,
                                                             vcard:address ;
@@ -404,14 +405,14 @@ ukg:ebf00238_fd9a_44ac_b15b_c5a80bb6cb40 rdf:type owl:ObjectProperty ;
                                                     "tiene dirección"@es .
 
 
-###  http://data.semantyk.com/ec815c33_1ca3_4421_b71b_091a628b8b63
+###  http://www.semantyk.com/knowledge/ukg#ec815c33_1ca3_4421_b71b_091a628b8b63
 ukg:ec815c33_1ca3_4421_b71b_091a628b8b63 rdf:type owl:ObjectProperty ;
                                          rdfs:isDefinedBy ukg: ;
                                          rdfs:label "es cualidad de"@es ,
                                                     "is quality of"@en .
 
 
-###  http://data.semantyk.com/ec8f132f_b500_4fe2_8873_e98835f96e79
+###  http://www.semantyk.com/knowledge/ukg#ec8f132f_b500_4fe2_8873_e98835f96e79
 ukg:ec8f132f_b500_4fe2_8873_e98835f96e79 rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:ca0dd069_6531_4f2c_85d0_38dee95e2f86 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -419,14 +420,14 @@ ukg:ec8f132f_b500_4fe2_8873_e98835f96e79 rdf:type owl:ObjectProperty ;
                                                     "tiene primo"@es .
 
 
-###  http://data.semantyk.com/f0b0c790_e005_4539_80b5_263dc433ebc0
+###  http://www.semantyk.com/knowledge/ukg#f0b0c790_e005_4539_80b5_263dc433ebc0
 ukg:f0b0c790_e005_4539_80b5_263dc433ebc0 rdf:type owl:ObjectProperty ;
                                          rdfs:isDefinedBy ukg: ;
                                          rdfs:label "has conceptual definition"@en ,
                                                     "tiene definición conceptual"@es .
 
 
-###  http://data.semantyk.com/f1bccfc6_d436_4d9c_97d3_0b524ba4df03
+###  http://www.semantyk.com/knowledge/ukg#f1bccfc6_d436_4d9c_97d3_0b524ba4df03
 ukg:f1bccfc6_d436_4d9c_97d3_0b524ba4df03 rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:d3057d37_c02d_456b_b34b_7fe28be07520 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -434,7 +435,7 @@ ukg:f1bccfc6_d436_4d9c_97d3_0b524ba4df03 rdf:type owl:ObjectProperty ;
                                                     "tiene primo político"@es .
 
 
-###  http://data.semantyk.com/f74f54b3_7388_49ac_9a6f_4e1629561876
+###  http://www.semantyk.com/knowledge/ukg#f74f54b3_7388_49ac_9a6f_4e1629561876
 ukg:f74f54b3_7388_49ac_9a6f_4e1629561876 rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:ad938c0b_c2bf_4b16_9c27_735ed41dc347 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -442,14 +443,14 @@ ukg:f74f54b3_7388_49ac_9a6f_4e1629561876 rdf:type owl:ObjectProperty ;
                                                     "tiene hermane"@es .
 
 
-###  http://data.semantyk.com/fa29d01c_002b_4064_ac70_3695ce9d20b6
+###  http://www.semantyk.com/knowledge/ukg#fa29d01c_002b_4064_ac70_3695ce9d20b6
 ukg:fa29d01c_002b_4064_ac70_3695ce9d20b6 rdf:type owl:ObjectProperty ;
                                          rdfs:isDefinedBy ukg: ;
                                          rdfs:label "has space"@en ,
                                                     "tiene espacio"@es .
 
 
-###  http://data.semantyk.com/fd51289e_9b3b_4fbc_b6d7_6ac809664cf3
+###  http://www.semantyk.com/knowledge/ukg#fd51289e_9b3b_4fbc_b6d7_6ac809664cf3
 ukg:fd51289e_9b3b_4fbc_b6d7_6ac809664cf3 rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:be95add1_e3a8_427a_a944_94e37a2ddbd7 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -457,14 +458,14 @@ ukg:fd51289e_9b3b_4fbc_b6d7_6ac809664cf3 rdf:type owl:ObjectProperty ;
                                                     "tiene padre"@es .
 
 
-###  http://data.semantyk.com/ff001670_4a2b_44e3_bf2f_f27ec9a5d681
+###  http://www.semantyk.com/knowledge/ukg#ff001670_4a2b_44e3_bf2f_f27ec9a5d681
 ukg:ff001670_4a2b_44e3_bf2f_f27ec9a5d681 rdf:type owl:ObjectProperty ;
                                          rdfs:isDefinedBy ukg: ;
                                          rdfs:label "has relative in law"@en ,
                                                     "tiene familiar político"@es .
 
 
-###  http://data.semantyk.com/ff1fa6ef_b582_4a1c_bb40_9d1233dd9a35
+###  http://www.semantyk.com/knowledge/ukg#ff1fa6ef_b582_4a1c_bb40_9d1233dd9a35
 ukg:ff1fa6ef_b582_4a1c_bb40_9d1233dd9a35 rdf:type owl:ObjectProperty ;
                                          rdfs:subPropertyOf ukg:f74f54b3_7388_49ac_9a6f_4e1629561876 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -512,7 +513,7 @@ foaf:phone rdf:type owl:ObjectProperty .
 #    Data properties
 #################################################################
 
-###  http://data.semantyk.com/a63e7166_015f_46fc_95f6_c63f58c823fd
+###  http://www.semantyk.com/knowledge/ukg#a63e7166_015f_46fc_95f6_c63f58c823fd
 ukg:a63e7166_015f_46fc_95f6_c63f58c823fd rdf:type owl:DatatypeProperty ;
                                          rdfs:subPropertyOf ukg:d5284bf9_6451_4e32_9ec1_c5054a13c2e8 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -520,21 +521,21 @@ ukg:a63e7166_015f_46fc_95f6_c63f58c823fd rdf:type owl:DatatypeProperty ;
                                                     "tiene pronombre de sujeto"@es .
 
 
-###  http://data.semantyk.com/a8bde562_af53_4983_812f_a0f24a0f3f1e
+###  http://www.semantyk.com/knowledge/ukg#a8bde562_af53_4983_812f_a0f24a0f3f1e
 ukg:a8bde562_af53_4983_812f_a0f24a0f3f1e rdf:type owl:DatatypeProperty ;
                                          rdfs:isDefinedBy ukg: ;
                                          rdfs:label "has credit score"@en ,
                                                     "tiene score crediticio"@es .
 
 
-###  http://data.semantyk.com/b4814b82_4469_4077_a43c_b543d4bd3d80
+###  http://www.semantyk.com/knowledge/ukg#b4814b82_4469_4077_a43c_b543d4bd3d80
 ukg:b4814b82_4469_4077_a43c_b543d4bd3d80 rdf:type owl:DatatypeProperty ;
                                          rdfs:isDefinedBy ukg: ;
                                          rdfs:label "has mass"@en ,
                                                     "tiene masa"@es .
 
 
-###  http://data.semantyk.com/b8747d2a_ef9f_4618_b65b_0d35b10489db
+###  http://www.semantyk.com/knowledge/ukg#b8747d2a_ef9f_4618_b65b_0d35b10489db
 ukg:b8747d2a_ef9f_4618_b65b_0d35b10489db rdf:type owl:DatatypeProperty ;
                                          rdfs:subPropertyOf ukg:fcf34795_ef5a_476f_ba73_4f98c4bc19c6 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -544,7 +545,7 @@ ukg:b8747d2a_ef9f_4618_b65b_0d35b10489db rdf:type owl:DatatypeProperty ;
                                                    "Unit: m"@en .
 
 
-###  http://data.semantyk.com/c8d61c32_b9b5_4e48_a377_74c7f8bb54ce
+###  http://www.semantyk.com/knowledge/ukg#c8d61c32_b9b5_4e48_a377_74c7f8bb54ce
 ukg:c8d61c32_b9b5_4e48_a377_74c7f8bb54ce rdf:type owl:DatatypeProperty ,
                                                   owl:FunctionalProperty ;
                                          rdfs:isDefinedBy ukg: ;
@@ -552,7 +553,7 @@ ukg:c8d61c32_b9b5_4e48_a377_74c7f8bb54ce rdf:type owl:DatatypeProperty ,
                                                     "tiene curp"@es .
 
 
-###  http://data.semantyk.com/cdde1211_9bd3_4711_987c_0e79ea04b240
+###  http://www.semantyk.com/knowledge/ukg#cdde1211_9bd3_4711_987c_0e79ea04b240
 ukg:cdde1211_9bd3_4711_987c_0e79ea04b240 rdf:type owl:DatatypeProperty ;
                                          rdfs:subPropertyOf foaf:familyName ;
                                          rdfs:isDefinedBy ukg: ;
@@ -560,7 +561,7 @@ ukg:cdde1211_9bd3_4711_987c_0e79ea04b240 rdf:type owl:DatatypeProperty ;
                                                     "tiene apellido"@es .
 
 
-###  http://data.semantyk.com/cf9019a8_6b8b_4a99_a235_0402e073c1cd
+###  http://www.semantyk.com/knowledge/ukg#cf9019a8_6b8b_4a99_a235_0402e073c1cd
 ukg:cf9019a8_6b8b_4a99_a235_0402e073c1cd rdf:type owl:DatatypeProperty ;
                                          rdfs:subPropertyOf ukg:d5284bf9_6451_4e32_9ec1_c5054a13c2e8 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -568,7 +569,7 @@ ukg:cf9019a8_6b8b_4a99_a235_0402e073c1cd rdf:type owl:DatatypeProperty ;
                                                     "tiene pronombre de posesión"@es .
 
 
-###  http://data.semantyk.com/cfffb044_054b_4c20_ae7c_e34c505f338d
+###  http://www.semantyk.com/knowledge/ukg#cfffb044_054b_4c20_ae7c_e34c505f338d
 ukg:cfffb044_054b_4c20_ae7c_e34c505f338d rdf:type owl:DatatypeProperty ;
                                          rdfs:subPropertyOf vcard:fn ,
                                                             foaf:name ;
@@ -577,14 +578,14 @@ ukg:cfffb044_054b_4c20_ae7c_e34c505f338d rdf:type owl:DatatypeProperty ;
                                                     "tiene nombre"@es .
 
 
-###  http://data.semantyk.com/d5284bf9_6451_4e32_9ec1_c5054a13c2e8
+###  http://www.semantyk.com/knowledge/ukg#d5284bf9_6451_4e32_9ec1_c5054a13c2e8
 ukg:d5284bf9_6451_4e32_9ec1_c5054a13c2e8 rdf:type owl:DatatypeProperty ;
                                          rdfs:isDefinedBy ukg: ;
                                          rdfs:label "has pronoun"@en ,
                                                     "tiene pronombre"@es .
 
 
-###  http://data.semantyk.com/d7395a72_c642_4898_a1f1_4fa403605fdb
+###  http://www.semantyk.com/knowledge/ukg#d7395a72_c642_4898_a1f1_4fa403605fdb
 ukg:d7395a72_c642_4898_a1f1_4fa403605fdb rdf:type owl:DatatypeProperty ;
                                          rdfs:subPropertyOf vcard:bday ;
                                          rdfs:isDefinedBy ukg: ;
@@ -592,7 +593,7 @@ ukg:d7395a72_c642_4898_a1f1_4fa403605fdb rdf:type owl:DatatypeProperty ;
                                                     "tiene fecha de cumpleaños"@es .
 
 
-###  http://data.semantyk.com/d9e14187_6950_421a_8260_c9c352460c91
+###  http://www.semantyk.com/knowledge/ukg#d9e14187_6950_421a_8260_c9c352460c91
 ukg:d9e14187_6950_421a_8260_c9c352460c91 rdf:type owl:DatatypeProperty ;
                                          rdfs:subPropertyOf vcard:nickname ,
                                                             foaf:nick ;
@@ -601,7 +602,7 @@ ukg:d9e14187_6950_421a_8260_c9c352460c91 rdf:type owl:DatatypeProperty ;
                                                     "tiene apodo"@es .
 
 
-###  http://data.semantyk.com/ddcc1129_17dc_4028_8314_37addbeba769
+###  http://www.semantyk.com/knowledge/ukg#ddcc1129_17dc_4028_8314_37addbeba769
 ukg:ddcc1129_17dc_4028_8314_37addbeba769 rdf:type owl:DatatypeProperty ;
                                          rdfs:subPropertyOf foaf:birthday ;
                                          rdfs:isDefinedBy ukg: ;
@@ -609,14 +610,14 @@ ukg:ddcc1129_17dc_4028_8314_37addbeba769 rdf:type owl:DatatypeProperty ;
                                                     "tiene cumpleaños"@es .
 
 
-###  http://data.semantyk.com/e244768a_ecfa_4ae1_ae48_9a2e0590b4cc
+###  http://www.semantyk.com/knowledge/ukg#e244768a_ecfa_4ae1_ae48_9a2e0590b4cc
 ukg:e244768a_ecfa_4ae1_ae48_9a2e0590b4cc rdf:type owl:DatatypeProperty ;
                                          rdfs:isDefinedBy ukg: ;
                                          rdfs:label "has rfc"@en ,
                                                     "tiene rfc"@es .
 
 
-###  http://data.semantyk.com/ea4a77f1_3c6c_4e5c_a510_c7686d1abffc
+###  http://www.semantyk.com/knowledge/ukg#ea4a77f1_3c6c_4e5c_a510_c7686d1abffc
 ukg:ea4a77f1_3c6c_4e5c_a510_c7686d1abffc rdf:type owl:DatatypeProperty ;
                                          rdfs:subPropertyOf foaf:givenName ;
                                          rdfs:isDefinedBy ukg: ;
@@ -624,7 +625,7 @@ ukg:ea4a77f1_3c6c_4e5c_a510_c7686d1abffc rdf:type owl:DatatypeProperty ;
                                                     "tiene nombre de pila"@es .
 
 
-###  http://data.semantyk.com/f6ea9d6e_ae04_47b7_ba81_ab6c456189b6
+###  http://www.semantyk.com/knowledge/ukg#f6ea9d6e_ae04_47b7_ba81_ab6c456189b6
 ukg:f6ea9d6e_ae04_47b7_ba81_ab6c456189b6 rdf:type owl:DatatypeProperty ;
                                          rdfs:subPropertyOf foaf:age ;
                                          rdfs:isDefinedBy ukg: ;
@@ -632,7 +633,7 @@ ukg:f6ea9d6e_ae04_47b7_ba81_ab6c456189b6 rdf:type owl:DatatypeProperty ;
                                                     "tiene edad"@es .
 
 
-###  http://data.semantyk.com/f7023dd4_6644_476d_a8c7_03f1f453d53d
+###  http://www.semantyk.com/knowledge/ukg#f7023dd4_6644_476d_a8c7_03f1f453d53d
 ukg:f7023dd4_6644_476d_a8c7_03f1f453d53d rdf:type owl:DatatypeProperty ;
                                          rdfs:subPropertyOf ukg:d5284bf9_6451_4e32_9ec1_c5054a13c2e8 ;
                                          rdfs:isDefinedBy ukg: ;
@@ -640,7 +641,7 @@ ukg:f7023dd4_6644_476d_a8c7_03f1f453d53d rdf:type owl:DatatypeProperty ;
                                                     "tiene pronombre de objeto"@es .
 
 
-###  http://data.semantyk.com/fcf34795_ef5a_476f_ba73_4f98c4bc19c6
+###  http://www.semantyk.com/knowledge/ukg#fcf34795_ef5a_476f_ba73_4f98c4bc19c6
 ukg:fcf34795_ef5a_476f_ba73_4f98c4bc19c6 rdf:type owl:DatatypeProperty ;
                                          rdfs:isDefinedBy ukg: ;
                                          rdfs:label "has distance"@en ,
@@ -687,17 +688,21 @@ foaf:nick rdf:type owl:DatatypeProperty .
 #    Classes
 #################################################################
 
-###  http://data.semantyk.com/a170c550_d25a_404d_a572_9832bc0f0932
+###  http://schema.org/Person
+<http://schema.org/Person> rdf:type owl:Class .
+
+
+###  http://www.semantyk.com/knowledge/ukg#a170c550_d25a_404d_a572_9832bc0f0932
 ukg:a170c550_d25a_404d_a572_9832bc0f0932 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a .
 
 
-###  http://data.semantyk.com/a22e854d_7141_4d55_8d98_66c4c5c842f3
+###  http://www.semantyk.com/knowledge/ukg#a22e854d_7141_4d55_8d98_66c4c5c842f3
 ukg:a22e854d_7141_4d55_8d98_66c4c5c842f3 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:be745206_fc56_4f49_bdc8_e552b423a07a .
 
 
-###  http://data.semantyk.com/a418160a_c783_42e9_97d6_baffb88467a0
+###  http://www.semantyk.com/knowledge/ukg#a418160a_c783_42e9_97d6_baffb88467a0
 ukg:a418160a_c783_42e9_97d6_baffb88467a0 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:ad005078_7b66_4aa9_a3ea_b3eb4a0fe866 ,
                                                          [ rdf:type owl:Restriction ;
@@ -706,7 +711,7 @@ ukg:a418160a_c783_42e9_97d6_baffb88467a0 rdf:type owl:Class ;
                                                          ] .
 
 
-###  http://data.semantyk.com/a4dffec1_e523_480f_b0c9_a6434ee0071d
+###  http://www.semantyk.com/knowledge/ukg#a4dffec1_e523_480f_b0c9_a6434ee0071d
 ukg:a4dffec1_e523_480f_b0c9_a6434ee0071d rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a ;
                                          rdfs:comment "A 'Class' labeled 'Universe' subclass of 'Thing'. Each of its instances is defined as a 'Universe'"@en ,
@@ -718,7 +723,7 @@ ukg:a4dffec1_e523_480f_b0c9_a6434ee0071d rdf:type owl:Class ;
                                                         "Universo"@es .
 
 
-###  http://data.semantyk.com/a59b12bb_7630_4d82_95bb_34de9b8e922e
+###  http://www.semantyk.com/knowledge/ukg#a59b12bb_7630_4d82_95bb_34de9b8e922e
 ukg:a59b12bb_7630_4d82_95bb_34de9b8e922e rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:ad005078_7b66_4aa9_a3ea_b3eb4a0fe866 ,
                                                          [ rdf:type owl:Restriction ;
@@ -727,17 +732,17 @@ ukg:a59b12bb_7630_4d82_95bb_34de9b8e922e rdf:type owl:Class ;
                                                          ] .
 
 
-###  http://data.semantyk.com/a79ff88f_1c74_4409_bbe6_968fe8f2ca18
+###  http://www.semantyk.com/knowledge/ukg#a79ff88f_1c74_4409_bbe6_968fe8f2ca18
 ukg:a79ff88f_1c74_4409_bbe6_968fe8f2ca18 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a .
 
 
-###  http://data.semantyk.com/a7e6cd45_fba8_47f5_a3a0_a75c3cf02d10
+###  http://www.semantyk.com/knowledge/ukg#a7e6cd45_fba8_47f5_a3a0_a75c3cf02d10
 ukg:a7e6cd45_fba8_47f5_a3a0_a75c3cf02d10 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:a170c550_d25a_404d_a572_9832bc0f0932 .
 
 
-###  http://data.semantyk.com/ab3c5d58_49b2_4ebb_935a_c11852004c77
+###  http://www.semantyk.com/knowledge/ukg#ab3c5d58_49b2_4ebb_935a_c11852004c77
 ukg:ab3c5d58_49b2_4ebb_935a_c11852004c77 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:f42f0486_92da_44cb_ae88_c94d23f795e3 ,
                                                          [ rdf:type owl:Restriction ;
@@ -753,17 +758,17 @@ ukg:ab3c5d58_49b2_4ebb_935a_c11852004c77 rdf:type owl:Class ;
                                                         "Sobrine"@es .
 
 
-###  http://data.semantyk.com/abcff5c3_589f_4961_a5d9_783bac25a459
+###  http://www.semantyk.com/knowledge/ukg#abcff5c3_589f_4961_a5d9_783bac25a459
 ukg:abcff5c3_589f_4961_a5d9_783bac25a459 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a .
 
 
-###  http://data.semantyk.com/acf6d2e9_bcba_4786_bb4d_a73f75ef1dd3
+###  http://www.semantyk.com/knowledge/ukg#acf6d2e9_bcba_4786_bb4d_a73f75ef1dd3
 ukg:acf6d2e9_bcba_4786_bb4d_a73f75ef1dd3 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a .
 
 
-###  http://data.semantyk.com/ad005078_7b66_4aa9_a3ea_b3eb4a0fe866
+###  http://www.semantyk.com/knowledge/ukg#ad005078_7b66_4aa9_a3ea_b3eb4a0fe866
 ukg:ad005078_7b66_4aa9_a3ea_b3eb4a0fe866 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a ,
                                                          [ rdf:type owl:Restriction ;
@@ -772,23 +777,23 @@ ukg:ad005078_7b66_4aa9_a3ea_b3eb4a0fe866 rdf:type owl:Class ;
                                                          ] .
 
 
-###  http://data.semantyk.com/af2893c1_c196_46fe_8342_12b3d515de85
+###  http://www.semantyk.com/knowledge/ukg#af2893c1_c196_46fe_8342_12b3d515de85
 ukg:af2893c1_c196_46fe_8342_12b3d515de85 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:ad005078_7b66_4aa9_a3ea_b3eb4a0fe866 .
 
 
-###  http://data.semantyk.com/b1e47cf6_b879_468b_b516_a86af87df2d9
+###  http://www.semantyk.com/knowledge/ukg#b1e47cf6_b879_468b_b516_a86af87df2d9
 ukg:b1e47cf6_b879_468b_b516_a86af87df2d9 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:ad005078_7b66_4aa9_a3ea_b3eb4a0fe866 .
 
 
-###  http://data.semantyk.com/b36e331b_7848_439c_a539_c05c049a9f43
+###  http://www.semantyk.com/knowledge/ukg#b36e331b_7848_439c_a539_c05c049a9f43
 ukg:b36e331b_7848_439c_a539_c05c049a9f43 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a ,
                                                          skos:Concept .
 
 
-###  http://data.semantyk.com/b37f726b_f1be_4039_8fdf_a6b02484c353
+###  http://www.semantyk.com/knowledge/ukg#b37f726b_f1be_4039_8fdf_a6b02484c353
 ukg:b37f726b_f1be_4039_8fdf_a6b02484c353 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:f42f0486_92da_44cb_ae88_c94d23f795e3 ,
                                                          [ rdf:type owl:Restriction ;
@@ -804,98 +809,98 @@ ukg:b37f726b_f1be_4039_8fdf_a6b02484c353 rdf:type owl:Class ;
                                                         "Tíe"@es .
 
 
-###  http://data.semantyk.com/b47f6f8b_20fd_41cc_a0c0_b72ad7743df4
+###  http://www.semantyk.com/knowledge/ukg#b47f6f8b_20fd_41cc_a0c0_b72ad7743df4
 ukg:b47f6f8b_20fd_41cc_a0c0_b72ad7743df4 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a .
 
 
-###  http://data.semantyk.com/b707f249_2691_4ba8_bd79_27822c3b3761
+###  http://www.semantyk.com/knowledge/ukg#b707f249_2691_4ba8_bd79_27822c3b3761
 ukg:b707f249_2691_4ba8_bd79_27822c3b3761 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a .
 
 
-###  http://data.semantyk.com/b931050e_daba_40df_835a_6a6dbee5a4c5
+###  http://www.semantyk.com/knowledge/ukg#b931050e_daba_40df_835a_6a6dbee5a4c5
 ukg:b931050e_daba_40df_835a_6a6dbee5a4c5 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a .
 
 
-###  http://data.semantyk.com/bc250d8a_0c3a_45de_931c_822d037873a0
+###  http://www.semantyk.com/knowledge/ukg#bc250d8a_0c3a_45de_931c_822d037873a0
 ukg:bc250d8a_0c3a_45de_931c_822d037873a0 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a .
 
 
-###  http://data.semantyk.com/bd560e81_ec87_4ee2_97f5_d63d8d0b3db9
+###  http://www.semantyk.com/knowledge/ukg#bd560e81_ec87_4ee2_97f5_d63d8d0b3db9
 ukg:bd560e81_ec87_4ee2_97f5_d63d8d0b3db9 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a ,
                                                          skos:ConceptScheme .
 
 
-###  http://data.semantyk.com/be745206_fc56_4f49_bdc8_e552b423a07a
+###  http://www.semantyk.com/knowledge/ukg#be745206_fc56_4f49_bdc8_e552b423a07a
 ukg:be745206_fc56_4f49_bdc8_e552b423a07a rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:ef15272a_ff63_42e8_b95e_5b7b12a820ba .
 
 
-###  http://data.semantyk.com/c10984dc_f290_4880_a60b_d6f8b6b22105
+###  http://www.semantyk.com/knowledge/ukg#c10984dc_f290_4880_a60b_d6f8b6b22105
 ukg:c10984dc_f290_4880_a60b_d6f8b6b22105 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:ec5fb444_a6d3_4485_b200_acba32af502d .
 
 
-###  http://data.semantyk.com/c151991f_2e06_443e_bac2_a7fa5fb15aff
+###  http://www.semantyk.com/knowledge/ukg#c151991f_2e06_443e_bac2_a7fa5fb15aff
 ukg:c151991f_2e06_443e_bac2_a7fa5fb15aff rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:ec5fb444_a6d3_4485_b200_acba32af502d .
 
 
-###  http://data.semantyk.com/c2195206_77e3_4c2f_86d4_8a10a34966b4
+###  http://www.semantyk.com/knowledge/ukg#c2195206_77e3_4c2f_86d4_8a10a34966b4
 ukg:c2195206_77e3_4c2f_86d4_8a10a34966b4 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a .
 
 
-###  http://data.semantyk.com/c2871766_bffb_4a9b_9a67_4a84f149c11c
+###  http://www.semantyk.com/knowledge/ukg#c2871766_bffb_4a9b_9a67_4a84f149c11c
 ukg:c2871766_bffb_4a9b_9a67_4a84f149c11c rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:ec5fb444_a6d3_4485_b200_acba32af502d .
 
 
-###  http://data.semantyk.com/c2b55971_77cc_458c_a9b1_412f42998acd
+###  http://www.semantyk.com/knowledge/ukg#c2b55971_77cc_458c_a9b1_412f42998acd
 ukg:c2b55971_77cc_458c_a9b1_412f42998acd rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a .
 
 
-###  http://data.semantyk.com/c342f0ec_b9de_4641_939f_3b8f6bff32bf
+###  http://www.semantyk.com/knowledge/ukg#c342f0ec_b9de_4641_939f_3b8f6bff32bf
 ukg:c342f0ec_b9de_4641_939f_3b8f6bff32bf rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a .
 
 
-###  http://data.semantyk.com/cbb907c7_4951_4b2d_9265_3e58114d3d22
+###  http://www.semantyk.com/knowledge/ukg#cbb907c7_4951_4b2d_9265_3e58114d3d22
 ukg:cbb907c7_4951_4b2d_9265_3e58114d3d22 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a .
 
 
-###  http://data.semantyk.com/cc0b7e13_35b3_46bf_997d_1066bfdf0a48
+###  http://www.semantyk.com/knowledge/ukg#cc0b7e13_35b3_46bf_997d_1066bfdf0a48
 ukg:cc0b7e13_35b3_46bf_997d_1066bfdf0a48 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a .
 
 
-###  http://data.semantyk.com/cd94c806_2fb6_44d0_b891_60cff20b57f9
+###  http://www.semantyk.com/knowledge/ukg#cd94c806_2fb6_44d0_b891_60cff20b57f9
 ukg:cd94c806_2fb6_44d0_b891_60cff20b57f9 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:ad005078_7b66_4aa9_a3ea_b3eb4a0fe866 .
 
 
-###  http://data.semantyk.com/d12fc4d6_c9f5_4686_9ae5_dea4df2df686
+###  http://www.semantyk.com/knowledge/ukg#d12fc4d6_c9f5_4686_9ae5_dea4df2df686
 ukg:d12fc4d6_c9f5_4686_9ae5_dea4df2df686 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:ad005078_7b66_4aa9_a3ea_b3eb4a0fe866 .
 
 
-###  http://data.semantyk.com/d2c2b22a_9a40_4595_b2cc_b7797e06128e
+###  http://www.semantyk.com/knowledge/ukg#d2c2b22a_9a40_4595_b2cc_b7797e06128e
 ukg:d2c2b22a_9a40_4595_b2cc_b7797e06128e rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a .
 
 
-###  http://data.semantyk.com/d38fba88_6621_43ab_872b_13bd317507c6
+###  http://www.semantyk.com/knowledge/ukg#d38fba88_6621_43ab_872b_13bd317507c6
 ukg:d38fba88_6621_43ab_872b_13bd317507c6 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a .
 
 
-###  http://data.semantyk.com/d3c3da1e_369b_4103_b5bf_58daba879d87
+###  http://www.semantyk.com/knowledge/ukg#d3c3da1e_369b_4103_b5bf_58daba879d87
 ukg:d3c3da1e_369b_4103_b5bf_58daba879d87 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:ad005078_7b66_4aa9_a3ea_b3eb4a0fe866 ,
                                                          [ rdf:type owl:Restriction ;
@@ -904,42 +909,42 @@ ukg:d3c3da1e_369b_4103_b5bf_58daba879d87 rdf:type owl:Class ;
                                                          ] .
 
 
-###  http://data.semantyk.com/d5d7f3ef_992c_410d_af35_41de2407fa15
+###  http://www.semantyk.com/knowledge/ukg#d5d7f3ef_992c_410d_af35_41de2407fa15
 ukg:d5d7f3ef_992c_410d_af35_41de2407fa15 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a .
 
 
-###  http://data.semantyk.com/d8089366_5145_4b41_9294_3f152794ff4a
+###  http://www.semantyk.com/knowledge/ukg#d8089366_5145_4b41_9294_3f152794ff4a
 ukg:d8089366_5145_4b41_9294_3f152794ff4a rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a .
 
 
-###  http://data.semantyk.com/d8ecbf49_5810_4dd3_9127_6ce97e0ada8d
+###  http://www.semantyk.com/knowledge/ukg#d8ecbf49_5810_4dd3_9127_6ce97e0ada8d
 ukg:d8ecbf49_5810_4dd3_9127_6ce97e0ada8d rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a .
 
 
-###  http://data.semantyk.com/dace8ccb_28f5_4787_be08_b688a7bcdd94
+###  http://www.semantyk.com/knowledge/ukg#dace8ccb_28f5_4787_be08_b688a7bcdd94
 ukg:dace8ccb_28f5_4787_be08_b688a7bcdd94 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:ec5fb444_a6d3_4485_b200_acba32af502d .
 
 
-###  http://data.semantyk.com/db427653_2dea_4dc0_9b37_65f0c5d17ca3
+###  http://www.semantyk.com/knowledge/ukg#db427653_2dea_4dc0_9b37_65f0c5d17ca3
 ukg:db427653_2dea_4dc0_9b37_65f0c5d17ca3 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a .
 
 
-###  http://data.semantyk.com/defa744b_6e3b_4121_b0dd_4ecfda754b0a
+###  http://www.semantyk.com/knowledge/ukg#defa744b_6e3b_4121_b0dd_4ecfda754b0a
 ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a rdf:type owl:Class ;
                                          rdfs:subClassOf owl:Thing .
 
 
-###  http://data.semantyk.com/df2b1a3a_ba81_4056_ab23_c4118bba51f9
+###  http://www.semantyk.com/knowledge/ukg#df2b1a3a_ba81_4056_ab23_c4118bba51f9
 ukg:df2b1a3a_ba81_4056_ab23_c4118bba51f9 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:ec6e83e0_2d4e_4e57_97f1_0ad262235f4e .
 
 
-###  http://data.semantyk.com/e1b671b2_280a_4841_a569_76eb85d9473f
+###  http://www.semantyk.com/knowledge/ukg#e1b671b2_280a_4841_a569_76eb85d9473f
 ukg:e1b671b2_280a_4841_a569_76eb85d9473f rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:ad005078_7b66_4aa9_a3ea_b3eb4a0fe866 ,
                                                          [ rdf:type owl:Restriction ;
@@ -948,49 +953,49 @@ ukg:e1b671b2_280a_4841_a569_76eb85d9473f rdf:type owl:Class ;
                                                          ] .
 
 
-###  http://data.semantyk.com/e56d4b67_b203_4e3e_93f1_611fcebb283b
+###  http://www.semantyk.com/knowledge/ukg#e56d4b67_b203_4e3e_93f1_611fcebb283b
 ukg:e56d4b67_b203_4e3e_93f1_611fcebb283b rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:a79ff88f_1c74_4409_bbe6_968fe8f2ca18 .
 
 
-###  http://data.semantyk.com/ec5fb444_a6d3_4485_b200_acba32af502d
+###  http://www.semantyk.com/knowledge/ukg#ec5fb444_a6d3_4485_b200_acba32af502d
 ukg:ec5fb444_a6d3_4485_b200_acba32af502d rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a .
 
 
-###  http://data.semantyk.com/ec6e83e0_2d4e_4e57_97f1_0ad262235f4e
+###  http://www.semantyk.com/knowledge/ukg#ec6e83e0_2d4e_4e57_97f1_0ad262235f4e
 ukg:ec6e83e0_2d4e_4e57_97f1_0ad262235f4e rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:ec5fb444_a6d3_4485_b200_acba32af502d .
 
 
-###  http://data.semantyk.com/ef15272a_ff63_42e8_b95e_5b7b12a820ba
+###  http://www.semantyk.com/knowledge/ukg#ef15272a_ff63_42e8_b95e_5b7b12a820ba
 ukg:ef15272a_ff63_42e8_b95e_5b7b12a820ba rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a .
 
 
-###  http://data.semantyk.com/f42f0486_92da_44cb_ae88_c94d23f795e3
+###  http://www.semantyk.com/knowledge/ukg#f42f0486_92da_44cb_ae88_c94d23f795e3
 ukg:f42f0486_92da_44cb_ae88_c94d23f795e3 rdf:type owl:Class ;
-                                         rdfs:subClassOf ukg:ad005078_7b66_4aa9_a3ea_b3eb4a0fe866 ,
-                                                         <http://schema.org/Person> ,
+                                         rdfs:subClassOf <http://schema.org/Person> ,
+                                                         ukg:ad005078_7b66_4aa9_a3ea_b3eb4a0fe866 ,
                                                          foaf:Person .
 
 
-###  http://data.semantyk.com/f6a07fad_1a19_4294_814e_c47a35265ca5
+###  http://www.semantyk.com/knowledge/ukg#f6a07fad_1a19_4294_814e_c47a35265ca5
 ukg:f6a07fad_1a19_4294_814e_c47a35265ca5 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:c2195206_77e3_4c2f_86d4_8a10a34966b4 .
 
 
-###  http://data.semantyk.com/f78442b5_4463_490d_9f51_7275deb2ac63
+###  http://www.semantyk.com/knowledge/ukg#f78442b5_4463_490d_9f51_7275deb2ac63
 ukg:f78442b5_4463_490d_9f51_7275deb2ac63 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a .
 
 
-###  http://data.semantyk.com/f927de71_07d4_42d6_a776_efc6c2c5d55a
+###  http://www.semantyk.com/knowledge/ukg#f927de71_07d4_42d6_a776_efc6c2c5d55a
 ukg:f927de71_07d4_42d6_a776_efc6c2c5d55a rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:ad005078_7b66_4aa9_a3ea_b3eb4a0fe866 .
 
 
-###  http://data.semantyk.com/fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d
+###  http://www.semantyk.com/knowledge/ukg#fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d
 ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d rdf:type owl:Class ;
                                          rdfs:subClassOf owl:Class ;
                                          rdfs:comment "A 'Class' labeled 'Class'. Each of its instances is defined as a 'Class'"@en ,
@@ -1002,18 +1007,14 @@ ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d rdf:type owl:Class ;
                                                         "Class"@en .
 
 
-###  http://data.semantyk.com/fdbb7981_7fc5_4dd6_8035_c9141c61df89
+###  http://www.semantyk.com/knowledge/ukg#fdbb7981_7fc5_4dd6_8035_c9141c61df89
 ukg:fdbb7981_7fc5_4dd6_8035_c9141c61df89 rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a .
 
 
-###  http://data.semantyk.com/fddab7f9_1d22_483d_a8d2_a290fb2d115e
+###  http://www.semantyk.com/knowledge/ukg#fddab7f9_1d22_483d_a8d2_a290fb2d115e
 ukg:fddab7f9_1d22_483d_a8d2_a290fb2d115e rdf:type owl:Class ;
                                          rdfs:subClassOf ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a .
-
-
-###  http://schema.org/Person
-<http://schema.org/Person> rdf:type owl:Class .
 
 
 ###  http://www.w3.org/2002/07/owl#Class
@@ -1036,79 +1037,99 @@ rdfg:Graph rdf:type owl:Class .
 #    Individuals
 #################################################################
 
-###  http://data.danielbakas.com/d2a2a3f1_fe97_4419_a53e_37fd29a9501e
-<http://data.danielbakas.com/d2a2a3f1_fe97_4419_a53e_37fd29a9501e> rdf:type owl:NamedIndividual .
+###  http://datos.gob.mx/d4a42972_30ab_4d65_9818_102a8b0f4935
+mex:d4a42972_30ab_4d65_9818_102a8b0f4935 rdf:type owl:NamedIndividual .
 
 
-###  http://data.semantyk.com/
+###  http://datos.gob.mx/e06a1482_4394_423b_a2ba_a5f5942fb284
+mex:e06a1482_4394_423b_a2ba_a5f5942fb284 rdf:type owl:NamedIndividual .
+
+
+###  http://datos.gob.mx/f7bf33a7_d6f0_4aed_b925_330dde702afb
+mex:f7bf33a7_d6f0_4aed_b925_330dde702afb rdf:type owl:NamedIndividual .
+
+
+###  http://datos.gob.mx/f7d86ba7_f612_4cef_916c_f6d80d230b64
+mex:f7d86ba7_f612_4cef_916c_f6d80d230b64 rdf:type owl:NamedIndividual .
+
+
+###  http://datos.gob.mx/fd1cb96d_35a9_495a_a6c1_ea441f9a77db
+mex:fd1cb96d_35a9_495a_a6c1_ea441f9a77db rdf:type owl:NamedIndividual .
+
+
+###  http://datos.gob.mx/ff11d93b_5c11_45ac_8d7a_ce37714788be
+mex:ff11d93b_5c11_45ac_8d7a_ce37714788be rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/ukg#
 ukg: rdf:type owl:NamedIndividual .
 
 
-###  http://data.semantyk.com/a071928a_b552_46fc_ba97_115ccd0e5130
+###  http://www.semantyk.com/knowledge/ukg#a071928a_b552_46fc_ba97_115ccd0e5130
 ukg:a071928a_b552_46fc_ba97_115ccd0e5130 rdf:type owl:NamedIndividual .
 
 
-###  http://data.semantyk.com/a0947516_0388_4c3a_81a1_a3888c6d5e24
+###  http://www.semantyk.com/knowledge/ukg#a0947516_0388_4c3a_81a1_a3888c6d5e24
 ukg:a0947516_0388_4c3a_81a1_a3888c6d5e24 rdf:type owl:NamedIndividual .
 
 
-###  http://data.semantyk.com/a170c550_d25a_404d_a572_9832bc0f0932
+###  http://www.semantyk.com/knowledge/ukg#a170c550_d25a_404d_a572_9832bc0f0932
 ukg:a170c550_d25a_404d_a572_9832bc0f0932 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/a22e854d_7141_4d55_8d98_66c4c5c842f3
+###  http://www.semantyk.com/knowledge/ukg#a22e854d_7141_4d55_8d98_66c4c5c842f3
 ukg:a22e854d_7141_4d55_8d98_66c4c5c842f3 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/a33f1a66_b28d_4ffe_a3ee_85b5fdc6a4a0
+###  http://www.semantyk.com/knowledge/ukg#a33f1a66_b28d_4ffe_a3ee_85b5fdc6a4a0
 ukg:a33f1a66_b28d_4ffe_a3ee_85b5fdc6a4a0 rdf:type owl:NamedIndividual .
 
 
-###  http://data.semantyk.com/a418160a_c783_42e9_97d6_baffb88467a0
+###  http://www.semantyk.com/knowledge/ukg#a418160a_c783_42e9_97d6_baffb88467a0
 ukg:a418160a_c783_42e9_97d6_baffb88467a0 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
-                                         ukg:a55a93ef_28dc_41b2_b537_eb916507bfdd <http://datos.gob.mx/f7d86ba7_f612_4cef_916c_f6d80d230b64> ;
-                                         ukg:f0b0c790_e005_4539_80b5_263dc433ebc0 <http://datos.gob.mx/f7d86ba7_f612_4cef_916c_f6d80d230b64> ;
+                                         ukg:a55a93ef_28dc_41b2_b537_eb916507bfdd mex:f7d86ba7_f612_4cef_916c_f6d80d230b64 ;
+                                         ukg:f0b0c790_e005_4539_80b5_263dc433ebc0 mex:f7d86ba7_f612_4cef_916c_f6d80d230b64 ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/a59b12bb_7630_4d82_95bb_34de9b8e922e
+###  http://www.semantyk.com/knowledge/ukg#a59b12bb_7630_4d82_95bb_34de9b8e922e
 ukg:a59b12bb_7630_4d82_95bb_34de9b8e922e rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
-                                         ukg:a55a93ef_28dc_41b2_b537_eb916507bfdd <http://datos.gob.mx/ff11d93b_5c11_45ac_8d7a_ce37714788be> ;
-                                         ukg:f0b0c790_e005_4539_80b5_263dc433ebc0 <http://datos.gob.mx/ff11d93b_5c11_45ac_8d7a_ce37714788be> ;
+                                         ukg:a55a93ef_28dc_41b2_b537_eb916507bfdd mex:ff11d93b_5c11_45ac_8d7a_ce37714788be ;
+                                         ukg:f0b0c790_e005_4539_80b5_263dc433ebc0 mex:ff11d93b_5c11_45ac_8d7a_ce37714788be ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/a79ff88f_1c74_4409_bbe6_968fe8f2ca18
+###  http://www.semantyk.com/knowledge/ukg#a79ff88f_1c74_4409_bbe6_968fe8f2ca18
 ukg:a79ff88f_1c74_4409_bbe6_968fe8f2ca18 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/a7e6cd45_fba8_47f5_a3a0_a75c3cf02d10
+###  http://www.semantyk.com/knowledge/ukg#a7e6cd45_fba8_47f5_a3a0_a75c3cf02d10
 ukg:a7e6cd45_fba8_47f5_a3a0_a75c3cf02d10 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/abcff5c3_589f_4961_a5d9_783bac25a459
+###  http://www.semantyk.com/knowledge/ukg#abcff5c3_589f_4961_a5d9_783bac25a459
 ukg:abcff5c3_589f_4961_a5d9_783bac25a459 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/acf6d2e9_bcba_4786_bb4d_a73f75ef1dd3
+###  http://www.semantyk.com/knowledge/ukg#acf6d2e9_bcba_4786_bb4d_a73f75ef1dd3
 ukg:acf6d2e9_bcba_4786_bb4d_a73f75ef1dd3 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/ad005078_7b66_4aa9_a3ea_b3eb4a0fe866
+###  http://www.semantyk.com/knowledge/ukg#ad005078_7b66_4aa9_a3ea_b3eb4a0fe866
 ukg:ad005078_7b66_4aa9_a3ea_b3eb4a0fe866 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          ukg:a55a93ef_28dc_41b2_b537_eb916507bfdd ukg:ff32cd02_5b28_4b4b_bde1_1a061b4d9c75 ;
@@ -1116,33 +1137,33 @@ ukg:ad005078_7b66_4aa9_a3ea_b3eb4a0fe866 rdf:type owl:NamedIndividual ,
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/af2893c1_c196_46fe_8342_12b3d515de85
+###  http://www.semantyk.com/knowledge/ukg#af2893c1_c196_46fe_8342_12b3d515de85
 ukg:af2893c1_c196_46fe_8342_12b3d515de85 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/b1e47cf6_b879_468b_b516_a86af87df2d9
+###  http://www.semantyk.com/knowledge/ukg#b1e47cf6_b879_468b_b516_a86af87df2d9
 ukg:b1e47cf6_b879_468b_b516_a86af87df2d9 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/b36e331b_7848_439c_a539_c05c049a9f43
+###  http://www.semantyk.com/knowledge/ukg#b36e331b_7848_439c_a539_c05c049a9f43
 ukg:b36e331b_7848_439c_a539_c05c049a9f43 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
-                                         ukg:a55a93ef_28dc_41b2_b537_eb916507bfdd <http://datos.gob.mx/fd1cb96d_35a9_495a_a6c1_ea441f9a77db> ;
-                                         ukg:f0b0c790_e005_4539_80b5_263dc433ebc0 <http://datos.gob.mx/fd1cb96d_35a9_495a_a6c1_ea441f9a77db> ;
+                                         ukg:a55a93ef_28dc_41b2_b537_eb916507bfdd mex:fd1cb96d_35a9_495a_a6c1_ea441f9a77db ;
+                                         ukg:f0b0c790_e005_4539_80b5_263dc433ebc0 mex:fd1cb96d_35a9_495a_a6c1_ea441f9a77db ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/b47f6f8b_20fd_41cc_a0c0_b72ad7743df4
+###  http://www.semantyk.com/knowledge/ukg#b47f6f8b_20fd_41cc_a0c0_b72ad7743df4
 ukg:b47f6f8b_20fd_41cc_a0c0_b72ad7743df4 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/b707f249_2691_4ba8_bd79_27822c3b3761
+###  http://www.semantyk.com/knowledge/ukg#b707f249_2691_4ba8_bd79_27822c3b3761
 ukg:b707f249_2691_4ba8_bd79_27822c3b3761 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          ukg:a55a93ef_28dc_41b2_b537_eb916507bfdd ukg:f5cf5ec0_2eb1_4fb3_be67_b1431637fde2 ;
@@ -1150,13 +1171,13 @@ ukg:b707f249_2691_4ba8_bd79_27822c3b3761 rdf:type owl:NamedIndividual ,
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/b931050e_daba_40df_835a_6a6dbee5a4c5
+###  http://www.semantyk.com/knowledge/ukg#b931050e_daba_40df_835a_6a6dbee5a4c5
 ukg:b931050e_daba_40df_835a_6a6dbee5a4c5 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/bc250d8a_0c3a_45de_931c_822d037873a0
+###  http://www.semantyk.com/knowledge/ukg#bc250d8a_0c3a_45de_931c_822d037873a0
 ukg:bc250d8a_0c3a_45de_931c_822d037873a0 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          ukg:a55a93ef_28dc_41b2_b537_eb916507bfdd ukg:a071928a_b552_46fc_ba97_115ccd0e5130 ;
@@ -1164,25 +1185,25 @@ ukg:bc250d8a_0c3a_45de_931c_822d037873a0 rdf:type owl:NamedIndividual ,
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/bd560e81_ec87_4ee2_97f5_d63d8d0b3db9
+###  http://www.semantyk.com/knowledge/ukg#bd560e81_ec87_4ee2_97f5_d63d8d0b3db9
 ukg:bd560e81_ec87_4ee2_97f5_d63d8d0b3db9 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
-                                         ukg:a55a93ef_28dc_41b2_b537_eb916507bfdd <http://datos.gob.mx/d4a42972_30ab_4d65_9818_102a8b0f4935> ;
-                                         ukg:f0b0c790_e005_4539_80b5_263dc433ebc0 <http://datos.gob.mx/d4a42972_30ab_4d65_9818_102a8b0f4935> ;
+                                         ukg:a55a93ef_28dc_41b2_b537_eb916507bfdd mex:d4a42972_30ab_4d65_9818_102a8b0f4935 ;
+                                         ukg:f0b0c790_e005_4539_80b5_263dc433ebc0 mex:d4a42972_30ab_4d65_9818_102a8b0f4935 ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/be745206_fc56_4f49_bdc8_e552b423a07a
+###  http://www.semantyk.com/knowledge/ukg#be745206_fc56_4f49_bdc8_e552b423a07a
 ukg:be745206_fc56_4f49_bdc8_e552b423a07a rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/bf4e6b3a_c931_4464_b4a5_e278d8cee8a9
+###  http://www.semantyk.com/knowledge/ukg#bf4e6b3a_c931_4464_b4a5_e278d8cee8a9
 ukg:bf4e6b3a_c931_4464_b4a5_e278d8cee8a9 rdf:type owl:NamedIndividual .
 
 
-###  http://data.semantyk.com/c10984dc_f290_4880_a60b_d6f8b6b22105
+###  http://www.semantyk.com/knowledge/ukg#c10984dc_f290_4880_a60b_d6f8b6b22105
 ukg:c10984dc_f290_4880_a60b_d6f8b6b22105 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          ukg:a55a93ef_28dc_41b2_b537_eb916507bfdd ukg:cba263e2_24ca_4849_ac58_6ac534083033 ;
@@ -1190,23 +1211,23 @@ ukg:c10984dc_f290_4880_a60b_d6f8b6b22105 rdf:type owl:NamedIndividual ,
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/c151991f_2e06_443e_bac2_a7fa5fb15aff
+###  http://www.semantyk.com/knowledge/ukg#c151991f_2e06_443e_bac2_a7fa5fb15aff
 ukg:c151991f_2e06_443e_bac2_a7fa5fb15aff rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/c1a6d450_4cf3_4af2_8141_75ca165d790d
+###  http://www.semantyk.com/knowledge/ukg#c1a6d450_4cf3_4af2_8141_75ca165d790d
 ukg:c1a6d450_4cf3_4af2_8141_75ca165d790d rdf:type owl:NamedIndividual .
 
 
-###  http://data.semantyk.com/c2195206_77e3_4c2f_86d4_8a10a34966b4
+###  http://www.semantyk.com/knowledge/ukg#c2195206_77e3_4c2f_86d4_8a10a34966b4
 ukg:c2195206_77e3_4c2f_86d4_8a10a34966b4 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/c2871766_bffb_4a9b_9a67_4a84f149c11c
+###  http://www.semantyk.com/knowledge/ukg#c2871766_bffb_4a9b_9a67_4a84f149c11c
 ukg:c2871766_bffb_4a9b_9a67_4a84f149c11c rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          ukg:a55a93ef_28dc_41b2_b537_eb916507bfdd ukg:bf4e6b3a_c931_4464_b4a5_e278d8cee8a9 ;
@@ -1214,7 +1235,7 @@ ukg:c2871766_bffb_4a9b_9a67_4a84f149c11c rdf:type owl:NamedIndividual ,
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/c2b55971_77cc_458c_a9b1_412f42998acd
+###  http://www.semantyk.com/knowledge/ukg#c2b55971_77cc_458c_a9b1_412f42998acd
 ukg:c2b55971_77cc_458c_a9b1_412f42998acd rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          ukg:a55a93ef_28dc_41b2_b537_eb916507bfdd ukg:e7981e92_c7e2_4a0e_808d_e895b3334f40 ;
@@ -1222,45 +1243,45 @@ ukg:c2b55971_77cc_458c_a9b1_412f42998acd rdf:type owl:NamedIndividual ,
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/c342f0ec_b9de_4641_939f_3b8f6bff32bf
+###  http://www.semantyk.com/knowledge/ukg#c342f0ec_b9de_4641_939f_3b8f6bff32bf
 ukg:c342f0ec_b9de_4641_939f_3b8f6bff32bf rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/c456155b_dbb7_4c77_af07_c03a9db350b0
+###  http://www.semantyk.com/knowledge/ukg#c456155b_dbb7_4c77_af07_c03a9db350b0
 ukg:c456155b_dbb7_4c77_af07_c03a9db350b0 rdf:type owl:NamedIndividual .
 
 
-###  http://data.semantyk.com/c6074215_7e91_4130_bc57_e8142f8613f1
+###  http://www.semantyk.com/knowledge/ukg#c6074215_7e91_4130_bc57_e8142f8613f1
 ukg:c6074215_7e91_4130_bc57_e8142f8613f1 rdf:type owl:NamedIndividual .
 
 
-###  http://data.semantyk.com/c6c110fa_8f7f_4297_b3ab_523ce3966dd9
+###  http://www.semantyk.com/knowledge/ukg#c6c110fa_8f7f_4297_b3ab_523ce3966dd9
 ukg:c6c110fa_8f7f_4297_b3ab_523ce3966dd9 rdf:type owl:NamedIndividual .
 
 
-###  http://data.semantyk.com/cae12296_c19d_4002_872f_4cce6818ad96
+###  http://www.semantyk.com/knowledge/ukg#cae12296_c19d_4002_872f_4cce6818ad96
 ukg:cae12296_c19d_4002_872f_4cce6818ad96 rdf:type owl:NamedIndividual .
 
 
-###  http://data.semantyk.com/cba263e2_24ca_4849_ac58_6ac534083033
+###  http://www.semantyk.com/knowledge/ukg#cba263e2_24ca_4849_ac58_6ac534083033
 ukg:cba263e2_24ca_4849_ac58_6ac534083033 rdf:type owl:NamedIndividual .
 
 
-###  http://data.semantyk.com/cbb907c7_4951_4b2d_9265_3e58114d3d22
+###  http://www.semantyk.com/knowledge/ukg#cbb907c7_4951_4b2d_9265_3e58114d3d22
 ukg:cbb907c7_4951_4b2d_9265_3e58114d3d22 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/cc0b7e13_35b3_46bf_997d_1066bfdf0a48
+###  http://www.semantyk.com/knowledge/ukg#cc0b7e13_35b3_46bf_997d_1066bfdf0a48
 ukg:cc0b7e13_35b3_46bf_997d_1066bfdf0a48 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/cd94c806_2fb6_44d0_b891_60cff20b57f9
+###  http://www.semantyk.com/knowledge/ukg#cd94c806_2fb6_44d0_b891_60cff20b57f9
 ukg:cd94c806_2fb6_44d0_b891_60cff20b57f9 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          ukg:a55a93ef_28dc_41b2_b537_eb916507bfdd ukg:c6c110fa_8f7f_4297_b3ab_523ce3966dd9 ;
@@ -1268,11 +1289,11 @@ ukg:cd94c806_2fb6_44d0_b891_60cff20b57f9 rdf:type owl:NamedIndividual ,
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/cff8a44f_b27f_485e_b2f2_210be0df7192
+###  http://www.semantyk.com/knowledge/ukg#cff8a44f_b27f_485e_b2f2_210be0df7192
 ukg:cff8a44f_b27f_485e_b2f2_210be0df7192 rdf:type owl:NamedIndividual .
 
 
-###  http://data.semantyk.com/d12fc4d6_c9f5_4686_9ae5_dea4df2df686
+###  http://www.semantyk.com/knowledge/ukg#d12fc4d6_c9f5_4686_9ae5_dea4df2df686
 ukg:d12fc4d6_c9f5_4686_9ae5_dea4df2df686 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          ukg:a55a93ef_28dc_41b2_b537_eb916507bfdd ukg:d567ba41_6051_4f26_8d4d_2d8a68068531 ;
@@ -1280,13 +1301,13 @@ ukg:d12fc4d6_c9f5_4686_9ae5_dea4df2df686 rdf:type owl:NamedIndividual ,
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/d2c2b22a_9a40_4595_b2cc_b7797e06128e
+###  http://www.semantyk.com/knowledge/ukg#d2c2b22a_9a40_4595_b2cc_b7797e06128e
 ukg:d2c2b22a_9a40_4595_b2cc_b7797e06128e rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/d38fba88_6621_43ab_872b_13bd317507c6
+###  http://www.semantyk.com/knowledge/ukg#d38fba88_6621_43ab_872b_13bd317507c6
 ukg:d38fba88_6621_43ab_872b_13bd317507c6 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          ukg:a55a93ef_28dc_41b2_b537_eb916507bfdd ukg:cff8a44f_b27f_485e_b2f2_210be0df7192 ;
@@ -1294,37 +1315,37 @@ ukg:d38fba88_6621_43ab_872b_13bd317507c6 rdf:type owl:NamedIndividual ,
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/d3c3da1e_369b_4103_b5bf_58daba879d87
+###  http://www.semantyk.com/knowledge/ukg#d3c3da1e_369b_4103_b5bf_58daba879d87
 ukg:d3c3da1e_369b_4103_b5bf_58daba879d87 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
-                                         ukg:a55a93ef_28dc_41b2_b537_eb916507bfdd <http://datos.gob.mx/e06a1482_4394_423b_a2ba_a5f5942fb284> ;
-                                         ukg:f0b0c790_e005_4539_80b5_263dc433ebc0 <http://datos.gob.mx/e06a1482_4394_423b_a2ba_a5f5942fb284> ;
+                                         ukg:a55a93ef_28dc_41b2_b537_eb916507bfdd mex:e06a1482_4394_423b_a2ba_a5f5942fb284 ;
+                                         ukg:f0b0c790_e005_4539_80b5_263dc433ebc0 mex:e06a1482_4394_423b_a2ba_a5f5942fb284 ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/d567ba41_6051_4f26_8d4d_2d8a68068531
+###  http://www.semantyk.com/knowledge/ukg#d567ba41_6051_4f26_8d4d_2d8a68068531
 ukg:d567ba41_6051_4f26_8d4d_2d8a68068531 rdf:type owl:NamedIndividual .
 
 
-###  http://data.semantyk.com/d5d7f3ef_992c_410d_af35_41de2407fa15
+###  http://www.semantyk.com/knowledge/ukg#d5d7f3ef_992c_410d_af35_41de2407fa15
 ukg:d5d7f3ef_992c_410d_af35_41de2407fa15 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/d8089366_5145_4b41_9294_3f152794ff4a
+###  http://www.semantyk.com/knowledge/ukg#d8089366_5145_4b41_9294_3f152794ff4a
 ukg:d8089366_5145_4b41_9294_3f152794ff4a rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/d8ecbf49_5810_4dd3_9127_6ce97e0ada8d
+###  http://www.semantyk.com/knowledge/ukg#d8ecbf49_5810_4dd3_9127_6ce97e0ada8d
 ukg:d8ecbf49_5810_4dd3_9127_6ce97e0ada8d rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/dace8ccb_28f5_4787_be08_b688a7bcdd94
+###  http://www.semantyk.com/knowledge/ukg#dace8ccb_28f5_4787_be08_b688a7bcdd94
 ukg:dace8ccb_28f5_4787_be08_b688a7bcdd94 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          ukg:a55a93ef_28dc_41b2_b537_eb916507bfdd ukg:c456155b_dbb7_4c77_af07_c03a9db350b0 ;
@@ -1332,56 +1353,56 @@ ukg:dace8ccb_28f5_4787_be08_b688a7bcdd94 rdf:type owl:NamedIndividual ,
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/db427653_2dea_4dc0_9b37_65f0c5d17ca3
+###  http://www.semantyk.com/knowledge/ukg#db427653_2dea_4dc0_9b37_65f0c5d17ca3
 ukg:db427653_2dea_4dc0_9b37_65f0c5d17ca3 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/defa744b_6e3b_4121_b0dd_4ecfda754b0a
+###  http://www.semantyk.com/knowledge/ukg#defa744b_6e3b_4121_b0dd_4ecfda754b0a
 ukg:defa744b_6e3b_4121_b0dd_4ecfda754b0a rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/df2b1a3a_ba81_4056_ab23_c4118bba51f9
+###  http://www.semantyk.com/knowledge/ukg#df2b1a3a_ba81_4056_ab23_c4118bba51f9
 ukg:df2b1a3a_ba81_4056_ab23_c4118bba51f9 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/e1b671b2_280a_4841_a569_76eb85d9473f
+###  http://www.semantyk.com/knowledge/ukg#e1b671b2_280a_4841_a569_76eb85d9473f
 ukg:e1b671b2_280a_4841_a569_76eb85d9473f rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
-                                         ukg:a55a93ef_28dc_41b2_b537_eb916507bfdd <http://datos.gob.mx/f7bf33a7_d6f0_4aed_b925_330dde702afb> ;
-                                         ukg:f0b0c790_e005_4539_80b5_263dc433ebc0 <http://datos.gob.mx/f7bf33a7_d6f0_4aed_b925_330dde702afb> ;
+                                         ukg:a55a93ef_28dc_41b2_b537_eb916507bfdd mex:f7bf33a7_d6f0_4aed_b925_330dde702afb ;
+                                         ukg:f0b0c790_e005_4539_80b5_263dc433ebc0 mex:f7bf33a7_d6f0_4aed_b925_330dde702afb ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/e3d7296f_d7d8_4136_85ed_921642690f9f
+###  http://www.semantyk.com/knowledge/ukg#e3d7296f_d7d8_4136_85ed_921642690f9f
 ukg:e3d7296f_d7d8_4136_85ed_921642690f9f rdf:type owl:NamedIndividual .
 
 
-###  http://data.semantyk.com/e488f280_77a9_4eb8_b753_8e3cd0fbf34e
+###  http://www.semantyk.com/knowledge/ukg#e488f280_77a9_4eb8_b753_8e3cd0fbf34e
 ukg:e488f280_77a9_4eb8_b753_8e3cd0fbf34e rdf:type owl:NamedIndividual .
 
 
-###  http://data.semantyk.com/e56d4b67_b203_4e3e_93f1_611fcebb283b
+###  http://www.semantyk.com/knowledge/ukg#e56d4b67_b203_4e3e_93f1_611fcebb283b
 ukg:e56d4b67_b203_4e3e_93f1_611fcebb283b rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/e7981e92_c7e2_4a0e_808d_e895b3334f40
+###  http://www.semantyk.com/knowledge/ukg#e7981e92_c7e2_4a0e_808d_e895b3334f40
 ukg:e7981e92_c7e2_4a0e_808d_e895b3334f40 rdf:type owl:NamedIndividual .
 
 
-###  http://data.semantyk.com/e9e28188_9a02_4e96_92ba_d30981e7f54b
+###  http://www.semantyk.com/knowledge/ukg#e9e28188_9a02_4e96_92ba_d30981e7f54b
 ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b rdf:type owl:NamedIndividual ,
                                                   rdfg:Graph ;
                                          owl:sameAs <http://www.semantyk.com/knowledge/ukg/core/onto#> ;
-                                         dcat:inCatalog ukg:c1a6d450_4cf3_4af2_8141_75ca165d790d ;
                                          <http://purl.org/dc/terms/subject> ukg:e3d7296f_d7d8_4136_85ed_921642690f9f ;
+                                         dcat:inCatalog ukg:c1a6d450_4cf3_4af2_8141_75ca165d790d ;
                                          rdfs:comment "An 'Ontology' labeled 'The Ontology' of 'The Core' of 'The Knowledge Graph' of 'The Universe'"@en ,
                                                       "Una 'Ontología' etiquetada 'La Ontología' de 'El Núcleo' de 'El Grafo de Conocimiento' de 'El Universo'"@es ;
                                          rdfs:isDefinedBy ukg: ;
@@ -1389,9 +1410,9 @@ ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b rdf:type owl:NamedIndividual ,
                                                     "The Ontology of The Core of The Knowledge Graph of The Universe"@en .
 
 
-###  http://data.semantyk.com/core/onto/
+###  http://www.semantyk.com/knowledge/ukg/core/onto#
 
-###  http://data.semantyk.com/ec5fb444_a6d3_4485_b200_acba32af502d
+###  http://www.semantyk.com/knowledge/ukg#ec5fb444_a6d3_4485_b200_acba32af502d
 ukg:ec5fb444_a6d3_4485_b200_acba32af502d rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          ukg:a55a93ef_28dc_41b2_b537_eb916507bfdd ukg:a33f1a66_b28d_4ffe_a3ee_85b5fdc6a4a0 ;
@@ -1399,49 +1420,49 @@ ukg:ec5fb444_a6d3_4485_b200_acba32af502d rdf:type owl:NamedIndividual ,
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/ec6e83e0_2d4e_4e57_97f1_0ad262235f4e
+###  http://www.semantyk.com/knowledge/ukg#ec6e83e0_2d4e_4e57_97f1_0ad262235f4e
 ukg:ec6e83e0_2d4e_4e57_97f1_0ad262235f4e rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/ed0cfe1a_2cd5_4bb9_af25_df6f93f064c0
+###  http://www.semantyk.com/knowledge/ukg#ed0cfe1a_2cd5_4bb9_af25_df6f93f064c0
 ukg:ed0cfe1a_2cd5_4bb9_af25_df6f93f064c0 rdf:type owl:NamedIndividual .
 
 
-###  http://data.semantyk.com/ef15272a_ff63_42e8_b95e_5b7b12a820ba
+###  http://www.semantyk.com/knowledge/ukg#ef15272a_ff63_42e8_b95e_5b7b12a820ba
 ukg:ef15272a_ff63_42e8_b95e_5b7b12a820ba rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/f42f0486_92da_44cb_ae88_c94d23f795e3
+###  http://www.semantyk.com/knowledge/ukg#f42f0486_92da_44cb_ae88_c94d23f795e3
 ukg:f42f0486_92da_44cb_ae88_c94d23f795e3 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/f5cf5ec0_2eb1_4fb3_be67_b1431637fde2
+###  http://www.semantyk.com/knowledge/ukg#f5cf5ec0_2eb1_4fb3_be67_b1431637fde2
 ukg:f5cf5ec0_2eb1_4fb3_be67_b1431637fde2 rdf:type owl:NamedIndividual .
 
 
-###  http://data.semantyk.com/f6a07fad_1a19_4294_814e_c47a35265ca5
+###  http://www.semantyk.com/knowledge/ukg#f6a07fad_1a19_4294_814e_c47a35265ca5
 ukg:f6a07fad_1a19_4294_814e_c47a35265ca5 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/f78442b5_4463_490d_9f51_7275deb2ac63
+###  http://www.semantyk.com/knowledge/ukg#f78442b5_4463_490d_9f51_7275deb2ac63
 ukg:f78442b5_4463_490d_9f51_7275deb2ac63 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/f7a4f75e_0eac_4c0e_bb39_24351ce93c51
+###  http://www.semantyk.com/knowledge/ukg#f7a4f75e_0eac_4c0e_bb39_24351ce93c51
 ukg:f7a4f75e_0eac_4c0e_bb39_24351ce93c51 rdf:type owl:NamedIndividual .
 
 
-###  http://data.semantyk.com/f927de71_07d4_42d6_a776_efc6c2c5d55a
+###  http://www.semantyk.com/knowledge/ukg#f927de71_07d4_42d6_a776_efc6c2c5d55a
 ukg:f927de71_07d4_42d6_a776_efc6c2c5d55a rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          ukg:a55a93ef_28dc_41b2_b537_eb916507bfdd ukg:ed0cfe1a_2cd5_4bb9_af25_df6f93f064c0 ;
@@ -1449,48 +1470,24 @@ ukg:f927de71_07d4_42d6_a776_efc6c2c5d55a rdf:type owl:NamedIndividual ,
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/fdbb7981_7fc5_4dd6_8035_c9141c61df89
+###  http://www.semantyk.com/knowledge/ukg#fdbb7981_7fc5_4dd6_8035_c9141c61df89
 ukg:fdbb7981_7fc5_4dd6_8035_c9141c61df89 rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/fddab7f9_1d22_483d_a8d2_a290fb2d115e
+###  http://www.semantyk.com/knowledge/ukg#fddab7f9_1d22_483d_a8d2_a290fb2d115e
 ukg:fddab7f9_1d22_483d_a8d2_a290fb2d115e rdf:type owl:NamedIndividual ,
                                                   ukg:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
                                          dcat:inCatalog ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b .
 
 
-###  http://data.semantyk.com/ff32cd02_5b28_4b4b_bde1_1a061b4d9c75
+###  http://www.semantyk.com/knowledge/ukg#ff32cd02_5b28_4b4b_bde1_1a061b4d9c75
 ukg:ff32cd02_5b28_4b4b_bde1_1a061b4d9c75 rdf:type owl:NamedIndividual .
 
 
-###  http://data.semantyk.com/core/onto/
+###  http://www.semantyk.com/knowledge/ukg/core/onto#
 <http://www.semantyk.com/knowledge/ukg/core/onto#> rdf:type owl:NamedIndividual .
-
-
-###  http://datos.gob.mx/d4a42972_30ab_4d65_9818_102a8b0f4935
-<http://datos.gob.mx/d4a42972_30ab_4d65_9818_102a8b0f4935> rdf:type owl:NamedIndividual .
-
-
-###  http://datos.gob.mx/e06a1482_4394_423b_a2ba_a5f5942fb284
-<http://datos.gob.mx/e06a1482_4394_423b_a2ba_a5f5942fb284> rdf:type owl:NamedIndividual .
-
-
-###  http://datos.gob.mx/f7bf33a7_d6f0_4aed_b925_330dde702afb
-<http://datos.gob.mx/f7bf33a7_d6f0_4aed_b925_330dde702afb> rdf:type owl:NamedIndividual .
-
-
-###  http://datos.gob.mx/f7d86ba7_f612_4cef_916c_f6d80d230b64
-<http://datos.gob.mx/f7d86ba7_f612_4cef_916c_f6d80d230b64> rdf:type owl:NamedIndividual .
-
-
-###  http://datos.gob.mx/fd1cb96d_35a9_495a_a6c1_ea441f9a77db
-<http://datos.gob.mx/fd1cb96d_35a9_495a_a6c1_ea441f9a77db> rdf:type owl:NamedIndividual .
-
-
-###  http://datos.gob.mx/ff11d93b_5c11_45ac_8d7a_ce37714788be
-<http://datos.gob.mx/ff11d93b_5c11_45ac_8d7a_ce37714788be> rdf:type owl:NamedIndividual .
 
 
 ###  https://id.danielbakas.com
