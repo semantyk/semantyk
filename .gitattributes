@@ -14,4 +14,4 @@
 # @copyright: Semantyk © 2025. All rights reserved.
 # ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
-apps/knowledge/data/mex/state/fed/loc/data.ttl filter=lfs diff=lfs merge=lfs -text
+packages/knowledge/data/mex/state/fed/loc/data.ttl filter=lfs diff=lfs merge=lfs -text
