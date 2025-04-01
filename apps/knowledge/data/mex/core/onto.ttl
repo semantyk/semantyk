@@ -23,7 +23,7 @@
 #################################################################
 
 ###  http://www.w3.org/2002/07/owl#imports
-owl:imports rdf:type owl:AnnotationProperty .
+owl:imports rdf:type owl:ObjectProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
