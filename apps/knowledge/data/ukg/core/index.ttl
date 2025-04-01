@@ -12,7 +12,7 @@
 
 <http://www.semantyk.com/knowledge/ukg/core#> rdf:type owl:Ontology ;
                                                owl:imports <http://www.semantyk.com/knowledge/ukg/core/data#> ,
-                                                           <http://www.semantyk.com/knowledge/ukg/core/onto#>,
+                                                           <http://www.semantyk.com/knowledge/ukg/core/onto#> ,
                                                            <http://www.semantyk.com/knowledge/ukg/core/voc#> .
 
 #################################################################
@@ -50,15 +50,13 @@ ukg:b592f057_6bc9_44db_9688_a9a7d1d9d606 rdf:type owl:NamedIndividual .
 ###  http://www.semantyk.com/knowledge/ukg#c1a6d450_4cf3_4af2_8141_75ca165d790d
 ukg:c1a6d450_4cf3_4af2_8141_75ca165d790d rdf:type owl:NamedIndividual ,
                                                   dcat:Catalog ;
-                                         dcat:dataset ukg:d1e95dc1_4dd8_447a_92b9_05020b01c728 ,
-                                                      ukg:e9e28188_9a02_4e96_92ba_d30981e7f54b ;
                                          dcterms:subject ukg:e3d7296f_d7d8_4136_85ed_921642690f9f ;
+                                         dcat:inCatalog ukg:b592f057_6bc9_44db_9688_a9a7d1d9d606 ;
                                          rdfs:comment "A 'Catalog' labeled 'The Catalog' of 'The Core' of 'The Knowledge Graph' of 'The Universe'"@en ,
                                                       "Un 'Catálogo' etiquetado 'El Catálogo' de 'El Núcleo' de 'El Grafo de Conocimiento' de  'El Universo'"@es ;
                                          rdfs:isDefinedBy ukg: ;
                                          rdfs:label "El Catálogo de El Núcleo de El Grafo de Conocimiento de El Universo"@es ,
-                                                    "The Catalog of The Core of The Knowledge Graph of The Universe"@en ;
-                                         dcat:inCatalog ukg:b592f057_6bc9_44db_9688_a9a7d1d9d606 .
+                                                    "The Catalog of The Core of The Knowledge Graph of The Universe"@en .
 
 
 ###  http://www.semantyk.com/knowledge/ukg#cdde4c47_7d4d_4ee2_85e8_0d3cf0545b13
@@ -73,14 +71,14 @@ ukg:d1e95dc1_4dd8_447a_92b9_05020b01c728 rdf:type owl:NamedIndividual .
 ukg:e3d7296f_d7d8_4136_85ed_921642690f9f rdf:type owl:NamedIndividual ,
                                                   rdfg:Graph ;
                                          owl:sameAs <http://www.semantyk.com/knowledge/ukg/core#> ;
-                                         rdfg:subGraphOf ukg:cdde4c47_7d4d_4ee2_85e8_0d3cf0545b13 ;
                                          dcterms:subject ukg:cdde4c47_7d4d_4ee2_85e8_0d3cf0545b13 ;
+                                         rdfg:subGraphOf ukg:cdde4c47_7d4d_4ee2_85e8_0d3cf0545b13 ;
+                                         dcat:inCatalog ukg:c1a6d450_4cf3_4af2_8141_75ca165d790d ;
                                          rdfs:comment "A 'Graph' labeled 'The Core' of 'The Knowledge Graph' of 'The Universe'"@en ,
                                                       "Un 'Grafo' etiquetado 'El Núcleo' de 'El Grafo de Conocimiento' de 'El Universo'"@es ;
                                          rdfs:isDefinedBy ukg: ;
                                          rdfs:label "El Núcleo de El Grafo de Conocimiento de El Universo"@es ,
-                                                    "The Core of The Knowledge Graph of The Universe"@en ;
-                                         dcat:inCatalog ukg:c1a6d450_4cf3_4af2_8141_75ca165d790d .
+                                                    "The Core of The Knowledge Graph of The Universe"@en .
 
 
 ###  http://www.semantyk.com/knowledge/ukg/core#
