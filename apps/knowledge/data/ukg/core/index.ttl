@@ -20,11 +20,11 @@
 #################################################################
 
 ###  http://purl.org/dc/terms/subject
-dcterms:subject rdf:type owl:AnnotationProperty .
+dcterms:subject rdf:type owl:ObjectProperty .
 
 
 ###  http://www.w3.org/ns/dcat#inCatalog
-dcat:inCatalog rdf:type owl:AnnotationProperty .
+dcat:inCatalog rdf:type owl:ObjectProperty .
 
 
 #################################################################

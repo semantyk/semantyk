@@ -26,7 +26,7 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/03/trix/rdfg-1/subGraphOf
-rdfg:subGraphOf rdf:type owl:AnnotationProperty .
+rdfg:subGraphOf rdf:type owl:ObjectProperty .
 
 
 #################################################################

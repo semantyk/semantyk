@@ -24,19 +24,19 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/ns/dcat#accessURL
-dcat:accessURL rdf:type owl:AnnotationProperty .
+dcat:accessURL rdf:type owl:ObjectProperty .
 
 
 ###  http://www.w3.org/ns/dcat#first
-dcat:first rdf:type owl:AnnotationProperty .
+dcat:first rdf:type owl:ObjectProperty .
 
 
 ###  http://www.w3.org/ns/dcat#next
-dcat:next rdf:type owl:AnnotationProperty .
+dcat:next rdf:type owl:ObjectProperty .
 
 
 ###  http://www.w3.org/ns/dcat#prev
-dcat:prev rdf:type owl:AnnotationProperty .
+dcat:prev rdf:type owl:ObjectProperty .
 
 
 #################################################################
