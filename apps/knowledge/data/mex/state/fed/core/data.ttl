@@ -1,0 +1,764 @@
+@prefix : <http://www.semantyk.com/knowledge/mex#> .
+@prefix mex: <http://www.semantyk.com/knowledge/mex#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ukg: <http://www.semantyk.com/knowledge/ukg#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfg: <http://www.w3.org/2004/03/trix/rdfg-1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://www.semantyk.com/knowledge/mex#> .
+
+<http://www.semantyk.com/knowledge/mex/state/fed/core/data#> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/dc/terms/subject
+dcterms:subject rdf:type owl:ObjectProperty .
+
+
+###  http://www.semantyk.com/knowledge/ukg#a55a93ef_28dc_41b2_b537_eb916507bfdd
+ukg:a55a93ef_28dc_41b2_b537_eb916507bfdd rdf:type owl:ObjectProperty .
+
+
+###  http://www.semantyk.com/knowledge/ukg#b64ea212_cb7d_473d_9f38_5d1a8911b8ca
+ukg:b64ea212_cb7d_473d_9f38_5d1a8911b8ca rdf:type owl:ObjectProperty .
+
+
+###  http://www.semantyk.com/knowledge/ukg#bdacdcb9_16b7_4149_b362_69a0007478a7
+ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 rdf:type owl:ObjectProperty .
+
+
+###  http://www.semantyk.com/knowledge/ukg#dca9db1b_2f0f_49b7_bb54_223ec90c07cf
+ukg:dca9db1b_2f0f_49b7_bb54_223ec90c07cf rdf:type owl:ObjectProperty .
+
+
+###  http://www.semantyk.com/knowledge/ukg#f0b0c790_e005_4539_80b5_263dc433ebc0
+ukg:f0b0c790_e005_4539_80b5_263dc433ebc0 rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2004/03/trix/rdfg-1/subGraphOf
+rdfg:subGraphOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#catalog
+dcat:catalog rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#dataset
+dcat:dataset rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#inCatalog
+dcat:inCatalog rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#resource
+dcat:resource rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#value
+rdf:value rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semantyk.com/knowledge/mex#a8ae0d5b_c0a9_42e4_83e6_5af79412c00a
+mex:a8ae0d5b_c0a9_42e4_83e6_5af79412c00a rdf:type owl:Class .
+
+
+###  http://www.semantyk.com/knowledge/mex#a8bd4744_d0b0_485d_889c_dfaf5d1fa6fe
+mex:a8bd4744_d0b0_485d_889c_dfaf5d1fa6fe rdf:type owl:Class .
+
+
+###  http://www.semantyk.com/knowledge/mex#bac6ffda_7cbd_43e2_93e8_458b773ac211
+mex:bac6ffda_7cbd_43e2_93e8_458b773ac211 rdf:type owl:Class .
+
+
+###  http://www.semantyk.com/knowledge/mex#c12531d0_53c0_40ab_8bf0_10f019459b24
+mex:c12531d0_53c0_40ab_8bf0_10f019459b24 rdf:type owl:Class .
+
+
+###  http://www.semantyk.com/knowledge/mex#c8d8cdf0_8173_4233_9c11_a21c40337503
+mex:c8d8cdf0_8173_4233_9c11_a21c40337503 rdf:type owl:Class .
+
+
+###  http://www.semantyk.com/knowledge/mex#caa5cf13_8f5f_4233_bf2d_f1012ba02de2
+mex:caa5cf13_8f5f_4233_bf2d_f1012ba02de2 rdf:type owl:Class .
+
+
+###  http://www.semantyk.com/knowledge/mex#cfd6b6b3_92a7_4a12_9080_92ff26f6c85c
+mex:cfd6b6b3_92a7_4a12_9080_92ff26f6c85c rdf:type owl:Class .
+
+
+###  http://www.semantyk.com/knowledge/mex#d52561c8_00a1_4af3_9d98_71b6e9e191a3
+mex:d52561c8_00a1_4af3_9d98_71b6e9e191a3 rdf:type owl:Class .
+
+
+###  http://www.semantyk.com/knowledge/mex#e3e803ac_950f_4d74_a6ca_9931e68b0157
+mex:e3e803ac_950f_4d74_a6ca_9931e68b0157 rdf:type owl:Class .
+
+
+###  http://www.semantyk.com/knowledge/mex#fd3b5629_e0e6_4d4e_8d5f_52d494ffe111
+mex:fd3b5629_e0e6_4d4e_8d5f_52d494ffe111 rdf:type owl:Class .
+
+
+###  http://www.semantyk.com/knowledge/mex#fd98d032_2fdd_4491_a235_a445ec0a7bf6
+mex:fd98d032_2fdd_4491_a235_a445ec0a7bf6 rdf:type owl:Class .
+
+
+###  http://www.semantyk.com/knowledge/mex#ff47a35d_08d7_4bb9_b226_972b1a9cc663
+mex:ff47a35d_08d7_4bb9_b226_972b1a9cc663 rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dcat#Catalog
+dcat:Catalog rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dcat#Dataset
+dcat:Dataset rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semantyk.com/knowledge/mex#a0913504_c970_44ad_885d_02c4e2d59cb2
+mex:a0913504_c970_44ad_885d_02c4e2d59cb2 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#a22fcd21_58d3_4e2a_b9e1_3ac8fb03b86f
+mex:a22fcd21_58d3_4e2a_b9e1_3ac8fb03b86f rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#a2376873_5961_493d_a4a5_44e366b3a72e
+mex:a2376873_5961_493d_a4a5_44e366b3a72e rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#a258f8fc_8587_409f_b521_820cb50f9b37
+mex:a258f8fc_8587_409f_b521_820cb50f9b37 rdf:type owl:NamedIndividual ,
+                                                  mex:fd3b5629_e0e6_4d4e_8d5f_52d494ffe111 ;
+                                         ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 mex:f680169c_633d_4fb8_ae0d_a99902d9281d ;
+                                         dcat:inCatalog mex:a8cc2536_2d50_48a4_a9f3_4de877530384 ;
+                                         rdfs:comment "A 'Secretariat' labeled 'The Mexican Federation Secretariat of Public Administration'"@en ,
+                                                      "Una 'Secretaría' etiquetada 'La Secretaría de la Función Pública de la Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "La Secretaría de la Función Pública de la Federación Mexicana"@es ,
+                                                    "The Mexican Federation Secretariat of Public Administration"@en ;
+                                         skos:prefLabel "SFP"@en ,
+                                                        "SFP"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#a3927a8a_5bb7_4e42_91d3_b5d8819fdd9c
+mex:a3927a8a_5bb7_4e42_91d3_b5d8819fdd9c rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#a46deff3_59fe_413e_9d73_c3859b0faa48
+mex:a46deff3_59fe_413e_9d73_c3859b0faa48 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#a5188c07_6a1f_4dcf_bb24_62ca70ce8708
+mex:a5188c07_6a1f_4dcf_bb24_62ca70ce8708 rdf:type owl:NamedIndividual ,
+                                                  dcat:Catalog ;
+                                         dcat:inCatalog mex:e087c2de_ebbb_49b0_8f5c_ea6dff2f49e9 ;
+                                         rdfs:comment "A 'Catalog' labeled 'The Catalog' of 'The Government' of 'The Mexican Federation'"@en ,
+                                                      "Un 'Catálogo' etiquetado 'El Catálogo' de 'El Gobierno' de 'La Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Catálogo de El Gobierno"@es ,
+                                                    "The Catalog of The Government"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#a5c1f505_16f3_490f_a80e_005370138213
+mex:a5c1f505_16f3_490f_a80e_005370138213 rdf:type owl:NamedIndividual ,
+                                                  mex:fd3b5629_e0e6_4d4e_8d5f_52d494ffe111 ;
+                                         ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 mex:f680169c_633d_4fb8_ae0d_a99902d9281d ;
+                                         dcat:inCatalog mex:a8cc2536_2d50_48a4_a9f3_4de877530384 ;
+                                         rdfs:comment "A 'Secretariat' labeled 'The Mexican Federation Secretariat of Communications and Transportation'"@en ,
+                                                      "Una 'Secretaría' etiquetada 'La Secretaría de Infraestructura, Comunicaciones y Transportes de la Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "La Secretaría de Infraestructura, Comunicaciones y Transportes de la Federación Mexicana"@es ,
+                                                    "The Mexican Federation Secretariat of Communications and Transportation"@en ;
+                                         skos:prefLabel "SICT"@en ,
+                                                        "SICT"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#a625c5c5_f0fc_46df_8404_1e8f969fa241
+mex:a625c5c5_f0fc_46df_8404_1e8f969fa241 rdf:type owl:NamedIndividual ,
+                                                  dcat:Dataset ;
+                                         dcterms:subject mex:a0913504_c970_44ad_885d_02c4e2d59cb2 ;
+                                         rdfg:subGraphOf mex:e7954272_8e97_4358_ab80_27d0a302caf2 ;
+                                         dcat:inCatalog mex:c592a9d3_6503_4726_b0a1_4620a9480b08 ;
+                                         dcat:resource mex:b35b9ae7_495e_4fb1_83a2_6dee9c663556 ;
+                                         rdfs:comment "A 'Dataset' labeled 'The Laws Dataset' of 'The Mexican Federation'"@en ,
+                                                      "Un 'Conjunto de Datos' etiquetado 'El Conjunto de Leyes' de 'La Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Conjunto de Leyes"@es ,
+                                                    "The Laws Dataset"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#a8cc2536_2d50_48a4_a9f3_4de877530384
+mex:a8cc2536_2d50_48a4_a9f3_4de877530384 rdf:type owl:NamedIndividual ,
+                                                  dcat:Dataset ;
+                                         dcat:inCatalog mex:d328e411_2ad3_41e4_8588_a4a27d42ac8e ;
+                                         rdfs:comment "A 'Dataset' labeled 'The Dataset of Secretariats' of 'The Mexican Federation'"@en ,
+                                                      "Un 'Conjunto de Datos' etiquetado 'El Conjunto de Secretarías' de 'La Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Conjunto de Secretarías"@es ,
+                                                    "The Dataset of Secretariats"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#a96355d4_e44d_4abf_b730_e2d69a342a12
+mex:a96355d4_e44d_4abf_b730_e2d69a342a12 rdf:type owl:NamedIndividual ,
+                                                  mex:d52561c8_00a1_4af3_9d98_71b6e9e191a3 ;
+                                         ukg:a55a93ef_28dc_41b2_b537_eb916507bfdd mex:b141f627_98cd_40ba_9354_cd34711b1540 ;
+                                         ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 mex:eb84f160_07b5_4299_828a_12a3ed67b49f ;
+                                         ukg:f0b0c790_e005_4539_80b5_263dc433ebc0 mex:b141f627_98cd_40ba_9354_cd34711b1540 ;
+                                         rdfs:comment "A 'Federación' labeled 'The Mexican Federation'. It is defined as 'The Mexican Federation'"@en ,
+                                                      "Una 'Federación' etiquetada 'La Federación Mexicana'. Se define como 'La Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "La Federación Mexicana"@es ,
+                                                    "The Mexican Federation"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#acdc7edd_ff8f_48a6_9ce6_a6d465d15be2
+mex:acdc7edd_ff8f_48a6_9ce6_a6d465d15be2 rdf:type owl:NamedIndividual ,
+                                                  mex:fd3b5629_e0e6_4d4e_8d5f_52d494ffe111 ;
+                                         ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 mex:f680169c_633d_4fb8_ae0d_a99902d9281d ;
+                                         dcat:inCatalog mex:a8cc2536_2d50_48a4_a9f3_4de877530384 ;
+                                         rdfs:comment "A 'Secretariat' labeled 'The Mexican Federation Secretariat of Labor and Social Welfare'"@en ,
+                                                      "Una 'Secretaría' etiquetada 'La Secretaría del Trabajo y Previsión Social de la Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "La Secretaría del Trabajo y Previsión Social de la Federación Mexicana"@es ,
+                                                    "The Mexican Federation Secretariat of Labor and Social Welfare"@en ;
+                                         skos:prefLabel "STPS"@en ,
+                                                        "STPS"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#ad735752_9c65_495a_8bc2_3dd16c97a90d
+mex:ad735752_9c65_495a_8bc2_3dd16c97a90d rdf:type owl:NamedIndividual ,
+                                                  mex:c12531d0_53c0_40ab_8bf0_10f019459b24 ;
+                                         ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 mex:f6394645_5a89_4db6_bef0_4b74acbf6fb7 ,
+                                                                                  mex:f680169c_633d_4fb8_ae0d_a99902d9281d ;
+                                         dcat:inCatalog mex:cc149f76_b8d5_446d_a004_77bfd06eaf13 ;
+                                         rdfs:comment "A 'Power' labeled 'The Executive Power' of 'The Mexican Federation'"@en ,
+                                                      "Un 'Poder' etiquetado 'El Poder Ejecutivo' de 'La Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Poder Ejecutivo"@es ,
+                                                    "The Executive Power"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#afc50617_af12_4f7b_a5c9_6e6bf86d207e
+mex:afc50617_af12_4f7b_a5c9_6e6bf86d207e rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#b141f627_98cd_40ba_9354_cd34711b1540
+mex:b141f627_98cd_40ba_9354_cd34711b1540 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#b31bb503_039c_4093_995e_e76d2ee48291
+mex:b31bb503_039c_4093_995e_e76d2ee48291 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#b35b9ae7_495e_4fb1_83a2_6dee9c663556
+mex:b35b9ae7_495e_4fb1_83a2_6dee9c663556 rdf:type owl:NamedIndividual ,
+                                                  mex:a8bd4744_d0b0_485d_889c_dfaf5d1fa6fe ;
+                                         dcat:inCatalog mex:a625c5c5_f0fc_46df_8404_1e8f969fa241 ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "La Ley Orgánica de la Administración Pública"@es ,
+                                                    "The Organic Law of the Public Administration"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#b5948746_9a94_4f3d_a8bc_ef9a0463a20e
+mex:b5948746_9a94_4f3d_a8bc_ef9a0463a20e rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#b6b58a54_2085_4146_8c5c_4c76ae938355
+mex:b6b58a54_2085_4146_8c5c_4c76ae938355 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#b723f1b4_d73d_4348_8a4e_31e0bbcce5d9
+mex:b723f1b4_d73d_4348_8a4e_31e0bbcce5d9 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#b73dabca_53d2_4aaa_9efe_1eebc532aeaf
+mex:b73dabca_53d2_4aaa_9efe_1eebc532aeaf rdf:type owl:NamedIndividual ,
+                                                  mex:c12531d0_53c0_40ab_8bf0_10f019459b24 ;
+                                         ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 mex:f6394645_5a89_4db6_bef0_4b74acbf6fb7 ;
+                                         dcat:inCatalog mex:cc149f76_b8d5_446d_a004_77bfd06eaf13 ;
+                                         rdfs:comment "A 'Power' labeled 'The Legislative Power' of 'The Mexican Federation'"@en ,
+                                                      "Un 'Poder' etiquetado 'El Poder Legislativo' de 'La Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Poder Legislativo"@es ,
+                                                    "The Legislative Power"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#b9674ff0_3060_446c_a526_154fc980db30
+mex:b9674ff0_3060_446c_a526_154fc980db30 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#b9791ab2_384e_4d4b_986a_ba9f8b67471d
+mex:b9791ab2_384e_4d4b_986a_ba9f8b67471d rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#bb840da2_f815_45ef_97e5_af9c06d75876
+mex:bb840da2_f815_45ef_97e5_af9c06d75876 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#bcb6f743_d432_4a27_9dcc_b3fb40f9b6b2
+mex:bcb6f743_d432_4a27_9dcc_b3fb40f9b6b2 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#c024a609_e955_4ae6_af7b_5b10809f3fac
+mex:c024a609_e955_4ae6_af7b_5b10809f3fac rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#c16e3867_6e48_4bc6_b75b_5b86b2d764e3
+mex:c16e3867_6e48_4bc6_b75b_5b86b2d764e3 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#c3003dc5_e891_4d38_a5b7_f6041566ce4e
+mex:c3003dc5_e891_4d38_a5b7_f6041566ce4e rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#c375a8c9_d1d1_42fe_ac3c_ebe6ae686ad5
+mex:c375a8c9_d1d1_42fe_ac3c_ebe6ae686ad5 rdf:type owl:NamedIndividual ,
+                                                  mex:fd3b5629_e0e6_4d4e_8d5f_52d494ffe111 ;
+                                         ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 mex:f680169c_633d_4fb8_ae0d_a99902d9281d ;
+                                         dcat:inCatalog mex:a8cc2536_2d50_48a4_a9f3_4de877530384 ;
+                                         rdfs:comment "A 'Secretariat' labeled 'The Mexican Federation Secretariat of Security and Citizen Protection'"@en ,
+                                                      "Una 'Secretaría' etiquetada 'La Secretaría de Seguridad y Protección Ciudadana de la Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "La Secretaría de Seguridad y Protección Ciudadana de la Federación Mexicana"@es ,
+                                                    "The Mexican Federation Secretariat of Security and Citizen Protection"@en ;
+                                         skos:prefLabel "SSPC"@en ,
+                                                        "SSPC"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#c3edd903_d4e2_4f95_9c2b_62959f5daaae
+mex:c3edd903_d4e2_4f95_9c2b_62959f5daaae rdf:type owl:NamedIndividual ,
+                                                  mex:e3e803ac_950f_4d74_a6ca_9931e68b0157 ;
+                                         dcat:inCatalog mex:c592a9d3_6503_4726_b0a1_4620a9480b08 ,
+                                                        mex:d328e411_2ad3_41e4_8588_a4a27d42ac8e ;
+                                         rdfs:comment "A 'Public Administration' labeled 'The Parastatal Public Administration' of 'The Mexican Federation'"@en ,
+                                                      "Una 'Administración Pública' etiquetada 'La Administración Pública Paraestatal' del 'Gobierno' de 'La Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "La Administración Pública Paraestatal"@es ,
+                                                    "The Parastatal Public Administration of The Mexican Federation"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#c439a131_0695_4a1a_b31c_14452d6218cd
+mex:c439a131_0695_4a1a_b31c_14452d6218cd rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#c592a9d3_6503_4726_b0a1_4620a9480b08
+mex:c592a9d3_6503_4726_b0a1_4620a9480b08 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#c71bd654_ebf8_4d3d_b90f_c4700826a250
+mex:c71bd654_ebf8_4d3d_b90f_c4700826a250 rdf:type owl:NamedIndividual ,
+                                                  mex:bac6ffda_7cbd_43e2_93e8_458b773ac211 ;
+                                         dcat:inCatalog mex:c592a9d3_6503_4726_b0a1_4620a9480b08 ;
+                                         rdfs:comment "An 'Office' labeled 'The Office of the President of the Republic'"@en ,
+                                                      "Una 'Oficina' etiquetada 'La Oficina de la Presidencia de la República'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "La Oficina de la Presidencia de la República"@es ,
+                                                    "The Office of the Presidency of the Republic"@en ;
+                                         skos:prefLabel "OPR"@en ,
+                                                        "OPR"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#cc149f76_b8d5_446d_a004_77bfd06eaf13
+mex:cc149f76_b8d5_446d_a004_77bfd06eaf13 rdf:type owl:NamedIndividual ,
+                                                  dcat:Dataset ;
+                                         dcterms:subject mex:ffa53e32_8b6d_42c1_9214_eb5aea130888 ;
+                                         dcat:inCatalog mex:c592a9d3_6503_4726_b0a1_4620a9480b08 ;
+                                         rdfs:comment "A 'Dataset' labeled 'The Dataset of Powers' of 'The Mexican Federation '"@en ,
+                                                      "Un 'Conjunto de Datos' etiquetado 'El Conjunto de Poderes' de 'La Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Conjunto de Poderes"@es ,
+                                                    "The Dataset of Powers"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#cc9884ef_999d_4cf2_bf72_47575917a6ad
+mex:cc9884ef_999d_4cf2_bf72_47575917a6ad rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#cf09a6a0_f74a_4e19_b34a_9315977a85da
+mex:cf09a6a0_f74a_4e19_b34a_9315977a85da rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#d0bb5866_6658_4bbc_b4bb_9ec1eddfbd53
+mex:d0bb5866_6658_4bbc_b4bb_9ec1eddfbd53 rdf:type owl:NamedIndividual ,
+                                                  mex:fd3b5629_e0e6_4d4e_8d5f_52d494ffe111 ;
+                                         ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 mex:f680169c_633d_4fb8_ae0d_a99902d9281d ;
+                                         dcat:inCatalog mex:a8cc2536_2d50_48a4_a9f3_4de877530384 ;
+                                         rdfs:comment "A 'Secretariat' labeled 'The Mexican Federation Secretariat of the Navy'"@en ,
+                                                      "Una 'Secretaría' etiquetada 'La Secretaría de Marina de la Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "La Secretaría de Marina de la Federación Mexicana"@es ,
+                                                    "The Mexican Federation Secretariat of the Navy"@en ;
+                                         skos:prefLabel "SEMAR"@en ,
+                                                        "SEMAR"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#d13bfc7d_a096_40f6_801f_2acea59d434c
+mex:d13bfc7d_a096_40f6_801f_2acea59d434c rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#d328e411_2ad3_41e4_8588_a4a27d42ac8e
+mex:d328e411_2ad3_41e4_8588_a4a27d42ac8e rdf:type owl:NamedIndividual ,
+                                                  dcat:Catalog ;
+                                         dcat:inCatalog mex:a5188c07_6a1f_4dcf_bb24_62ca70ce8708 ;
+                                         rdfs:comment "A 'Dataset' labeled 'The Catalog' of the 'Public Administration' of 'The Mexican Federation'"@en ,
+                                                      "Un 'Conjunto de Datos' etiquetado 'El Catálogo' de 'La Administración Pública' de 'La Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Catálogo de la Administración Pública"@es ,
+                                                    "The Catalog of the Public Administration"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#d3928aa8_3021_4122_8eb5_352a8f11520a
+mex:d3928aa8_3021_4122_8eb5_352a8f11520a rdf:type owl:NamedIndividual ,
+                                                  mex:fd3b5629_e0e6_4d4e_8d5f_52d494ffe111 ;
+                                         ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 mex:f680169c_633d_4fb8_ae0d_a99902d9281d ;
+                                         dcat:inCatalog mex:a8cc2536_2d50_48a4_a9f3_4de877530384 ;
+                                         rdfs:comment "A 'Secretariat' labeled 'The Mexican Federation Secretariat of Agrarian, Land, and Urban Development'"@en ,
+                                                      "Una 'Secretaría' etiquetada 'La Secretaría de Desarrollo Agrario, Territorial y Urbano de la Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "La Secretaría de Desarrollo Agrario, Territorial y Urbano de la Federación Mexicana"@es ,
+                                                    "The Mexican Federation Secretariat of Agrarian, Land, and Urban Development"@en ;
+                                         skos:prefLabel "SEDATU"@en ,
+                                                        "SEDATU"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#d4047971_43b9_460b_a4a3_da56702d28d7
+mex:d4047971_43b9_460b_a4a3_da56702d28d7 rdf:type owl:NamedIndividual ,
+                                                  mex:fd3b5629_e0e6_4d4e_8d5f_52d494ffe111 ;
+                                         ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 mex:f680169c_633d_4fb8_ae0d_a99902d9281d ;
+                                         dcat:inCatalog mex:a8cc2536_2d50_48a4_a9f3_4de877530384 ;
+                                         rdfs:comment "A 'Secretariat' labeled 'The Mexican Federation Secretariat of Governance'"@en ,
+                                                      "Una 'Secretaría' etiquetada 'La Secretaría de Gobernación de la Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "La Secretaría de Gobernación de la Federación Mexicana"@es ,
+                                                    "The Mexican Federation Secretariat of Governance"@en ;
+                                         skos:prefLabel "SEGOB"@en ,
+                                                        "SEGOB"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#d4a9df88_fff3_49fa_8aca_df3453f52f90
+mex:d4a9df88_fff3_49fa_8aca_df3453f52f90 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#d4d3bb30_959a_41be_a211_ab7dec33b4f4
+mex:d4d3bb30_959a_41be_a211_ab7dec33b4f4 rdf:type owl:NamedIndividual ,
+                                                  mex:caa5cf13_8f5f_4233_bf2d_f1012ba02de2 ;
+                                         ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 mex:ad735752_9c65_495a_8bc2_3dd16c97a90d ;
+                                         dcat:inCatalog mex:c592a9d3_6503_4726_b0a1_4620a9480b08 ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "La Consejería Jurídica del Ejecutivo Federal"@es ,
+                                                    "The Legal Counsel of the Federal Executive"@en ;
+                                         skos:prefLabel "CJEF"@en ,
+                                                        "CJEF"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#d513b571_f16d_45ee_9d8d_efbd7a304bb8
+mex:d513b571_f16d_45ee_9d8d_efbd7a304bb8 rdf:type owl:NamedIndividual ,
+                                                  mex:fd3b5629_e0e6_4d4e_8d5f_52d494ffe111 ;
+                                         ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 mex:f680169c_633d_4fb8_ae0d_a99902d9281d ;
+                                         dcat:inCatalog mex:a8cc2536_2d50_48a4_a9f3_4de877530384 ;
+                                         rdfs:comment "A 'Secretariat' labeled 'The Mexican Federation Secretariat of the Economy'"@en ,
+                                                      "Una 'Secretaría' etiquetada 'La Secretaría de Economía de la Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "La Secretaría de Economía de la Federación Mexicana"@es ,
+                                                    "The Mexican Federation Secretariat of the Economy"@en ;
+                                         skos:prefLabel "SE"@en ,
+                                                        "SE"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#d6699d5e_74a5_4cca_a1c6_4970e25e1dc4
+mex:d6699d5e_74a5_4cca_a1c6_4970e25e1dc4 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#d93d42e6_db49_4557_a6a9_fc6937887945
+mex:d93d42e6_db49_4557_a6a9_fc6937887945 rdf:type owl:NamedIndividual ,
+                                                  mex:fd3b5629_e0e6_4d4e_8d5f_52d494ffe111 ;
+                                         ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 mex:f680169c_633d_4fb8_ae0d_a99902d9281d ;
+                                         dcat:inCatalog mex:a8cc2536_2d50_48a4_a9f3_4de877530384 ;
+                                         rdfs:comment "A 'Secretariat' labeled 'The Mexican Federation Secretariat of Environment and Natural Resources'"@en ,
+                                                      "Una 'Secretaría' etiquetada 'La Secretaría de Medio Ambiente y Recursos Naturales de la Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "La Secretaría de Medio Ambiente y Recursos Naturales de la Federación Mexicana"@es ,
+                                                    "The Mexican Federation Secretariat of Environment and Natural Resources"@en ;
+                                         skos:prefLabel "SEMARNAT"@en ,
+                                                        "SEMARNAT"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#dad4e5af_2124_4f12_92de_8acd02e502d4
+mex:dad4e5af_2124_4f12_92de_8acd02e502d4 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#db13c3fb_656a_4fb9_ac7a_2f1e74449ca1
+mex:db13c3fb_656a_4fb9_ac7a_2f1e74449ca1 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#dcdd4971_3783_45c8_9aa3_c369e99dd9bf
+mex:dcdd4971_3783_45c8_9aa3_c369e99dd9bf rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#de209b08_0cfb_4a18_aebe_be1242e05285
+mex:de209b08_0cfb_4a18_aebe_be1242e05285 rdf:type owl:NamedIndividual ,
+                                                  mex:fd3b5629_e0e6_4d4e_8d5f_52d494ffe111 ;
+                                         ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 mex:f680169c_633d_4fb8_ae0d_a99902d9281d ;
+                                         dcat:inCatalog mex:a8cc2536_2d50_48a4_a9f3_4de877530384 ;
+                                         rdfs:comment "A 'Secretariat' labeled 'The Mexican Federation Secretariat of Welfare'"@en ,
+                                                      "Una 'Secretaría' etiquetada 'La Secretaría de Bienestar de la Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "La Secretaría de Bienestar de la Federación Mexicana"@es ,
+                                                    "The Mexican Federation Secretariat of Welfare"@en ;
+                                         skos:prefLabel "BIENESTAR"@en ,
+                                                        "BIENESTAR"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#debc9050_e50e_495b_9797_b1123fbc55ca
+mex:debc9050_e50e_495b_9797_b1123fbc55ca rdf:type owl:NamedIndividual ,
+                                                  mex:fd3b5629_e0e6_4d4e_8d5f_52d494ffe111 ;
+                                         ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 mex:f680169c_633d_4fb8_ae0d_a99902d9281d ;
+                                         dcat:inCatalog mex:a8cc2536_2d50_48a4_a9f3_4de877530384 ;
+                                         rdfs:comment "A 'Secretariat' labeled 'The Mexican Federation Secretariat of Culture'"@en ,
+                                                      "Una 'Secretaría' etiquetada 'La Secretaría de Cultura de la Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "La Secretaría de Cultura de la Federación Mexicana"@es ,
+                                                    "The Mexican Federation Secretariat of Culture"@en ;
+                                         skos:prefLabel "CULTURA"@en ,
+                                                        "CULTURA"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#dee19e74_5fe8_4650_924e_866c7bf48e9b
+mex:dee19e74_5fe8_4650_924e_866c7bf48e9b rdf:type owl:NamedIndividual ,
+                                                  mex:fd3b5629_e0e6_4d4e_8d5f_52d494ffe111 ;
+                                         ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 mex:f680169c_633d_4fb8_ae0d_a99902d9281d ;
+                                         dcat:inCatalog mex:a8cc2536_2d50_48a4_a9f3_4de877530384 ;
+                                         rdfs:comment "A 'Secretariat' labeled 'The Mexican Federation Secretariat of Health'"@en ,
+                                                      "Una 'Secretaría' etiquetada 'La Secretaría de Salud de la Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "La Secretaría de Salud de la Federación Mexicana"@es ,
+                                                    "The Mexican Federation Secretariat of Health"@en ;
+                                         skos:prefLabel "SSA"@en ,
+                                                        "SSA"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#e00527de_5140_4086_acc4_98e1ee21fb4c
+mex:e00527de_5140_4086_acc4_98e1ee21fb4c rdf:type owl:NamedIndividual ,
+                                                  mex:fd3b5629_e0e6_4d4e_8d5f_52d494ffe111 ;
+                                         ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 mex:f680169c_633d_4fb8_ae0d_a99902d9281d ;
+                                         dcat:inCatalog mex:a8cc2536_2d50_48a4_a9f3_4de877530384 ;
+                                         rdfs:comment "A 'Secretariat' labeled 'The Mexican Federation Secretariat of Foreign Affairs'"@en ,
+                                                      "Una 'Secretaría' etiquetada 'La Secretaría de Relaciones Exteriores de la Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "La Secretaría de Relaciones Exteriores de la Federación Mexicana"@es ,
+                                                    "The Mexican Federation Secretariat of Foreign Affairs"@en ;
+                                         skos:prefLabel "SRE"@en ,
+                                                        "SRE"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#e087c2de_ebbb_49b0_8f5c_ea6dff2f49e9
+mex:e087c2de_ebbb_49b0_8f5c_ea6dff2f49e9 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#e08c6a96_9bc3_439e_8330_4772feeae599
+mex:e08c6a96_9bc3_439e_8330_4772feeae599 rdf:type owl:NamedIndividual ,
+                                                  mex:fd3b5629_e0e6_4d4e_8d5f_52d494ffe111 ;
+                                         ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 mex:f680169c_633d_4fb8_ae0d_a99902d9281d ;
+                                         dcat:inCatalog mex:a8cc2536_2d50_48a4_a9f3_4de877530384 ;
+                                         rdfs:comment "A 'Secretariat' labeled 'The Mexican Federation Secretariat of Tourism'"@en ,
+                                                      "Una 'Secretaría' etiquetada 'La Secretaría de Turismo de la Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "La Secretaría de Turismo de la Federación Mexicana"@es ,
+                                                    "The Mexican Federation Secretariat of Tourism"@en ;
+                                         skos:prefLabel "SECTUR"@en ,
+                                                        "SECTUR"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#e161c75a_17b7_4a58_a725_5e61acbd609c
+mex:e161c75a_17b7_4a58_a725_5e61acbd609c rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#e2f991aa_d311_4896_9cd2_6a13efce3de6
+mex:e2f991aa_d311_4896_9cd2_6a13efce3de6 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#e40a5e47_3fa8_40cc_adda_c9e6f43569ff
+mex:e40a5e47_3fa8_40cc_adda_c9e6f43569ff rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#e5423592_6699_41fc_ab86_e4df786b05b8
+mex:e5423592_6699_41fc_ab86_e4df786b05b8 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#e5d32d88_4265_4479_89ff_b681c1cef7c5
+mex:e5d32d88_4265_4479_89ff_b681c1cef7c5 rdf:type owl:NamedIndividual ,
+                                                  mex:fd3b5629_e0e6_4d4e_8d5f_52d494ffe111 ;
+                                         ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 mex:f680169c_633d_4fb8_ae0d_a99902d9281d ;
+                                         dcat:inCatalog mex:a8cc2536_2d50_48a4_a9f3_4de877530384 ;
+                                         rdfs:comment "A 'Secretariat' labeled 'The Mexican Federation Secretariat of Energy'"@en ,
+                                                      "Una 'Secretaría' etiquetada 'La Secretaría de Energía de la Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "La Secretaría de Energía de la Federación Mexicana"@es ,
+                                                    "The Mexican Federation Secretariat of Energy"@en ;
+                                         skos:prefLabel "SENER"@en ,
+                                                        "SENER"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#e601a68d_ea1b_4ac9_b222_b146f0839481
+mex:e601a68d_ea1b_4ac9_b222_b146f0839481 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#e7954272_8e97_4358_ab80_27d0a302caf2
+mex:e7954272_8e97_4358_ab80_27d0a302caf2 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#eb84f160_07b5_4299_828a_12a3ed67b49f
+mex:eb84f160_07b5_4299_828a_12a3ed67b49f rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#eff96bf8_ee3c_40fe_b993_cc04a019131e
+mex:eff96bf8_ee3c_40fe_b993_cc04a019131e rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#f133fc27_6776_461f_a070_2ffb95584414
+mex:f133fc27_6776_461f_a070_2ffb95584414 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#f17fff98_735a_443a_8d82_3b4afedb1214
+mex:f17fff98_735a_443a_8d82_3b4afedb1214 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#f33e7d26_14b7_431e_882e_8f46b339da2f
+mex:f33e7d26_14b7_431e_882e_8f46b339da2f rdf:type owl:NamedIndividual ,
+                                                  mex:fd3b5629_e0e6_4d4e_8d5f_52d494ffe111 ;
+                                         ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 mex:f680169c_633d_4fb8_ae0d_a99902d9281d ;
+                                         dcat:inCatalog mex:a8cc2536_2d50_48a4_a9f3_4de877530384 ;
+                                         rdfs:comment "A 'Secretariat' labeled 'The Mexican Federation Secretariat of National Defense'"@en ,
+                                                      "Una 'Secretaría' etiquetada 'La Secretaría de la Defensa Nacional de la Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "La Secretaría de la Defensa Nacional de la Federación Mexicana"@es ,
+                                                    "The Mexican Federation Secretariat of National Defense"@en ;
+                                         skos:prefLabel "SEDENA"@en ,
+                                                        "SEDENA"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#f3e47a7b_d977_4ddc_ba35_272d98e5fdaf
+mex:f3e47a7b_d977_4ddc_ba35_272d98e5fdaf rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#f4e0b171_cf73_4b16_bd64_3a22f2a6a2a1
+mex:f4e0b171_cf73_4b16_bd64_3a22f2a6a2a1 rdf:type owl:NamedIndividual ,
+                                                  mex:c12531d0_53c0_40ab_8bf0_10f019459b24 ;
+                                         ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 mex:f6394645_5a89_4db6_bef0_4b74acbf6fb7 ;
+                                         dcat:inCatalog mex:cc149f76_b8d5_446d_a004_77bfd06eaf13 ;
+                                         rdfs:comment "A 'Power' labeled 'The Judicial Power' of 'The Mexican Federation'"@en ,
+                                                      "Un 'Poder' etiquetado 'El Poder Judicial' de 'La Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Poder Judicial"@es ,
+                                                    "The Judicial Power"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#f6394645_5a89_4db6_bef0_4b74acbf6fb7
+mex:f6394645_5a89_4db6_bef0_4b74acbf6fb7 rdf:type owl:NamedIndividual ,
+                                                  mex:caa5cf13_8f5f_4233_bf2d_f1012ba02de2 ,
+                                                  mex:cfd6b6b3_92a7_4a12_9080_92ff26f6c85c ;
+                                         ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 mex:c3003dc5_e891_4d38_a5b7_f6041566ce4e ;
+                                         dcat:inCatalog mex:a5188c07_6a1f_4dcf_bb24_62ca70ce8708 ;
+                                         rdfs:comment "A 'Government' labeled 'The Government' of 'The Mexican Federation'"@en ,
+                                                      "Un 'Gobierno' etiquetado 'El Gobierno' de 'La Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Gobierno"@es ,
+                                                    "The Government"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#f680169c_633d_4fb8_ae0d_a99902d9281d
+mex:f680169c_633d_4fb8_ae0d_a99902d9281d rdf:type owl:NamedIndividual ,
+                                                  mex:e3e803ac_950f_4d74_a6ca_9931e68b0157 ;
+                                         dcat:inCatalog mex:c592a9d3_6503_4726_b0a1_4620a9480b08 ,
+                                                        mex:d328e411_2ad3_41e4_8588_a4a27d42ac8e ;
+                                         rdfs:comment "A 'Public Administration' labeled 'The Centralized Public Administration' of the 'Government' of 'The Mexican Federation'"@en ,
+                                                      "Una 'Administración Pública' etiquetada 'La Administración Pública Centralizada' del 'Gobierno' de 'La Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "La Administración Pública Centralizada"@es ,
+                                                    "The Centralized Public Administration"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#f767f129_a7ab_4d57_ad5d_dc5229d869ab
+mex:f767f129_a7ab_4d57_ad5d_dc5229d869ab rdf:type owl:NamedIndividual ,
+                                                  mex:fd3b5629_e0e6_4d4e_8d5f_52d494ffe111 ;
+                                         ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 mex:f680169c_633d_4fb8_ae0d_a99902d9281d ;
+                                         dcat:inCatalog mex:a8cc2536_2d50_48a4_a9f3_4de877530384 ;
+                                         rdfs:comment "A 'Secretariat' labeled 'The Mexican Federation Secretariat of Finance and Public Credit'"@en ,
+                                                      "Una 'Secretaría' etiquetada 'La Secretaría de Hacienda y Crédito Público de la Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "La Secretaría de Hacienda y Crédito Público de la Federación Mexicana"@es ,
+                                                    "The Mexican Federation Secretariat of Finance and Public Credit"@en ;
+                                         skos:prefLabel "SHCP"@en ,
+                                                        "SHCP"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#f7765109_dadd_41f1_84c8_3d7738ec23c4
+mex:f7765109_dadd_41f1_84c8_3d7738ec23c4 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#f822cfd5_5cce_4075_b963_db23c32ff5d5
+mex:f822cfd5_5cce_4075_b963_db23c32ff5d5 rdf:type owl:NamedIndividual ,
+                                                  mex:fd3b5629_e0e6_4d4e_8d5f_52d494ffe111 ;
+                                         ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 mex:f680169c_633d_4fb8_ae0d_a99902d9281d ;
+                                         dcat:inCatalog mex:a8cc2536_2d50_48a4_a9f3_4de877530384 ;
+                                         rdfs:comment "A 'Secretariat' labeled 'The Mexican Federation Secretariat of Public Education'"@en ,
+                                                      "Una 'Secretaría' etiquetada 'La Secretaría de Educación Pública de la Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "La Secretaría de Educación Pública de la Federación Mexicana"@es ,
+                                                    "The Mexican Federation Secretariat of Public Education"@en ;
+                                         skos:prefLabel "SEP"@en ,
+                                                        "SEP"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#fa6d7993_de87_4e5b_9e18_4bbb04f87922
+mex:fa6d7993_de87_4e5b_9e18_4bbb04f87922 rdf:type owl:NamedIndividual ,
+                                                  mex:fd3b5629_e0e6_4d4e_8d5f_52d494ffe111 ;
+                                         ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 mex:f680169c_633d_4fb8_ae0d_a99902d9281d ;
+                                         dcat:inCatalog mex:a8cc2536_2d50_48a4_a9f3_4de877530384 ;
+                                         rdfs:comment "A 'Secretariat' labeled 'The Mexican Federation Secretariat of Agriculture and Rural Development'"@en ,
+                                                      "Una 'Secretaría' etiquetada 'La Secretaría de Agricultura y Desarrollo Rural de la Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "La Secretaría de Agricultura y Desarrollo Rural de la Federación Mexicana"@es ,
+                                                    "The Mexican Federation Secretariat of Agriculture and Rural Development"@en ;
+                                         skos:prefLabel "SADER"@en ,
+                                                        "SADER"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#fe6609f2_f88c_4dc0_a8ad_6c6cd5750204
+mex:fe6609f2_f88c_4dc0_a8ad_6c6cd5750204 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#ffa53e32_8b6d_42c1_9214_eb5aea130888
+mex:ffa53e32_8b6d_42c1_9214_eb5aea130888 rdf:type owl:NamedIndividual .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

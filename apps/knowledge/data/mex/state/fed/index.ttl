@@ -1,0 +1,148 @@
+@prefix : <http://www.semantyk.com/knowledge/mex#> .
+@prefix mex: <http://www.semantyk.com/knowledge/mex#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ukg: <http://www.semantyk.com/knowledge/ukg#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfg: <http://www.w3.org/2004/03/trix/rdfg-1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://www.semantyk.com/knowledge/mex#> .
+
+<http://www.semantyk.com/knowledge/mex/state/fed#> rdf:type owl:Ontology ;
+                                                    owl:imports <http://www.semantyk.com/knowledge/mex/state/fed/core#> ,
+                                                                <http://www.semantyk.com/knowledge/mex/state/fed/ef#> ,
+                                                                <http://www.semantyk.com/knowledge/mex/state/fed/loc#> ,
+                                                                <http://www.semantyk.com/knowledge/mex/state/fed/mun#> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/dc/terms/subject
+dcterms:subject rdf:type owl:ObjectProperty .
+
+
+###  http://www.semantyk.com/knowledge/ukg#bdacdcb9_16b7_4149_b362_69a0007478a7
+ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2004/03/trix/rdfg-1/subGraphOf
+rdfg:subGraphOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#catalog
+dcat:catalog rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#dataset
+dcat:dataset rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#inCatalog
+dcat:inCatalog rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#resource
+dcat:resource rdf:type owl:ObjectProperty .
+
+
+###  http://xmlns.com/foaf/0.1/page
+foaf:page rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2004/03/trix/rdfg-1/Graph
+rdfg:Graph rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dcat#Catalog
+dcat:Catalog rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dcat#Dataset
+dcat:Dataset rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semantyk.com/knowledge/mex#a96355d4_e44d_4abf_b730_e2d69a342a12
+mex:a96355d4_e44d_4abf_b730_e2d69a342a12 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#bed3f1e0_b5b9_494a_a97b_be866a71f637
+mex:bed3f1e0_b5b9_494a_a97b_be866a71f637 rdf:type owl:NamedIndividual ,
+                                                  rdfg:Graph ;
+                                         owl:sameAs <http://www.semantyk.com/knowledge/mex/state/fed#> ;
+                                         dcterms:subject mex:a96355d4_e44d_4abf_b730_e2d69a342a12 ;
+                                         rdfg:subGraphOf mex:c9c8b688_9776_4bfb_8007_69f7efe21618 ;
+                                         dcat:inCatalog mex:e087c2de_ebbb_49b0_8f5c_ea6dff2f49e9 ;
+                                         rdfs:isDefinedBy <http://www.semantyk.com/knowledge/mex/state/fed#> ;
+                                         rdfs:label "El Grafo de Conocimiento de La Federación Mexicana"@es ,
+                                                    "The Knowledge Graph of the Mexican Federation"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex/state/fed#
+
+###  http://www.semantyk.com/knowledge/mex#c009b94d_da5f_4f35_a1d3_d6515df21ca5
+mex:c009b94d_da5f_4f35_a1d3_d6515df21ca5 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#c9172e79_096d_43d4_b07c_ac4898e4f6da
+mex:c9172e79_096d_43d4_b07c_ac4898e4f6da rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#c9c8b688_9776_4bfb_8007_69f7efe21618
+mex:c9c8b688_9776_4bfb_8007_69f7efe21618 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#e020b001_8b16_48de_a00e_60a6fe4babb8
+mex:e020b001_8b16_48de_a00e_60a6fe4babb8 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#e087c2de_ebbb_49b0_8f5c_ea6dff2f49e9
+mex:e087c2de_ebbb_49b0_8f5c_ea6dff2f49e9 rdf:type owl:NamedIndividual ,
+                                                  dcat:Catalog ;
+                                         dcterms:subject mex:bed3f1e0_b5b9_494a_a97b_be866a71f637 ;
+                                         dcat:catalog mex:c009b94d_da5f_4f35_a1d3_d6515df21ca5 ,
+                                                      mex:c9172e79_096d_43d4_b07c_ac4898e4f6da ,
+                                                      mex:e020b001_8b16_48de_a00e_60a6fe4babb8 ,
+                                                      mex:f8a4cd20_110e_4a90_9c8c_83af097a291d ;
+                                         dcat:inCatalog mex:e9819be9_10e3_45be_8602_7736d5cb5448 ;
+                                         rdfs:comment "A 'Catalog' labeled 'The Catalog' of 'The Knowledge Graph' of 'The Mexican Federation'"@en ,
+                                                      "Un 'Catálogo' etiquetado 'El Catálogo' de 'El Grafo de Conocimiento' de 'La Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy <http://www.semantyk.com/knowledge/mex/state/fed#> ;
+                                         rdfs:label "El Catálogo de El Grafo de Conocimiento de La Federación Mexicana"@es ,
+                                                    "The Catalog of The Knowledge Graph of The Mexican Federation"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#e9819be9_10e3_45be_8602_7736d5cb5448
+mex:e9819be9_10e3_45be_8602_7736d5cb5448 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#f8a4cd20_110e_4a90_9c8c_83af097a291d
+mex:f8a4cd20_110e_4a90_9c8c_83af097a291d rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex/state/fed#
+<http://www.semantyk.com/knowledge/mex/state/fed#> rdf:type owl:NamedIndividual .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
