@@ -1,1 +1,17 @@
-* !text !filter !merge !diff
+# ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+# # `.gitattributes`
+# @organization: Semantyk
+# @project: Semantyk
+#
+# @file: This file contains attributes for Git.
+#
+# @created: Apr 1, 2025
+# @modified: Apr 1, 2025
+#
+# @author: Semantyk Team
+# @maintainer: Daniel Bakas <https://id.danielbakas.com>
+#
+# @copyright: Semantyk © 2025. All rights reserved.
+# ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+apps/knowledge/data/mex/state/fed/loc/data.ttl filter=lfs diff=lfs merge=lfs -text
