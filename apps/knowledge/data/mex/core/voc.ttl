@@ -1,0 +1,647 @@
+@prefix : <http://www.semantyk.com/knowledge/mex#> .
+@prefix mex: <http://www.semantyk.com/knowledge/mex#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ukg: <http://www.semantyk.com/knowledge/ukg#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix rdfg: <http://www.w3.org/2004/03/trix/rdfg-1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <http://www.semantyk.com/knowledge/mex#> .
+
+<http://www.semantyk.com/knowledge/mex/core/voc#> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semantyk.com/knowledge/ukg#c55f7a9f_8e55_45e2_87c0_f22a089c42d8
+ukg:c55f7a9f_8e55_45e2_87c0_f22a089c42d8 rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#topConceptOf
+skos:topConceptOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2004/03/trix/rdfg-1/subGraphOf
+rdfg:subGraphOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#inCatalog
+dcat:inCatalog rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semantyk.com/knowledge/ukg#b36e331b_7848_439c_a539_c05c049a9f43
+ukg:b36e331b_7848_439c_a539_c05c049a9f43 rdf:type owl:Class .
+
+
+###  http://www.semantyk.com/knowledge/ukg#bd560e81_ec87_4ee2_97f5_d63d8d0b3db9
+ukg:bd560e81_ec87_4ee2_97f5_d63d8d0b3db9 rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+skos:ConceptScheme rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/03/trix/rdfg-1/Graph
+rdfg:Graph rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semantyk.com/knowledge/mex#
+mex: rdf:type owl:NamedIndividual ;
+     owl:sameAs mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 .
+
+
+###  http://www.semantyk.com/knowledge/mex#daa6a4eb_ffaf_42e7_90a4_edde1f9286f8
+
+###  http://www.semantyk.com/knowledge/mex#a0913504_c970_44ad_885d_02c4e2d59cb2
+mex:a0913504_c970_44ad_885d_02c4e2d59cb2 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'law'"@en ,
+                                                      "Un 'Concepto' etiquetado 'ley'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "law (Concept)"@en ,
+                                                    "ley (Concepto)"@es ;
+                                         skos:prefLabel "law"@en ,
+                                                        "ley"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#a24c56f1_8e46_40d6_8008_92c6c7fc1d00
+mex:a24c56f1_8e46_40d6_8008_92c6c7fc1d00 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'The Mexican Territory'"@en ,
+                                                      "Un 'Concepto' etiquetado 'El Territorio Mexicano'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Territorio Mexicano (Concepto)"@es ,
+                                                    "The Mexican Territory (Concept)"@en ;
+                                         skos:prefLabel "El Territorio Mexicano"@es ,
+                                                        "The Mexican Territory"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#a28b4fdd_45d5_4aba_a63f_c59c0f0f2bd9
+mex:a28b4fdd_45d5_4aba_a63f_c59c0f0f2bd9 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'man'"@en ,
+                                                      "Un 'Concepto' etiquetado 'hombre'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "hombre (Concepto)"@es ,
+                                                    "man (Concept)"@en ;
+                                         skos:prefLabel "hombre"@es ,
+                                                        "man"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#a8fe9c49_4473_448c_b666_c6f99c609cdd
+mex:a8fe9c49_4473_448c_b666_c6f99c609cdd rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'Nation-State'"@en ,
+                                                      "Un 'Concepto' etiquetado 'Estado-Nación'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "Estado-Nación (Concepto)"@es ,
+                                                    "Nation-State (Concept)"@en ;
+                                         skos:prefLabel "Estado-Nación"@es ,
+                                                        "Nation-State"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#a9b56b3f_fe56_45d2_922c_c21c6e9c276d
+mex:a9b56b3f_fe56_45d2_922c_c21c6e9c276d rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'People'"@en ,
+                                                      "Un 'Concepto' etiquetado 'Pueblo'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "People (Concept)"@en ,
+                                                    "Pueblo (Concepto)"@es ;
+                                         skos:prefLabel "People"@en ,
+                                                        "Pueblo"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#aa6f3ff2_e49a_4db5_a0c7_a6b1c7f7856a
+mex:aa6f3ff2_e49a_4db5_a0c7_a6b1c7f7856a rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:topConceptOf mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'Thing'"@en ,
+                                                      "Un 'Concepto' etiquetado 'Cosa'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "Cosa (Concepto)"@es ,
+                                                    "Thing (Concept)"@en ;
+                                         skos:prefLabel "Cosa"@es ,
+                                                        "Thing"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#ab118fe2_9773_44cd_8178_8a503ea1dea8
+mex:ab118fe2_9773_44cd_8178_8a503ea1dea8 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'Class'"@en ,
+                                                      "Un 'Concepto' etiquetado 'Clase'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "Clase (Concepto)"@es ,
+                                                    "Class (Concept)"@en ;
+                                         skos:prefLabel "Clase"@es ,
+                                                        "Class"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#b141f627_98cd_40ba_9354_cd34711b1540
+mex:b141f627_98cd_40ba_9354_cd34711b1540 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'The Mexican Federation'"@en ,
+                                                      "Un 'Concepto' etiquetado 'La Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "La Federación Mexicana (Concepto)"@es ,
+                                                    "The Mexican Federation (Concept)"@en ;
+                                         skos:prefLabel "La Federación Mexicana"@es ,
+                                                        "The Mexican Federation"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#b3751c18_02b5_4a72_a9e2_c82ac2c6fed3
+mex:b3751c18_02b5_4a72_a9e2_c82ac2c6fed3 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'secretariat'"@en ,
+                                                      "Un 'Concepto' etiquetado 'secretaría'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "secretariat (Concept)"@en ,
+                                                    "secretaría (Concepto)"@es ;
+                                         skos:prefLabel "secretariat"@en ,
+                                                        "secretaría"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#b46e3fe1_96d1_41f6_957f_f7823d50a8c0
+mex:b46e3fe1_96d1_41f6_957f_f7823d50a8c0 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'Republic'"@en ,
+                                                      "Un 'Concepto' etiquetado 'República'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "Republic (Concept)"@en ,
+                                                    "República (Concepto)"@es ;
+                                         skos:prefLabel "Republic"@en ,
+                                                        "República"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#b780c9a0_57c4_4985_8c6f_83c9140803f5
+mex:b780c9a0_57c4_4985_8c6f_83c9140803f5 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'woman'"@en ,
+                                                      "Un 'Concepto' etiquetado 'mujer'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "mujer (Concepto)"@es ,
+                                                    "woman (Concept)"@en ;
+                                         skos:prefLabel "mujer"@es ,
+                                                        "woman"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#b7c0ca8d_4519_43bc_82c0_5a331cb799e5
+mex:b7c0ca8d_4519_43bc_82c0_5a331cb799e5 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'Federation'"@en ,
+                                                      "Un 'Concepto' etiquetado 'Federación'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "Federación (Concepto)"@es ,
+                                                    "Federation (Concept)"@en ;
+                                         skos:prefLabel "Federación"@es ,
+                                                        "Federation"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#b89c40b4_cc84_4295_94fe_b74ce0dc7389
+mex:b89c40b4_cc84_4295_94fe_b74ce0dc7389 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'municipality'"@en ,
+                                                      "Un 'Concepto' etiquetado 'municipio'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "municipality (Concept)"@en ,
+                                                    "municipio (Concepto)"@es ;
+                                         skos:prefLabel "municipality"@en ,
+                                                        "municipio"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#b9e92c2a_6e79_4015_9256_e33deaeec8ad
+mex:b9e92c2a_6e79_4015_9256_e33deaeec8ad rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'Culture'"@en ,
+                                                      "Un 'Concepto' etiquetado 'Cultura'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "Cultura (Concepto)"@es ,
+                                                    "Culture (Concept)"@en ;
+                                         skos:prefLabel "Cultura"@es ,
+                                                        "Culture"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#ba881fe7_6251_44c1_af4f_aa4d9826e864
+mex:ba881fe7_6251_44c1_af4f_aa4d9826e864 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'Mexican Person'"@en ,
+                                                      "Un 'Concepto' etiquetado 'Persona Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "Mexican Person (Concept)"@en ,
+                                                    "Persona Mexicana (Concepto)"@es ;
+                                         skos:prefLabel "Mexican Person"@en ,
+                                                        "Persona Mexicana"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#bc3cb910_6657_4e98_b337_866c623b2cc3
+mex:bc3cb910_6657_4e98_b337_866c623b2cc3 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'government'"@en ,
+                                                      "Un 'Concepto' etiquetado 'gobierno'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "gobierno (Concepto)"@es ,
+                                                    "government (Concept)"@en ;
+                                         skos:prefLabel "gobierno"@es ,
+                                                        "government"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#c26d2b14_ec3a_4371_9a52_c41322f490b7
+mex:c26d2b14_ec3a_4371_9a52_c41322f490b7 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'constitution'"@en ,
+                                                      "Un 'Concepto' etiquetado 'constitución'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "constitución (Concepto)"@es ,
+                                                    "constitution (Concept)"@en ;
+                                         skos:prefLabel "constitución"@es ,
+                                                        "constitution"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#c4945d83_7935_4f0f_aac3_76310064f96e
+mex:c4945d83_7935_4f0f_aac3_76310064f96e rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'The Mexican Nation'"@en ,
+                                                      "Un 'Concepto' etiquetado 'La Nación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "La Nación Mexicana (Concepto)"@es ,
+                                                    "The Mexican Nation (Concept)"@en ;
+                                         skos:prefLabel "La Nación Mexicana"@es ,
+                                                        "The Mexican Nation"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#c53ae0e4_3e09_4cdd_93f3_f496c8d89e75
+mex:c53ae0e4_3e09_4cdd_93f3_f496c8d89e75 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'code'"@en ,
+                                                      "Un 'Concepto' etiquetado 'código'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "code (Concept)"@en ,
+                                                    "código (Concepto)"@es ;
+                                         skos:prefLabel "code"@en ,
+                                                        "código"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#c5574968_dcd6_4ed7_a404_abfb378c7ab3
+mex:c5574968_dcd6_4ed7_a404_abfb378c7ab3 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'The Mexican State'"@en ,
+                                                      "Un 'Concepto' etiquetado 'El Estado Mexicano'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Estado Mexicano (Concepto)"@es ,
+                                                    "The Mexican State (Concept)"@en ;
+                                         skos:prefLabel "El Estado Mexicano"@es ,
+                                                        "The Mexican State"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#ca5379ce_307a_4cee_8af8_541a26eb475d
+mex:ca5379ce_307a_4cee_8af8_541a26eb475d rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'female'"@en ,
+                                                      "Un 'Concepto' etiquetado 'hembra'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "female (Concept)"@en ,
+                                                    "hembra (Concepto)"@es ;
+                                         skos:prefLabel "female"@en ,
+                                                        "hembra"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#d093d8db_840e_4b85_bc0d_ebf14e960830
+mex:d093d8db_840e_4b85_bc0d_ebf14e960830 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'public administration'"@en ,
+                                                      "Un 'Concepto' etiquetado 'administración pública'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "administración pública (Concepto)"@es ,
+                                                    "public administration (Concept)"@en ;
+                                         skos:prefLabel "administración pública"@es ,
+                                                        "public administration"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#d3b514db_c9e0_40f1_b38c_92cdf0e1aa41
+mex:d3b514db_c9e0_40f1_b38c_92cdf0e1aa41 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'Person'"@en ,
+                                                      "Un 'Concepto' etiquetado 'Persona'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "Person (Concept)"@en ,
+                                                    "Persona (Concepto)"@es ;
+                                         skos:prefLabel "Person"@en ,
+                                                        "Persona"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#d4090495_7f84_422e_ac20_305b0d94a91a
+mex:d4090495_7f84_422e_ac20_305b0d94a91a rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'Mexican Thing'"@en ,
+                                                      "Un 'Concepto' etiquetado 'Cosa Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "Cosa Mexicana (Concepto)"@es ,
+                                                    "Mexican Thing (Concept)"@en ;
+                                         skos:prefLabel "Cosa Mexicana"@es ,
+                                                        "Mexican Thing"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#d4a42972_30ab_4d65_9818_102a8b0f4935
+mex:d4a42972_30ab_4d65_9818_102a8b0f4935 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         ukg:c55f7a9f_8e55_45e2_87c0_f22a089c42d8 ukg:bd560e81_ec87_4ee2_97f5_d63d8d0b3db9 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'Concept Scheme'"@en ,
+                                                      "Un 'Concepto' etiquetado 'Esquema de Conceptos'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "Concept Scheme (Concept)"@en ,
+                                                    "Esquema de Conceptos (Concepto)"@es ;
+                                         skos:prefLabel "Concept Scheme"@en ,
+                                                        "Esquema de Conceptos"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#daa6a4eb_ffaf_42e7_90a4_edde1f9286f8
+mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 rdf:type owl:NamedIndividual ,
+                                                  ukg:bd560e81_ec87_4ee2_97f5_d63d8d0b3db9 ;
+                                         dcat:inCatalog mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept Scheme' labeled 'The Concept Scheme' of 'The Core' of 'The Knowledge Graph' of Mexico'"@en ,
+                                                      "Un 'Esquema de Conceptos' etiquetado 'El Esquema de Conceptos' de 'El Núcleo' de de 'El Grafo de Conocimiento' de 'México'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Esquema de Conceptos de El Núcleo de El Grafo de Conocimiento de México"@es ,
+                                                    "The Concept Scheme of The Core of The Knowledge Graph of Mexico"@en ;
+                                         skos:prefLabel "El Esquema de Conceptos de El Núcleo de El Grafo de Conocimiento de México"@es ,
+                                                        "The Concept Scheme of The Core of The Knowledge Graph of Mexico"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#def916a2_22b3_4438_b3d5_9e0e8813029f
+mex:def916a2_22b3_4438_b3d5_9e0e8813029f rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'population'"@en ,
+                                                      "Un 'Concepto' etiquetado 'población'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "población (Concepto)"@es ,
+                                                    "population (Concept)"@en ;
+                                         skos:prefLabel "población"@es ,
+                                                        "population"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#e06a1482_4394_423b_a2ba_a5f5942fb284
+mex:e06a1482_4394_423b_a2ba_a5f5942fb284 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'Woman'"@en ,
+                                                      "Un 'Concepto' etiquetado 'Mujer'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "Mujer (Concepto)"@es ,
+                                                    "Woman (Concept)"@en ;
+                                         skos:prefLabel "Mujer"@es ,
+                                                        "Woman"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#e240586b_0bb3_463b_8458_5c0e16953b80
+mex:e240586b_0bb3_463b_8458_5c0e16953b80 rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'political'"@en ,
+                                                      "Un 'Concepto' etiquetado 'político' o 'política'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "political (Concept)"@en ,
+                                                    "política (Concepto)"@es ,
+                                                    "político (Concepto)"@es ;
+                                         skos:prefLabel "political"@en ,
+                                                        "política"@es ,
+                                                        "político"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#e62a535e_a6af_471c_9ef6_55d716ebd4fb
+mex:e62a535e_a6af_471c_9ef6_55d716ebd4fb rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'The Mexican People'"@en ,
+                                                      "Un 'Concepto' etiquetado 'El Pueblo Mexicano'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Pueblo Mexicano (Concepto)"@es ,
+                                                    "The Mexican People (Concept)"@en ;
+                                         skos:prefLabel "El Pueblo Mexicano"@es ,
+                                                        "The Mexican People"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#e8d7e95a_eeb1_449e_9c77_1963da6f4766
+mex:e8d7e95a_eeb1_449e_9c77_1963da6f4766 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'congress'"@en ,
+                                                      "Un 'Concepto' etiquetado 'congreso'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "congreso (Concepto)"@es ,
+                                                    "congress (Concept)"@en ;
+                                         skos:prefLabel "congreso"@es ,
+                                                        "congress"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#e9849ae8_891a_4131_9ccb_31a6991c1e4c
+mex:e9849ae8_891a_4131_9ccb_31a6991c1e4c rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'territory'"@en ,
+                                                      "Un 'Concepto' etiquetado 'territorio'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "territorio (Concepto)"@es ,
+                                                    "territory (Concept)"@en ;
+                                         skos:prefLabel "territorio"@es ,
+                                                        "territory"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#e98eaf63_8f23_4454_99f5_6b71f2acde01
+mex:e98eaf63_8f23_4454_99f5_6b71f2acde01 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'The Mexican Republic'"@en ,
+                                                      "Un 'Concepto' etiquetado 'La República Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "La República Mexicana (Concepto)"@es ,
+                                                    "The Mexican Republic (Concept)"@en ;
+                                         skos:prefLabel "La República Mexicana"@es ,
+                                                        "The Mexican Republic"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#f3c626f4_1444_46a0_be30_8a7d14a269bb
+mex:f3c626f4_1444_46a0_be30_8a7d14a269bb rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'locality'"@en ,
+                                                      "Un 'Concepto' etiquetado 'localidad'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "localidad (Concepto)"@es ,
+                                                    "locality (Concept)"@en ;
+                                         skos:prefLabel "localidad"@es ,
+                                                        "locality"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#f6bc881f_d7dc_45ce_8b1d_0b1f563ab2a9
+mex:f6bc881f_d7dc_45ce_8b1d_0b1f563ab2a9 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'The Mexican Culture'"@en ,
+                                                      "Un 'Concepto' etiquetado 'La Cultura Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "La Cultura Mexicana (Concepto)"@es ,
+                                                    "The Mexican Culture (Concept)"@en ;
+                                         skos:prefLabel "La Cultura Mexicana"@es ,
+                                                        "The Mexican Culture"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#f7bf33a7_d6f0_4aed_b925_330dde702afb
+mex:f7bf33a7_d6f0_4aed_b925_330dde702afb rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'Man'"@en ,
+                                                      "Un 'Concepto' etiquetado 'Hombre'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "Hombre (Concepto)"@es ,
+                                                    "Man (Concept)"@en ;
+                                         skos:prefLabel "A Man"@en ,
+                                                        "Hombre"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#f7d86ba7_f612_4cef_916c_f6d80d230b64
+mex:f7d86ba7_f612_4cef_916c_f6d80d230b64 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'Male'"@en ,
+                                                      "Un 'Concepto' etiquetado 'Macho'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "Macho (Concepto)"@es ,
+                                                    "Male (Concept)"@en ;
+                                         skos:prefLabel "Macho"@es ,
+                                                        "Male"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#fa57b4a9_7c59_4c0f_a0a1_b4d44538c611
+mex:fa57b4a9_7c59_4c0f_a0a1_b4d44538c611 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'male'"@en ,
+                                                      "Un 'Concepto' etiquetado 'macho'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "macho (Concepto)"@es ,
+                                                    "male (Concept)"@en ;
+                                         skos:prefLabel "macho"@es ,
+                                                        "male"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#fd1cb96d_35a9_495a_a6c1_ea441f9a77db
+mex:fd1cb96d_35a9_495a_a6c1_ea441f9a77db rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'Concept'"@en ,
+                                                      "Un 'Concepto' etiquetado 'Concepto'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "Concept (Concept)"@en ,
+                                                    "Concepto (Concepto)"@es ;
+                                         skos:prefLabel "Concept"@en ,
+                                                        "Concepto"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#ff11d93b_5c11_45ac_8d7a_ce37714788be
+mex:ff11d93b_5c11_45ac_8d7a_ce37714788be rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'Female'"@en ,
+                                                      "Un 'Concepto' etiquetado 'Hembra'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "Female (Concept)"@en ,
+                                                    "Hembra (Concepto)"@es ;
+                                         skos:prefLabel "Female"@en ,
+                                                        "Hembra"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#ffa53e32_8b6d_42c1_9214_eb5aea130888
+mex:ffa53e32_8b6d_42c1_9214_eb5aea130888 rdf:type owl:NamedIndividual ,
+                                                  ukg:b36e331b_7848_439c_a539_c05c049a9f43 ;
+                                         skos:inScheme mex:daa6a4eb_ffaf_42e7_90a4_edde1f9286f8 ;
+                                         rdfs:comment "A 'Concept' labeled 'power'"@en ,
+                                                      "Un 'Concepto' etiquetado 'poder'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "poder (Concepto)"@es ,
+                                                    "power (Concept)"@en ;
+                                         skos:prefLabel "poder"@es ,
+                                                        "power"@en .
+
+
+###  http://www.semantyk.com/knowledge/ukg#bd560e81_ec87_4ee2_97f5_d63d8d0b3db9
+ukg:bd560e81_ec87_4ee2_97f5_d63d8d0b3db9 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/ukg#bf4e6b3a_c931_4464_b4a5_e278d8cee8a9
+ukg:bf4e6b3a_c931_4464_b4a5_e278d8cee8a9 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/ukg#c6c110fa_8f7f_4297_b3ab_523ce3966dd9
+ukg:c6c110fa_8f7f_4297_b3ab_523ce3966dd9 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/ukg#cba263e2_24ca_4849_ac58_6ac534083033
+ukg:cba263e2_24ca_4849_ac58_6ac534083033 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/ukg#cff8a44f_b27f_485e_b2f2_210be0df7192
+ukg:cff8a44f_b27f_485e_b2f2_210be0df7192 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/ukg#d567ba41_6051_4f26_8d4d_2d8a68068531
+ukg:d567ba41_6051_4f26_8d4d_2d8a68068531 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/ukg#ed0cfe1a_2cd5_4bb9_af25_df6f93f064c0
+ukg:ed0cfe1a_2cd5_4bb9_af25_df6f93f064c0 rdf:type owl:NamedIndividual .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
