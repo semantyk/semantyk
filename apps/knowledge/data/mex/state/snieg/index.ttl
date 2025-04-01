@@ -1,0 +1,156 @@
+@prefix : <http://www.semantyk.com/knowledge/mex/state/snieg#> .
+@prefix mex: <http://www.semantyk.com/knowledge/mex#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ukg: <http://www.semantyk.com/knowledge/mex#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix rdfg: <http://www.w3.org/2004/03/trix/rdfg-1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix snieg: <http://www.semantyk.com/knowledge/mex/state/snieg#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://www.semantyk.com/knowledge/mex/state/snieg#> .
+
+<http://www.semantyk.com/knowledge/mex/state/snieg#> rdf:type owl:Ontology ;
+                                                      owl:imports <http://www.semantyk.com/knowledge/mex/state/snieg/core#> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semantyk.com/knowledge/mex#bdacdcb9_16b7_4149_b362_69a0007478a7
+ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2004/03/trix/rdfg-1/subGraphOf
+rdfg:subGraphOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#accessURL
+dcat:accessURL rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#catalog
+dcat:catalog rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#dataset
+dcat:dataset rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#distribution
+dcat:distribution rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#first
+dcat:first rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#inCatalog
+dcat:inCatalog rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#inSeries
+dcat:inSeries rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#last
+dcat:last rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#next
+dcat:next rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#prev
+dcat:prev rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#seriesMember
+dcat:seriesMember rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/dc/terms/issued
+dcterms:issued rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2004/03/trix/rdfg-1/Graph
+rdfg:Graph rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dcat#Catalog
+dcat:Catalog rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semantyk.com/knowledge/mex#c9c8b688_9776_4bfb_8007_69f7efe21618
+ukg:c9c8b688_9776_4bfb_8007_69f7efe21618 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#e9819be9_10e3_45be_8602_7736d5cb5448
+ukg:e9819be9_10e3_45be_8602_7736d5cb5448 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex/state/snieg#
+: rdf:type owl:NamedIndividual ;
+                                                     owl:sameAs snieg:b1894955_33d9_42ee_8d1f_b34651f761d4 .
+
+
+###  http://www.semantyk.com/knowledge/mex/state/snieg#b1894955_33d9_42ee_8d1f_b34651f761d4
+
+###  http://www.semantyk.com/knowledge/mex/state/snieg#b1894955_33d9_42ee_8d1f_b34651f761d4
+snieg:b1894955_33d9_42ee_8d1f_b34651f761d4 rdf:type owl:NamedIndividual ,
+                                                    rdfg:Graph ;
+                                           rdfg:subGraphOf ukg:c9c8b688_9776_4bfb_8007_69f7efe21618 ;
+                                           dcat:inCatalog snieg:ecc6bfab_54c8_4853_8f80_34e9bc8ca5fb ;
+                                           rdfs:isDefinedBy <http://www.semantyk.com/knowledge/mex/state/snieg#> ;
+                                           rdfs:label "El Gran Grafo de Conocimiento de SNIEG"@es ,
+                                                      "The Large Knowledge Graph of SNIEG"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex/state/snieg#ecc6bfab_54c8_4853_8f80_34e9bc8ca5fb
+snieg:ecc6bfab_54c8_4853_8f80_34e9bc8ca5fb rdf:type owl:NamedIndividual ,
+                                                    dcat:Catalog ;
+                                           dcat:catalog snieg:ef6bdbe1_1f8b_4eba_90be_f362f80b750b ,
+                                                        snieg:f47585e8_258a_4d0e_aac4_8ee2148571cf ;
+                                           dcat:dataset snieg:b1894955_33d9_42ee_8d1f_b34651f761d4 ;
+                                           dcat:inCatalog ukg:e9819be9_10e3_45be_8602_7736d5cb5448 ;
+                                           rdfs:comment "A 'Catalog' labeled 'The Large Catalog' of 'The Large Knowledge Graph' of 'SNIEG'"@en ,
+                                                        "Un 'Catálogo' etiquetado 'El Gran Catálogo' de 'El Gran Grafo de Conocimiento' de 'SNIEG'"@es ;
+                                           rdfs:isDefinedBy <http://www.semantyk.com/knowledge/mex/state/snieg#> ;
+                                           rdfs:label "El Gran Catálogo de El Gran Grafo de Conocimiento de SNIEG"@es ,
+                                                      "The Large Catalog of The Large Knowledge Graph of SNIEG"@en ;
+                                           skos:prefLabel "El Gran Catálogo"@es ,
+                                                          "The Large Catalog"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex/state/snieg#ef6bdbe1_1f8b_4eba_90be_f362f80b750b
+snieg:ef6bdbe1_1f8b_4eba_90be_f362f80b750b rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex/state/snieg#f47585e8_258a_4d0e_aac4_8ee2148571cf
+snieg:f47585e8_258a_4d0e_aac4_8ee2148571cf rdf:type owl:NamedIndividual .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
