@@ -1,0 +1,136 @@
+@prefix : <http://www.semantyk.com/knowledge/mex#> .
+@prefix mex: <http://www.semantyk.com/knowledge/mex#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix rdfg: <http://www.w3.org/2004/03/trix/rdfg-1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix inegi: <http://www.semantyk.com/knowledge/mex/state/inegi#> .
+@prefix snieg: <http://www.semantyk.com/knowledge/mex/state/snieg#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://www.semantyk.com/knowledge/mex#> .
+
+<http://www.semantyk.com/knowledge/mex/state#> rdf:type owl:Ontology ;
+                                                owl:imports <http://www.semantyk.com/knowledge/mex/state/fed#> ,
+                                                            <http://www.semantyk.com/knowledge/mex/state/core#> ,
+                                                            inegi: ,
+                                                            snieg: .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/dc/terms/subject
+dcterms:subject rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2004/03/trix/rdfg-1/subGraphOf
+rdfg:subGraphOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#catalog
+dcat:catalog rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#dataset
+dcat:dataset rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#inCatalog
+dcat:inCatalog rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2004/03/trix/rdfg-1/Graph
+rdfg:Graph rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dcat#Catalog
+dcat:Catalog rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semantyk.com/knowledge/mex#ada1b5d2_2825_4ba2_be0b_4fcfe74a8e6b
+mex:ada1b5d2_2825_4ba2_be0b_4fcfe74a8e6b rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#c215bb74_71cc_49e9_975c_429d37249612
+mex:c215bb74_71cc_49e9_975c_429d37249612 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#c9c8b688_9776_4bfb_8007_69f7efe21618
+mex:c9c8b688_9776_4bfb_8007_69f7efe21618 rdf:type owl:NamedIndividual ,
+                                                  rdfg:Graph ;
+                                         owl:sameAs <http://www.semantyk.com/knowledge/mex/state#> ;
+                                         dcterms:subject mex:eb84f160_07b5_4299_828a_12a3ed67b49f ;
+                                         rdfg:subGraphOf mex:cd4263a1_8ba9_444b_82ed_8bfaae5d3be4 ;
+                                         dcat:inCatalog mex:e9819be9_10e3_45be_8602_7736d5cb5448 ;
+                                         rdfs:comment "A 'Graph' labeled 'The Knowledge Graph' of 'The Mexican State'"@en ,
+                                                      "Un 'Grafo' etiquetado 'El Grafo de Conocimiento' de 'El Estado Mexicano'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Grafo de Conocimiento de El Estado Mexicano"@es ,
+                                                    "The Knowledge Graph of The Mexican State"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex/state#
+
+###  http://www.semantyk.com/knowledge/mex#cd4263a1_8ba9_444b_82ed_8bfaae5d3be4
+mex:cd4263a1_8ba9_444b_82ed_8bfaae5d3be4 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#e087c2de_ebbb_49b0_8f5c_ea6dff2f49e9
+mex:e087c2de_ebbb_49b0_8f5c_ea6dff2f49e9 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#e9819be9_10e3_45be_8602_7736d5cb5448
+mex:e9819be9_10e3_45be_8602_7736d5cb5448 rdf:type owl:NamedIndividual ,
+                                                  dcat:Catalog ;
+                                         dcterms:subject mex:c9c8b688_9776_4bfb_8007_69f7efe21618 ;
+                                         dcat:catalog mex:c215bb74_71cc_49e9_975c_429d37249612 ,
+                                                      mex:e087c2de_ebbb_49b0_8f5c_ea6dff2f49e9 ,
+                                                      inegi:edc3ab4b_228c_4eb4_90a1_3bb891b413f0 ,
+                                                      snieg:ecc6bfab_54c8_4853_8f80_34e9bc8ca5fb ;
+                                         dcat:inCatalog mex:ada1b5d2_2825_4ba2_be0b_4fcfe74a8e6b ;
+                                         rdfs:comment "A 'Catalog' labeled 'The Catalog' of 'The Knowledge Graph' of 'The Mexican State'"@en ,
+                                                      "Un 'Catálogo' etiquetado 'El Catálogo' de 'El Grafo de Conocimiento' de 'El Estado Mexicano'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Catálogo de El Grafo de Conocimiento de El Estado Mexicano"@es ,
+                                                    "The Catalog of The Knowledge Graph of The Mexican State"@en ;
+                                         skos:prefLabel "El Catálogo"@es ,
+                                                        "The Catalog"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#eb84f160_07b5_4299_828a_12a3ed67b49f
+mex:eb84f160_07b5_4299_828a_12a3ed67b49f rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex/state#
+<http://www.semantyk.com/knowledge/mex/state#> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex/state/inegi#edc3ab4b_228c_4eb4_90a1_3bb891b413f0
+inegi:edc3ab4b_228c_4eb4_90a1_3bb891b413f0 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex/state/snieg#ecc6bfab_54c8_4853_8f80_34e9bc8ca5fb
+snieg:ecc6bfab_54c8_4853_8f80_34e9bc8ca5fb rdf:type owl:NamedIndividual .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
