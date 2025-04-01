@@ -1,0 +1,298 @@
+@prefix : <http://www.semantyk.com/knowledge/mex#> .
+@prefix mex: <http://www.semantyk.com/knowledge/mex#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ukg: <http://www.semantyk.com/knowledge/ukg#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://www.semantyk.com/knowledge/mex#> .
+
+<http://www.semantyk.com/knowledge/mex/state/fed/ef#> rdf:type owl:Ontology ;
+                                                owl:imports <http://www.semantyk.com/knowledge/mex/state/fed/ef/data#> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semantyk.com/knowledge/ukg#bdacdcb9_16b7_4149_b362_69a0007478a7
+ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#catalog
+dcat:catalog rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#dataset
+dcat:dataset rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#inCatalog
+dcat:inCatalog rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/dc/terms/Dataset
+dcterms:Dataset rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dcat#Catalog
+dcat:Catalog rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dcat#Dataset
+dcat:Dataset rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semantyk.com/knowledge/mex#a74ef361_d63a_48fe_a838_18a9cf1e4c55
+mex:a74ef361_d63a_48fe_a838_18a9cf1e4c55 rdf:type owl:NamedIndividual ,
+                                                  dcat:Catalog ;
+                                         dcat:dataset mex:c1b681cb_a2ea_4c8d_a8aa_80670f8da20d ,
+                                                      mex:c75a5270_c160_4f1a_963d_7ec9b3cce455 ,
+                                                      mex:e144e920_3aed_4b6b_9b6f_97ee278d0c95 ;
+                                         rdfs:label "El Catálogo de Administraciones Públicas de Entidades Federativas"@es .
+
+
+###  http://www.semantyk.com/knowledge/mex#a8c2515e_23e6_4cef_8fda_c50c06730b24
+mex:a8c2515e_23e6_4cef_8fda_c50c06730b24 rdf:type owl:NamedIndividual ,
+                                                  dcat:Dataset ;
+                                         ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 mex:c3003dc5_e891_4d38_a5b7_f6041566ce4e ;
+                                         dcat:inCatalog mex:f8a4cd20_110e_4a90_9c8c_83af097a291d ;
+                                         rdfs:comment "A 'Dataset' labeled 'The Set of Federal Entities Governments'"@en ,
+                                                      "Un 'Conjunto de Datos' etiquetado 'El Conjunto de Gobiernos de Entidades Federativas'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Conjunto de Gobiernos de Entidades Federativas"@es ,
+                                                    "The Set of Federal Entities Governments"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#b3eac302_636b_459b_a5f0_b5f06925c684
+mex:b3eac302_636b_459b_a5f0_b5f06925c684 rdf:type owl:NamedIndividual ,
+                                                  dcterms:Dataset ;
+                                         rdfs:label "El Conjunto de Órganos Desconcentrados de Entidad Federativaes"@es ,
+                                                    "The Federal Entities Desconcentrated Organs Set"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#b3fe7fe8_3c6f_4c24_b350_225d75f6ea51
+mex:b3fe7fe8_3c6f_4c24_b350_225d75f6ea51 rdf:type owl:NamedIndividual ,
+                                                  dcat:Dataset ;
+                                         rdfs:label "El Conjunto de Órganos Descentralizados de Entidades Federativas"@es ,
+                                                    "The Federal Entities Descentralized Organs Dataset"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#b5948746_9a94_4f3d_a8bc_ef9a0463a20e
+mex:b5948746_9a94_4f3d_a8bc_ef9a0463a20e rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#c1b681cb_a2ea_4c8d_a8aa_80670f8da20d
+mex:c1b681cb_a2ea_4c8d_a8aa_80670f8da20d rdf:type owl:NamedIndividual ,
+                                                  dcat:Dataset ;
+                                         rdfs:comment "A 'Dataset' labeled 'The Set of Federal Entities Public Administrations'"@en ,
+                                                      "Un 'Conjunto de Datos' etiquetado 'El Conjunto de Administraciones Públicas de Entidades Federativas'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Conjunto de Administraciones Públicas de Entidades Federativas"@es ,
+                                                    "The Set of Federal Entities Public Administrations"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#c3003dc5_e891_4d38_a5b7_f6041566ce4e
+mex:c3003dc5_e891_4d38_a5b7_f6041566ce4e rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#c75a5270_c160_4f1a_963d_7ec9b3cce455
+mex:c75a5270_c160_4f1a_963d_7ec9b3cce455 rdf:type owl:NamedIndividual ,
+                                                  dcat:Dataset ;
+                                         rdfs:comment "A 'Dataset' labeled 'The Set of Federal Entities Paraestatales Public Administrations'"@en ,
+                                                      "Un 'Conjunto de Datos' etiquetado 'El Conjunto de Administraciones Públicas Paraestatales de Entidades Federativas'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Conjunto de Administraciones Públicas Paraestatales de Entidades Federativas"@es ,
+                                                    "The Set of Federal Entities Parastatal Public Administrations"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#c8ac4056_9cdb_4f94_a848_28c4ce21c552
+mex:c8ac4056_9cdb_4f94_a848_28c4ce21c552 rdf:type owl:NamedIndividual ,
+                                                  dcat:Dataset ;
+                                         ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 mex:b5948746_9a94_4f3d_a8bc_ef9a0463a20e ;
+                                         dcat:inCatalog mex:f8a4cd20_110e_4a90_9c8c_83af097a291d ;
+                                         rdfs:comment "A 'Dataset' labeled 'The Set of Federal Entities Populations'"@en ,
+                                                      "Un 'Conjunto de Datos' etiquetado 'El Conjunto de Poblaciones de Entidades Federativas'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Conjunto de Poblaciones de Entidades Federativas"@es ,
+                                                    "The Set of Federal Entities Populations"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#cec028e8_3778_430a_8155_eed99f469f29
+mex:cec028e8_3778_430a_8155_eed99f469f29 rdf:type owl:NamedIndividual ,
+                                                  dcat:Dataset ;
+                                         dcat:inCatalog mex:f8a4cd20_110e_4a90_9c8c_83af097a291d ;
+                                         rdfs:comment "A 'Dataset' labeled 'The Dataset of Entities' of 'Federal Entities' of 'The Mexican Federation'"@en ,
+                                                      "Un 'Conjunto de Datos' etiquetado 'El Conjunto de Entidades' de 'Entidades Federativas' de 'La Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Conjunto de Entidades"@es ,
+                                                    "The Dataset of Entities"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#cfe126af_96e5_43d7_8cbc_b52e6d3e1e3d
+mex:cfe126af_96e5_43d7_8cbc_b52e6d3e1e3d rdf:type owl:NamedIndividual ,
+                                                  dcat:Dataset ;
+                                         dcat:inCatalog mex:f8a4cd20_110e_4a90_9c8c_83af097a291d ;
+                                         rdfs:comment "A 'Dataset' labeled 'The Set of Federal Entities Powers'"@en ,
+                                                      "Un 'Conjunto de Datos' etiquetado 'El Conjunto de Poderes de Entidades Federativas'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Conjunto de Poderes de Entidades Federativas"@es ,
+                                                    "The Set of Federal Entities Powers"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#d0b33245_980c_4187_9532_62b4a112f1d9
+mex:d0b33245_980c_4187_9532_62b4a112f1d9 rdf:type owl:NamedIndividual ,
+                                                  dcat:Dataset ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Conjunto de Tribunales Superiores de Justicia de las Entidades Federativas"@es ,
+                                                    "The Set of Federal Entity Superior Tribunals of Justice"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#d6699d5e_74a5_4cca_a1c6_4970e25e1dc4
+mex:d6699d5e_74a5_4cca_a1c6_4970e25e1dc4 rdf:type owl:NamedIndividual ,
+                                                  dcat:Dataset ;
+                                         dcat:inCatalog mex:e020b001_8b16_48de_a00e_60a6fe4babb8 ,
+                                                        mex:f8a4cd20_110e_4a90_9c8c_83af097a291d ;
+                                         rdfs:comment "A 'Dataset' labeled 'The Set of Federal Entities Codes'"@en ,
+                                                      "Un 'Conjunto de Datos' etiquetado 'El Conjunto de Códigos de Entidades Federativas'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Conjunto de Códigos de Entidades Federativas"@es ,
+                                                    "The Set of Federal Entities Codes"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#d708be28_1b48_4003_89a4_e281c864cec3
+mex:d708be28_1b48_4003_89a4_e281c864cec3 rdf:type owl:NamedIndividual ,
+                                                  dcat:Dataset ;
+                                         dcat:inCatalog mex:fbb9c814_b2d0_48d3_b3b3_dedadc5ff93c ;
+                                         rdfs:comment "A 'Dataset' labeled 'The Set of Federal Entities Political Constitutions'"@en ,
+                                                      "Un 'Conjunto de Datos' etiquetado 'El Conjunto de Constituciones Políticas de Entidades Federativas'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Conjunto de Constituciones Políticas de Entidades Federativas"@es ,
+                                                    "The Set of Federal Entities Political Constitutions"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#d75bfb46_ffd6_470e_a470_ea1fc2f161cf
+mex:d75bfb46_ffd6_470e_a470_ea1fc2f161cf rdf:type owl:NamedIndividual ,
+                                                  dcat:Dataset ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Conjunto de Congresos de las Entidades Federativas"@es ,
+                                                    "The Set of Federal Entity Congresses"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#d7e8ce09_5598_4f88_87e9_7891aab93dc4
+mex:d7e8ce09_5598_4f88_87e9_7891aab93dc4 rdf:type owl:NamedIndividual ,
+                                                  dcat:Dataset ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Conjunto de Personas Gobernadoras de Entidades Federativas"@es ,
+                                                    "The Set of Federal Entities Governors"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#e020b001_8b16_48de_a00e_60a6fe4babb8
+mex:e020b001_8b16_48de_a00e_60a6fe4babb8 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#e087c2de_ebbb_49b0_8f5c_ea6dff2f49e9
+mex:e087c2de_ebbb_49b0_8f5c_ea6dff2f49e9 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#e0e72c41_9fd7_4087_b78e_b401a3192873
+mex:e0e72c41_9fd7_4087_b78e_b401a3192873 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex#e144e920_3aed_4b6b_9b6f_97ee278d0c95
+mex:e144e920_3aed_4b6b_9b6f_97ee278d0c95 rdf:type owl:NamedIndividual ,
+                                                  dcat:Dataset ;
+                                         rdfs:comment "A 'Dataset' labeled 'The Set of Federal Entities Centralized Public Administrations'"@en ,
+                                                      "Un 'Conjunto de Datos' etiquetado 'El Conjunto de Administraciones Públicas Centralizadas de Entidades Federativas'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Conjunto de Administraciones Públicas Centralizadas de Entidades Federativas"@es ,
+                                                    "The Set of Federal Entities Centralized Public Administrations"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#e4753b47_f22b_4c31_8759_1c45a1a9a805
+mex:e4753b47_f22b_4c31_8759_1c45a1a9a805 rdf:type owl:NamedIndividual ,
+                                                  dcat:Dataset ;
+                                         ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 mex:e0e72c41_9fd7_4087_b78e_b401a3192873 ;
+                                         dcat:inCatalog mex:f8a4cd20_110e_4a90_9c8c_83af097a291d ;
+                                         rdfs:comment "A 'Dataset' labeled 'The Set of Federal Entities Territories'"@en ,
+                                                      "Un 'Conjunto de Datos' etiquetado 'El Conjunto de Territorios de Entidades Federativas'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Conjunto de Territorios de Entidades Federativas"@es ,
+                                                    "The Set of Federal Entities Territories"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#e5423592_6699_41fc_ab86_e4df786b05b8
+mex:e5423592_6699_41fc_ab86_e4df786b05b8 rdf:type owl:NamedIndividual ,
+                                                  dcat:Dataset ;
+                                         dcat:inCatalog mex:f8a4cd20_110e_4a90_9c8c_83af097a291d ;
+                                         rdfs:comment "A 'Dataset' labeled 'The Dataset of Federal Entities' of 'The Mexican Federation'"@en ,
+                                                      "Un 'Conjunto de Datos' etiquetado 'El Conjunto de Entidades Federativas' de 'La Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Conjunto de Entidades Federativas"@es ,
+                                                    "The Set of Federal Entities"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#e8044265_1fb6_41ff_9cff_c0702930ccb7
+mex:e8044265_1fb6_41ff_9cff_c0702930ccb7 rdf:type owl:NamedIndividual ,
+                                                  dcat:Dataset ;
+                                         rdfs:label "El Conjunto de Programas de SEDEMA"@es ,
+                                                    "The SEDEMA Programs Dataset"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#f8a4cd20_110e_4a90_9c8c_83af097a291d
+mex:f8a4cd20_110e_4a90_9c8c_83af097a291d rdf:type owl:NamedIndividual ,
+                                                  dcat:Catalog ;
+                                         dcat:catalog mex:a74ef361_d63a_48fe_a838_18a9cf1e4c55 ,
+                                                      mex:fbb9c814_b2d0_48d3_b3b3_dedadc5ff93c ;
+                                         dcat:dataset mex:a8c2515e_23e6_4cef_8fda_c50c06730b24 ,
+                                                      mex:c8ac4056_9cdb_4f94_a848_28c4ce21c552 ,
+                                                      mex:cec028e8_3778_430a_8155_eed99f469f29 ,
+                                                      mex:cfe126af_96e5_43d7_8cbc_b52e6d3e1e3d ,
+                                                      mex:d6699d5e_74a5_4cca_a1c6_4970e25e1dc4 ,
+                                                      mex:d75bfb46_ffd6_470e_a470_ea1fc2f161cf ,
+                                                      mex:e4753b47_f22b_4c31_8759_1c45a1a9a805 ,
+                                                      mex:e5423592_6699_41fc_ab86_e4df786b05b8 ;
+                                         dcat:inCatalog mex:e087c2de_ebbb_49b0_8f5c_ea6dff2f49e9 ;
+                                         rdfs:comment "A 'Catalog' labeled 'The Catalog of Federal Entities' of 'The Mexican Federation'"@en ,
+                                                      "Un 'Catálogo' etiquetado 'El Catálogo de Entidades Federativas' de 'La Federación Mexicana'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Catálogo de Entidades Federativas"@es ,
+                                                    "The Catalog of Federal Entities"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#fab4e55d_2ec4_4843_b170_aa53f2ba7cd1
+mex:fab4e55d_2ec4_4843_b170_aa53f2ba7cd1 rdf:type owl:NamedIndividual ,
+                                                  dcat:Dataset ;
+                                         ukg:bdacdcb9_16b7_4149_b362_69a0007478a7 mex:c3003dc5_e891_4d38_a5b7_f6041566ce4e ;
+                                         rdfs:comment "A 'Dataset' labeled 'The Set of Federal Entities Public Administrations Organic Laws'"@en ,
+                                                      "Un 'Conjunto de Datos' etiquetado 'El Conjunto de Leyes Orgánicas de las Administraciones Públicas de las Entidades Federativas'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Conjunto de Leyes Orgánicas de las Administraciones Públicas de las Entidades Federativas"@es ,
+                                                    "The Set of Federal Entities Public Administrations Organic Laws"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex#fbb9c814_b2d0_48d3_b3b3_dedadc5ff93c
+mex:fbb9c814_b2d0_48d3_b3b3_dedadc5ff93c rdf:type owl:NamedIndividual ,
+                                                  dcat:Catalog ;
+                                         dcat:dataset mex:d708be28_1b48_4003_89a4_e281c864cec3 ;
+                                         dcat:inCatalog mex:f8a4cd20_110e_4a90_9c8c_83af097a291d ;
+                                         rdfs:comment "A 'Catalog' labeled 'The Catalog of Federal Entities Laws'"@en ,
+                                                      "Un 'Catálogo' etiquetado 'El Catálogo de Leyes de Entidades Federativas'"@es ;
+                                         rdfs:isDefinedBy mex: ;
+                                         rdfs:label "El Catálogo de Leyes de Entidades Federativas"@es ,
+                                                    "The Catalog of Federal Entities Laws"@en .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
