@@ -1,0 +1,133 @@
+@prefix : <http://www.semantyk.com/knowledge/mex/state/inegi#> .
+@prefix mex: <http://www.semantyk.com/knowledge/mex#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ukg: <http://www.semantyk.com/knowledge/ukg#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix inegi: <http://www.semantyk.com/knowledge/mex/state/inegi#> .
+@base <http://www.semantyk.com/knowledge/mex/state/inegi#> .
+
+<http://www.semantyk.com/knowledge/mex/state/inegi/core#> rdf:type owl:Ontology ;
+                                                           owl:imports <http://www.semantyk.com/knowledge/mex/state/inegi/core/data#> ,
+                                                                       <http://www.semantyk.com/knowledge/mex/state/inegi/core/onto#> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.w3.org/ns/dcat#catalog
+dcat:catalog rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#dataset
+dcat:dataset rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#inCatalog
+dcat:inCatalog rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semantyk.com/knowledge/ukg#bd560e81_ec87_4ee2_97f5_d63d8d0b3db9
+ukg:bd560e81_ec87_4ee2_97f5_d63d8d0b3db9 rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dcat#Catalog
+dcat:Catalog rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dcat#Dataset
+dcat:Dataset rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semantyk.com/knowledge/mex#e020b001_8b16_48de_a00e_60a6fe4babb8
+mex:e020b001_8b16_48de_a00e_60a6fe4babb8 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex/state/inegi#a997b3e6_b59f_45d4_8288_d00bee553a44
+inegi:a997b3e6_b59f_45d4_8288_d00bee553a44 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/mex/state/inegi#bbb66685_5ad6_4b48_be59_9e8d9cfdf3e1
+inegi:bbb66685_5ad6_4b48_be59_9e8d9cfdf3e1 rdf:type owl:NamedIndividual ,
+                                                    dcat:Dataset ;
+                                           owl:sameAs <http://www.semantyk.com/knowledge/mex/state/inegi/core/onto#> ;
+                                           dcat:inCatalog inegi:edc3ab4b_228c_4eb4_90a1_3bb891b413f0 ;
+                                           rdfs:comment "An 'Ontology' labeled 'The Core Ontology' of 'The Large Knowledge Graph of INEGI'"@en ,
+                                                        "Una 'Ontología' etiquetada 'La Ontología Núcleo' de 'El Gran Grafo de Conocimiento de INEGI'"@es ;
+                                           rdfs:isDefinedBy inegi: ;
+                                           rdfs:label "La Ontología Núcleo de El Gran Grafo de Conocimiento de INEGI"@es ,
+                                                      "The Core Ontology of The Large Knowledge Graph of INEGI"@en ;
+                                           skos:prefLabel "La Ontología Núcleo"@es ,
+                                                          "The Core Ontology"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex/state/inegi/core/onto#
+
+###  http://www.semantyk.com/knowledge/mex/state/inegi#c8b22215_d411_4d0b_b5f9_2997daba83ed
+inegi:c8b22215_d411_4d0b_b5f9_2997daba83ed rdf:type owl:NamedIndividual ,
+                                                    ukg:bd560e81_ec87_4ee2_97f5_d63d8d0b3db9 ;
+                                           dcat:inCatalog inegi:edc3ab4b_228c_4eb4_90a1_3bb891b413f0 ;
+                                           rdfs:comment "A 'Concept Scheme' labeled 'The Core Concept Scheme' of 'The Large Knowledge Graph' of INEGI'"@en ,
+                                                        "Un 'Esquema de Conceptos' etiquetado 'El Esquema de Conceptos Núcleo' de 'El Gran Grafo de Conocimiento' de 'INEGI'"@es ;
+                                           rdfs:isDefinedBy inegi: ;
+                                           rdfs:label "El Esquema de Conceptos Núcleo de El Gran Grafo de Conocimiento de INEGI"@es ,
+                                                      "The Core Concept Scheme of The Large Knowledge Graph of INEGI"@en ;
+                                           skos:prefLabel "El Esquema de Conceptos Núcleo"@es ,
+                                                          "The Core Concept Scheme"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex/state/inegi#c8e53ac6_3060_49e4_97e2_97ef6de23ae8
+inegi:c8e53ac6_3060_49e4_97e2_97ef6de23ae8 rdf:type owl:NamedIndividual ,
+                                                    dcat:Dataset ;
+                                           dcat:inCatalog inegi:edc3ab4b_228c_4eb4_90a1_3bb891b413f0 ;
+                                           rdfs:comment "A 'Dataset' labeled 'The Core Dataset' of 'The Large Knowledge Graph of INEGI'"@en ,
+                                                        "Un 'Conjunto de Datos' etiquetado 'El Conjunto de Datos Núcleo' de 'El Gran Grafo de Conocimiento de INEGI'"@es ;
+                                           rdfs:isDefinedBy inegi: ;
+                                           rdfs:label "El Conjunto de Datos Núcleo de El Gran Grafo de Conocimiento de INEGI"@es ,
+                                                      "The Core Dataset of The Large Knowledge Graph of INEGI"@en ;
+                                           skos:prefLabel "El Conjunto de Datos Núcleo"@es ,
+                                                          "The Core Dataset"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex/state/inegi#edc3ab4b_228c_4eb4_90a1_3bb891b413f0
+inegi:edc3ab4b_228c_4eb4_90a1_3bb891b413f0 rdf:type owl:NamedIndividual ,
+                                                    dcat:Catalog ;
+                                           dcat:catalog mex:e020b001_8b16_48de_a00e_60a6fe4babb8 ;
+                                           dcat:dataset inegi:bbb66685_5ad6_4b48_be59_9e8d9cfdf3e1 ,
+                                                        inegi:c8b22215_d411_4d0b_b5f9_2997daba83ed ,
+                                                        inegi:c8e53ac6_3060_49e4_97e2_97ef6de23ae8 ;
+                                           dcat:inCatalog inegi:a997b3e6_b59f_45d4_8288_d00bee553a44 ;
+                                           rdfs:comment "A 'Catalog' labeled 'The Core Catalog' of 'The Large Knowledge Graph of INEGI'"@en ,
+                                                        "Un 'Catálogo' etiquetado 'El Catálogo Núcleo' de 'El Gran Grafo de Conocimiento de INEGI'"@es ;
+                                           rdfs:isDefinedBy inegi: ;
+                                           rdfs:label "El Catálogo Núcleo de El Gran Grafo de Conocimiento de INEGI"@es ,
+                                                      "The Core Catalog of The Large Knowledge Graph of INEGI"@en ;
+                                           skos:prefLabel "El Catálogo Núcleo"@es ,
+                                                          "The Core Catalog"@en .
+
+
+###  http://www.semantyk.com/knowledge/mex/state/inegi/core/onto#
+<http://www.semantyk.com/knowledge/mex/state/inegi/core/onto#> rdf:type owl:NamedIndividual .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
