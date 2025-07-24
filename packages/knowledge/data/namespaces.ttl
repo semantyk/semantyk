@@ -15,22 +15,27 @@
 # –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 #* Prefixes
+# Main
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix inegi: <http://www.semantyk.com/knowledge/mex/state/inegi#> .
-@prefix mex: <http://www.semantyk.com/knowledge/mex#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfg: <http://www.w3.org/2004/03/trix/rdfg-1/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
-@prefix skg: <http://www.semantyk.com/knowledge/skg#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix snieg: <http://www.semantyk.com/knowledge/mex/state/snieg#> .
 @prefix time: <http://www.w3.org/2006/time#> .
-@prefix ukg: <http://www.semantyk.com/knowledge/ukg#> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Mexico
+@prefix mex: <http://www.semantyk.com/knowledge/mex#> .
+@prefix inegi: <http://www.semantyk.com/knowledge/mex/state/inegi#> .
+@prefix snieg: <http://www.semantyk.com/knowledge/mex/state/snieg#> .
+
+# Semantyk
+@prefix skg: <http://www.semantyk.com/knowledge/skg#> .
+@prefix ukg: <http://www.semantyk.com/knowledge/ukg#> .
