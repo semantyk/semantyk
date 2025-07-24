@@ -6,7 +6,7 @@
 # @file: This file contains the list of namespaces used in the knowledge graph.
 #
 # @created: Mar 29, 2025
-# @modified: Mar 29, 2025
+# @modified: Jul 24, 2025
 #
 # @author: Semantyk Team
 # @maintainer: Daniel Bakas <https://id.danielbakas.com>
