@@ -21,10 +21,10 @@ import os
 from rdflib import Graph
 
 # * Main
-base_dir = 'apps/knowledge/data/'
+base_dir = 'apps/knowledge/src/'
 
 exclude_paths = [
-    'apps/knowledge/data/mex/state/fed/loc/data.ttl',
+    'apps/knowledge/src/mex/state/fed/loc/data.ttl',
 ]
 
 abox_g = Graph()
