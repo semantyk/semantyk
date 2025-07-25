@@ -1,0 +1,1814 @@
+@prefix : <http://www.semantyk.com/knowledge#> .
+@prefix mex: <http://www.semantyk.com/knowledge/mex#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfg: <http://www.w3.org/2004/03/trix/rdfg-1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix schema: <http://schema.org/> .
+@base <http://www.semantyk.com/knowledge#> .
+
+<http://www.semantyk.com/knowledge/core/tbox#> rdf:type owl:Ontology ;
+                                                owl:imports <http://www.w3.org/ns/dcat3> ,
+                                                            foaf: ;
+                                                rdfs:comment "An 'Ontology' labeled 'The Terminological Box' of 'The Core Ontology'"@en ,
+                                                             "Una 'Ontología' etiquetada 'La Caja Terminológica' de 'La Ontología Núcleo'"@es ;
+                                                rdfs:isDefinedBy : ;
+                                                rdfs:label "La Caja Terminológica de La Ontología Núcleo"@es ,
+                                                           "The Terminological Box of The Core Ontology"@es .
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.semantyk.com/knowledge#c7fdcc8b_9db8_492b_b2b6_bf98d2ef4312
+:c7fdcc8b_9db8_492b_b2b6_bf98d2ef4312 rdf:type rdfs:Datatype ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "CURP"@en ,
+                                                 "CURP"@es .
+
+
+###  http://www.semantyk.com/knowledge#fe0a00a8_3ced_493b_8711_2023cd46db1a
+:fe0a00a8_3ced_493b_8711_2023cd46db1a rdf:type rdfs:Datatype ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "RFC"@en ,
+                                                 "RFC"@es .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://schema.org/about
+schema:about rdf:type owl:ObjectProperty .
+
+
+###  http://www.semantyk.com/knowledge#a278ea71_1682_4765_ad90_979b1c68ce58
+:a278ea71_1682_4765_ad90_979b1c68ce58 rdf:type owl:ObjectProperty ;
+                                      owl:inverseOf :e6c26c87_1587_4af0_a72a_bcbb8b90973c ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has gender"@en ,
+                                                 "tiene género"@es .
+
+
+###  http://www.semantyk.com/knowledge#a3497142_8f28_4f79_8c43_bc0cb4fcbc17
+:a3497142_8f28_4f79_8c43_bc0cb4fcbc17 rdf:type owl:ObjectProperty ;
+                                      owl:inverseOf :bb5ce225_5e0d_4bea_bd71_68b2dfb9969f ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has part"@en ,
+                                                 "tiene parte"@es .
+
+
+###  http://www.semantyk.com/knowledge#a4194abe_6ce5_46bd_b32e_1a9b6f3543a4
+:a4194abe_6ce5_46bd_b32e_1a9b6f3543a4 rdf:type owl:ObjectProperty ;
+                                      owl:inverseOf :ddf2406c_67d2_4619_8e7a_cc9bd5460f69 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "es sexo de"@es ,
+                                                 "is sex of"@en .
+
+
+###  http://www.semantyk.com/knowledge#a55a93ef_28dc_41b2_b537_eb916507bfdd
+:a55a93ef_28dc_41b2_b537_eb916507bfdd rdf:type owl:ObjectProperty ;
+                                      owl:inverseOf :c55f7a9f_8e55_45e2_87c0_f22a089c42d8 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "es definición formal de"@es ,
+                                                 "is formal definition of"@en .
+
+
+###  http://www.semantyk.com/knowledge#ad938c0b_c2bf_4b16_9c27_735ed41dc347
+:ad938c0b_c2bf_4b16_9c27_735ed41dc347 rdf:type owl:ObjectProperty ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has relative"@en ,
+                                                 "tiene familiar"@es .
+
+
+###  http://www.semantyk.com/knowledge#b0c54ceb_ca3f_441e_8f4d_002d8fa7ab25
+:b0c54ceb_ca3f_441e_8f4d_002d8fa7ab25 rdf:type owl:ObjectProperty ;
+                                      owl:inverseOf skos:inScheme ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has concept"@en ,
+                                                 "tiene concepto"@es .
+
+
+###  http://www.semantyk.com/knowledge#b1732230_46b3_41c0_bf94_ac48a18b903f
+:b1732230_46b3_41c0_bf94_ac48a18b903f rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :fa29d01c_002b_4064_ac70_3695ce9d20b6 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has place of residency"@en ,
+                                                 "tiene lugar de residencia"@es .
+
+
+###  http://www.semantyk.com/knowledge#b4564826_2779_4f5b_ba76_7c2a4a99a1b9
+:b4564826_2779_4f5b_ba76_7c2a4a99a1b9 rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf vcard:hasEmail ,
+                                                         foaf:mbox ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has email address"@en ,
+                                                 "tiene dirección email"@es .
+
+
+###  http://www.semantyk.com/knowledge#b558af09_dbbf_4cc9_964f_71502b5c9e1a
+:b558af09_dbbf_4cc9_964f_71502b5c9e1a rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :ff001670_4a2b_44e3_bf2f_f27ec9a5d681 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has nephew in law"@en ,
+                                                 "tiene sobrino político"@es .
+
+
+###  http://www.semantyk.com/knowledge#b5a0cb5b_d367_4249_a3eb_38974e5ba945
+:b5a0cb5b_d367_4249_a3eb_38974e5ba945 rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :c7324f52_2114_4ee6_9f7a_b5ec1836123e ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has aunt"@en ,
+                                                 "tiene tía"@es .
+
+
+###  http://www.semantyk.com/knowledge#b5e7df65_a9f2_4372_b595_cbc98e780e29
+:b5e7df65_a9f2_4372_b595_cbc98e780e29 rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf vcard:hasTelephone ,
+                                                         foaf:phone ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has phone number"@en ,
+                                                 "tiene número telefónico"@es .
+
+
+###  http://www.semantyk.com/knowledge#b64ea212_cb7d_473d_9f38_5d1a8911b8ca
+:b64ea212_cb7d_473d_9f38_5d1a8911b8ca rdf:type owl:ObjectProperty ;
+                                      owl:inverseOf :ec815c33_1ca3_4421_b71b_091a628b8b63 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has quality"@en ,
+                                                 "tiene cualidad"@es .
+
+
+###  http://www.semantyk.com/knowledge#b73d2759_edf4_43a7_b1c6_4023ac16772d
+:b73d2759_edf4_43a7_b1c6_4023ac16772d rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :e5b26872_7d5d_4d95_933d_d5d5e47dc89e ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has son"@en ,
+                                                 "tiene hijo"@es .
+
+
+###  http://www.semantyk.com/knowledge#baffaa3c_f3d4_4c58_8de0_2124baba9bfd
+:baffaa3c_f3d4_4c58_8de0_2124baba9bfd rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :c32f1f6b_b350_49d4_94b9_e36874c0d36b ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has stepsister"@en ,
+                                                 "tiene hermanastra"@es .
+
+
+###  http://www.semantyk.com/knowledge#bb5ce225_5e0d_4bea_bd71_68b2dfb9969f
+:bb5ce225_5e0d_4bea_bd71_68b2dfb9969f rdf:type owl:ObjectProperty ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "es parte de"@es ,
+                                                 "is part of"@en .
+
+
+###  http://www.semantyk.com/knowledge#bdacdcb9_16b7_4149_b362_69a0007478a7
+:bdacdcb9_16b7_4149_b362_69a0007478a7 rdf:type owl:ObjectProperty ;
+                                      owl:equivalentProperty owl:topObjectProperty ;
+                                      rdf:type owl:SymmetricProperty ;
+                                      rdfs:comment "A 'Property' labeled 'has relation to'"@es ,
+                                                   "Una 'Propiedad' etiquetada 'tiene relación con'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has relation to"@en ,
+                                                 "tiene relación con"@es .
+
+
+###  http://www.semantyk.com/knowledge#be95add1_e3a8_427a_a944_94e37a2ddbd7
+:be95add1_e3a8_427a_a944_94e37a2ddbd7 rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :ad938c0b_c2bf_4b16_9c27_735ed41dc347 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has parent"@en ,
+                                                 "tiene progenitore"@es .
+
+
+###  http://www.semantyk.com/knowledge#c0bf2258_70ea_4ae7_b673_0a69fa9ba65f
+:c0bf2258_70ea_4ae7_b673_0a69fa9ba65f rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :ca0dd069_6531_4f2c_85d0_38dee95e2f86 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has cousin"@en ,
+                                                 "tiene prima"@es .
+
+
+###  http://www.semantyk.com/knowledge#c234ff51_3e90_4600_8520_1219b6458d49
+:c234ff51_3e90_4600_8520_1219b6458d49 rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :cf49c7d5_001f_4256_9e55_fb4f30910395 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has stepdaughter"@en ,
+                                                 "tiene hijastra"@es .
+
+
+###  http://www.semantyk.com/knowledge#c32f1f6b_b350_49d4_94b9_e36874c0d36b
+:c32f1f6b_b350_49d4_94b9_e36874c0d36b rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :ff001670_4a2b_44e3_bf2f_f27ec9a5d681 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has stepsibling"@en ,
+                                                 "tiene hermanastre"@es .
+
+
+###  http://www.semantyk.com/knowledge#c38dfb00_ddc2_45f5_ab84_9c7cc169624b
+:c38dfb00_ddc2_45f5_ab84_9c7cc169624b rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :ad938c0b_c2bf_4b16_9c27_735ed41dc347 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has nibling"@en ,
+                                                 "tiene sobrine"@es .
+
+
+###  http://www.semantyk.com/knowledge#c39be766_2dda_4656_bb1f_1cfba7f87f60
+:c39be766_2dda_4656_bb1f_1cfba7f87f60 rdf:type owl:ObjectProperty ;
+                                      owl:inverseOf :ddb20028_0da9_4b1a_99b8_f7374592744f ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has role"@en ,
+                                                 "tiene rol"@es .
+
+
+###  http://www.semantyk.com/knowledge#c43a799e_c975_4fcc_a743_25c98975a203
+:c43a799e_c975_4fcc_a743_25c98975a203 rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :fa29d01c_002b_4064_ac70_3695ce9d20b6 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has place of birth"@en ,
+                                                 "tiene lugar de nacimiento"@es .
+
+
+###  http://www.semantyk.com/knowledge#c55f7a9f_8e55_45e2_87c0_f22a089c42d8
+:c55f7a9f_8e55_45e2_87c0_f22a089c42d8 rdf:type owl:ObjectProperty ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has formal definition"@en ,
+                                                 "tiene definición formal"@es .
+
+
+###  http://www.semantyk.com/knowledge#c6a447d1_49f6_441d_a374_e307cbc18272
+:c6a447d1_49f6_441d_a374_e307cbc18272 rdf:type owl:ObjectProperty ;
+                                      owl:inverseOf :dca9db1b_2f0f_49b7_bb54_223ec90c07cf ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "es código de"@es ,
+                                                 "is code of"@en .
+
+
+###  http://www.semantyk.com/knowledge#c7324f52_2114_4ee6_9f7a_b5ec1836123e
+:c7324f52_2114_4ee6_9f7a_b5ec1836123e rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :ad938c0b_c2bf_4b16_9c27_735ed41dc347 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has pibling"@en ,
+                                                 "tiene tíe"@es .
+
+
+###  http://www.semantyk.com/knowledge#ca0dd069_6531_4f2c_85d0_38dee95e2f86
+:ca0dd069_6531_4f2c_85d0_38dee95e2f86 rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :ad938c0b_c2bf_4b16_9c27_735ed41dc347 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has cousin"@en ,
+                                                 "tiene prime"@es .
+
+
+###  http://www.semantyk.com/knowledge#cabcae4c_d47e_4c55_bf57_a5c3fd628ad9
+:cabcae4c_d47e_4c55_bf57_a5c3fd628ad9 rdf:type owl:ObjectProperty ;
+                                      owl:inverseOf :f0b0c790_e005_4539_80b5_263dc433ebc0 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "es definición conceptual de"@es ,
+                                                 "is conceptual definition of"@en .
+
+
+###  http://www.semantyk.com/knowledge#ccfcf232_a1b0_4450_aee1_e6e72f8f9ad8
+:ccfcf232_a1b0_4450_aee1_e6e72f8f9ad8 rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :c7324f52_2114_4ee6_9f7a_b5ec1836123e ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has uncle"@en ,
+                                                 "tiene tío"@es .
+
+
+###  http://www.semantyk.com/knowledge#cd471fc3_febb_4f12_b2a7_40b49d4f0a3a
+:cd471fc3_febb_4f12_b2a7_40b49d4f0a3a rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :be95add1_e3a8_427a_a944_94e37a2ddbd7 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has mother"@en ,
+                                                 "tiene madre"@es .
+
+
+###  http://www.semantyk.com/knowledge#cf49c7d5_001f_4256_9e55_fb4f30910395
+:cf49c7d5_001f_4256_9e55_fb4f30910395 rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :ff001670_4a2b_44e3_bf2f_f27ec9a5d681 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has stepchild"@en ,
+                                                 "tiene hijastre"@es .
+
+
+###  http://www.semantyk.com/knowledge#d2a2a3f1_fe97_4419_a53e_37fd29a9501e
+:d2a2a3f1_fe97_4419_a53e_37fd29a9501e rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :e5b26872_7d5d_4d95_933d_d5d5e47dc89e ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has daughter"@en ,
+                                                 "tiene hija"@es .
+
+
+###  http://www.semantyk.com/knowledge#d3057d37_c02d_456b_b34b_7fe28be07520
+:d3057d37_c02d_456b_b34b_7fe28be07520 rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :ff001670_4a2b_44e3_bf2f_f27ec9a5d681 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has cousin in law"@en ,
+                                                 "tiene prime político"@es .
+
+
+###  http://www.semantyk.com/knowledge#d956adb4_ad24_44b6_8a6f_0b43b4a5a565
+:d956adb4_ad24_44b6_8a6f_0b43b4a5a565 rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :f74f54b3_7388_49ac_9a6f_4e1629561876 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has sister"@en ,
+                                                 "tiene hermana"@es .
+
+
+###  http://www.semantyk.com/knowledge#daa6d714_eb04_4bb3_8f2a_9765b2b8cfe8
+:daa6d714_eb04_4bb3_8f2a_9765b2b8cfe8 rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :ff001670_4a2b_44e3_bf2f_f27ec9a5d681 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has partner"@en ,
+                                                 "tiene pareja"@es .
+
+
+###  http://www.semantyk.com/knowledge#dca9db1b_2f0f_49b7_bb54_223ec90c07cf
+:dca9db1b_2f0f_49b7_bb54_223ec90c07cf rdf:type owl:ObjectProperty ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has code"@en ,
+                                                 "tiene código"@es .
+
+
+###  http://www.semantyk.com/knowledge#dcf980a2_5e3b_473f_b201_6ebef83e8242
+:dcf980a2_5e3b_473f_b201_6ebef83e8242 rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :c32f1f6b_b350_49d4_94b9_e36874c0d36b ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has stepbrother"@en ,
+                                                 "tiene hermanastro"@es .
+
+
+###  http://www.semantyk.com/knowledge#ddb20028_0da9_4b1a_99b8_f7374592744f
+:ddb20028_0da9_4b1a_99b8_f7374592744f rdf:type owl:ObjectProperty ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "es rol de"@es ,
+                                                 "is role of"@en .
+
+
+###  http://www.semantyk.com/knowledge#ddf2406c_67d2_4619_8e7a_cc9bd5460f69
+:ddf2406c_67d2_4619_8e7a_cc9bd5460f69 rdf:type owl:ObjectProperty ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has sex"@en ,
+                                                 "tiene sexo"@es .
+
+
+###  http://www.semantyk.com/knowledge#e5b26872_7d5d_4d95_933d_d5d5e47dc89e
+:e5b26872_7d5d_4d95_933d_d5d5e47dc89e rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :ad938c0b_c2bf_4b16_9c27_735ed41dc347 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has child"@en ,
+                                                 "tiene hije"@es .
+
+
+###  http://www.semantyk.com/knowledge#e6c26c87_1587_4af0_a72a_bcbb8b90973c
+:e6c26c87_1587_4af0_a72a_bcbb8b90973c rdf:type owl:ObjectProperty ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "es género de"@es ,
+                                                 "is gender of"@en .
+
+
+###  http://www.semantyk.com/knowledge#e8c26232_53a5_49ba_a8cf_c8b86569ee54
+:e8c26232_53a5_49ba_a8cf_c8b86569ee54 rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :c38dfb00_ddc2_45f5_ab84_9c7cc169624b ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has niece"@en ,
+                                                 "tiene sobrina"@es .
+
+
+###  http://www.semantyk.com/knowledge#e9f7a6bf_0d3c_40fe_a52e_068839ffed2d
+:e9f7a6bf_0d3c_40fe_a52e_068839ffed2d rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :cf49c7d5_001f_4256_9e55_fb4f30910395 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has stepson"@en ,
+                                                 "tiene hijastro"@es .
+
+
+###  http://www.semantyk.com/knowledge#eb4406c5_f414_4be4_8897_68e58cf0d2c2
+:eb4406c5_f414_4be4_8897_68e58cf0d2c2 rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :c38dfb00_ddc2_45f5_ab84_9c7cc169624b ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has nephew"@en ,
+                                                 "tiene sobrino"@es .
+
+
+###  http://www.semantyk.com/knowledge#ebf00238_fd9a_44ac_b15b_c5a80bb6cb40
+:ebf00238_fd9a_44ac_b15b_c5a80bb6cb40 rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :fa29d01c_002b_4064_ac70_3695ce9d20b6 ,
+                                                         vcard:address ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has address"@en ,
+                                                 "tiene dirección"@es .
+
+
+###  http://www.semantyk.com/knowledge#ec815c33_1ca3_4421_b71b_091a628b8b63
+:ec815c33_1ca3_4421_b71b_091a628b8b63 rdf:type owl:ObjectProperty ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "es cualidad de"@es ,
+                                                 "is quality of"@en .
+
+
+###  http://www.semantyk.com/knowledge#ec8f132f_b500_4fe2_8873_e98835f96e79
+:ec8f132f_b500_4fe2_8873_e98835f96e79 rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :ca0dd069_6531_4f2c_85d0_38dee95e2f86 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has cousin"@en ,
+                                                 "tiene primo"@es .
+
+
+###  http://www.semantyk.com/knowledge#f0b0c790_e005_4539_80b5_263dc433ebc0
+:f0b0c790_e005_4539_80b5_263dc433ebc0 rdf:type owl:ObjectProperty ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has conceptual definition"@en ,
+                                                 "tiene definición conceptual"@es .
+
+
+###  http://www.semantyk.com/knowledge#f1bccfc6_d436_4d9c_97d3_0b524ba4df03
+:f1bccfc6_d436_4d9c_97d3_0b524ba4df03 rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :d3057d37_c02d_456b_b34b_7fe28be07520 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has cousin in law"@en ,
+                                                 "tiene primo político"@es .
+
+
+###  http://www.semantyk.com/knowledge#f74f54b3_7388_49ac_9a6f_4e1629561876
+:f74f54b3_7388_49ac_9a6f_4e1629561876 rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :ad938c0b_c2bf_4b16_9c27_735ed41dc347 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has sibling"@en ,
+                                                 "tiene hermane"@es .
+
+
+###  http://www.semantyk.com/knowledge#fa29d01c_002b_4064_ac70_3695ce9d20b6
+:fa29d01c_002b_4064_ac70_3695ce9d20b6 rdf:type owl:ObjectProperty ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has space"@en ,
+                                                 "tiene espacio"@es .
+
+
+###  http://www.semantyk.com/knowledge#fd51289e_9b3b_4fbc_b6d7_6ac809664cf3
+:fd51289e_9b3b_4fbc_b6d7_6ac809664cf3 rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :be95add1_e3a8_427a_a944_94e37a2ddbd7 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has father"@en ,
+                                                 "tiene padre"@es .
+
+
+###  http://www.semantyk.com/knowledge#ff001670_4a2b_44e3_bf2f_f27ec9a5d681
+:ff001670_4a2b_44e3_bf2f_f27ec9a5d681 rdf:type owl:ObjectProperty ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has relative in law"@en ,
+                                                 "tiene familiar político"@es .
+
+
+###  http://www.semantyk.com/knowledge#ff1fa6ef_b582_4a1c_bb40_9d1233dd9a35
+:ff1fa6ef_b582_4a1c_bb40_9d1233dd9a35 rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf :f74f54b3_7388_49ac_9a6f_4e1629561876 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has brother"@en ,
+                                                 "tiene hermano"@es .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2004/03/trix/rdfg-1/subGraphOf
+rdfg:subGraphOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2006/vcard/ns#address
+vcard:address rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2006/vcard/ns#hasEmail
+vcard:hasEmail rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2006/vcard/ns#hasTelephone
+vcard:hasTelephone rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#inCatalog
+dcat:inCatalog rdf:type owl:ObjectProperty .
+
+
+###  http://xmlns.com/foaf/0.1/mbox
+foaf:mbox rdf:type owl:ObjectProperty .
+
+
+###  http://xmlns.com/foaf/0.1/phone
+foaf:phone rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semantyk.com/knowledge#a63e7166_015f_46fc_95f6_c63f58c823fd
+:a63e7166_015f_46fc_95f6_c63f58c823fd rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf :d5284bf9_6451_4e32_9ec1_c5054a13c2e8 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has pronoun of subject"@en ,
+                                                 "tiene pronombre de sujeto"@es .
+
+
+###  http://www.semantyk.com/knowledge#a8bde562_af53_4983_812f_a0f24a0f3f1e
+:a8bde562_af53_4983_812f_a0f24a0f3f1e rdf:type owl:DatatypeProperty ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has credit score"@en ,
+                                                 "tiene score crediticio"@es .
+
+
+###  http://www.semantyk.com/knowledge#b4814b82_4469_4077_a43c_b543d4bd3d80
+:b4814b82_4469_4077_a43c_b543d4bd3d80 rdf:type owl:DatatypeProperty ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has mass"@en ,
+                                                 "tiene masa"@es .
+
+
+###  http://www.semantyk.com/knowledge#b8747d2a_ef9f_4618_b65b_0d35b10489db
+:b8747d2a_ef9f_4618_b65b_0d35b10489db rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf :fcf34795_ef5a_476f_ba73_4f98c4bc19c6 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has height"@en ,
+                                                 "tiene estatura"@es ;
+                                      skos:note "Unidad: m"@es ,
+                                                "Unit: m"@en .
+
+
+###  http://www.semantyk.com/knowledge#c8d61c32_b9b5_4e48_a377_74c7f8bb54ce
+:c8d61c32_b9b5_4e48_a377_74c7f8bb54ce rdf:type owl:DatatypeProperty ,
+                                               owl:FunctionalProperty ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has curp"@en ,
+                                                 "tiene curp"@es .
+
+
+###  http://www.semantyk.com/knowledge#cdde1211_9bd3_4711_987c_0e79ea04b240
+:cdde1211_9bd3_4711_987c_0e79ea04b240 rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf foaf:familyName ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has surname"@en ,
+                                                 "tiene apellido"@es .
+
+
+###  http://www.semantyk.com/knowledge#cf9019a8_6b8b_4a99_a235_0402e073c1cd
+:cf9019a8_6b8b_4a99_a235_0402e073c1cd rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf :d5284bf9_6451_4e32_9ec1_c5054a13c2e8 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has pronoun of posession"@en ,
+                                                 "tiene pronombre de posesión"@es .
+
+
+###  http://www.semantyk.com/knowledge#cfffb044_054b_4c20_ae7c_e34c505f338d
+:cfffb044_054b_4c20_ae7c_e34c505f338d rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf vcard:fn ,
+                                                         foaf:name ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has name"@en ,
+                                                 "tiene nombre"@es .
+
+
+###  http://www.semantyk.com/knowledge#d5284bf9_6451_4e32_9ec1_c5054a13c2e8
+:d5284bf9_6451_4e32_9ec1_c5054a13c2e8 rdf:type owl:DatatypeProperty ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has pronoun"@en ,
+                                                 "tiene pronombre"@es .
+
+
+###  http://www.semantyk.com/knowledge#d7395a72_c642_4898_a1f1_4fa403605fdb
+:d7395a72_c642_4898_a1f1_4fa403605fdb rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf vcard:bday ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has birthday date"@en ,
+                                                 "tiene fecha de cumpleaños"@es .
+
+
+###  http://www.semantyk.com/knowledge#d9e14187_6950_421a_8260_c9c352460c91
+:d9e14187_6950_421a_8260_c9c352460c91 rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf vcard:nickname ,
+                                                         foaf:nick ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has nickname"@en ,
+                                                 "tiene apodo"@es .
+
+
+###  http://www.semantyk.com/knowledge#ddcc1129_17dc_4028_8314_37addbeba769
+:ddcc1129_17dc_4028_8314_37addbeba769 rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf foaf:birthday ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has birthday"@en ,
+                                                 "tiene cumpleaños"@es .
+
+
+###  http://www.semantyk.com/knowledge#e244768a_ecfa_4ae1_ae48_9a2e0590b4cc
+:e244768a_ecfa_4ae1_ae48_9a2e0590b4cc rdf:type owl:DatatypeProperty ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has rfc"@en ,
+                                                 "tiene rfc"@es .
+
+
+###  http://www.semantyk.com/knowledge#ea4a77f1_3c6c_4e5c_a510_c7686d1abffc
+:ea4a77f1_3c6c_4e5c_a510_c7686d1abffc rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf foaf:givenName ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has given name"@en ,
+                                                 "tiene nombre de pila"@es .
+
+
+###  http://www.semantyk.com/knowledge#f6ea9d6e_ae04_47b7_ba81_ab6c456189b6
+:f6ea9d6e_ae04_47b7_ba81_ab6c456189b6 rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf foaf:age ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has age"@en ,
+                                                 "tiene edad"@es .
+
+
+###  http://www.semantyk.com/knowledge#f7023dd4_6644_476d_a8c7_03f1f453d53d
+:f7023dd4_6644_476d_a8c7_03f1f453d53d rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf :d5284bf9_6451_4e32_9ec1_c5054a13c2e8 ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has pronoun of object"@en ,
+                                                 "tiene pronombre de objeto"@es .
+
+
+###  http://www.semantyk.com/knowledge#fcf34795_ef5a_476f_ba73_4f98c4bc19c6
+:fcf34795_ef5a_476f_ba73_4f98c4bc19c6 rdf:type owl:DatatypeProperty ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "has distance"@en ,
+                                                 "tiene distancia"@es .
+
+
+###  http://www.w3.org/2006/vcard/ns#bday
+vcard:bday rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/2006/vcard/ns#fn
+vcard:fn rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/2006/vcard/ns#nickname
+vcard:nickname rdf:type owl:DatatypeProperty .
+
+
+###  http://xmlns.com/foaf/0.1/age
+foaf:age rdf:type owl:DatatypeProperty .
+
+
+###  http://xmlns.com/foaf/0.1/birthday
+foaf:birthday rdf:type owl:DatatypeProperty .
+
+
+###  http://xmlns.com/foaf/0.1/familyName
+foaf:familyName rdf:type owl:DatatypeProperty .
+
+
+###  http://xmlns.com/foaf/0.1/givenName
+foaf:givenName rdf:type owl:DatatypeProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:DatatypeProperty .
+
+
+###  http://xmlns.com/foaf/0.1/nick
+foaf:nick rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://schema.org/Person
+schema:Person rdf:type owl:Class .
+
+
+###  http://www.semantyk.com/knowledge#a170c550_d25a_404d_a572_9832bc0f0932
+:a170c550_d25a_404d_a572_9832bc0f0932 rdf:type owl:Class ;
+                                      rdfs:subClassOf :defa744b_6e3b_4121_b0dd_4ecfda754b0a .
+
+
+###  http://www.semantyk.com/knowledge#a22e854d_7141_4d55_8d98_66c4c5c842f3
+:a22e854d_7141_4d55_8d98_66c4c5c842f3 rdf:type owl:Class ;
+                                      rdfs:subClassOf :be745206_fc56_4f49_bdc8_e552b423a07a .
+
+
+###  http://www.semantyk.com/knowledge#a418160a_c783_42e9_97d6_baffb88467a0
+:a418160a_c783_42e9_97d6_baffb88467a0 rdf:type owl:Class ;
+                                      rdfs:subClassOf :ad005078_7b66_4aa9_a3ea_b3eb4a0fe866 ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :ddf2406c_67d2_4619_8e7a_cc9bd5460f69 ;
+                                                        owl:hasValue :cae12296_c19d_4002_872f_4cce6818ad96
+                                                      ] .
+
+
+###  http://www.semantyk.com/knowledge#a4dffec1_e523_480f_b0c9_a6434ee0071d
+:a4dffec1_e523_480f_b0c9_a6434ee0071d rdf:type owl:Class ;
+                                      rdfs:subClassOf :defa744b_6e3b_4121_b0dd_4ecfda754b0a ;
+                                      rdfs:comment "A 'Class' labeled 'Universe' subclass of 'Thing'. Each of its instances is defined as a 'Universe'"@en ,
+                                                   "Una 'Clase' etiquetada 'Universo' subclase de 'Cosa'. Cada una de sus instancias se define como un 'Universo'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Universe"@en ,
+                                                 "Universo"@es .
+
+
+###  http://www.semantyk.com/knowledge#a59b12bb_7630_4d82_95bb_34de9b8e922e
+:a59b12bb_7630_4d82_95bb_34de9b8e922e rdf:type owl:Class ;
+                                      rdfs:subClassOf :ad005078_7b66_4aa9_a3ea_b3eb4a0fe866 ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :ddf2406c_67d2_4619_8e7a_cc9bd5460f69 ;
+                                                        owl:hasValue :e488f280_77a9_4eb8_b753_8e3cd0fbf34e
+                                                      ] .
+
+
+###  http://www.semantyk.com/knowledge#a79ff88f_1c74_4409_bbe6_968fe8f2ca18
+:a79ff88f_1c74_4409_bbe6_968fe8f2ca18 rdf:type owl:Class ;
+                                      rdfs:subClassOf :defa744b_6e3b_4121_b0dd_4ecfda754b0a .
+
+
+###  http://www.semantyk.com/knowledge#a7e6cd45_fba8_47f5_a3a0_a75c3cf02d10
+:a7e6cd45_fba8_47f5_a3a0_a75c3cf02d10 rdf:type owl:Class ;
+                                      rdfs:subClassOf :a170c550_d25a_404d_a572_9832bc0f0932 .
+
+
+###  http://www.semantyk.com/knowledge#ab3c5d58_49b2_4ebb_935a_c11852004c77
+:ab3c5d58_49b2_4ebb_935a_c11852004c77 rdf:type owl:Class ;
+                                      rdfs:subClassOf :f42f0486_92da_44cb_ae88_c94d23f795e3 ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :c7324f52_2114_4ee6_9f7a_b5ec1836123e ;
+                                                        owl:someValuesFrom :b37f726b_f1be_4039_8fdf_a6b02484c353
+                                                      ] ;
+                                      rdfs:comment "A 'Class' labeled 'Nibling' subclass of 'Person'. Each of its instances is defined as a 'Nibling'"@en ,
+                                                   "Una 'Clase' etiquetada 'Sobrine' subclase de 'Persona'. Cada una de sus instancias se define como un 'Sobrine'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Nibling"@en ,
+                                                 "Sobrine"@es .
+
+
+###  http://www.semantyk.com/knowledge#abcff5c3_589f_4961_a5d9_783bac25a459
+:abcff5c3_589f_4961_a5d9_783bac25a459 rdf:type owl:Class ;
+                                      rdfs:subClassOf :defa744b_6e3b_4121_b0dd_4ecfda754b0a .
+
+
+###  http://www.semantyk.com/knowledge#acf6d2e9_bcba_4786_bb4d_a73f75ef1dd3
+:acf6d2e9_bcba_4786_bb4d_a73f75ef1dd3 rdf:type owl:Class ;
+                                      rdfs:subClassOf :defa744b_6e3b_4121_b0dd_4ecfda754b0a .
+
+
+###  http://www.semantyk.com/knowledge#ad005078_7b66_4aa9_a3ea_b3eb4a0fe866
+:ad005078_7b66_4aa9_a3ea_b3eb4a0fe866 rdf:type owl:Class ;
+                                      rdfs:subClassOf :defa744b_6e3b_4121_b0dd_4ecfda754b0a ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :bdacdcb9_16b7_4149_b362_69a0007478a7 ;
+                                                        owl:hasValue :c6074215_7e91_4130_bc57_e8142f8613f1
+                                                      ] .
+
+
+###  http://www.semantyk.com/knowledge#af2893c1_c196_46fe_8342_12b3d515de85
+:af2893c1_c196_46fe_8342_12b3d515de85 rdf:type owl:Class ;
+                                      rdfs:subClassOf :ad005078_7b66_4aa9_a3ea_b3eb4a0fe866 .
+
+
+###  http://www.semantyk.com/knowledge#b1e47cf6_b879_468b_b516_a86af87df2d9
+:b1e47cf6_b879_468b_b516_a86af87df2d9 rdf:type owl:Class ;
+                                      rdfs:subClassOf :ad005078_7b66_4aa9_a3ea_b3eb4a0fe866 .
+
+
+###  http://www.semantyk.com/knowledge#b36e331b_7848_439c_a539_c05c049a9f43
+:b36e331b_7848_439c_a539_c05c049a9f43 rdf:type owl:Class ;
+                                      rdfs:subClassOf :defa744b_6e3b_4121_b0dd_4ecfda754b0a ,
+                                                      skos:Concept .
+
+
+###  http://www.semantyk.com/knowledge#b37f726b_f1be_4039_8fdf_a6b02484c353
+:b37f726b_f1be_4039_8fdf_a6b02484c353 rdf:type owl:Class ;
+                                      rdfs:subClassOf :f42f0486_92da_44cb_ae88_c94d23f795e3 ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :c38dfb00_ddc2_45f5_ab84_9c7cc169624b ;
+                                                        owl:someValuesFrom :ab3c5d58_49b2_4ebb_935a_c11852004c77
+                                                      ] ;
+                                      rdfs:comment "A 'Class' labeled 'Pibling' subclass of 'Person'. Each of its instances is defined as a 'Pibling'"@en ,
+                                                   "Una 'Clase' etiquetada 'Tíe' subclase de 'Persona'. Cada una de sus instancias se define como un 'Tíe'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Pibling"@en ,
+                                                 "Tíe"@es .
+
+
+###  http://www.semantyk.com/knowledge#b47f6f8b_20fd_41cc_a0c0_b72ad7743df4
+:b47f6f8b_20fd_41cc_a0c0_b72ad7743df4 rdf:type owl:Class ;
+                                      rdfs:subClassOf :defa744b_6e3b_4121_b0dd_4ecfda754b0a .
+
+
+###  http://www.semantyk.com/knowledge#b707f249_2691_4ba8_bd79_27822c3b3761
+:b707f249_2691_4ba8_bd79_27822c3b3761 rdf:type owl:Class ;
+                                      rdfs:subClassOf :defa744b_6e3b_4121_b0dd_4ecfda754b0a .
+
+
+###  http://www.semantyk.com/knowledge#b931050e_daba_40df_835a_6a6dbee5a4c5
+:b931050e_daba_40df_835a_6a6dbee5a4c5 rdf:type owl:Class ;
+                                      rdfs:subClassOf :defa744b_6e3b_4121_b0dd_4ecfda754b0a .
+
+
+###  http://www.semantyk.com/knowledge#bc250d8a_0c3a_45de_931c_822d037873a0
+:bc250d8a_0c3a_45de_931c_822d037873a0 rdf:type owl:Class ;
+                                      rdfs:subClassOf :defa744b_6e3b_4121_b0dd_4ecfda754b0a .
+
+
+###  http://www.semantyk.com/knowledge#bd560e81_ec87_4ee2_97f5_d63d8d0b3db9
+:bd560e81_ec87_4ee2_97f5_d63d8d0b3db9 rdf:type owl:Class ;
+                                      rdfs:subClassOf :defa744b_6e3b_4121_b0dd_4ecfda754b0a ,
+                                                      skos:ConceptScheme .
+
+
+###  http://www.semantyk.com/knowledge#be745206_fc56_4f49_bdc8_e552b423a07a
+:be745206_fc56_4f49_bdc8_e552b423a07a rdf:type owl:Class ;
+                                      rdfs:subClassOf :ef15272a_ff63_42e8_b95e_5b7b12a820ba .
+
+
+###  http://www.semantyk.com/knowledge#c10984dc_f290_4880_a60b_d6f8b6b22105
+:c10984dc_f290_4880_a60b_d6f8b6b22105 rdf:type owl:Class ;
+                                      rdfs:subClassOf :ec5fb444_a6d3_4485_b200_acba32af502d .
+
+
+###  http://www.semantyk.com/knowledge#c151991f_2e06_443e_bac2_a7fa5fb15aff
+:c151991f_2e06_443e_bac2_a7fa5fb15aff rdf:type owl:Class ;
+                                      rdfs:subClassOf :ec5fb444_a6d3_4485_b200_acba32af502d .
+
+
+###  http://www.semantyk.com/knowledge#c2195206_77e3_4c2f_86d4_8a10a34966b4
+:c2195206_77e3_4c2f_86d4_8a10a34966b4 rdf:type owl:Class ;
+                                      rdfs:subClassOf :defa744b_6e3b_4121_b0dd_4ecfda754b0a .
+
+
+###  http://www.semantyk.com/knowledge#c2871766_bffb_4a9b_9a67_4a84f149c11c
+:c2871766_bffb_4a9b_9a67_4a84f149c11c rdf:type owl:Class ;
+                                      rdfs:subClassOf :ec5fb444_a6d3_4485_b200_acba32af502d .
+
+
+###  http://www.semantyk.com/knowledge#c2b55971_77cc_458c_a9b1_412f42998acd
+:c2b55971_77cc_458c_a9b1_412f42998acd rdf:type owl:Class ;
+                                      rdfs:subClassOf :defa744b_6e3b_4121_b0dd_4ecfda754b0a .
+
+
+###  http://www.semantyk.com/knowledge#c342f0ec_b9de_4641_939f_3b8f6bff32bf
+:c342f0ec_b9de_4641_939f_3b8f6bff32bf rdf:type owl:Class ;
+                                      rdfs:subClassOf :defa744b_6e3b_4121_b0dd_4ecfda754b0a .
+
+
+###  http://www.semantyk.com/knowledge#cbb907c7_4951_4b2d_9265_3e58114d3d22
+:cbb907c7_4951_4b2d_9265_3e58114d3d22 rdf:type owl:Class ;
+                                      rdfs:subClassOf :defa744b_6e3b_4121_b0dd_4ecfda754b0a .
+
+
+###  http://www.semantyk.com/knowledge#cc0b7e13_35b3_46bf_997d_1066bfdf0a48
+:cc0b7e13_35b3_46bf_997d_1066bfdf0a48 rdf:type owl:Class ;
+                                      rdfs:subClassOf :defa744b_6e3b_4121_b0dd_4ecfda754b0a .
+
+
+###  http://www.semantyk.com/knowledge#cd94c806_2fb6_44d0_b891_60cff20b57f9
+:cd94c806_2fb6_44d0_b891_60cff20b57f9 rdf:type owl:Class ;
+                                      rdfs:subClassOf :ad005078_7b66_4aa9_a3ea_b3eb4a0fe866 .
+
+
+###  http://www.semantyk.com/knowledge#d12fc4d6_c9f5_4686_9ae5_dea4df2df686
+:d12fc4d6_c9f5_4686_9ae5_dea4df2df686 rdf:type owl:Class ;
+                                      rdfs:subClassOf :ad005078_7b66_4aa9_a3ea_b3eb4a0fe866 .
+
+
+###  http://www.semantyk.com/knowledge#d2c2b22a_9a40_4595_b2cc_b7797e06128e
+:d2c2b22a_9a40_4595_b2cc_b7797e06128e rdf:type owl:Class ;
+                                      rdfs:subClassOf :defa744b_6e3b_4121_b0dd_4ecfda754b0a .
+
+
+###  http://www.semantyk.com/knowledge#d38fba88_6621_43ab_872b_13bd317507c6
+:d38fba88_6621_43ab_872b_13bd317507c6 rdf:type owl:Class ;
+                                      rdfs:subClassOf :defa744b_6e3b_4121_b0dd_4ecfda754b0a .
+
+
+###  http://www.semantyk.com/knowledge#d3c3da1e_369b_4103_b5bf_58daba879d87
+:d3c3da1e_369b_4103_b5bf_58daba879d87 rdf:type owl:Class ;
+                                      rdfs:subClassOf :ad005078_7b66_4aa9_a3ea_b3eb4a0fe866 ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :a278ea71_1682_4765_ad90_979b1c68ce58 ;
+                                                        owl:hasValue :f7a4f75e_0eac_4c0e_bb39_24351ce93c51
+                                                      ] .
+
+
+###  http://www.semantyk.com/knowledge#d5d7f3ef_992c_410d_af35_41de2407fa15
+:d5d7f3ef_992c_410d_af35_41de2407fa15 rdf:type owl:Class ;
+                                      rdfs:subClassOf :defa744b_6e3b_4121_b0dd_4ecfda754b0a .
+
+
+###  http://www.semantyk.com/knowledge#d8089366_5145_4b41_9294_3f152794ff4a
+:d8089366_5145_4b41_9294_3f152794ff4a rdf:type owl:Class ;
+                                      rdfs:subClassOf :defa744b_6e3b_4121_b0dd_4ecfda754b0a .
+
+
+###  http://www.semantyk.com/knowledge#d8ecbf49_5810_4dd3_9127_6ce97e0ada8d
+:d8ecbf49_5810_4dd3_9127_6ce97e0ada8d rdf:type owl:Class ;
+                                      rdfs:subClassOf :defa744b_6e3b_4121_b0dd_4ecfda754b0a .
+
+
+###  http://www.semantyk.com/knowledge#dace8ccb_28f5_4787_be08_b688a7bcdd94
+:dace8ccb_28f5_4787_be08_b688a7bcdd94 rdf:type owl:Class ;
+                                      rdfs:subClassOf :ec5fb444_a6d3_4485_b200_acba32af502d .
+
+
+###  http://www.semantyk.com/knowledge#db427653_2dea_4dc0_9b37_65f0c5d17ca3
+:db427653_2dea_4dc0_9b37_65f0c5d17ca3 rdf:type owl:Class ;
+                                      rdfs:subClassOf :defa744b_6e3b_4121_b0dd_4ecfda754b0a .
+
+
+###  http://www.semantyk.com/knowledge#defa744b_6e3b_4121_b0dd_4ecfda754b0a
+:defa744b_6e3b_4121_b0dd_4ecfda754b0a rdf:type owl:Class ;
+                                      rdfs:subClassOf owl:Thing .
+
+
+###  http://www.semantyk.com/knowledge#df2b1a3a_ba81_4056_ab23_c4118bba51f9
+:df2b1a3a_ba81_4056_ab23_c4118bba51f9 rdf:type owl:Class ;
+                                      rdfs:subClassOf :ec6e83e0_2d4e_4e57_97f1_0ad262235f4e .
+
+
+###  http://www.semantyk.com/knowledge#e1b671b2_280a_4841_a569_76eb85d9473f
+:e1b671b2_280a_4841_a569_76eb85d9473f rdf:type owl:Class ;
+                                      rdfs:subClassOf :ad005078_7b66_4aa9_a3ea_b3eb4a0fe866 ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :a278ea71_1682_4765_ad90_979b1c68ce58 ;
+                                                        owl:hasValue :a0947516_0388_4c3a_81a1_a3888c6d5e24
+                                                      ] .
+
+
+###  http://www.semantyk.com/knowledge#e56d4b67_b203_4e3e_93f1_611fcebb283b
+:e56d4b67_b203_4e3e_93f1_611fcebb283b rdf:type owl:Class ;
+                                      rdfs:subClassOf :a79ff88f_1c74_4409_bbe6_968fe8f2ca18 .
+
+
+###  http://www.semantyk.com/knowledge#ec5fb444_a6d3_4485_b200_acba32af502d
+:ec5fb444_a6d3_4485_b200_acba32af502d rdf:type owl:Class ;
+                                      rdfs:subClassOf :defa744b_6e3b_4121_b0dd_4ecfda754b0a .
+
+
+###  http://www.semantyk.com/knowledge#ec6e83e0_2d4e_4e57_97f1_0ad262235f4e
+:ec6e83e0_2d4e_4e57_97f1_0ad262235f4e rdf:type owl:Class ;
+                                      rdfs:subClassOf :ec5fb444_a6d3_4485_b200_acba32af502d .
+
+
+###  http://www.semantyk.com/knowledge#ef15272a_ff63_42e8_b95e_5b7b12a820ba
+:ef15272a_ff63_42e8_b95e_5b7b12a820ba rdf:type owl:Class ;
+                                      rdfs:subClassOf :defa744b_6e3b_4121_b0dd_4ecfda754b0a .
+
+
+###  http://www.semantyk.com/knowledge#f42f0486_92da_44cb_ae88_c94d23f795e3
+:f42f0486_92da_44cb_ae88_c94d23f795e3 rdf:type owl:Class ;
+                                      rdfs:subClassOf schema:Person ,
+                                                      :ad005078_7b66_4aa9_a3ea_b3eb4a0fe866 ,
+                                                      foaf:Person .
+
+
+###  http://www.semantyk.com/knowledge#f6a07fad_1a19_4294_814e_c47a35265ca5
+:f6a07fad_1a19_4294_814e_c47a35265ca5 rdf:type owl:Class ;
+                                      rdfs:subClassOf :c2195206_77e3_4c2f_86d4_8a10a34966b4 .
+
+
+###  http://www.semantyk.com/knowledge#f78442b5_4463_490d_9f51_7275deb2ac63
+:f78442b5_4463_490d_9f51_7275deb2ac63 rdf:type owl:Class ;
+                                      rdfs:subClassOf :defa744b_6e3b_4121_b0dd_4ecfda754b0a .
+
+
+###  http://www.semantyk.com/knowledge#f927de71_07d4_42d6_a776_efc6c2c5d55a
+:f927de71_07d4_42d6_a776_efc6c2c5d55a rdf:type owl:Class ;
+                                      rdfs:subClassOf :ad005078_7b66_4aa9_a3ea_b3eb4a0fe866 .
+
+
+###  http://www.semantyk.com/knowledge#fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d
+:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d rdf:type owl:Class ;
+                                      rdfs:subClassOf owl:Class .
+
+
+###  http://www.semantyk.com/knowledge#fdbb7981_7fc5_4dd6_8035_c9141c61df89
+:fdbb7981_7fc5_4dd6_8035_c9141c61df89 rdf:type owl:Class ;
+                                      rdfs:subClassOf :defa744b_6e3b_4121_b0dd_4ecfda754b0a .
+
+
+###  http://www.semantyk.com/knowledge#fddab7f9_1d22_483d_a8d2_a290fb2d115e
+:fddab7f9_1d22_483d_a8d2_a290fb2d115e rdf:type owl:Class ;
+                                      rdfs:subClassOf :defa744b_6e3b_4121_b0dd_4ecfda754b0a .
+
+
+###  http://www.w3.org/2002/07/owl#Class
+owl:Class rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semantyk.com/knowledge#
+: rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge#a071928a_b552_46fc_ba97_115ccd0e5130
+:a071928a_b552_46fc_ba97_115ccd0e5130 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge#a0947516_0388_4c3a_81a1_a3888c6d5e24
+:a0947516_0388_4c3a_81a1_a3888c6d5e24 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge#a170c550_d25a_404d_a572_9832bc0f0932
+:a170c550_d25a_404d_a572_9832bc0f0932 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#a22e854d_7141_4d55_8d98_66c4c5c842f3
+:a22e854d_7141_4d55_8d98_66c4c5c842f3 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#a33f1a66_b28d_4ffe_a3ee_85b5fdc6a4a0
+:a33f1a66_b28d_4ffe_a3ee_85b5fdc6a4a0 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge#a418160a_c783_42e9_97d6_baffb88467a0
+:a418160a_c783_42e9_97d6_baffb88467a0 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#a59b12bb_7630_4d82_95bb_34de9b8e922e
+:a59b12bb_7630_4d82_95bb_34de9b8e922e rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#a79ff88f_1c74_4409_bbe6_968fe8f2ca18
+:a79ff88f_1c74_4409_bbe6_968fe8f2ca18 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#a7e6cd45_fba8_47f5_a3a0_a75c3cf02d10
+:a7e6cd45_fba8_47f5_a3a0_a75c3cf02d10 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#abcff5c3_589f_4961_a5d9_783bac25a459
+:abcff5c3_589f_4961_a5d9_783bac25a459 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#acf6d2e9_bcba_4786_bb4d_a73f75ef1dd3
+:acf6d2e9_bcba_4786_bb4d_a73f75ef1dd3 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#ad005078_7b66_4aa9_a3ea_b3eb4a0fe866
+:ad005078_7b66_4aa9_a3ea_b3eb4a0fe866 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      :a55a93ef_28dc_41b2_b537_eb916507bfdd :ff32cd02_5b28_4b4b_bde1_1a061b4d9c75 ;
+                                      :f0b0c790_e005_4539_80b5_263dc433ebc0 :ff32cd02_5b28_4b4b_bde1_1a061b4d9c75 ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#af2893c1_c196_46fe_8342_12b3d515de85
+:af2893c1_c196_46fe_8342_12b3d515de85 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#b1e47cf6_b879_468b_b516_a86af87df2d9
+:b1e47cf6_b879_468b_b516_a86af87df2d9 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#b36e331b_7848_439c_a539_c05c049a9f43
+:b36e331b_7848_439c_a539_c05c049a9f43 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      :a55a93ef_28dc_41b2_b537_eb916507bfdd :cf21407f_56f3_4f2f_a459_2c9204466ea2 ;
+                                      :f0b0c790_e005_4539_80b5_263dc433ebc0 :cf21407f_56f3_4f2f_a459_2c9204466ea2 ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#b47f6f8b_20fd_41cc_a0c0_b72ad7743df4
+:b47f6f8b_20fd_41cc_a0c0_b72ad7743df4 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#b592f057_6bc9_44db_9688_a9a7d1d9d606
+:b592f057_6bc9_44db_9688_a9a7d1d9d606 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge#b707f249_2691_4ba8_bd79_27822c3b3761
+:b707f249_2691_4ba8_bd79_27822c3b3761 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      :a55a93ef_28dc_41b2_b537_eb916507bfdd :f5cf5ec0_2eb1_4fb3_be67_b1431637fde2 ;
+                                      :f0b0c790_e005_4539_80b5_263dc433ebc0 :f5cf5ec0_2eb1_4fb3_be67_b1431637fde2 ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#b931050e_daba_40df_835a_6a6dbee5a4c5
+:b931050e_daba_40df_835a_6a6dbee5a4c5 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#bc250d8a_0c3a_45de_931c_822d037873a0
+:bc250d8a_0c3a_45de_931c_822d037873a0 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      :a55a93ef_28dc_41b2_b537_eb916507bfdd :a071928a_b552_46fc_ba97_115ccd0e5130 ;
+                                      :f0b0c790_e005_4539_80b5_263dc433ebc0 :a071928a_b552_46fc_ba97_115ccd0e5130 ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#bd560e81_ec87_4ee2_97f5_d63d8d0b3db9
+:bd560e81_ec87_4ee2_97f5_d63d8d0b3db9 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#be745206_fc56_4f49_bdc8_e552b423a07a
+:be745206_fc56_4f49_bdc8_e552b423a07a rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#bf4e6b3a_c931_4464_b4a5_e278d8cee8a9
+:bf4e6b3a_c931_4464_b4a5_e278d8cee8a9 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge#c10984dc_f290_4880_a60b_d6f8b6b22105
+:c10984dc_f290_4880_a60b_d6f8b6b22105 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      :a55a93ef_28dc_41b2_b537_eb916507bfdd :cba263e2_24ca_4849_ac58_6ac534083033 ;
+                                      :f0b0c790_e005_4539_80b5_263dc433ebc0 :cba263e2_24ca_4849_ac58_6ac534083033 ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#c151991f_2e06_443e_bac2_a7fa5fb15aff
+:c151991f_2e06_443e_bac2_a7fa5fb15aff rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#c2195206_77e3_4c2f_86d4_8a10a34966b4
+:c2195206_77e3_4c2f_86d4_8a10a34966b4 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#c2871766_bffb_4a9b_9a67_4a84f149c11c
+:c2871766_bffb_4a9b_9a67_4a84f149c11c rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      :a55a93ef_28dc_41b2_b537_eb916507bfdd :bf4e6b3a_c931_4464_b4a5_e278d8cee8a9 ;
+                                      :f0b0c790_e005_4539_80b5_263dc433ebc0 :bf4e6b3a_c931_4464_b4a5_e278d8cee8a9 ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#c2b55971_77cc_458c_a9b1_412f42998acd
+:c2b55971_77cc_458c_a9b1_412f42998acd rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      :a55a93ef_28dc_41b2_b537_eb916507bfdd :e7981e92_c7e2_4a0e_808d_e895b3334f40 ;
+                                      :f0b0c790_e005_4539_80b5_263dc433ebc0 :e7981e92_c7e2_4a0e_808d_e895b3334f40 ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#c342f0ec_b9de_4641_939f_3b8f6bff32bf
+:c342f0ec_b9de_4641_939f_3b8f6bff32bf rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#c456155b_dbb7_4c77_af07_c03a9db350b0
+:c456155b_dbb7_4c77_af07_c03a9db350b0 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge#c6074215_7e91_4130_bc57_e8142f8613f1
+:c6074215_7e91_4130_bc57_e8142f8613f1 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge#c6c110fa_8f7f_4297_b3ab_523ce3966dd9
+:c6c110fa_8f7f_4297_b3ab_523ce3966dd9 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge#cae12296_c19d_4002_872f_4cce6818ad96
+:cae12296_c19d_4002_872f_4cce6818ad96 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge#cba263e2_24ca_4849_ac58_6ac534083033
+:cba263e2_24ca_4849_ac58_6ac534083033 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge#cbb907c7_4951_4b2d_9265_3e58114d3d22
+:cbb907c7_4951_4b2d_9265_3e58114d3d22 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#cc0b7e13_35b3_46bf_997d_1066bfdf0a48
+:cc0b7e13_35b3_46bf_997d_1066bfdf0a48 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#cd94c806_2fb6_44d0_b891_60cff20b57f9
+:cd94c806_2fb6_44d0_b891_60cff20b57f9 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      :a55a93ef_28dc_41b2_b537_eb916507bfdd :c6c110fa_8f7f_4297_b3ab_523ce3966dd9 ;
+                                      :f0b0c790_e005_4539_80b5_263dc433ebc0 :c6c110fa_8f7f_4297_b3ab_523ce3966dd9 ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#cdde4c47_7d4d_4ee2_85e8_0d3cf0545b13
+:cdde4c47_7d4d_4ee2_85e8_0d3cf0545b13 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge#cf21407f_56f3_4f2f_a459_2c9204466ea2
+:cf21407f_56f3_4f2f_a459_2c9204466ea2 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge#cff8a44f_b27f_485e_b2f2_210be0df7192
+:cff8a44f_b27f_485e_b2f2_210be0df7192 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge#d12fc4d6_c9f5_4686_9ae5_dea4df2df686
+:d12fc4d6_c9f5_4686_9ae5_dea4df2df686 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      :a55a93ef_28dc_41b2_b537_eb916507bfdd :d567ba41_6051_4f26_8d4d_2d8a68068531 ;
+                                      :f0b0c790_e005_4539_80b5_263dc433ebc0 :d567ba41_6051_4f26_8d4d_2d8a68068531 ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#d2c2b22a_9a40_4595_b2cc_b7797e06128e
+:d2c2b22a_9a40_4595_b2cc_b7797e06128e rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#d38fba88_6621_43ab_872b_13bd317507c6
+:d38fba88_6621_43ab_872b_13bd317507c6 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      :a55a93ef_28dc_41b2_b537_eb916507bfdd :cff8a44f_b27f_485e_b2f2_210be0df7192 ;
+                                      :f0b0c790_e005_4539_80b5_263dc433ebc0 :cff8a44f_b27f_485e_b2f2_210be0df7192 ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#d3c3da1e_369b_4103_b5bf_58daba879d87
+:d3c3da1e_369b_4103_b5bf_58daba879d87 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#d567ba41_6051_4f26_8d4d_2d8a68068531
+:d567ba41_6051_4f26_8d4d_2d8a68068531 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge#d5d7f3ef_992c_410d_af35_41de2407fa15
+:d5d7f3ef_992c_410d_af35_41de2407fa15 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#d8089366_5145_4b41_9294_3f152794ff4a
+:d8089366_5145_4b41_9294_3f152794ff4a rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#d8ecbf49_5810_4dd3_9127_6ce97e0ada8d
+:d8ecbf49_5810_4dd3_9127_6ce97e0ada8d rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#dace8ccb_28f5_4787_be08_b688a7bcdd94
+:dace8ccb_28f5_4787_be08_b688a7bcdd94 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      :a55a93ef_28dc_41b2_b537_eb916507bfdd :c456155b_dbb7_4c77_af07_c03a9db350b0 ;
+                                      :f0b0c790_e005_4539_80b5_263dc433ebc0 :c456155b_dbb7_4c77_af07_c03a9db350b0 ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#db427653_2dea_4dc0_9b37_65f0c5d17ca3
+:db427653_2dea_4dc0_9b37_65f0c5d17ca3 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#defa744b_6e3b_4121_b0dd_4ecfda754b0a
+:defa744b_6e3b_4121_b0dd_4ecfda754b0a rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#df2b1a3a_ba81_4056_ab23_c4118bba51f9
+:df2b1a3a_ba81_4056_ab23_c4118bba51f9 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#e1b671b2_280a_4841_a569_76eb85d9473f
+:e1b671b2_280a_4841_a569_76eb85d9473f rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#e488f280_77a9_4eb8_b753_8e3cd0fbf34e
+:e488f280_77a9_4eb8_b753_8e3cd0fbf34e rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge#e56d4b67_b203_4e3e_93f1_611fcebb283b
+:e56d4b67_b203_4e3e_93f1_611fcebb283b rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#e7981e92_c7e2_4a0e_808d_e895b3334f40
+:e7981e92_c7e2_4a0e_808d_e895b3334f40 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge#e9e28188_9a02_4e96_92ba_d30981e7f54b
+:e9e28188_9a02_4e96_92ba_d30981e7f54b rdf:type owl:NamedIndividual ,
+                                               dcat:Catalog ;
+                                      schema:about <http://www.semantyk.com/knowledge/core/tbox#> ;
+                                      dcat:inCatalog :b592f057_6bc9_44db_9688_a9a7d1d9d606 ;
+                                      rdfs:comment "A 'Catalog' labeled 'The Catalog' of 'The Terminological Box' of 'The Core' of 'The Knowledge Graph'"@en ,
+                                                   "Un 'Catálogo' etiquetado 'El Catálogo' de 'La Caja Terminológica' de 'El Núcleo' de 'El Grafo de Conocimiento'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "El Catálogo de La Caja Terminológica de El Núcleo de El Grafo de Conocimiento"@es ,
+                                                 "The Catalog of The Terminological Box of The Core of The Knowledge Graph"@en .
+
+
+###  http://www.semantyk.com/knowledge#ec5fb444_a6d3_4485_b200_acba32af502d
+:ec5fb444_a6d3_4485_b200_acba32af502d rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      :a55a93ef_28dc_41b2_b537_eb916507bfdd :a33f1a66_b28d_4ffe_a3ee_85b5fdc6a4a0 ;
+                                      :f0b0c790_e005_4539_80b5_263dc433ebc0 :a33f1a66_b28d_4ffe_a3ee_85b5fdc6a4a0 ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#ec6e83e0_2d4e_4e57_97f1_0ad262235f4e
+:ec6e83e0_2d4e_4e57_97f1_0ad262235f4e rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#ed0cfe1a_2cd5_4bb9_af25_df6f93f064c0
+:ed0cfe1a_2cd5_4bb9_af25_df6f93f064c0 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge#ef15272a_ff63_42e8_b95e_5b7b12a820ba
+:ef15272a_ff63_42e8_b95e_5b7b12a820ba rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#f42f0486_92da_44cb_ae88_c94d23f795e3
+:f42f0486_92da_44cb_ae88_c94d23f795e3 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#f5cf5ec0_2eb1_4fb3_be67_b1431637fde2
+:f5cf5ec0_2eb1_4fb3_be67_b1431637fde2 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge#f6a07fad_1a19_4294_814e_c47a35265ca5
+:f6a07fad_1a19_4294_814e_c47a35265ca5 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#f78442b5_4463_490d_9f51_7275deb2ac63
+:f78442b5_4463_490d_9f51_7275deb2ac63 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#f7a4f75e_0eac_4c0e_bb39_24351ce93c51
+:f7a4f75e_0eac_4c0e_bb39_24351ce93c51 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge#f927de71_07d4_42d6_a776_efc6c2c5d55a
+:f927de71_07d4_42d6_a776_efc6c2c5d55a rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      :a55a93ef_28dc_41b2_b537_eb916507bfdd :ed0cfe1a_2cd5_4bb9_af25_df6f93f064c0 ;
+                                      :f0b0c790_e005_4539_80b5_263dc433ebc0 :ed0cfe1a_2cd5_4bb9_af25_df6f93f064c0 ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d
+:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#fdbb7981_7fc5_4dd6_8035_c9141c61df89
+:fdbb7981_7fc5_4dd6_8035_c9141c61df89 rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#fddab7f9_1d22_483d_a8d2_a290fb2d115e
+:fddab7f9_1d22_483d_a8d2_a290fb2d115e rdf:type owl:NamedIndividual ,
+                                               :fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d ;
+                                      dcat:inCatalog :e9e28188_9a02_4e96_92ba_d30981e7f54b .
+
+
+###  http://www.semantyk.com/knowledge#ff32cd02_5b28_4b4b_bde1_1a061b4d9c75
+:ff32cd02_5b28_4b4b_bde1_1a061b4d9c75 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semantyk.com/knowledge/core/tbox#
+<http://www.semantyk.com/knowledge/core/tbox#> rdf:type owl:NamedIndividual ;
+                                               schema:about :cdde4c47_7d4d_4ee2_85e8_0d3cf0545b13 .
+
+
+###  https://id.danielbakas.com
+<https://id.danielbakas.com> rdf:type owl:NamedIndividual .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:a170c550_d25a_404d_a572_9832bc0f0932 rdfs:comment "A 'Class' labeled 'Genre' subclass of 'Thing'. Each of its instances is defined as a 'Genre'"@en ,
+                                                   "Una 'Clase' etiquetada 'Género' subclase de 'Cosa'. Cada una de sus instancias se define como un 'Género'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Genre"@en ,
+                                                 "Género"@es .
+
+
+:a22e854d_7141_4d55_8d98_66c4c5c842f3 rdfs:comment "A 'Class' labeled 'Capital' subclass of 'State'. Each of its instances is defined as a 'Capital'"@en ,
+                                                   "Una 'Clase' etiquetada 'Capital' subclase de 'Estado'. Cada una de sus instancias se define como un 'Capital'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Capital"@en ,
+                                                 "Capital"@es .
+
+
+:a418160a_c783_42e9_97d6_baffb88467a0 rdfs:comment "A 'Class' labeled 'Male' subclass of 'Thing'. Each of its instances is defined as a 'Male' and has the 'male' sex"@en ,
+                                                   "Una 'Clase' etiquetada 'Macho' subclase de 'Cosa'. Cada una de sus instancias se define como un 'Macho' y tiene el sexo 'macho'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Macho"@es ,
+                                                 "Male"@en .
+
+
+:a59b12bb_7630_4d82_95bb_34de9b8e922e rdfs:comment "A 'Class' labeled 'Female' subclass of 'Thing'. Each of its instances is defined as a 'Female' and has the 'female' sex"@en ,
+                                                   "Una 'Clase' etiquetada 'Hembra' subclase de 'Cosa'. Cada una de sus instancias se define como una 'Hembra' y tiene el sexo 'hembra'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Female"@en ,
+                                                 "Hembra"@es .
+
+
+:a79ff88f_1c74_4409_bbe6_968fe8f2ca18 rdfs:comment "A 'Class' labeled 'Group' subclass of 'Thing'. Each of its instances is defined as a 'Group'"@en ,
+                                                   "Una 'Clase' etiquetada 'Grupo' subclase de 'Cosa'. Cada una de sus instancias se define como un 'Grupo'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Group"@en ,
+                                                 "Grupo"@es .
+
+
+:a7e6cd45_fba8_47f5_a3a0_a75c3cf02d10 rdfs:comment "A 'Class' labeled 'Musical Genre' subclass of 'Genre'. Each of its instances is defined as a 'Musical Genre'"@en ,
+                                                   "Una 'Clase' etiquetada 'Género Musical' subclase de 'Género'. Cada una de sus instancias se define como un 'Género Musical'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Género Musical"@es ,
+                                                 "Musical Genre"@en .
+
+
+:abcff5c3_589f_4961_a5d9_783bac25a459 rdfs:comment "A 'Class' labeled 'Municipality' subclass of 'Thing'. Each of its instances is defined as a 'Municipality'"@en ,
+                                                   "Una 'Clase' etiquetada 'Municipio' subclase de 'Cosa'. Cada una de sus instancias se define como un 'Municipio'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Municipality"@en ,
+                                                 "Municipio"@es .
+
+
+:acf6d2e9_bcba_4786_bb4d_a73f75ef1dd3 rdfs:comment "A 'Class' labeled 'Course' subclass of 'Thing'. Each of its instances is defined as a 'Course'"@en ,
+                                                   "Una 'Clase' etiquetada 'Curso' subclase de 'Cosa'. Cada una de sus instancias se define como un 'Curso'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Course"@en ,
+                                                 "Curso"@es .
+
+
+:ad005078_7b66_4aa9_a3ea_b3eb4a0fe866 rdfs:comment "A 'Class' labeled 'Agent' subclass of 'Thing'. Each of its instances is defined as a 'Agent'"@en ,
+                                                   "Una 'Clase' etiquetada 'Agente' subclase de 'Cosa'. Cada una de sus instancias se define como un 'Agente'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Agent"@en ,
+                                                 "Agente"@es .
+
+
+:af2893c1_c196_46fe_8342_12b3d515de85 rdfs:comment "A 'Class' labeled 'State' subclass of 'Thing'. Each of its instances is defined as a 'State'"@en ,
+                                                   "Una 'Clase' etiquetada 'Estado' subclase de 'Cosa'. Cada una de sus instancias se define como un 'Estado'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Estado"@es ,
+                                                 "State"@en .
+
+
+:b1e47cf6_b879_468b_b516_a86af87df2d9 rdfs:comment "A 'Class' labeled 'State' subclass of 'Agent'. Each of its instances is defined as a 'State'"@en ,
+                                                   "Una 'Clase' etiquetada 'Gobierno' subclase de 'Agente'. Cada una de sus instancias se define como un 'Gobierno'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Gobierno"@es ,
+                                                 "Government"@en .
+
+
+:b36e331b_7848_439c_a539_c05c049a9f43 rdfs:comment "A 'Class' labeled 'Concept' subclass of 'Thing'. Each of its instances is defined as a 'Concept'"@en ,
+                                                   "Una 'Clase' etiquetada 'Concepto' subclase de 'Cosa'. Cada una de sus instancias se define como un 'Concepto'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Concept"@en ,
+                                                 "Concepto"@es .
+
+
+:b47f6f8b_20fd_41cc_a0c0_b72ad7743df4 rdfs:comment "A 'Class' labeled 'Web Domain' subclass of 'Thing'. Each of its instances is defined as a 'Web Domain'"@en ,
+                                                   "Una 'Clase' etiquetada 'Dominio Web' subclase de 'Cosa'. Cada una de sus instancias se define como un 'Dominio Web'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Dominio Web"@es ,
+                                                 "Web Domain"@en .
+
+
+:b707f249_2691_4ba8_bd79_27822c3b3761 rdfs:comment "A 'Class' labeled 'Action' subclass of 'Thing'. Each of its instances is defined as an 'Action'"@en ,
+                                                   "Una 'Clase' etiquetada 'Acción' subclase de 'Cosa'. Cada una de sus instancias se define como una 'Acción'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Actividad"@es ,
+                                                 "Activity"@en .
+
+
+:b931050e_daba_40df_835a_6a6dbee5a4c5 rdfs:comment "A 'Class' labeled 'Task' subclass of 'Thing'. Each of its instances is defined as a 'Task'"@en ,
+                                                   "Una 'Clase' etiquetada 'Tarea' subclase de 'Cosa'. Cada una de sus instancias se define como una 'Tarea'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Tarea"@es ,
+                                                 "Task"@en .
+
+
+:bc250d8a_0c3a_45de_931c_822d037873a0 rdfs:comment "A 'Class' labeled 'Administration' subclass of 'Thing'. Each of its instances is defined as a 'Administration'"@en ,
+                                                   "Una 'Clase' etiquetada 'Administración' subclase de 'Cosa'. Cada una de sus instancias se define como un 'Administración'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Administración"@es ,
+                                                 "Administration"@en .
+
+
+:bd560e81_ec87_4ee2_97f5_d63d8d0b3db9 rdfs:comment "A 'Class' labeled 'Concept Scheme' subclass of 'Thing'. Each of its instancesis a 'Concept Scheme'"@en ,
+                                                   "Una 'Clase' etiquetada 'Esquema de Conceptos' subclase de 'Cosa'. Cada una de sus instancias se define como un 'Esquema de Conceptos'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Concept Scheme"@en ,
+                                                 "Esquema de Conceptos"@es .
+
+
+:be745206_fc56_4f49_bdc8_e552b423a07a rdfs:comment "A 'Class' labeled 'State' subclass of 'Federal Entity'. Each of its instances is defined as a 'State'"@en ,
+                                                   "Una 'Clase' etiquetada 'Estado' subclase de 'Entidad Federativa'. Cada una de sus instancias se define como un 'Estado'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Estado"@es ,
+                                                 "State"@en .
+
+
+:c10984dc_f290_4880_a60b_d6f8b6b22105 rdfs:comment "A 'Class' labeled 'Sex' subclass of 'Thing'. Each of its instances is defined as a 'Sex'"@en ,
+                                                   "Una 'Clase' etiquetada 'Sexo' subclase de 'Cosa'. Cada una de sus instancias se define como un 'Sexo'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Sex"@en ,
+                                                 "Sexo"@es .
+
+
+:c151991f_2e06_443e_bac2_a7fa5fb15aff rdfs:comment "A 'Class' labeled 'Intensity' subclass of 'Quality'. Each of its instances is defined as an 'Intensity'"@en ,
+                                                   "Una 'Clase' etiquetada 'Intensidad' subclase de 'Cualidad'. Cada una de sus instancias se define como una 'Intensidad'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Intensidad"@es ,
+                                                 "Intensity"@en .
+
+
+:c2195206_77e3_4c2f_86d4_8a10a34966b4 rdfs:comment "A 'Class' labeled 'Document' subclass of 'Thing'. Each of its instances is defined as a 'Document'"@en ,
+                                                   "Una 'Clase' etiquetada 'Documento' subclase de 'Cosa'. Cada una de sus instancias se define como un 'Documento'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Document"@en ,
+                                                 "Documento"@es .
+
+
+:c2871766_bffb_4a9b_9a67_4a84f149c11c rdfs:comment "A 'Class' labeled 'Gender' subclass of 'Thing'. Each of its instances is defined as a 'Gender'"@en ,
+                                                   "Una 'Clase' etiquetada 'Género' subclase de 'Cosa'. Cada una de sus instancias se define como un 'Género'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Gender"@en ,
+                                                 "Género"@es .
+
+
+:c2b55971_77cc_458c_a9b1_412f42998acd rdfs:comment "A 'Class' labeled 'Action' subclass of 'Thing'. Each of its instances is defined as an 'Action'"@en ,
+                                                   "Una 'Clase' etiquetada 'Acción' subclase de 'Cosa'. Cada una de sus instancias se define como una 'Acción'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Acción"@es ,
+                                                 "Action"@en .
+
+
+:c342f0ec_b9de_4641_939f_3b8f6bff32bf rdfs:comment "A 'Class' labeled 'Power' subclass of 'Thing'. Each of its instances is defined as a 'Power'"@en ,
+                                                   "Una 'Clase' etiquetada 'Poder' subclase de 'Cosa'. Cada una de sus instancias se define como un 'Poder'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Poder"@es ,
+                                                 "Power"@en .
+
+
+:cb18af83_4d9a_479a_9c69_c44ade51be08 rdfs:label "has organization"@en ,
+                                                 "tiene organización"@es .
+
+
+:cbb907c7_4951_4b2d_9265_3e58114d3d22 rdfs:comment "A 'Class' labeled 'Process' subclass of 'Thing'. Each of its instances is defined as a 'Process'"@en ,
+                                                   "Una 'Clase' etiquetada 'Proceso' subclase de 'Cosa'. Cada una de sus instancias se define como una 'Proceso'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Proceso"@es ,
+                                                 "Process"@en .
+
+
+:cc0b7e13_35b3_46bf_997d_1066bfdf0a48 rdfs:comment "A 'Class' labeled 'Locality' subclass of 'Thing'. Each of its instances is defined as an 'Locality'"@en ,
+                                                   "Una 'Clase' etiquetada 'Localidad' subclase de 'Cosa'. Cada una de sus instancias se define como una 'Localidad'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Localidad"@es ,
+                                                 "Locality"@en .
+
+
+:cd94c806_2fb6_44d0_b891_60cff20b57f9 rdfs:comment "A 'Class' labeled 'Organization' subclass of 'Agent'. Each of its instances is defined as a 'Organization'"@en ,
+                                                   "Una 'Clase' etiquetada 'Organización' subclase de 'Agente'. Cada una de sus instancias se define como una 'Organización'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Organización"@es ,
+                                                 "Organization"@en .
+
+
+:d12fc4d6_c9f5_4686_9ae5_dea4df2df686 rdfs:comment "A 'Class' labeled 'Nation' subclass of 'Agent'. Each of its instances is defined as a 'Nation'"@en ,
+                                                   "Una 'Clase' etiquetada 'Nación' subclase de 'Agente'. Cada una de sus instancias se define como una 'Nación'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Nación"@es ,
+                                                 "Nation"@en .
+
+
+:d2c2b22a_9a40_4595_b2cc_b7797e06128e rdfs:comment "A 'Class' labeled 'Operation' subclass of 'Thing'. Each of its instances is defined as an 'Operation'"@en ,
+                                                   "Una 'Clase' etiquetada 'Operación' subclase de 'Cosa'. Cada una de sus instancias se define como una 'Operación'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Operación"@es ,
+                                                 "Operation"@en .
+
+
+:d38fba88_6621_43ab_872b_13bd317507c6 rdfs:comment "A 'Class' labeled 'Project' subclass of 'Thing'. Each of its instances is defined as a 'Project'"@en ,
+                                                   "Una 'Clase' etiquetada 'Proyecto' subclase de 'Cosa'. Cada una de sus instancias se define como una 'Proyecto'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Project"@en ,
+                                                 "Proyecto"@es .
+
+
+:d3c3da1e_369b_4103_b5bf_58daba879d87 rdfs:comment "A 'Class' labeled 'Woman' subclass of 'Thing'. Each of its instances is defined as a 'Woman' and has the 'woman' gender"@en ,
+                                                   "Una 'Clase' etiquetada 'Mujer' subclase de 'Cosa'. Cada una de sus instancias se define como una 'Mujer' y tiene el género 'mujer'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Mujer"@es ,
+                                                 "Woman"@en .
+
+
+:d5d7f3ef_992c_410d_af35_41de2407fa15 rdfs:comment "A 'Class' labeled 'Meeting' subclass of 'Thing'. Each of its instances is defined as a 'Meeting'"@en ,
+                                                   "Una 'Clase' etiquetada 'Reunión' subclase de 'Cosa'. Cada una de sus instancias se define como una 'Reunión'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Meeting"@en ,
+                                                 "Reunión"@es .
+
+
+:d8089366_5145_4b41_9294_3f152794ff4a rdfs:comment "A 'Class' labeled 'Lesson' subclass of 'Thing'. Each of its instances is defined as an 'Lesson'"@en ,
+                                                   "Una 'Clase' etiquetada 'Lección' subclase de 'Cosa'. Cada una de sus instancias se define como una 'Lección'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Lección"@es ,
+                                                 "Lesson"@en .
+
+
+:d8ecbf49_5810_4dd3_9127_6ce97e0ada8d rdfs:comment "A 'Class' labeled 'Unit' subclass of 'Thing'. Each of its instances is defined as an 'Unit'"@en ,
+                                                   "Una 'Clase' etiquetada 'Unidad' subclase de 'Cosa'. Cada una de sus instancias se define como una 'Unidad'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Unidad"@es ,
+                                                 "Unit"@en .
+
+
+:dace8ccb_28f5_4787_be08_b688a7bcdd94 rdfs:comment "A 'Class' labeled 'Color' subclass of 'Quality'. Each of its instances is defined as an 'Color'"@en ,
+                                                   "Una 'Clase' etiquetada 'Color' subclase de 'Cualidad'. Cada una de sus instancias se define como un 'Color'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Color"@en ,
+                                                 "Color"@es .
+
+
+:db427653_2dea_4dc0_9b37_65f0c5d17ca3 rdfs:comment "A 'Class' labeled 'Quantity' subclass of 'Thing'. Each of its instances is defined as a 'Quantity'"@en ,
+                                                   "Una 'Clase' etiquetada 'Cantidad' subclase de 'Cosa'. Cada una de sus instancias se define como una 'Cantidad'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Cantidad"@es ,
+                                                 "Quantity"@en .
+
+
+:defa744b_6e3b_4121_b0dd_4ecfda754b0a rdfs:comment "A 'Class' labeled 'Thing'. Each of its instances is defined as a 'Thing'"@en ,
+                                                   "Una 'Clase' etiquetada 'Cosa'. Cada una de sus instancias se define cómo una 'Cosa'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Cosa"@es ,
+                                                 "Thing"@en .
+
+
+:df2b1a3a_ba81_4056_ab23_c4118bba51f9 rdfs:comment "A 'Class' labeled 'Attribute of Software' subclass of 'Attribute'. Each of its instances is defined as an 'Attribute of Software'"@en ,
+                                                   "Una 'Clase' etiquetada 'Atributo de Software' subclase de 'Atributo'. Cada una de sus instancias se define como un 'Atributo de Software'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Atributo de Software"@es ,
+                                                 "Attribute of Software"@en .
+
+
+:e1b671b2_280a_4841_a569_76eb85d9473f rdfs:comment "A 'Class' labeled 'Man' subclass of 'Thing'. Each of its instances is defined as a 'Man' and has the 'man' gender"@en ,
+                                                   "Una 'Clase' etiquetada 'Hombre' subclase de 'Cosa'. Cada una de sus instancias se define como un 'Hombre' y tiene el género 'hombre'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Hombre"@es ,
+                                                 "Man"@en .
+
+
+:e56d4b67_b203_4e3e_93f1_611fcebb283b rdfs:comment "A 'Class' labeled 'Team' subclass of 'Thing'. Each of its instances is defined as a 'Team'"@en ,
+                                                   "Una 'Clase' etiquetada 'Equipo' subclase de 'Cosa'. Cada una de sus instancias se define como un 'Equipo'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Equipo"@es ,
+                                                 "Team"@en .
+
+
+:ea4d04f3_2792_4aab_9aa4_d352448bb48d rdfs:label "has person"@en ,
+                                                 "tiene persona"@es .
+
+
+:ec5fb444_a6d3_4485_b200_acba32af502d rdfs:comment "A 'Class' labeled 'Quality' subclass of 'Thing'. Each of its instances is defined as a 'Quality'"@en ,
+                                                   "Una 'Clase' etiquetada 'Cualidad' subclase de 'Cosa'. Cada una de sus instancias se define como una 'Cualidad'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Cualidad"@es ,
+                                                 "Quality"@en .
+
+
+:ec6e83e0_2d4e_4e57_97f1_0ad262235f4e rdfs:comment "A 'Class' labeled 'Attribute' subclass of 'Quality'. Each of its instances is defined as an 'Attribute'"@en ,
+                                                   "Una 'Clase' etiquetada 'Atributo' subclase de 'Cualidad'. Cada una de sus instancias se define como un 'Atributo'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Atributo"@es ,
+                                                 "Attribute"@en .
+
+
+:ef15272a_ff63_42e8_b95e_5b7b12a820ba rdfs:comment "A 'Class' labeled 'Federal Entity' subclass of 'Thing'. Each of its instances is defined as a 'Federal Entity'"@en ,
+                                                   "Una 'Clase' etiquetada 'Entidad Federativa' subclase de 'Cosa'. Cada una de sus instancias se define como una 'Entidad Federativa'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Entidad Federativa"@es ,
+                                                 "Federal Entity"@en .
+
+
+:f42f0486_92da_44cb_ae88_c94d23f795e3 rdfs:comment "A 'Class' labeled 'Person' subclass of 'Thing'. Each of its instances is defined as a 'Person'"@en ,
+                                                   "Una 'Clase' etiquetada 'Persona' subclase de 'Cosa'. Cada una de sus instancias se define como un 'Persona'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Person"@en ,
+                                                 "Persona"@es .
+
+
+:f6a07fad_1a19_4294_814e_c47a35265ca5 rdfs:comment "A 'Class' labeled 'Report' subclass of 'Document'. Each of its instances is defined as a 'Report'"@en ,
+                                                   "Una 'Clase' etiquetada 'Reporte' subclase de 'Documento'. Cada una de sus instancias se define como un 'Reporte'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Report"@en ,
+                                                 "Reporte"@es .
+
+
+:f78442b5_4463_490d_9f51_7275deb2ac63 rdfs:comment "A 'Class' labeled 'Action' subclass of 'Thing'. Each of its instances is defined as a 'Anomaly'"@en ,
+                                                   "Una 'Clase' etiquetada 'Acción' subclase de 'Cosa'. Cada una de sus instancias se define como una 'Anomalía'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Anomaly"@en ,
+                                                 "Anomalía"@es .
+
+
+:f927de71_07d4_42d6_a776_efc6c2c5d55a rdfs:comment "A 'Class' labeled 'Nation-State' subclass of 'Agent'. Each of its instances is defined as a 'Nation-State'"@en ,
+                                                   "Una 'Clase' etiquetada 'Estado-Nación' subclase de 'Agente'. Cada una de sus instancias se define como un 'Estado-Nación'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Estado-Nación"@es ,
+                                                 "Nation-State"@en .
+
+
+:f941ccaf_c6b2_4729_ae48_d2482c14de84 rdfs:label "has membership during"@en ,
+                                                 "tiene membresía durante"@es .
+
+
+:fc1b0b25_d9ae_4ecd_bac5_c7228e59a72d rdfs:comment "A 'Class' labeled 'Class'. Each of its instances is defined as a 'Class'"@en ,
+                                                   "Una 'Clase' etiquetada 'Clase'. Cada una de sus instancias se define como una 'Clase'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Clase"@es ,
+                                                 "Class"@en .
+
+
+:fdbb7981_7fc5_4dd6_8035_c9141c61df89 rdfs:comment "A 'Class' labeled 'Role' subclass of 'Thing'. Each of its instances is defined as a 'Role'"@en ,
+                                                   "Una 'Clase' etiquetada 'Rol' subclase de 'Cosa'. Cada una de sus instancias se define como una 'Rol'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Rol"@es ,
+                                                 "Role"@en .
+
+
+:fddab7f9_1d22_483d_a8d2_a290fb2d115e rdfs:comment "A 'Class' labeled 'Post' subclass of 'Thing'. Each of its instances is defined as a 'Post'"@en ,
+                                                   "Una 'Clase' etiquetada 'Puesto' subclase de 'Cosa'. Cada una de sus instancias se define como una 'Puesto'"@es ;
+                                      rdfs:isDefinedBy : ;
+                                      rdfs:label "Post"@en ,
+                                                 "Puesto"@es .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
