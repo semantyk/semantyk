@@ -2,12 +2,12 @@
 \ ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 \ # `README.md`
 \ @organization: Semantyk
-\ @project: The Knowledge Graph of The Universe
+\ @project: The Core of The Knowledge Graph
 \
-\ @file: This is the main README file for The Knowledge Graph of The Universe project.
+\ @file: This is the main README file for The Core of The Knowledge Graph project.
 \
 \ @created: Mar 30, 2025
-\ @modified: Mar 30, 2025
+\ @modified: Jul 24, 2025
 \
 \ @author: Semantyk Team
 \ @maintainer: Daniel Bakas <https://id.danielbakas.com>
@@ -16,7 +16,7 @@
 \ ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 )
 
-<h1 align='center'> The Knowledge Graph of The Universe | Semantyk</h1>
+<h1 align='center'> The Core of The Knowledge Graph | Semantyk</h1>
 <h3 align='center'><i>Ideas Wonder</i></h3>
 <p align='center'>
   <picture>
