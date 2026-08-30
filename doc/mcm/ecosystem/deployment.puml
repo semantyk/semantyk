@@ -1,0 +1,42 @@
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+' # `deployment.puml`
+' @organization: Semantyk
+' @project: Ecosystem
+'
+' @file: This file defines the `deployment.puml` diagram.
+'
+' @created: 2026-08-29 11:27
+' @modified: 2026-08-30 03:52
+'
+' @since: 0.1.0-alpha.12
+' @version: 0.1.0-alpha.12
+'
+' @author: Semantyk Team
+' @maintainer: Daniel Bakas <daniel@semantyk.com>
+'
+' @copyright: Semantyk © 2026
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@startuml "DESPLIEGUE DEL ECOSISTEMA"
+
+frame "USUARIOS" <<capa>> {
+    actor TÉCNICO
+    actor ESTRATÉGICO
+}
+
+frame PRESENTACIÓN <<capa>> {
+    node "PRODUCTOS\nsemarnat.gob.mx" <<nodo>>
+    component "/sniarn"
+}
+
+frame LÓGICA <<capa>> {
+    node "PRODUCTOS\nsemarnat.gob.mx" <<nodo>>
+    component "/sniarn"
+}
+
+mainframe <<despliegue>>\n**ECOSISTEMA**
+
+footer <size:8>Semantyk © 2026</size>
+
+@enduml
+
