@@ -1,0 +1,32 @@
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+' # `mereology.puml`
+' @organization: Semantyk
+' @project: Ecosystem
+'
+' @file: This file defines the `mereology.puml` diagram.
+'
+' @created: 2026-08-29 11:27
+' @modified: 2026-08-30 03:52
+'
+' @since: 0.1.0-alpha.24
+' @version: 0.1.0-alpha.24
+'
+' @author: Semantyk Team
+' @maintainer: Daniel Bakas <daniel@semantyk.com>
+'
+' @copyright: Semantyk © 2026
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@startuml "COMPOSICIÓN"
+
+'* Imports
+!include ../../../../src/packages/ux/styles/mereology.styles.puml
+
+'* Main
+mainframe <<mereología>>\n**TRABAJO**
+
+$mereology(META-TRABAJO, 150, 75, TRABAJO, 97, 50, 120, 152)
+
+footer <size:8>Semantyk © 2026</size>
+
+@enduml
