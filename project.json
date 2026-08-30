@@ -1,0 +1,20 @@
+{
+  "name": "@semantyk/ecosystem",
+  "targets": {
+    "build": {
+      "command": "true"
+    },
+    "dev": {
+      "command": "true"
+    },
+    "start": {
+      "command": "docker compose --all-resources up -d"
+    },
+    "stop": {
+      "command": "docker compose --all-resources down"
+    },
+    "test": {
+      "command": "bun test"
+    }
+  }
+}

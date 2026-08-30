@@ -1,18 +1,22 @@
-# –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-# # `bug_report.yaml` | Issue Templates
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+# `bug_report.yaml`
 # @organization: Semantyk
-# @project: client
+# @project: Ecosystem
 #
 # @file: This file contains the GitHub template for reporting a bug in Semantyk.
 #
-# @created: Dec 9, 2023
-# @modified: Mar 7, 2025
+# @created: 2023-12-09 00:00
+# @modified: 2026-08-29 20:46
+#
+# @since: 0.1.0-alpha.0
+# @version: 0.1.0-alpha.0
 #
 # @author: Semantyk Team
-# @maintainer: Daniel Bakas <https://id.danielbakas.com>
+# @maintainer: Daniel Bakas <daniel@semantyk.com>
 #
-# @copyright: Semantyk © 2025. All rights reserved.
-# –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+# @copyright: Semantyk © 2026
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
 
 name: 🐛 Bug | Report
 title: "🐛 Bug | {Replace this with title}"
@@ -47,9 +51,7 @@ body:
       label: Package Manager
       description: Select the package manager.
       options:
-        - npm
-        - yarn
-        - pnpm
+        - bun
     validations:
       required: true
   - type: checkboxes
@@ -67,9 +69,9 @@ body:
         # TODO: Add links to the Documentation
         - label: Read the [docs]().
           required: true
-        - label: Check that there isn't [already an issue](https://github.com/semantyk/client/issues) that reports the same bug to avoid creating a duplicate.
+        - label: Check that there isn't [already an issue](https://github.com/semantyk/semantyk/issues) that reports the same bug to avoid creating a duplicate.
           required: true
-        - label: Check that this is a concrete bug. For Q&A open a [GitHub Discussion](https://github.com/semantyk/client/discussions).
+        - label: Check that this is a concrete bug. For Q&A open a [GitHub Discussion](https://github.com/semantyk/semantyk/discussions).
           required: true
         - label: The provided reproduction is a [minimal reproducible example](https://stackoverflow.com/help/minimal-reproducible-example) of the bug.
           required: true

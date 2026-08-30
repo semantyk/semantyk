@@ -1,0 +1,44 @@
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+' # `taxonomy.puml`
+' @organization: Semantyk
+' @project: Ecosystem
+'
+' @file: This file defines the `taxonomy.puml` diagram.
+'
+' @created: 2026-08-29 11:27
+' @modified: 2026-08-30 02:51
+'
+' @since: 0.1.0-alpha.0
+' @version: 0.1.0-alpha.0
+'
+' @author: Semantyk Team
+' @maintainer: Daniel Bakas <daniel@semantyk.com>
+'
+' @copyright: Semantyk © 2026
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@startmindmap "TIPOS DE COMMIT"
+
+'* Imports
+!include ../../../../../src/packages/ux/styles/main.styles.puml
+
+mainframe <<taxonomía>>\n**VERSIONAMIENTO**\n**DE COMMITS**
+
+*
+** 🧹 CHORE
+** 📓 DOCS
+** ✨ FEAT
+** 🐛 FIX
+** 🪢 MERGE
+** 🚀 PERFORMANCE
+** 🔧 REFACTOR
+** 🎨 STYLE
+** 🧪 TEST
+
+'  <type>: <subject>
+'  • <body>
+'  <footer>
+
+footer <size:8>Semantyk © 2026</size>
+
+@endmindmap

@@ -1,0 +1,54 @@
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+' # `flow.puml`
+' @organization: Semantyk
+' @project: Ecosystem
+'
+' @file: This file defines the `flow.puml` diagram.
+'
+' @created: 2026-08-29 11:27
+' @modified: 2026-08-29 20:04
+'
+' @since: 0.1.0-alpha.0
+' @version: 0.1.0-alpha.0
+'
+' @author: Semantyk Team
+' @maintainer: Daniel Bakas <daniel@semantyk.com>
+'
+' @copyright: Semantyk © 2026
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@startuml "FLUJO DE SERVICIOS NORMATIVOS"
+
+'* Imports
+!include ../../../../../src/packages/ux/styles/main.styles.puml
+
+'* Main
+mainframe <<servicios>>\n**NORMATIVOS**
+
+start
+
+split
+    :NORMAS VINCULANTES;
+    split
+    :ATRIBUCIONES;
+    split again
+    :DERECHOS;
+    split again
+    :OBLIGACIONES;
+    end split
+split again
+    :NORMAS NO VINCULANTES;
+    split
+        :BASE CONCEPTUAL;
+    split again
+        :BASE METODOLÓGICA;
+    end split
+end split
+:DOCUMENTACIÓN;
+:ACUERDOS;
+
+stop
+
+footer <size:8>Semantyk © 2026</size>
+
+@enduml

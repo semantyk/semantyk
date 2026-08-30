@@ -1,0 +1,31 @@
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+# `compose.yaml`
+# @organization: Semantyk
+# @project: Ecosystem
+#
+# @file: This file defines the Docker Compose services for Semantyk.
+#
+# @created: 2026-08-29 10:33
+# @modified: 2026-08-29 11:10
+#
+# @since: 0.1.0-alpha.0
+# @version: 0.1.0-alpha.0
+#
+# @author: Semantyk Team
+# @maintainer: Daniel Bakas <daniel@semantyk.com>
+# @copyright: Semantyk © 2026
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+name: semantyk
+
+include:
+  - path: src/apps/compose.yaml
+  - path: src/libs/compose.yaml
+  - path: src/packages/compose.yaml
+
+networks:
+  semantyk:
+    name: semantyk
+    driver: bridge
+
+services: {}
