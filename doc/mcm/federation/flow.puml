@@ -1,0 +1,50 @@
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+' # `flow.puml`
+' @organization: Semantyk
+' @project: Ecosystem
+'
+' @file: This file defines the `flow.puml` diagram.
+'
+' @created: 2026-08-29 11:27
+' @modified: 2026-08-30 03:52
+'
+' @since: 0.1.0-alpha.13
+' @version: 0.1.0-alpha.13
+'
+' @author: Semantyk Team
+' @maintainer: Daniel Bakas <daniel@semantyk.com>
+'
+' @copyright: Semantyk © 2026
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@startuml semantic
+
+'* Imports
+!include ../../../src/packages/ux/styles/main.styles.puml
+
+'* Main
+left to right direction
+mainframe <<flujo>>\n**FEDERACIÓN**\n**DE CONSULTAS**
+
+'* Main
+package "CLIENTE" as C {
+    usecase " " as 1
+}
+package "SERVIDOR" as S {
+    usecase " " as 2
+
+    note bottom of 2: **DESCOMPONER**\n   (SOLICITUD)
+    note top of 2: **INTEGRAR**\n(RESPUESTAS)
+}
+package "FUENTES" as D {
+    usecase " " as 3
+    usecase " " as 4
+}
+
+1 <..> 2
+2 <..> 3
+2 <..> 4
+
+footer <size:8>Semantyk © 2026</size>
+
+@enduml
