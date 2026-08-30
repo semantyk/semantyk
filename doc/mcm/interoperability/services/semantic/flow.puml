@@ -1,0 +1,64 @@
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+' # `flow.puml`
+' @organization: Semantyk
+' @project: Ecosystem
+'
+' @file: This file defines the `flow.puml` diagram.
+'
+' @created: 2026-08-29 11:27
+' @modified: 2026-08-30 03:52
+'
+' @since: 0.1.0-alpha.15
+' @version: 0.1.0-alpha.15
+'
+' @author: Semantyk Team
+' @maintainer: Daniel Bakas <daniel@semantyk.com>
+'
+' @copyright: Semantyk © 2026
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@startuml "FLUJO DE SERVICIOS SEMÁNTICOS"
+
+start
+
+split
+    :TÉRMINOS;
+split again
+    :DEFINICIONES;
+split again
+    :RELACIONES;
+split again
+    :REGLAS;
+end split
+
+partition "REPRESENTACIONES DE CONOCIMIENTO" {
+    :GLOSARIOS;
+    :VOCABULARIOS;
+    split
+        :MEREOLOGÍAS;
+    split again
+        :TAXONOMÍAS;
+    split again
+        :JERARQUÍAS;
+    split again
+        :TESAUROS;
+    end split
+    partition "ONTOLOGÍAS" {
+        split
+            :CAJAS TERMINOLÓGICAS;
+        split again
+            :CAJAS ASERCIONALES;
+        end split
+    }
+}
+
+:DOCUMENTACIÓN;
+:ACUERDOS;
+
+stop
+
+mainframe <<servicios>>\n**SEMÁNTICOS**
+
+footer <size:8>Semantyk © 2026</size>
+
+@enduml

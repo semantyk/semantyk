@@ -1,0 +1,50 @@
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+' # `flow.puml`
+' @organization: Semantyk
+' @project: Ecosystem
+'
+' @file: This file defines the `flow.puml` diagram.
+'
+' @created: 2026-08-29 11:27
+' @modified: 2026-08-30 03:52
+'
+' @since: 0.1.0-alpha.15
+' @version: 0.1.0-alpha.15
+'
+' @author: Semantyk Team
+' @maintainer: Daniel Bakas <daniel@semantyk.com>
+'
+' @copyright: Semantyk © 2026
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@startuml "FLUJO DE SERVICIOS ORGANIZATIVOS"
+
+'* Imports
+!include ../../../../../src/packages/ux/styles/main.styles.puml
+
+'* Main
+mainframe <<servicios>>\n**ORGANIZATIVOS**
+
+start
+
+split
+    :DIRECTORIO;
+split again
+    :ORGANIGRAMAS;
+split again
+    :PROCESOS;
+end split
+
+split
+    :FLUJOS DE INTERCAMBIO;
+split again
+    :REGLAS DE NEGOCIO;
+end split
+:DOCUMENTACIÓN;
+:ACUERDOS;
+
+stop
+
+footer <size:8>Semantyk © 2026</size>
+
+@enduml
