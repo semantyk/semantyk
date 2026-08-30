@@ -1,0 +1,32 @@
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+' # `taxonomy.puml`
+' @organization: Semantyk
+' @project: Ecosystem
+'
+' @file: This file defines the `taxonomy.puml` diagram.
+'
+' @created: 2026-08-29 11:27
+' @modified: 2026-08-29 20:04
+'
+' @since: 0.1.0-alpha.0
+' @version: 0.1.0-alpha.0
+'
+' @author: Semantyk Team
+' @maintainer: Daniel Bakas <daniel@semantyk.com>
+'
+' @copyright: Semantyk © 2026
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@startuml "DATOS"
+
+'* Imports
+!include ../../../../../src/packages/ux/styles/mereology.styles.puml
+
+'* Main
+mainframe <<mereología>>\n**DATOS**
+
+$mereology(META-DATOS, 150, 75, DATOS, 103, 50, 125, 155)
+
+footer <size:8>Semantyk © 2026</size>
+
+@enduml

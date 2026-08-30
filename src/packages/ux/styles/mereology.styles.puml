@@ -1,0 +1,34 @@
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+' # `mereology.styles.puml`
+' @organization: Semantyk
+' @project: Ecosystem
+'
+' @file: This file contains the PlantUML code for the styles.
+'
+' @created: 2026-08-29 11:27
+' @modified: 2026-08-29 20:12
+'
+' @since: 0.1.0-alpha.0
+' @version: 0.1.0-alpha.0
+'
+' @author: Semantyk Team
+' @maintainer: Daniel Bakas <daniel@semantyk.com>
+'
+' @copyright: Semantyk © 2026
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+!include main.styles.puml
+
+!procedure $mereology($outer, $size, $half, $inner, $ox, $oy, $ix, $iy)
+skinparam Rectangle {
+  BackgroundColor transparent
+  BorderColor transparent
+}
+sprite mereology <svg viewBox="0 0 $size $size">
+<circle cx="$size" cy="$size" r="$size" fill="#FEFECE" stroke="#A80036" stroke-width="2"/>
+<circle cx="$size" cy="$size" r="$half" fill="#FFFFFF" stroke="#A80036" stroke-width="2"/>
+<text x="$ox" y="$oy" text-anchor="middle" dominant-baseline="middle" fill="#000000" font-size="14" font-weight="700">$outer</text>
+<text x="$ix" y="$iy" text-anchor="middle" dominant-baseline="middle" fill="#000000" font-size="14" font-weight="700">$inner</text>
+</svg>
+rectangle "<$mereology>"
+!endprocedure

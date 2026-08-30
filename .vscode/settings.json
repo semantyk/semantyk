@@ -1,0 +1,4 @@
+{
+  "plantuml.render": "Local",
+  "plantuml.jar": "/opt/homebrew/opt/plantuml/libexec/plantuml.jar"
+}
