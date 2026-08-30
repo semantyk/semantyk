@@ -1,0 +1,39 @@
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+' # `flow.puml`
+' @organization: Semantyk
+' @project: Ecosystem
+'
+' @file: This file defines the `flow.puml` diagram.
+'
+' @created: 2026-08-29 11:27
+' @modified: 2026-08-30 03:52
+'
+' @since: 0.1.0-alpha.11
+' @version: 0.1.0-alpha.11
+'
+' @author: Semantyk Team
+' @maintainer: Daniel Bakas <daniel@semantyk.com>
+'
+' @copyright: Semantyk © 2026
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@startuml "RAMAS DE DESARROLLO"
+
+'* Imports
+!include ../../../../src/packages/ux/styles/main.styles.puml
+
+'* Main
+mainframe <<flujo>>\n**DESARROLLO**
+
+start
+
+:SANDBOX;
+:DEV;
+:STAGING;
+:MAIN;
+
+stop
+
+footer <size:8>Semantyk © 2026</size>
+
+@enduml
