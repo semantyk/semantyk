@@ -1,0 +1,43 @@
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+' # `taxonomy.puml`
+' @organization: Semantyk
+' @project: Ecosystem
+'
+' @file: This file defines the `taxonomy.puml` diagram.
+'
+' @created: 2026-08-29 11:27
+' @modified: 2026-08-30 03:52
+'
+' @since: 0.1.0-alpha.18
+' @version: 0.1.0-alpha.18
+'
+' @author: Semantyk Team
+' @maintainer: Daniel Bakas <daniel@semantyk.com>
+'
+' @copyright: Semantyk © 2026
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@startmindmap "INTENSIDAD"
+
+'* Imports
+!include ../../../../../src/packages/ux/styles/main.styles.puml
+
+mainframe <<métricas>>\n**INTENSIDAD**\n{Dimensión}{1–5}
+
+*
+ * 1 · EXTREMA
+ * 2 · ALTA
+ * 3 · MEDIA
+ * 4 · BAJA
+ * 5 · MÍNIMA
+
+note right
+  C# Complejidad
+  I# Importancia
+  T# Plazo
+  P# Premura
+end note
+
+footer <size:8>Semantyk © 2026</size>
+
+@endmindmap

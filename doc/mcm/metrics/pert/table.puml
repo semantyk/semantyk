@@ -1,0 +1,61 @@
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+' # `table.puml`
+' @organization: Semantyk
+' @project: Ecosystem
+'
+' @file: This file defines the `table.puml` diagram.
+'
+' @created: 2026-08-29 11:27
+' @modified: 2026-08-30 03:52
+'
+' @since: 0.1.0-alpha.18
+' @version: 0.1.0-alpha.18
+'
+' @author: Semantyk Team
+' @maintainer: Daniel Bakas <daniel@semantyk.com>
+'
+' @copyright: Semantyk © 2026
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@startuml "PLAZO ⨉ COMPLEJIDAD"
+
+'* Imports
+!include ../../../../src/packages/ux/styles/main.styles.puml
+
+<style>
+class {
+    BackgroundColor transparent
+    linecolor transparent
+}
+note {
+    linecolor transparent
+}
+
+</style>
+
+mainframe <<métrica>>\n**PERT**
+
+hide empty members
+hide circle
+class "|=|= <color:Blue>**C5: Mínima**</color> \
+|= <color:Green>**C4: Baja**</color> \
+|= <color:#B8860B>**C3: Media**</color> \
+|= <color:Orange>**C2: Alta**</color> \
+|= <color:Red>**C1: Extrema**</color> |\n\
+| <color:Red>**T1: Inmediato**</color> | < 1 día | 1 - 3 días | 1 - 2 semanas | 2 - 4 semanas | 3 - 6 semanas |\n\
+| <color:Orange>**T2: Corto**</color> | 4 - 7 días | 1 - 3 semanas | 3 - 6 semanas | 2 - 4 meses | 4 - 6 meses |\n\
+| <color:#B8860B>**T3: Mediano**</color> | 1 - 3 semanas | 3 - 6 semanas | 2 - 4 meses | 1 - 3 años | 3 - 5 años |\n\
+| <color:Green>**T4: Largo**</color> | 3 - 6 semanas | 2 - 3 meses | 6 - 12 meses | 4 - 6 años | > 6 años |\n\
+| <color:Blue>**T5: Indefinido**</color> |  | |  |  |  |" as Table {}
+
+note bottom of Table
+<math>PERT = \frac{O + 4M + P}{6} \text{, donde:}</math>
+
+* <math> O = \text{Estimación optimista}</math>
+* <math> M = \text{Estimación más probable}</math>
+* <math> P = \text{Estimación pesimista}</math>
+end note
+
+footer <size:8>Semantyk © 2026</size>
+
+@enduml

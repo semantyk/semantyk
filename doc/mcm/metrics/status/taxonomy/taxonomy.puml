@@ -1,0 +1,44 @@
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+' # `taxonomy.puml`
+' @organization: Semantyk
+' @project: Ecosystem
+'
+' @file: This file defines the `taxonomy.puml` diagram.
+'
+' @created: 2026-08-29 11:27
+' @modified: 2026-08-30 03:52
+'
+' @since: 0.1.0-alpha.18
+' @version: 0.1.0-alpha.18
+'
+' @author: Semantyk Team
+' @maintainer: Daniel Bakas <daniel@semantyk.com>
+'
+' @copyright: Semantyk © 2026
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@startmindmap "STATUS"
+
+'* Imports
+!include ../../../../../src/packages/ux/styles/main.styles.puml
+
+mainframe <<métricas>>\n**STATUS**\nS0–S9
+
+*
+ * PENDIENTES
+  * S0 · IDEADO
+  * S1 · PROPUESTO
+  * S2 · APROBADO
+  * S3 · ASIGNADO
+ * ACTIVAS
+  * S4 · INICIADO
+  * S5 · EN CURSO
+  * S6 · AVANZADO
+ * FINALIZADAS
+  * S7 · REALIZADO
+  * S8 · TERMINADO
+  * S9 · ARCHIVADO
+
+footer <size:8>Semantyk © 2026</size>
+
+@endmindmap
