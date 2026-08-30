@@ -6,10 +6,10 @@
 @file: This file defines the global specification requirements for Semantyk.
 
 @created: 2026-08-29 21:13
-@modified: 2026-08-30 03:52
+@modified: 2026-08-30 13:21
 
 @since: 0.1.0-alpha.6
-@version: 0.1.0-alpha.6
+@version: 0.1.0-alpha.36
 
 @author: Semantyk Team
 @maintainer: Daniel Bakas <daniel@semantyk.com>
@@ -17,199 +17,133 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
 import {
-  RFC2119,
-  extractRequirementIds,
-  hasFileHeader,
-  listHeaderFiles,
-  listTestFiles,
-  moduleTestPath,
-  root,
-} from "#test/helpers";
+  REQUIREMENT_TITLE,
+  expect,
+  isRequirementRegistered,
+  iterateFiles,
+  listAuthoredFiles,
+  listRequirementIds,
+  listSpecFiles,
+  workspace,
+  workspaceRoot,
+  type HeaderFieldName,
+} from "@semantyk/test";
 import { Glob } from "bun";
-import { describe, expect, test } from "bun:test";
-import { existsSync } from "node:fs";
+import { describe, test } from "bun:test";
 import { dirname, resolve } from "node:path";
 
-const here = import.meta.dir;
-const helpers = await Bun.file(resolve(root, "test/helpers.ts")).text();
+const HEADER_ATTR_REQUIREMENTS = [
+  { id: "REQ.NF.0390b", field: "organization" as HeaderFieldName },
+  { id: "REQ.NF.715de", field: "project" as HeaderFieldName },
+  { id: "REQ.NF.55a42", field: "file" as HeaderFieldName },
+  { id: "REQ.NF.e9e52", field: "created" as HeaderFieldName },
+  { id: "REQ.NF.9afbc", field: "modified" as HeaderFieldName },
+  { id: "REQ.NF.dabc0", field: "since" as HeaderFieldName },
+  { id: "REQ.NF.292db", field: "version" as HeaderFieldName },
+  { id: "REQ.NF.22ecc", field: "author" as HeaderFieldName },
+  { id: "REQ.NF.3dcc0", field: "maintainer" as HeaderFieldName },
+  { id: "REQ.NF.9b14b", field: "copyright" as HeaderFieldName },
+] as const;
 
 describe("LA ESPECIFICACIÓN", () => {
   test("REQ.NF.a3f73 — DEBE tener un ID con estructura REQ.F|NF.#####", async () => {
-    const ids = new Set<string>();
-    for (const path of await listTestFiles()) {
-      const text = await Bun.file(resolve(root, path)).text();
-      for (const id of extractRequirementIds(text)) ids.add(id);
+    const requirementIds = new Set<string>();
+    for await (const { text } of iterateFiles(await listSpecFiles())) {
+      for (const id of listRequirementIds(text)) requirementIds.add(id);
     }
-    for (const id of ids) {
-      expect(id).toMatch(/^REQ\.(F|NF)\.[0-9a-f]{5}$/);
-    }
+    expect(requirementIds.size).toBeGreaterThan(0);
+    for (const id of requirementIds) expect(id).toBeRequirementId();
   });
 
   test("REQ.NF.1d4c7 — DEBE cumplir con RFC 2119 (DEBE, DEBERÍA, PUEDE, NO)", async () => {
-    const reqTest =
-      /test\(\s*["'`]([^"'`]*REQ\.(?:F|NF)\.[0-9a-f]{5}[^"'`]*)["'`]/g;
-
-    for (const path of await listTestFiles()) {
-      const text = await Bun.file(resolve(root, path)).text();
-      for (const match of text.matchAll(reqTest)) {
-        expect(match[1]).toMatch(RFC2119);
+    for await (const { text } of iterateFiles(await listSpecFiles())) {
+      for (const match of text.matchAll(REQUIREMENT_TITLE)) {
+        expect(match[1]).toContainRfc2119();
       }
     }
   });
 
   test("REQ.NF.08c47 — DEBE contener un triaje global", () => {
-    expect(existsSync(resolve(here, "TRIAGE.md"))).toBe(true);
+    expect("doc/spec/TRIAGE.md").toExistInWorkspace();
   });
 
   test("REQ.NF.14504 — PUEDE contener un triaje por módulo", async () => {
-    for await (const path of new Glob("**/TRIAGE.md").scan({ cwd: root })) {
-      const normalized = path.replaceAll("\\", "/");
-      if (normalized === "doc/spec/TRIAGE.md") continue;
-      if (normalized.includes("node_modules/") || normalized.includes(".git/")) continue;
-      const dir = dirname(resolve(root, normalized));
-      expect(existsSync(moduleTestPath(dir))).toBe(true);
+    for await (const path of new Glob("**/TRIAGE.md").scan({ cwd: workspaceRoot })) {
+      const relativePath = path.replaceAll("\\", "/");
+      if (relativePath === "doc/spec/TRIAGE.md") continue;
+      if (relativePath.includes("node_modules/") || relativePath.includes(".git/")) continue;
+      expect(dirname(resolve(workspaceRoot, relativePath))).toHaveModuleSpec();
     }
   });
 
   test("REQ.NF.fe953 — PUEDE contener un `NOTES.md` por módulo", async () => {
-    for await (const path of new Glob("**/NOTES.md").scan({ cwd: root })) {
-      const normalized = path.replaceAll("\\", "/");
-      if (normalized === "doc/spec/NOTES.md") continue;
-      if (normalized.includes("node_modules/") || normalized.includes(".git/")) continue;
-      const dir = dirname(resolve(root, normalized));
-      expect(existsSync(moduleTestPath(dir))).toBe(true);
+    for await (const path of new Glob("**/NOTES.md").scan({ cwd: workspaceRoot })) {
+      const relativePath = path.replaceAll("\\", "/");
+      if (relativePath === "doc/spec/NOTES.md") continue;
+      if (relativePath.includes("node_modules/") || relativePath.includes(".git/")) continue;
+      expect(dirname(resolve(workspaceRoot, relativePath))).toHaveModuleSpec();
     }
   });
 
   test("REQ.NF.b763a — DEBE contener requerimientos por especificación", async () => {
     let total = 0;
-    for (const path of await listTestFiles()) {
-      const text = await Bun.file(resolve(root, path)).text();
-      total += extractRequirementIds(text).length;
+    for await (const { text } of iterateFiles(await listSpecFiles())) {
+      total += listRequirementIds(text).length;
     }
     expect(total).toBeGreaterThan(0);
   });
 
   describe("ENCABEZADO", () => {
-    function headerAttr(text: string, name: string) {
-      return (
-        text.slice(0, 1200).match(new RegExp(`@${name}:\\s*(.+)`))?.[1]?.trim() ??
-        ""
-      );
+    test("REQ.NF.a4a26 — DEBE tener un encabezado en cada archivo", async () => {
+      for await (const { path, text } of iterateFiles(await listAuthoredFiles())) {
+        expect(text, path).toHaveCompleteHeader();
+      }
+    });
+
+    for (const { id, field } of HEADER_ATTR_REQUIREMENTS) {
+      test(`${id} — DEBE tener el atributo \`@${field}\``, async () => {
+        for await (const { path, text } of iterateFiles(await listAuthoredFiles())) {
+          expect(text, path).toHaveHeaderField(field);
+        }
+      });
     }
 
-    test("REQ.NF.a4a26 — DEBE tener un encabezado en cada archivo", async () => {
-      for (const path of await listHeaderFiles()) {
-        const text = await Bun.file(resolve(root, path)).text();
-        expect(hasFileHeader(text)).toBe(true);
-      }
-    });
-
-    test("REQ.NF.0390b — DEBE tener el atributo `@organization`", async () => {
-      for (const path of await listHeaderFiles()) {
-        const text = await Bun.file(resolve(root, path)).text();
-        expect(headerAttr(text, "organization").length, path).toBeGreaterThan(0);
-      }
-    });
-
-    test("REQ.NF.715de — DEBE tener el atributo `@project`", async () => {
-      for (const path of await listHeaderFiles()) {
-        const text = await Bun.file(resolve(root, path)).text();
-        expect(headerAttr(text, "project").length, path).toBeGreaterThan(0);
-      }
-    });
-
-    test("REQ.NF.55a42 — DEBE tener el atributo `@file`", async () => {
-      for (const path of await listHeaderFiles()) {
-        const text = await Bun.file(resolve(root, path)).text();
-        expect(headerAttr(text, "file").length, path).toBeGreaterThan(0);
-      }
-    });
-
     test("REQ.NF.26d18 — DEBE comenzar el atributo `@file` con \"This file\"", async () => {
-      for (const path of await listHeaderFiles()) {
-        const text = await Bun.file(resolve(root, path)).text();
-        expect(headerAttr(text, "file").startsWith("This file"), path).toBe(true);
-      }
-    });
-
-    test("REQ.NF.e9e52 — DEBE tener el atributo `@created`", async () => {
-      for (const path of await listHeaderFiles()) {
-        const text = await Bun.file(resolve(root, path)).text();
-        expect(headerAttr(text, "created").length, path).toBeGreaterThan(0);
-      }
-    });
-
-    test("REQ.NF.9afbc — DEBE tener el atributo `@modified`", async () => {
-      for (const path of await listHeaderFiles()) {
-        const text = await Bun.file(resolve(root, path)).text();
-        expect(headerAttr(text, "modified").length, path).toBeGreaterThan(0);
-      }
-    });
-
-    test("REQ.NF.dabc0 — DEBE tener el atributo `@since`", async () => {
-      for (const path of await listHeaderFiles()) {
-        const text = await Bun.file(resolve(root, path)).text();
-        expect(headerAttr(text, "since").length, path).toBeGreaterThan(0);
-      }
-    });
-
-    test("REQ.NF.292db — DEBE tener el atributo `@version`", async () => {
-      for (const path of await listHeaderFiles()) {
-        const text = await Bun.file(resolve(root, path)).text();
-        expect(headerAttr(text, "version").length, path).toBeGreaterThan(0);
-      }
-    });
-
-    test("REQ.NF.22ecc — DEBE tener el atributo `@author`", async () => {
-      for (const path of await listHeaderFiles()) {
-        const text = await Bun.file(resolve(root, path)).text();
-        expect(headerAttr(text, "author").length, path).toBeGreaterThan(0);
-      }
-    });
-
-    test("REQ.NF.3dcc0 — DEBE tener el atributo `@maintainer`", async () => {
-      for (const path of await listHeaderFiles()) {
-        const text = await Bun.file(resolve(root, path)).text();
-        expect(headerAttr(text, "maintainer").length, path).toBeGreaterThan(0);
-      }
-    });
-
-    test("REQ.NF.9b14b — DEBE tener el atributo `@copyright`", async () => {
-      for (const path of await listHeaderFiles()) {
-        const text = await Bun.file(resolve(root, path)).text();
-        expect(headerAttr(text, "copyright").length, path).toBeGreaterThan(0);
+      for await (const { path, text } of iterateFiles(await listAuthoredFiles())) {
+        expect(text, path).toHaveFileFieldPrefix("This file");
       }
     });
 
     test("REQ.NF.5995e — DEBE usar el año presente en el atributo `@copyright`", async () => {
-      const year = String(new Date().getFullYear());
-      for (const path of await listHeaderFiles()) {
-        const text = await Bun.file(resolve(root, path)).text();
-        const copyright = headerAttr(text, "copyright");
-        const match = copyright.match(/©\s*(\d{4})/) ?? copyright.match(/\b(\d{4})\b/);
-        expect(match?.[1], path).toBe(year);
+      for await (const { path, text } of iterateFiles(await listAuthoredFiles())) {
+        expect(text, path).toHaveCurrentCopyrightYear();
       }
     });
   });
 
-  test("REQ.NF.3c8e1 — DEBE compartir helpers de prueba desde test/", () => {
-    expect(existsSync(resolve(root, "test/helpers.ts"))).toBe(true);
-    expect(helpers).toContain("export const root");
-    expect(helpers).toContain("export function extractRequirementIds");
+  test("REQ.NF.3c8e1 — DEBE compartir utilidades de prueba en la lib `@semantyk/test`", async () => {
+    expect("src/libs/test/package.json").toExistInWorkspace();
+    expect("src/libs/test/facade.ts").toExistInWorkspace();
+    expect("src/libs/test/matchers.ts").toExistInWorkspace();
+    expect(await workspace.readText("src/libs/test/workspace.ts")).toContain(
+      "export const workspaceRoot",
+    );
+    expect(await workspace.readText("src/libs/test/matchers.ts")).toContain(
+      "expect.extend",
+    );
+    expect(await workspace.readText("src/libs/test/facade.ts")).toContain(
+      "listRequirementIds",
+    );
   });
 
   test("REQ.NF.00f3c — DEBE validar cada requerimiento mediante archivos `*.test.ts`", async () => {
-    expect((await listTestFiles()).length).toBeGreaterThan(0);
+    expect((await listSpecFiles()).length).toBeGreaterThan(0);
   });
 
   test("REQ.NF.64b7c — DEBE identificar cada requerimiento con su ID en la prueba", async () => {
-    for (const path of await listTestFiles()) {
-      const text = await Bun.file(resolve(root, path)).text();
-      for (const id of extractRequirementIds(text)) {
-        expect(text).toMatch(
-          new RegExp(`(?:test|describe)\\(\\s*["'\`].*${id.replaceAll(".", "\\.")}`),
-        );
+    for await (const { text } of iterateFiles(await listSpecFiles())) {
+      for (const id of listRequirementIds(text)) {
+        expect(isRequirementRegistered(text, id), id).toBe(true);
       }
     }
   });

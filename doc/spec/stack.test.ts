@@ -6,37 +6,39 @@
 @file: This file defines the stack specification requirements.
 
 @created: 2026-08-29 23:47
-@modified: 2026-08-30 03:52
+@modified: 2026-08-30 13:21
 
 @since: 0.1.0-alpha.6
-@version: 0.1.0-alpha.6
+@version: 0.1.0-alpha.36
 
 @author: Semantyk Team
 @maintainer: Daniel Bakas <daniel@semantyk.com>
 @copyright: Semantyk © 2026
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
-import { moduleTestPath, root } from "#test/helpers";
+import { expect, workspace, workspaceRoot } from "@semantyk/test";
 import { Glob } from "bun";
-import { describe, expect, test } from "bun:test";
+import { describe, test } from "bun:test";
 import { existsSync } from "node:fs";
 import { readdir } from "node:fs/promises";
 import { basename, dirname, relative, resolve } from "node:path";
 
-const pkg = await Bun.file(resolve(root, "package.json")).json();
-const compose = Bun.YAML.parse(
-  await Bun.file(resolve(root, "compose.yaml")).text(),
-) as {
+const pkg = await workspace.readJson<{
+  packageManager?: string;
+  dependencies?: Record<string, string>;
+  devDependencies?: Record<string, string>;
+}>("package.json");
+const compose = await workspace.readYaml<{
   networks?: Record<string, unknown>;
   include?: { path?: string }[];
-};
+}>("compose.yaml");
 
 async function collectIncludedComposes(
   composePath: string,
   seen = new Set<string>(),
 ) {
   const normalized =
-    relative(root, composePath).replaceAll("\\", "/") || "compose.yaml";
+    relative(workspaceRoot, composePath).replaceAll("\\", "/") || "compose.yaml";
   if (seen.has(normalized)) return seen;
   seen.add(normalized);
 
@@ -59,31 +61,31 @@ describe("EL STACK", () => {
   describe("NX", () => {
     test("REQ.NF.1f547 — DEBE usar nx como gestor", () => {
       expect(pkg.devDependencies?.nx).toBeDefined();
-      expect(existsSync(resolve(root, "nx.json"))).toBe(true);
+      expect("nx.json").toExistInWorkspace();
     });
   });
 
   describe("BUN", () => {
     test("REQ.NF.acc61 — DEBE usar bun como entorno de ejecución, pruebas y gestor de paquetes", () => {
       expect(pkg.packageManager).toMatch(/^bun@/);
-      expect(existsSync(resolve(root, "bun.lock"))).toBe(true);
+      expect("bun.lock").toExistInWorkspace();
     });
   });
 
   describe("TRIVY", () => {
     test("REQ.NF.0ac5c — DEBE usar Trivy para la política de licencias", async () => {
-      expect(existsSync(resolve(root, "trivy.yaml"))).toBe(true);
+      expect("trivy.yaml").toExistInWorkspace();
 
       const workflows: string[] = [];
       for await (const path of new Glob(".github/workflows/*.{yaml,yml}").scan({
-        cwd: root,
+        cwd: workspaceRoot,
       })) {
         workflows.push(path.replaceAll("\\", "/"));
       }
       expect(workflows.length).toBeGreaterThan(0);
 
       for (const path of workflows) {
-        const workflow = await Bun.file(resolve(root, path)).text();
+        const workflow = await workspace.readText(path);
         expect(workflow).toContain("aquasecurity/trivy-action@");
         expect(workflow).toMatch(/\bcomply\s*:/);
         expect(workflow).toMatch(/scanners:\s*license/);
@@ -95,7 +97,7 @@ describe("EL STACK", () => {
 
   describe("DOCKER", () => {
     test("REQ.NF.32aa0 — DEBE usar docker como gestor de contenedores", () => {
-      expect(existsSync(resolve(root, "compose.yaml"))).toBe(true);
+      expect("compose.yaml").toExistInWorkspace();
     });
 
     test("REQ.NF.ace68 — DEBE declarar una red `semantyk`", () => {
@@ -106,29 +108,35 @@ describe("EL STACK", () => {
     });
 
     test("REQ.NF.94944 — PUEDE tener un compose por módulo", async () => {
-      for await (const path of new Glob("**/compose.yaml").scan({ cwd: root })) {
+      for await (const path of new Glob("**/compose.yaml").scan({
+        cwd: workspaceRoot,
+      })) {
         const normalized = path.replaceAll("\\", "/");
         if (normalized === "compose.yaml") continue;
         if (normalized.includes("node_modules/") || normalized.includes(".git/"))
           continue;
-        const dir = dirname(resolve(root, normalized));
-        expect(existsSync(moduleTestPath(dir))).toBe(true);
+        const dir = dirname(workspace.resolve(normalized));
+        expect(dir).toHaveModuleSpec();
       }
     });
 
     test("REQ.NF.f2672 — DEBE declarar una red por módulo que forme parte de la red `semantyk`", async () => {
-      const included = await collectIncludedComposes(resolve(root, "compose.yaml"));
+      const included = await collectIncludedComposes(
+        workspace.resolve("compose.yaml"),
+      );
 
-      for await (const path of new Glob("**/compose.yaml").scan({ cwd: root })) {
+      for await (const path of new Glob("**/compose.yaml").scan({
+        cwd: workspaceRoot,
+      })) {
         const normalized = path.replaceAll("\\", "/");
         if (normalized === "compose.yaml") continue;
         if (normalized.includes("node_modules/") || normalized.includes(".git/"))
           continue;
 
         const module = basename(dirname(normalized));
-        const moduleCompose = Bun.YAML.parse(
-          await Bun.file(resolve(root, normalized)).text(),
-        ) as { networks?: Record<string, { name?: string }> };
+        const moduleCompose = await workspace.readYaml<{
+          networks?: Record<string, { name?: string }>;
+        }>(normalized);
 
         expect(moduleCompose.networks?.[module]).toBeDefined();
         expect(moduleCompose.networks?.[module]?.name).toBe(module);
@@ -139,27 +147,29 @@ describe("EL STACK", () => {
 
     test("REQ.NF.a5bfb — DEBE concentrar en cada Dockerfile la configuración del servicio que habilita", async () => {
       const dockerfiles: string[] = [];
-      for await (const path of new Glob("**/Dockerfile").scan({ cwd: root })) {
+      for await (const path of new Glob("**/Dockerfile").scan({
+        cwd: workspaceRoot,
+      })) {
         const normalized = path.replaceAll("\\", "/");
         if (normalized.includes("node_modules/") || normalized.includes(".git/"))
           continue;
         dockerfiles.push(normalized);
       }
       for (const path of dockerfiles) {
-        const dockerfile = await Bun.file(resolve(root, path)).text();
+        const dockerfile = await workspace.readText(path);
         expect(dockerfile).toMatch(/\bENV\b/);
         expect(dockerfile).toMatch(/\bEXPOSE\b/);
       }
 
-      for await (const path of new Glob("**/compose.yaml").scan({ cwd: root })) {
+      for await (const path of new Glob("**/compose.yaml").scan({
+        cwd: workspaceRoot,
+      })) {
         const normalized = path.replaceAll("\\", "/");
         if (normalized.includes("node_modules/") || normalized.includes(".git/"))
           continue;
 
-        const composeDir = dirname(resolve(root, normalized));
-        const parsed = Bun.YAML.parse(
-          await Bun.file(resolve(root, normalized)).text(),
-        ) as {
+        const composeDir = dirname(workspace.resolve(normalized));
+        const parsed = await workspace.readYaml<{
           services?: Record<
             string,
             {
@@ -167,7 +177,7 @@ describe("EL STACK", () => {
               environment?: Record<string, string> | string[];
             }
           >;
-        };
+        }>(normalized);
 
         for (const [name, service] of Object.entries(parsed.services ?? {})) {
           if (!service.build) continue;
@@ -221,16 +231,16 @@ describe("EL STACK", () => {
       const assignment = /^ENV_[0-9a-f]{5}=/;
       const ids = new Set<string>();
 
-      const envFiles = (await readdir(root))
+      const envFiles = (await readdir(workspaceRoot))
         .filter((name) => name.startsWith(".env"))
-        .map((name) => resolve(root, name));
+        .map((name) => workspace.resolve(name));
 
       for (const path of envFiles) {
         const text = await Bun.file(path).text();
         for (const line of text.split("\n")) {
           const trimmed = line.trim();
           if (!trimmed || trimmed.startsWith("#")) continue;
-          expect(trimmed, relative(root, path)).toMatch(assignment);
+          expect(trimmed, relative(workspaceRoot, path)).toMatch(assignment);
           const id = trimmed.slice(0, trimmed.indexOf("="));
           expect(id).toMatch(envId);
           expect(ids.has(id), `duplicate ${id}`).toBe(false);
@@ -270,9 +280,7 @@ describe("EL STACK", () => {
     });
 
     test("REQ.NF.3b089 — DEBE usar shadcn como biblioteca de componentes", () => {
-      expect(existsSync(resolve(root, "src/packages/ux/components.json"))).toBe(
-        true,
-      );
+      expect("src/packages/ux/components.json").toExistInWorkspace();
     });
   });
 });

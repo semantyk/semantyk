@@ -13,6 +13,7 @@
         "tailwindcss": "^4.3.3",
       },
       "devDependencies": {
+        "@semantyk/test": "workspace:*",
         "@types/bun": "^1.4.0",
         "@types/react": "^19.2.18",
         "@types/react-dom": "^19.2.5",
@@ -20,6 +21,10 @@
         "nx": "23.1.2",
         "typescript": "^7.0.2",
       },
+    },
+    "src/libs/test": {
+      "name": "@semantyk/test",
+      "version": "0.1.0-alpha.36",
     },
     "src/packages/data": {
       "name": "@semantyk/data",
@@ -140,6 +145,8 @@
     "@semantyk/data": ["@semantyk/data@workspace:src/packages/data"],
 
     "@semantyk/logic": ["@semantyk/logic@workspace:src/packages/logic"],
+
+    "@semantyk/test": ["@semantyk/test@workspace:src/libs/test"],
 
     "@semantyk/ux": ["@semantyk/ux@workspace:src/packages/ux"],
 

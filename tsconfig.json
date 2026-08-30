@@ -3,8 +3,10 @@
     "module": "Preserve",
     "moduleResolution": "bundler",
     "noEmit": true,
+    "allowImportingTsExtensions": true,
     "paths": {
-      "#test/helpers": ["./test/helpers.ts"]
+      "@semantyk/test": ["./src/libs/test/facade.ts"],
+      "@semantyk/test/*": ["./src/libs/test/*"]
     },
     "types": ["bun-types"]
   },

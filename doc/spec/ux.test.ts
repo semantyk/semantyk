@@ -6,18 +6,18 @@
 @file: This file defines the global UX specification requirements.
 
 @created: 2026-08-30 01:51
-@modified: 2026-08-30 03:52
+@modified: 2026-08-30 13:21
 
 @since: 0.1.0-alpha.6
-@version: 0.1.0-alpha.6
+@version: 0.1.0-alpha.36
 
 @author: Semantyk Team
 @maintainer: Daniel Bakas <daniel@semantyk.com>
 @copyright: Semantyk © 2026
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
-import { root } from "#test/helpers";
-import { describe, expect, test } from "bun:test";
+import { expect, workspaceRoot } from "@semantyk/test";
+import { describe, test } from "bun:test";
 import { existsSync, readdirSync, statSync } from "node:fs";
 import { basename, relative, resolve } from "node:path";
 
@@ -31,7 +31,7 @@ function listFiles(dir: string, found: string[] = []) {
   return found;
 }
 
-function listUxModules(dir = resolve(root, "src"), found: string[] = []) {
+function listUxModules(dir = resolve(workspaceRoot, "src"), found: string[] = []) {
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
     if (!entry.isDirectory() || entry.name.startsWith(".")) continue;
     if (entry.name === "node_modules") continue;
@@ -49,7 +49,7 @@ describe("UX", () => {
       expect(modules.length).toBeGreaterThan(0);
       for (const ux of modules) {
         const components = resolve(ux, "components");
-        expect(existsSync(components), relative(root, ux)).toBe(true);
+        expect(existsSync(components), relative(workspaceRoot, ux)).toBe(true);
         expect(statSync(components).isDirectory()).toBe(true);
       }
     });
@@ -57,7 +57,7 @@ describe("UX", () => {
     test("REQ.F.c9a4d — DEBE contener el módulo `atoms`", () => {
       for (const ux of listUxModules()) {
         const atoms = resolve(ux, "components/atoms");
-        expect(existsSync(atoms), relative(root, ux)).toBe(true);
+        expect(existsSync(atoms), relative(workspaceRoot, ux)).toBe(true);
         expect(statSync(atoms).isDirectory()).toBe(true);
       }
     });
@@ -65,7 +65,7 @@ describe("UX", () => {
     test("REQ.F.d0b5e — DEBE contener el módulo `molecules`", () => {
       for (const ux of listUxModules()) {
         const molecules = resolve(ux, "components/molecules");
-        expect(existsSync(molecules), relative(root, ux)).toBe(true);
+        expect(existsSync(molecules), relative(workspaceRoot, ux)).toBe(true);
         expect(statSync(molecules).isDirectory()).toBe(true);
       }
     });
@@ -73,7 +73,7 @@ describe("UX", () => {
     test("REQ.F.e1c6f — DEBE contener el módulo `organisms`", () => {
       for (const ux of listUxModules()) {
         const organisms = resolve(ux, "components/organisms");
-        expect(existsSync(organisms), relative(root, ux)).toBe(true);
+        expect(existsSync(organisms), relative(workspaceRoot, ux)).toBe(true);
         expect(statSync(organisms).isDirectory()).toBe(true);
       }
     });
@@ -81,7 +81,7 @@ describe("UX", () => {
     test("REQ.F.f2d70 — DEBE contener el módulo `pages`", () => {
       for (const ux of listUxModules()) {
         const pages = resolve(ux, "components/pages");
-        expect(existsSync(pages), relative(root, ux)).toBe(true);
+        expect(existsSync(pages), relative(workspaceRoot, ux)).toBe(true);
         expect(statSync(pages).isDirectory()).toBe(true);
       }
     });
@@ -89,7 +89,7 @@ describe("UX", () => {
     test("REQ.F.03e81 — DEBE contener el módulo `templates`", () => {
       for (const ux of listUxModules()) {
         const templates = resolve(ux, "components/templates");
-        expect(existsSync(templates), relative(root, ux)).toBe(true);
+        expect(existsSync(templates), relative(workspaceRoot, ux)).toBe(true);
         expect(statSync(templates).isDirectory()).toBe(true);
       }
     });
@@ -104,7 +104,7 @@ describe("UX", () => {
       if (!existsSync(components)) continue;
       for (const path of listFiles(components)) {
         const name = basename(path);
-        const id = relative(root, path);
+        const id = relative(workspaceRoot, path);
         if (companion.test(name)) {
           expect(
             existsSync(path.replace(/\.(logic|hook)\.ts$/, ".tsx")),
@@ -126,7 +126,7 @@ describe("UX", () => {
       for (const path of listFiles(components)) {
         const name = basename(path);
         if (!name.endsWith(".logic.ts")) continue;
-        expect(logic.test(name), relative(root, path)).toBe(true);
+        expect(logic.test(name), relative(workspaceRoot, path)).toBe(true);
       }
     }
   });
@@ -140,7 +140,7 @@ describe("UX", () => {
       for (const path of listFiles(components)) {
         const name = basename(path);
         if (!name.endsWith(".hook.ts")) continue;
-        expect(hook.test(name), relative(root, path)).toBe(true);
+        expect(hook.test(name), relative(workspaceRoot, path)).toBe(true);
       }
     }
   });

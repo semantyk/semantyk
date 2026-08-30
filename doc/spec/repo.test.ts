@@ -6,23 +6,29 @@
 @file: This file defines the monorepository specification requirements.
 
 @created: 2026-08-29 23:29
-@modified: 2026-08-30 03:52
+@modified: 2026-08-30 13:21
 
 @since: 0.1.0-alpha.6
-@version: 0.1.0-alpha.6
+@version: 0.1.0-alpha.36
 
 @author: Semantyk Team
 @maintainer: Daniel Bakas <daniel@semantyk.com>
 @copyright: Semantyk © 2026
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
-import { root } from "#test/helpers";
-import { describe, expect, test } from "bun:test";
-import { existsSync } from "node:fs";
-import { resolve } from "node:path";
+import { expect, workspace, workspaceRoot } from "@semantyk/test";
+import { describe, test } from "bun:test";
 
-const pkg = await Bun.file(resolve(root, "package.json")).json();
-const project = await Bun.file(resolve(root, "project.json")).json();
+const pkg = await workspace.readJson<{
+  name: string;
+  description: string;
+  license?: string;
+  scripts?: Record<string, string>;
+  nx?: unknown;
+}>("package.json");
+const project = await workspace.readJson<{
+  targets?: Record<string, { command?: string }>;
+}>("project.json");
 
 const ENV_BRANCHES = ["sandbox", "dev", "staging", "main"] as const;
 type EnvBranch = (typeof ENV_BRANCHES)[number];
@@ -37,7 +43,7 @@ async function currentEnvBranch(): Promise<EnvBranch | null> {
   }
 
   const proc = Bun.spawn(["git", "branch", "--show-current"], {
-    cwd: root,
+    cwd: workspaceRoot,
     stdout: "pipe",
     stderr: "pipe",
   });
@@ -60,22 +66,22 @@ describe("EL MONOREPOSITORIO", () => {
   });
 
   test("REQ.NF.0379a — DEBE tener una arquitectura de monorepositorio", () => {
-    expect(existsSync(resolve(root, "doc"))).toBe(true);
-    expect(existsSync(resolve(root, "src"))).toBe(true);
+    expect("doc").toExistInWorkspace();
+    expect("src").toExistInWorkspace();
   });
 
   test("REQ.NF.901fa — DEBE tener una arquitectura modular", () => {
-    expect(existsSync(resolve(root, "src/apps"))).toBe(true);
-    expect(existsSync(resolve(root, "src/libs"))).toBe(true);
-    expect(existsSync(resolve(root, "src/packages"))).toBe(true);
+    expect("src/apps").toExistInWorkspace();
+    expect("src/libs").toExistInWorkspace();
+    expect("src/packages").toExistInWorkspace();
   });
 
   test("REQ.NF.7ba58 — DEBE tener un CÓDIGO FUENTE", () => {
-    expect(existsSync(resolve(root, "src/src.test.ts"))).toBe(true);
+    expect("src/src.test.ts").toExistInWorkspace();
   });
 
   test("REQ.NF.09da8 — DEBE tener una ESPECIFICACIÓN", () => {
-    expect(existsSync(resolve(root, "doc/spec/spec.test.ts"))).toBe(true);
+    expect("doc/spec/spec.test.ts").toExistInWorkspace();
   });
 
   describe("scripts", () => {
@@ -108,7 +114,7 @@ describe("EL MONOREPOSITORIO", () => {
   });
 
   test("REQ.NF.e1085 — DEBE declarar los targets de nx del repositorio en `project.json`", () => {
-    expect(existsSync(resolve(root, "project.json"))).toBe(true);
+    expect("project.json").toExistInWorkspace();
     expect(pkg.nx).toBeUndefined();
   });
 
@@ -116,7 +122,7 @@ describe("EL MONOREPOSITORIO", () => {
     const branch = await currentEnvBranch();
     if (!branch) return;
 
-    const readme = await Bun.file(resolve(root, "README.md")).text();
+    const readme = await workspace.readText("README.md");
     const licenseId = String(pkg.license ?? "");
     expect(licenseId.length).toBeGreaterThan(0);
 

@@ -6,34 +6,38 @@
 @file: This file defines the source code module specification requirements.
 
 @created: 2026-08-29 23:29
-@modified: 2026-08-30 03:52
+@modified: 2026-08-30 13:21
 
 @since: 0.1.0-alpha.31
-@version: 0.1.0-alpha.31
+@version: 0.1.0-alpha.36
 
 @author: Semantyk Team
 @maintainer: Daniel Bakas <daniel@semantyk.com>
 @copyright: Semantyk © 2026
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
-import { isSemVer, root } from "#test/helpers";
-import { describe, expect, test } from "bun:test";
-import { resolve } from "node:path";
+import { expect, workspace } from "@semantyk/test";
+import { describe, test } from "bun:test";
 
-const pkg = await Bun.file(resolve(root, "package.json")).json();
-const compose = await Bun.file(resolve(root, "compose.yaml")).text();
+const pkg = await workspace.readJson<{
+  version: string;
+  packageManager?: string;
+}>("package.json");
+const compose = await workspace.readText("compose.yaml");
 
 describe("EL CÓDIGO FUENTE", () => {
   test("REQ.NF.c80ae — DEBE usar versionamiento semántico", () => {
-    expect(isSemVer(pkg.version)).toBe(true);
+    expect(pkg.version).toBeSemVer();
 
     const composeVersion = compose.match(/@version:\s*(\S+)/)?.[1];
     expect(composeVersion).toBeDefined();
-    expect(isSemVer(composeVersion!)).toBe(true);
+    expect(composeVersion!).toBeSemVer();
 
-    const pm = String(pkg.packageManager ?? "");
-    const pmVersion = pm.includes("@") ? pm.split("@").pop()! : "";
-    expect(pmVersion.length).toBeGreaterThan(0);
-    expect(isSemVer(pmVersion)).toBe(true);
+    const packageManager = String(pkg.packageManager ?? "");
+    const packageManagerVersion = packageManager.includes("@")
+      ? packageManager.split("@").pop()!
+      : "";
+    expect(packageManagerVersion.length).toBeGreaterThan(0);
+    expect(packageManagerVersion).toBeSemVer();
   });
 });

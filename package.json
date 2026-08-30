@@ -1,15 +1,13 @@
 {
   "name": "@semantyk/ecosystem",
-  "version": "0.1.0-alpha.35",
+  "version": "0.1.0-alpha.36",
   "private": true,
   "description": "Our ecosystem",
   "license": "CC-BY-NC-SA-4.0",
   "type": "module",
-  "imports": {
-    "#test/helpers": "./test/helpers.ts"
-  },
   "packageManager": "bun@1.4.0",
   "workspaces": [
+    "src/libs/*",
     "src/packages/*"
   ],
   "scripts": {
@@ -28,6 +26,7 @@
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
+    "@semantyk/test": "workspace:*",
     "@types/bun": "^1.4.0",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.5",
