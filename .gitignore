@@ -235,6 +235,7 @@ dist
 .nx/polygraph
 .nx/self-healing
 tmp/
+temp/
 
 ### Trivy ###
 .cache/trivy/

@@ -1,6 +1,6 @@
 {
   "name": "@semantyk/test",
-  "version": "0.1.0-alpha.37",
+  "version": "0.1.0-alpha.38",
   "private": true,
   "description": "Shared Semantyk test utilities (repo-specific lib)",
   "license": "CC-BY-NC-SA-4.0",
