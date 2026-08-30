@@ -1,0 +1,8 @@
+{
+  "name": "@semantyk/data",
+  "version": "0.1.0-alpha.1",
+  "private": true,
+  "description": "Our data",
+  "license": "CC-BY-NC-SA-4.0",
+  "type": "module"
+}
