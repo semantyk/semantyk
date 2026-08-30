@@ -6,10 +6,10 @@
 @file: This file defines the stack specification requirements.
 
 @created: 2026-08-29 23:47
-@modified: 2026-08-30 13:21
+@modified: 2026-08-30 13:58
 
 @since: 0.1.0-alpha.6
-@version: 0.1.0-alpha.36
+@version: 0.1.0-alpha.39
 
 @author: Semantyk Team
 @maintainer: Daniel Bakas <daniel@semantyk.com>
@@ -57,6 +57,19 @@ function hasDep(name: string) {
   return Boolean(pkg.dependencies?.[name] ?? pkg.devDependencies?.[name]);
 }
 
+async function runGh(...args: string[]) {
+  const proc = Bun.spawn(["gh", ...args], {
+    stdout: "pipe",
+    stderr: "pipe",
+  });
+  const [stdout, stderr, code] = await Promise.all([
+    new Response(proc.stdout).text(),
+    new Response(proc.stderr).text(),
+    proc.exited,
+  ]);
+  return { code, stdout, stderr };
+}
+
 describe("EL STACK", () => {
   describe("NX", () => {
     test("REQ.NF.1f547 — DEBE usar nx como gestor", () => {
@@ -69,6 +82,18 @@ describe("EL STACK", () => {
     test("REQ.NF.acc61 — DEBE usar bun como entorno de ejecución, pruebas y gestor de paquetes", () => {
       expect(pkg.packageManager).toMatch(/^bun@/);
       expect("bun.lock").toExistInWorkspace();
+    });
+  });
+
+  describe("GH", () => {
+    test("REQ.NF.0087b — DEBE usar `gh` para la gestión de proyectos en GitHub", async () => {
+      const version = await runGh("--version");
+      expect(version.code).toBe(0);
+      expect(version.stdout).toMatch(/^gh version /);
+
+      const projectHelp = await runGh("project", "--help");
+      expect(projectHelp.code).toBe(0);
+      expect(projectHelp.stdout + projectHelp.stderr).toMatch(/\bproject\b/);
     });
   });
 
