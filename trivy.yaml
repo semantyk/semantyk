@@ -1,0 +1,26 @@
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+# `trivy.yaml`
+# @organization: Semantyk
+# @project: Ecosystem
+#
+# @file: This file configures Trivy for dependency license policy in CI.
+#
+# @created: 2026-08-30 01:26
+# @modified: 2026-08-30 01:30
+#
+# @since: 0.1.0-alpha.0
+# @version: 0.1.0-alpha.0
+#
+# @author: Semantyk Team
+# @maintainer: Daniel Bakas <daniel@semantyk.com>
+#
+# @copyright: Semantyk © 2026
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+# SaaS / website: CI fails only on forbidden licenses (CRITICAL), e.g. GPL/AGPL.
+# LGPL remains non-CRITICAL so dynamically linked optional binaries
+# (e.g. Next.js → sharp) are accepted under Trivy’s default classification.
+
+scan:
+  scanners:
+    - license

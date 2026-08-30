@@ -1,23 +1,24 @@
-[//]: # (
-\ ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-\ # `README.md`
-\ @organization: Semantyk
-\ @project: Semantyk
-\
-\ @file: This is the main README file for the Semantyk project.
-\
-\ @created: Mar 18, 2025
-\ @modified: Mar 18, 2025
-\
-\ @author: Semantyk Team
-\ @maintainer: Daniel Bakas <https://id.danielbakas.com>
-\
-\ @copyright: Semantyk © 2025. All rights reserved.
-\ ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-)
+<!--––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+# `README.md`
+@organization: Semantyk
+@project: Ecosystem
+
+@file: This file is the main README file for the Semantyk project.
+
+@created: 2025-03-18 00:00
+@modified: 2026-08-30 03:31
+
+@since: 0.1.0-alpha.0
+@version: 0.1.0-alpha.0
+
+@author: Semantyk Team
+@maintainer: Daniel Bakas <daniel@semantyk.com>
+
+@copyright: Semantyk © 2026
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->
 
 <h1 align='center'>Semantyk</h1>
-<h3 align='center'><i>Ideas Wonder</i></h3>
+<h3 align='center'><i>Curiosity and wonder</i></h3>
 <p align='center'>
   <picture>
     <source srcset="https://www.semantyk.com/favicon-dark.svg" media="
@@ -31,6 +32,9 @@ width="250" />
 
 ## License
 
+[![license](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-informational)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![compliance](https://img.shields.io/github/actions/workflow/status/semantyk/semantyk/main.yaml?branch=main&label=compliance)](https://github.com/semantyk/semantyk/actions/workflows/main.yaml)
+
 This project is licensed under
 the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 license:
@@ -41,8 +45,6 @@ license:
   license terms.
 * **No Additional Restrictions:** Users should avoid imposing extra restrictions
   beyond those of the license.
-
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsemantyk%2Fsemantyk.svg?type=small)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsemantyk%2Fsemantyk?ref=badge_small)
 
 ## Contact
 
@@ -55,4 +57,7 @@ For inquiries or support regarding this project, please reach out to us:
 Your feedback and questions are greatly appreciated!
 
 ---
-*[Semantyk](https://www.semantyk.com/) © 2025. All rights reserved.*
+
+<p align='center'>
+  <a href="https://www.semantyk.com/">Semantyk</a> © 2026
+</p>
