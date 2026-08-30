@@ -228,9 +228,13 @@ dist
 
 # End of https://www.toptal.com/developers/gitignore/api/git,macos,node,visualstudiocode
 
-### NX ###
-*.nx/*
-!tsconfig.base.json
+### Nx ###
+.nx/cache
+.nx/installation
+.nx/workspace-data
+.nx/polygraph
+.nx/self-healing
+tmp/
 
 ### Trivy ###
 .cache/trivy/
