@@ -1,11 +1,11 @@
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-# `dev.yaml`
+# `main.yaml`
 # @organization: Semantyk
 # @project: Ecosystem
 #
-# @file: This file contains the GitHub Actions workflow for the development CI.
+# @file: This file contains the GitHub Actions workflow for the production CI.
 #
-# @created: 2025-03-18 00:00
+# @created: 2026-08-29 00:00
 # @modified: 2026-08-30 01:26
 #
 # @since: 0.1.0-alpha.0
@@ -18,15 +18,12 @@
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 
-name: Development CI Workflow
+name: Production CI Workflow
 
 on:
   push:
     branches:
-      - dev
-  pull_request:
-    branches:
-      - dev
+      - main
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -107,3 +104,20 @@ jobs:
         name: 4. Install Dependencies
       - run: bun run build
         name: 5. Build
+
+  # Temporarily disabled until there is something to deploy (no app.yaml yet).
+  deploy:
+    if: false
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v7
+        name: 1. Repository Checkout
+      - uses: google-github-actions/auth@v3
+        name: 2. Google Cloud Authentication
+        with:
+          credentials_json: ${{secrets.GCP_CREDENTIALS}}
+      - uses: google-github-actions/setup-gcloud@v3
+        name: 3. Cloud SDK Configuration
+      - name: 4. Deployment to 'main' Service
+        run: gcloud app deploy app.yaml --project ${{secrets.GCP_PROJECT_ID}} --promote
