@@ -6,10 +6,10 @@
 @file: This file is the main README file for the Semantyk project.
 
 @created: 2025-03-18 00:00
-@modified: 2026-08-30 03:31
+@modified: 2026-08-30 03:52
 
 @since: 0.1.0-alpha.0
-@version: 0.1.0-alpha.0
+@version: 0.1.0-alpha.32
 
 @author: Semantyk Team
 @maintainer: Daniel Bakas <daniel@semantyk.com>
@@ -33,7 +33,7 @@ width="250" />
 ## License
 
 [![license](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-informational)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-[![compliance](https://img.shields.io/github/actions/workflow/status/semantyk/semantyk/dev.yaml?branch=dev&label=compliance)](https://github.com/semantyk/semantyk/actions/workflows/dev.yaml)
+[![compliance](https://img.shields.io/github/actions/workflow/status/semantyk/semantyk/sandbox.yaml?branch=sandbox&label=compliance)](https://github.com/semantyk/semantyk/actions/workflows/sandbox.yaml)
 
 This project is licensed under
 the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
