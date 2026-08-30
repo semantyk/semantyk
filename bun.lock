@@ -16,6 +16,7 @@
         "@types/bun": "^1.4.0",
         "@types/react": "^19.2.18",
         "@types/react-dom": "^19.2.5",
+        "bun-types": "1.4.0",
         "nx": "23.1.2",
         "typescript": "^7.0.2",
       },

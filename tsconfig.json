@@ -6,7 +6,7 @@
     "paths": {
       "#test/helpers": ["./test/helpers.ts"]
     },
-    "types": ["bun"]
+    "types": ["bun-types"]
   },
   "include": ["**/*.ts"]
 }

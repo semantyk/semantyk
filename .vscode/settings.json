@@ -1,4 +1,6 @@
 {
   "plantuml.render": "Local",
-  "plantuml.jar": "/opt/homebrew/opt/plantuml/libexec/plantuml.jar"
+  "plantuml.jar": "/opt/homebrew/opt/plantuml/libexec/plantuml.jar",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
