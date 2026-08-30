@@ -1,11 +1,11 @@
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-# `dev.yaml`
+# `sandbox.yaml`
 # @organization: Semantyk
 # @project: Ecosystem
 #
-# @file: This file contains the GitHub Actions workflow for the development CI.
+# @file: This file contains the GitHub Actions workflow for the sandbox CI.
 #
-# @created: 2025-03-18 00:00
+# @created: 2026-08-29 00:00
 # @modified: 2026-08-30 01:26
 #
 # @since: 0.1.0-alpha.0
@@ -18,15 +18,15 @@
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 
-name: Development CI Workflow
+name: Sandbox CI Workflow
 
 on:
   push:
     branches:
-      - dev
+      - sandbox
   pull_request:
     branches:
-      - dev
+      - sandbox
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
