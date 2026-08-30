@@ -1,0 +1,21 @@
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+' # `main.styles.puml`
+' @organization: Semantyk
+' @project: Ecosystem
+'
+' @file: This file contains the PlantUML code for the styles.
+'
+' @created: 2026-08-29 11:27
+' @modified: 2026-08-29 20:12
+'
+' @since: 0.1.0-alpha.0
+' @version: 0.1.0-alpha.0
+'
+' @author: Semantyk Team
+' @maintainer: Daniel Bakas <daniel@semantyk.com>
+'
+' @copyright: Semantyk © 2026
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+skinparam shadowing false
+skinparam defaultFontName "Plus Jakarta Sans"

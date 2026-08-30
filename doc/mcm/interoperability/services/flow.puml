@@ -1,0 +1,184 @@
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+' # `flow.puml`
+' @organization: Semantyk
+' @project: Ecosystem
+'
+' @file: This file defines the `flow.puml` diagram.
+'
+' @created: 2026-08-29 11:27
+' @modified: 2026-08-29 20:04
+'
+' @since: 0.1.0-alpha.0
+' @version: 0.1.0-alpha.0
+'
+' @author: Semantyk Team
+' @maintainer: Daniel Bakas <daniel@semantyk.com>
+'
+' @copyright: Semantyk © 2026
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@startuml "FLUJO DE SERVICIOS DE INTEROPERABILIDAD"
+
+start
+
+split
+    partition "NORMATIVA" {
+        split
+            :NORMAS VINCULANTES;
+            :ATRIBUCIONES;
+        split again
+            :NORMAS NO VINCULANTES;
+            split
+                :BASE CONCEPTUAL;
+            split again
+                :BASE METODOLÓGICA;
+            end split
+        end split
+    }
+split again
+    partition "ORGANIZATIVA" {
+        split
+            :DIRECTORIO;
+        split again
+            :ORGANIGRAMAS;
+        split again
+            :PROCESOS;
+        end split
+
+        split
+            :FLUJOS DE INTERCAMBIO;
+        split again
+            :REGLAS DE NEGOCIO;
+        end split
+    }
+split again
+    partition "SEMÁNTICA" {
+        split
+            :TÉRMINOS;
+        split again
+            :DEFINICIONES;
+        split again
+            :RELACIONES;
+        split again
+            :REGLAS;
+        end split
+
+        partition "REPRESENTACIONES DE CONOCIMIENTO" {
+            :GLOSARIOS;
+            :VOCABULARIOS;
+            split
+                :MEREOLOGÍAS;
+            split again
+                :TAXONOMÍAS;
+            split again
+                :JERARQUÍAS;
+            split again
+                :TESAUROS;
+            end split
+            partition "ONTOLOGÍAS" {
+                split
+                    :CAJAS TERMINOLÓGICAS;
+                split again
+                    :CAJAS ASERCIONALES;
+                end split
+            }
+        }
+    }
+split again
+    partition "TECNOLÓGICA" {
+        partition "ARQUITECTURAS" {
+            split
+                :ESTRUCTURAS DE DATOS;
+            split again
+                :FORMATOS;
+            split again
+                :SERIALIZACIONES;
+            split again
+                :LENGUAJES DE CONSULTA;
+            end split
+            split
+                :PROTOCOLOS DE COMUNICACIÓN;
+            split again
+                :SERVICIOS DE INTERCAMBIO;
+            split again
+                :SERVICIOS DE INTEGRACIÓN;
+            split again
+                :SERVICIOS DE PRESENTACIÓN;
+            end split
+
+            split
+                :DIRECTORIO DE DATOS;
+            split again
+                partition "GESTORES" {
+                    split
+                        :AUTORIZACIONES;
+                    split again
+                        :CONVENIOS;
+                    end split
+                }
+            split again
+                :MECANISMO DE SEGURIDAD Y PRIVACIDAD DE ACCESO;
+            split again
+                :REGISTRO DE TRAZABILIDAD;
+            split again
+                :MONITOREO;
+            end split
+        }
+    }
+end split
+partition "GOBERNANZA" {
+    partition "INVENTARIOS" {
+        partition "RECURSOS REUTILIZABLES" {
+            :COMPONENTES;
+            :MÓDULOS;
+        }
+        split
+            partition "REPRESENTACIONES DE CONOCIMIENTO" {
+                :GLOSARIOS;
+                :VOCABULARIOS;
+                split
+                    :JERARQUÍAS;
+                split again
+                    :TAXONOMÍAS;
+                split again
+                    :TESAUROS;
+                end split
+                partition "ONTOLOGÍAS" {
+                    split
+                        :CAJAS TERMINOLÓGICAS;
+                    split again
+                        :CAJAS ASERCIONALES;
+                    end split
+                }
+            }
+        split again
+            partition "FUENTES DE INFORMACIÓN Y SERVICIOS" {
+                split
+                    partition "EXTERNOS" {
+                        :INFRAESTRUCTURAS;
+                        :PRODUCTOS;
+                    }
+                split again
+                    partition "INTERNOS" {
+                        :INFRAESTRUCTURAS;
+                        :PRODUCTOS;
+                    }
+                end split
+            }
+        end split
+        partition "PLATAFORMA" {
+            :INFRAESTRUCTURAS;
+            :PRODUCTOS;
+        }
+    }
+}
+:DOCUMENTACIÓN;
+:ACUERDOS;
+
+stop
+
+mainframe <<servicios>>\n**INTEROPERABILIDAD**
+
+footer <size:8>Semantyk © 2026</size>
+
+@enduml

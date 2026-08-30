@@ -1,19 +1,21 @@
-# ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-# # `.gitignore`
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+# `.gitignore`
 # @organization: Semantyk
-# @project: Semantyk
+# @project: Ecosystem
 #
-# @file: This file contains the list of files and folders that are ignored by
-# Git.
+# @file: This file contains the list of files and folders that are ignored by Git.
 #
-# @created: Mar 18, 2025
-# @modified: Mar 18, 2025
+# @created: 2025-03-18 00:00
+# @modified: 2026-08-30 01:26
+#
+# @since: 0.1.0-alpha.0
+# @version: 0.1.0-alpha.0
 #
 # @author: Semantyk Team
-# @maintainer: Daniel Bakas <https://id.danielbakas.com>
+# @maintainer: Daniel Bakas <daniel@semantyk.com>
 #
-# @copyright: Semantyk © 2025. All rights reserved.
-# ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+# @copyright: Semantyk © 2026
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 # Created by https://www.toptal.com/developers/gitignore/api/git,macos,node,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=git,macos,node,visualstudiocode
@@ -74,7 +76,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
-.pnpm-debug.log*
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
@@ -230,3 +231,6 @@ dist
 ### NX ###
 *.nx/*
 !tsconfig.base.json
+
+### Trivy ###
+.cache/trivy/

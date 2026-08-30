@@ -1,0 +1,36 @@
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+' # `taxonomy.puml`
+' @organization: Semantyk
+' @project: Ecosystem
+'
+' @file: This file defines the `taxonomy.puml` diagram.
+'
+' @created: 2026-08-29 11:27
+' @modified: 2026-08-29 20:04
+'
+' @since: 0.1.0-alpha.0
+' @version: 0.1.0-alpha.0
+'
+' @author: Semantyk Team
+' @maintainer: Daniel Bakas <daniel@semantyk.com>
+'
+' @copyright: Semantyk © 2026
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@startmindmap "PROTOTIPOS"
+
+'* Imports
+!include ../../../../src/packages/ux/styles/main.styles.puml
+
+'* Main
+mainframe <<composición>>\n**PROTOTIPOS**
+
+*
+ * BAJA FIDELIDAD (LO-FI)
+ * MEDIA FIDELIDAD (MID-FI)
+ * ALTA FIDELIDAD (HI-FI)
+
+footer <size:8>Semantyk © 2026</size>
+
+@endmindmap
+

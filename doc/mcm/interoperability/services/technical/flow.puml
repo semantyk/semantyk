@@ -1,0 +1,96 @@
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+' # `flow.puml`
+' @organization: Semantyk
+' @project: Ecosystem
+'
+' @file: This file defines the `flow.puml` diagram.
+'
+' @created: 2026-08-29 11:27
+' @modified: 2026-08-29 20:04
+'
+' @since: 0.1.0-alpha.0
+' @version: 0.1.0-alpha.0
+'
+' @author: Semantyk Team
+' @maintainer: Daniel Bakas <daniel@semantyk.com>
+'
+' @copyright: Semantyk © 2026
+' ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@startuml "FLUJO DE SERVICIOS TÉCNICOS"
+
+'* Imports
+!include ../../../../../src/packages/ux/styles/main.styles.puml
+
+'* Main
+mainframe <<servicios>>\n**TÉCNICOS**
+
+start
+partition "FORMAS" {
+    split
+        :PROTOCOLOS;
+    split again
+        :CODIFICACIONES;
+    split again
+        :FORMATOS;
+    split again
+        :ESTRUCTURAS;
+    split again
+        :ESQUEMAS;
+    split again
+        :MODELOS;
+    end split
+}
+partition "SERVICIOS" {
+    split
+        :AUTENTICACIÓN;
+    split again
+        :AUTORIZACIÓN;
+    split again
+        :PRIVACIDAD;
+    split again
+        :SEGURIDAD;
+    end split
+    split
+        :GESTIÓN;
+    split again
+        :INTERCAMBIO;
+    split again
+        :TRANSFORMACIÓN;
+    split again
+        :INTEGRACIÓN;
+    split again
+        :PRESENTACIÓN;
+    end split
+    split
+        :EVALUACIÓN;
+    split again
+        :MONITOREO;
+    split again
+        :TRAZABILIDAD;
+    split again
+        :SEGUIMIENTO;
+    end split
+}
+partition "LENGUAJES" {
+    split
+        :CONSULTA;
+    split again
+        :PROGRAMACIÓN;
+    end split
+}
+partition "SOLUCIONES" {
+    split
+        :INFRAESTRUCTURAS;
+    split again
+        :PRODUCTOS;
+    end split
+}
+:DOCUMENTACIÓN;
+:ACUERDOS;
+
+stop
+
+footer <size:8>Semantyk © 2026</size>
+
+@enduml
