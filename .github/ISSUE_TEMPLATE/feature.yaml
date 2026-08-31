@@ -19,7 +19,7 @@
 
 
 name: ✨ Feature
-description: "Propose a feature"
+description: "Propose new functionality for the ecosystem"
 type: "✨ Feature"
 body:
   - type: textarea
