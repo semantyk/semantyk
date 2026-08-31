@@ -19,6 +19,7 @@
 
 
 name: 🧹 Chore
+title: "🧹 Chore | "
 description: "Maintenance or housekeeping that is not a feature or fix"
 type: "🧹 Chore"
 body:
