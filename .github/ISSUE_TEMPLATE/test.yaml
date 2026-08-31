@@ -19,8 +19,7 @@
 
 
 name: 🧪 Test
-title: "🧪 Test | {Replace this with title}"
-description: Add, fix, or improve tests
+description: ""
 type: "🧪 Test"
 body:
   - type: textarea

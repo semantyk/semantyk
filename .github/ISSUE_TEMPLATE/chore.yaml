@@ -19,8 +19,7 @@
 
 
 name: 🧹 Chore
-title: "🧹 Chore | {Replace this with title}"
-description: Maintenance or housekeeping that is not a feature or bugfix
+description: ""
 type: "🧹 Chore"
 body:
   - type: textarea

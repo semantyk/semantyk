@@ -19,8 +19,7 @@
 
 
 name: 🐛 Bug
-title: "🐛 Bug | {Replace this with title}"
-description: Report a bug in Semantyk
+description: ""
 type: "🐛 Bug"
 body:
   - type: textarea

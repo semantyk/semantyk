@@ -19,8 +19,7 @@
 
 
 name: ✨ Feature
-title: "✨ Feature | {Replace this with title}"
-description: Propose or track a new feature
+description: ""
 type: "✨ Feature"
 body:
   - type: textarea
