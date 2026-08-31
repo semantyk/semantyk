@@ -6,7 +6,7 @@
 @file: This file lists all individuals having contributed content to the project.
 
 @created: 2025-03-18 00:00
-@modified: 2026-08-30 01:39
+@modified: 2026-08-31 11:51
 
 @since: 0.1.0-alpha.0
 @version: 0.1.0-alpha.0
@@ -23,8 +23,8 @@
 
 This file lists all individuals having contributed to the project.
 
-* **Created:** Mar 18, 2025
-* **Modified**: 2026-08-29 11:10
+* **Created:** 2025-03-18 00:00
+* **Modified:** 2026-08-31 11:51
 * **Since:** 0.1.0-alpha.0
 * **Version:** 0.1.0-alpha.0
 * **Author:** [Semantyk Team](https://github.com/orgs/semantyk/people)
