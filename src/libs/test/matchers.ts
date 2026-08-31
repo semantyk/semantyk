@@ -6,10 +6,10 @@
 @file: This file adapts domain checks to Bun `expect` via `expect.extend` (Adapter).
 
 @created: 2026-08-30 13:11
-@modified: 2026-08-30 13:21
+@modified: 2026-08-31 11:51
 
 @since: 0.1.0-alpha.36
-@version: 0.1.0-alpha.36
+@version: 0.1.0-alpha.41
 
 @author: Semantyk Team
 @maintainer: Daniel Bakas <daniel@semantyk.com>
@@ -20,6 +20,8 @@ import { expect } from "bun:test";
 import { existsSync } from "node:fs";
 import {
   FILE_FIELD_PREFIX,
+  HEADER_DATETIME_PATTERN,
+  MARKDOWN_DATETIME_BULLET,
   RFC2119_PATTERN,
   type HeaderFieldName,
 } from "./catalog.ts";
@@ -59,6 +61,16 @@ expect.extend({
     };
   },
 
+  toBeHeaderDatetime(received: unknown) {
+    const pass =
+      typeof received === "string" && HEADER_DATETIME_PATTERN.test(received);
+    return {
+      pass,
+      message: () =>
+        `expected ${Bun.inspect(received)} ${pass ? "not " : ""}to match YYYY-MM-DD HH:mm`,
+    };
+  },
+
   toHaveCompleteHeader(received: unknown) {
     const pass = typeof received === "string" && hasCompleteHeader(received);
     return {
@@ -75,6 +87,20 @@ expect.extend({
       pass,
       message: () =>
         `expected header ${pass ? "not " : ""}to declare @${fieldName}${pass ? "" : ` (got ${Bun.inspect(value)})`}`,
+    };
+  },
+
+  toHaveHeaderDatetimeField(
+    received: unknown,
+    fieldName: "created" | "modified",
+  ) {
+    const value =
+      typeof received === "string" ? readHeaderField(received, fieldName) : "";
+    const pass = HEADER_DATETIME_PATTERN.test(value);
+    return {
+      pass,
+      message: () =>
+        `expected @${fieldName} ${pass ? "not " : ""}to be YYYY-MM-DD HH:mm (got ${Bun.inspect(value)})`,
     };
   },
 
@@ -128,8 +154,10 @@ declare module "bun:test" {
     toBeSemVer(): T;
     toBeRequirementId(): T;
     toContainRfc2119(): T;
+    toBeHeaderDatetime(): T;
     toHaveCompleteHeader(): T;
     toHaveHeaderField(fieldName: HeaderFieldName | string): T;
+    toHaveHeaderDatetimeField(fieldName: "created" | "modified"): T;
     toHaveFileFieldPrefix(prefix?: string): T;
     toHaveCurrentCopyrightYear(): T;
     toExistInWorkspace(): T;
@@ -140,4 +168,9 @@ declare module "bun:test" {
 /** Assert an optional module directory ships its `{folder}.test.ts`. */
 export function expectModuleSpec(moduleDir: string) {
   expect(moduleDir).toHaveModuleSpec();
+}
+
+/** True when a markdown Created/Modified bullet uses the canonical datetime form. */
+export function isMarkdownDatetimeBullet(line: string) {
+  return MARKDOWN_DATETIME_BULLET.test(line.trim());
 }

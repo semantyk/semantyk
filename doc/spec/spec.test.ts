@@ -6,10 +6,10 @@
 @file: This file defines the global specification requirements for Semantyk.
 
 @created: 2026-08-29 21:13
-@modified: 2026-08-30 20:22
+@modified: 2026-08-31 11:51
 
 @since: 0.1.0-alpha.6
-@version: 0.1.0-alpha.36
+@version: 0.1.0-alpha.41
 
 @author: Semantyk Team
 @maintainer: Daniel Bakas <daniel@semantyk.com>
@@ -19,6 +19,7 @@
 import {
   REQUIREMENT_TITLE,
   expect,
+  isMarkdownDatetimeBullet,
   isRequirementRegistered,
   iterateFiles,
   listAuthoredFiles,
@@ -102,6 +103,26 @@ describe("LA ESPECIFICACIÓN", () => {
         }
       });
     }
+
+    test("REQ.NF.ce021 — DEBE usar el formato `YYYY-MM-DD HH:mm` en `@created` y `@modified`", async () => {
+      for await (const { path, text } of iterateFiles(await listAuthoredFiles())) {
+        expect(text, path).toHaveHeaderDatetimeField("created");
+        expect(text, path).toHaveHeaderDatetimeField("modified");
+      }
+    });
+
+    test("REQ.NF.dac80 — DEBE usar el mismo formato de fecha en viñetas Created/Modified del cuerpo", async () => {
+      for await (const { path, text } of iterateFiles(await listAuthoredFiles())) {
+        if (!path.endsWith(".md")) continue;
+        for (const line of text.split("\n")) {
+          if (!/\*\*(?:Created|Modified)/.test(line)) continue;
+          expect(
+            isMarkdownDatetimeBullet(line),
+            `${path}: ${line.trim()}`,
+          ).toBe(true);
+        }
+      }
+    });
 
     test("REQ.NF.26d18 — DEBE comenzar el atributo `@file` con \"This file\"", async () => {
       for await (const { path, text } of iterateFiles(await listAuthoredFiles())) {
