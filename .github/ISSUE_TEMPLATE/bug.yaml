@@ -19,7 +19,7 @@
 
 
 name: 🐛 Bug
-description: ""
+description: "Report a bug"
 type: "🐛 Bug"
 body:
   - type: textarea

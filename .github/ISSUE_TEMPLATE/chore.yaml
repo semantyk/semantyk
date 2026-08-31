@@ -19,7 +19,7 @@
 
 
 name: 🧹 Chore
-description: ""
+description: "Request a chore"
 type: "🧹 Chore"
 body:
   - type: textarea
