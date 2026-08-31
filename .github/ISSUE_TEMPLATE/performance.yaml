@@ -19,8 +19,7 @@
 
 
 name: 🚀 Performance
-title: "🚀 Performance | {Replace this with title}"
-description: Performance regression or improvement
+description: ""
 type: "🚀 Performance"
 body:
   - type: textarea

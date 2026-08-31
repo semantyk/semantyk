@@ -19,8 +19,7 @@
 
 
 name: 📓 Docs
-title: "📓 Docs | {Replace this with title}"
-description: Documentation change or addition
+description: ""
 type: "📓 Docs"
 body:
   - type: textarea
