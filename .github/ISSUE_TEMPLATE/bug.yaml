@@ -1,15 +1,15 @@
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-# `bug_report.yaml`
+# `bug.yaml`
 # @organization: Semantyk
 # @project: Ecosystem
 #
-# @file: This file contains the GitHub template for reporting a bug in Semantyk.
+# @file: GitHub issue template for 🐛 Bug.
 #
 # @created: 2023-12-09 00:00
-# @modified: 2026-08-30 03:52
+# @modified: 2026-08-30 19:51
 #
 # @since: 0.1.0-alpha.3
-# @version: 0.1.0-alpha.3
+# @version: 0.1.0-alpha.39
 #
 # @author: Semantyk Team
 # @maintainer: Daniel Bakas <daniel@semantyk.com>
@@ -18,10 +18,10 @@
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 
-name: 🐛 Bug | Report
+name: 🐛 Bug
 title: "🐛 Bug | {Replace this with title}"
 description: Report a bug in Semantyk
-labels: [ bug ]
+type: "🐛 Bug"
 body:
   - type: textarea
     id: description
@@ -35,6 +35,13 @@ body:
     attributes:
       label: Reproduction
       description: Steps to reproduce the bug.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected
+      description: What you expected to happen.
     validations:
       required: true
   - type: textarea
