@@ -34,7 +34,7 @@ body:
     id: location
     attributes:
       label: Location
-      description: Paths, pages, or diagrams involved (e.g. `doc/spec/TRIAGE.md`).
+      description: Paths, pages, or diagrams involved (e.g. `doc/spec/plan.test.ts`).
     validations:
       required: false
   - type: checkboxes
