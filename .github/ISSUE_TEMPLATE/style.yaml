@@ -1,0 +1,48 @@
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+# `style.yaml`
+# @organization: Semantyk
+# @project: Ecosystem
+#
+# @file: GitHub issue template for 🎨 Style.
+#
+# @created: 2026-08-30 19:51
+# @modified: 2026-08-30 19:51
+#
+# @since: 0.1.0-alpha.39
+# @version: 0.1.0-alpha.39
+#
+# @author: Semantyk Team
+# @maintainer: Daniel Bakas <daniel@semantyk.com>
+#
+# @copyright: Semantyk © 2026
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+name: 🎨 Style
+title: "🎨 Style | {Replace this with title}"
+description: Formatting, lint, or presentation-only changes
+type: "🎨 Style"
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What style change is needed and why.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Files, rules, or tooling involved (optional).
+    validations:
+      required: false
+  - type: checkboxes
+    id: checkboxes
+    attributes:
+      label: Validations
+      options:
+        - label: Follow our [Code of Conduct]()
+          required: true
+        - label: Check that there isn't [already an issue](https://github.com/semantyk/semantyk/issues) for this style work.
+          required: true
