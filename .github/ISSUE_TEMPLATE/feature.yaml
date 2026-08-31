@@ -1,0 +1,57 @@
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+# `feature.yaml`
+# @organization: Semantyk
+# @project: Ecosystem
+#
+# @file: GitHub issue template for ✨ Feature.
+#
+# @created: 2026-08-30 19:51
+# @modified: 2026-08-30 19:51
+#
+# @since: 0.1.0-alpha.39
+# @version: 0.1.0-alpha.39
+#
+# @author: Semantyk Team
+# @maintainer: Daniel Bakas <daniel@semantyk.com>
+#
+# @copyright: Semantyk © 2026
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+name: ✨ Feature
+title: "✨ Feature | {Replace this with title}"
+description: Propose or track a new feature
+type: "✨ Feature"
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What should be built and why it matters.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance
+      description: How we know this is done (criteria or scenarios).
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Constraints, links, or open questions (optional).
+    validations:
+      required: false
+  - type: checkboxes
+    id: checkboxes
+    attributes:
+      label: Validations
+      options:
+        - label: Follow our [Code of Conduct]()
+          required: true
+        - label: Read the [Contributing Guidelines]().
+          required: true
+        - label: Check that there isn't [already an issue](https://github.com/semantyk/semantyk/issues) for this feature.
+          required: true
