@@ -19,7 +19,7 @@
 
 
 name: 🚀 Performance
-description: ""
+description: "Report a performance issue"
 type: "🚀 Performance"
 body:
   - type: textarea

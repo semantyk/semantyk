@@ -19,7 +19,7 @@
 
 
 name: 📓 Docs
-description: ""
+description: "Request a docs change"
 type: "📓 Docs"
 body:
   - type: textarea
