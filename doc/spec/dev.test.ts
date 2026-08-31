@@ -6,7 +6,7 @@
 @file: This file defines the development specification requirements.
 
 @created: 2026-08-31 11:38
-@modified: 2026-08-31 11:47
+@modified: 2026-08-31 11:59
 
 @since: 0.1.0-alpha.40
 @version: 0.1.0-alpha.41
@@ -65,7 +65,7 @@ function hasDep(name: string) {
 }
 
 describe("EL DESARROLLO", () => {
-  describe("STACK", () => {
+  describe("EL STACK", () => {
     describe("NX", () => {
       test("REQ.NF.1f547 — DEBE usar nx como gestor", () => {
         expect(pkg.devDependencies?.nx).toBeDefined();
@@ -305,7 +305,7 @@ describe("EL DESARROLLO", () => {
     });
   });
 
-  describe("CI/CD", () => {
+  describe("EL CI/CD", () => {
     test("REQ.NF.239a3 — DEBE autenticar el CI con una GitHub App de la organización", async () => {
       for (const path of ENV_WORKFLOWS) {
         const workflow = await workspace.readText(path);
