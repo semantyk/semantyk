@@ -19,7 +19,7 @@
 
 
 name: 🔧 Refactor
-description: "Request a refactor"
+description: "Restructure code without changing intended behavior"
 type: "🔧 Refactor"
 body:
   - type: textarea

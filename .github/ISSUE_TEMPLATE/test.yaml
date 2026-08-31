@@ -19,7 +19,7 @@
 
 
 name: 🧪 Test
-description: "Request a test change"
+description: "Add, fix, or improve automated tests or coverage"
 type: "🧪 Test"
 body:
   - type: textarea
