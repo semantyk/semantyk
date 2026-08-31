@@ -19,7 +19,7 @@
 
 
 name: 🔧 Refactor
-description: ""
+description: "Request a refactor"
 type: "🔧 Refactor"
 body:
   - type: textarea

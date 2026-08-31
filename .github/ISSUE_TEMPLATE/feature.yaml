@@ -19,7 +19,7 @@
 
 
 name: ✨ Feature
-description: ""
+description: "Propose a feature"
 type: "✨ Feature"
 body:
   - type: textarea
