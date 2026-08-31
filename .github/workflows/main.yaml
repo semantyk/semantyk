@@ -6,7 +6,7 @@
 # @file: This file contains the GitHub Actions workflow for the production CI.
 #
 # @created: 2026-08-29 00:00
-# @modified: 2026-08-30 01:26
+# @modified: 2026-08-31 11:20
 #
 # @since: 0.1.0-alpha.0
 # @version: 0.1.0-alpha.0
@@ -31,6 +31,7 @@ concurrency:
 
 permissions:
   contents: read
+  issues: read
 
 jobs:
   comply:
@@ -80,8 +81,17 @@ jobs:
             ${{ runner.os }}-bun-
       - run: bun install --frozen-lockfile
         name: 4. Install Dependencies
+      - uses: actions/create-github-app-token@v3
+        id: app-token
+        name: 5. Generate App Token
+        with:
+          client-id: ${{ vars.SEMANTYK_ID }}
+          private-key: ${{ secrets.SEMANTYK_PK }}
+          owner: ${{ github.repository_owner }}
       - run: bun run test
-        name: 5. Run Tests
+        name: 6. Run Tests
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
 
   build:
     runs-on: ubuntu-latest
