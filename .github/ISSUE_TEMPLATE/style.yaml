@@ -19,8 +19,7 @@
 
 
 name: 🎨 Style
-title: "🎨 Style | {Replace this with title}"
-description: Formatting, lint, or presentation-only changes
+description: ""
 type: "🎨 Style"
 body:
   - type: textarea
