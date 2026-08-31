@@ -6,7 +6,7 @@
 @file: This file defines the work plan specification requirements.
 
 @created: 2026-08-30 20:18
-@modified: 2026-08-31 10:57
+@modified: 2026-08-31 11:05
 
 @since: 0.1.0-alpha.40
 @version: 0.1.0-alpha.40
@@ -25,30 +25,37 @@ describe("EL PLAN DE TRABAJO", () => {
       "repo",
       "view",
       "--json",
-      "owner",
+      "nameWithOwner",
       "-q",
-      ".owner.login",
+      ".nameWithOwner",
     );
     expect(repo.code, repo.stderr || repo.stdout).toBe(0);
-    const owner = repo.stdout.trim();
-    expect(owner.length).toBeGreaterThan(0);
+    const [owner, name] = repo.stdout.trim().split("/");
+    expect(owner?.length).toBeGreaterThan(0);
+    expect(name?.length).toBeGreaterThan(0);
 
+    // Prefer repository-linked Projects V2 — visible to Actions' GITHUB_TOKEN.
+    // Org-wide `gh project list --owner` often returns [] for that token.
     const projects = await runGh(
-      "project",
-      "list",
-      "--owner",
-      owner,
-      "--format",
-      "json",
-      "--limit",
-      "100",
+      "api",
+      "graphql",
+      "-f",
+      `query=query($owner:String!,$name:String!){repository(owner:$owner,name:$name){projectsV2(first:20){nodes{title url closed}}}}`,
+      "-F",
+      `owner=${owner}`,
+      "-F",
+      `name=${name}`,
+      "--jq",
+      ".data.repository.projectsV2.nodes",
     );
     expect(projects.code, projects.stderr || projects.stdout).toBe(0);
 
-    const parsed = JSON.parse(projects.stdout) as {
-      projects?: { closed?: boolean; title?: string; url?: string }[];
-    };
-    const open = (parsed.projects ?? []).filter((project) => !project.closed);
+    const nodes = JSON.parse(projects.stdout) as {
+      closed?: boolean;
+      title?: string;
+      url?: string;
+    }[];
+    const open = nodes.filter((project) => !project.closed);
     expect(open.length).toBeGreaterThan(0);
   });
 
