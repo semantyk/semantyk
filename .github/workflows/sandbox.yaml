@@ -6,7 +6,7 @@
 # @file: This file contains the GitHub Actions workflow for the sandbox CI.
 #
 # @created: 2026-08-29 00:00
-# @modified: 2026-08-30 01:26
+# @modified: 2026-08-31 10:57
 #
 # @since: 0.1.0-alpha.0
 # @version: 0.1.0-alpha.0
@@ -34,6 +34,8 @@ concurrency:
 
 permissions:
   contents: read
+  issues: read
+  projects: read
 
 jobs:
   comply:
@@ -85,6 +87,8 @@ jobs:
         name: 4. Install Dependencies
       - run: bun run test
         name: 5. Run Tests
+        env:
+          GH_TOKEN: ${{ github.token }}
 
   build:
     runs-on: ubuntu-latest

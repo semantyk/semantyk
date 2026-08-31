@@ -6,17 +6,17 @@
 @file: This file defines the stack specification requirements.
 
 @created: 2026-08-29 23:47
-@modified: 2026-08-30 13:58
+@modified: 2026-08-31 10:57
 
 @since: 0.1.0-alpha.6
-@version: 0.1.0-alpha.39
+@version: 0.1.0-alpha.40
 
 @author: Semantyk Team
 @maintainer: Daniel Bakas <daniel@semantyk.com>
 @copyright: Semantyk © 2026
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
-import { expect, workspace, workspaceRoot } from "@semantyk/test";
+import { expect, runGh, workspace, workspaceRoot } from "@semantyk/test";
 import { Glob } from "bun";
 import { describe, test } from "bun:test";
 import { existsSync } from "node:fs";
@@ -55,19 +55,6 @@ async function collectIncludedComposes(
 
 function hasDep(name: string) {
   return Boolean(pkg.dependencies?.[name] ?? pkg.devDependencies?.[name]);
-}
-
-async function runGh(...args: string[]) {
-  const proc = Bun.spawn(["gh", ...args], {
-    stdout: "pipe",
-    stderr: "pipe",
-  });
-  const [stdout, stderr, code] = await Promise.all([
-    new Response(proc.stdout).text(),
-    new Response(proc.stderr).text(),
-    proc.exited,
-  ]);
-  return { code, stdout, stderr };
 }
 
 describe("EL STACK", () => {

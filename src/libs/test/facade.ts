@@ -6,10 +6,10 @@
 @file: This file is the public Facade for `@semantyk/test`.
 
 @created: 2026-08-29 10:33
-@modified: 2026-08-30 13:21
+@modified: 2026-08-31 10:57
 
 @since: 0.1.0-alpha.5
-@version: 0.1.0-alpha.36
+@version: 0.1.0-alpha.40
 
 @author: Semantyk Team
 @maintainer: Daniel Bakas <daniel@semantyk.com>
@@ -62,6 +62,8 @@ export {
   isSemVer,
   listRequirementIds,
 } from "./requirement.ts";
+
+export { runGh, type GhResult } from "./gh.ts";
 
 export {
   moduleSpecFileName,
