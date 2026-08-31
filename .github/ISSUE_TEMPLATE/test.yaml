@@ -19,7 +19,7 @@
 
 
 name: 🧪 Test
-description: ""
+description: "Request a test change"
 type: "🧪 Test"
 body:
   - type: textarea
