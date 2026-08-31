@@ -32,7 +32,6 @@ concurrency:
 permissions:
   contents: read
   issues: read
-  projects: read
 
 jobs:
   comply:
