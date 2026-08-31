@@ -1,0 +1,55 @@
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+# `test.yaml`
+# @organization: Semantyk
+# @project: Ecosystem
+#
+# @file: GitHub issue template for 🧪 Test.
+#
+# @created: 2026-08-30 19:51
+# @modified: 2026-08-30 19:51
+#
+# @since: 0.1.0-alpha.39
+# @version: 0.1.0-alpha.39
+#
+# @author: Semantyk Team
+# @maintainer: Daniel Bakas <daniel@semantyk.com>
+#
+# @copyright: Semantyk © 2026
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+name: 🧪 Test
+title: "🧪 Test | {Replace this with title}"
+description: Add, fix, or improve tests
+type: "🧪 Test"
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What coverage gap or failing test to address.
+    validations:
+      required: true
+  - type: textarea
+    id: target
+    attributes:
+      label: Target
+      description: Spec, module, or behavior under test.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Fixtures, commands, or constraints (optional).
+    validations:
+      required: false
+  - type: checkboxes
+    id: checkboxes
+    attributes:
+      label: Validations
+      options:
+        - label: Follow our [Code of Conduct]()
+          required: true
+        - label: Check that there isn't [already an issue](https://github.com/semantyk/semantyk/issues) for this test work.
+          required: true

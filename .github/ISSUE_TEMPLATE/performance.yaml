@@ -1,0 +1,62 @@
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+# `performance.yaml`
+# @organization: Semantyk
+# @project: Ecosystem
+#
+# @file: GitHub issue template for 🚀 Performance.
+#
+# @created: 2026-08-30 19:51
+# @modified: 2026-08-30 19:51
+#
+# @since: 0.1.0-alpha.39
+# @version: 0.1.0-alpha.39
+#
+# @author: Semantyk Team
+# @maintainer: Daniel Bakas <daniel@semantyk.com>
+#
+# @copyright: Semantyk © 2026
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+name: 🚀 Performance
+title: "🚀 Performance | {Replace this with title}"
+description: Performance regression or improvement
+type: "🚀 Performance"
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What is slow or what should improve.
+    validations:
+      required: true
+  - type: textarea
+    id: baseline
+    attributes:
+      label: Baseline
+      description: Current measurement (time, size, throughput) and how you measured it.
+    validations:
+      required: true
+  - type: textarea
+    id: target
+    attributes:
+      label: Target
+      description: Desired outcome or budget.
+    validations:
+      required: false
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Steps or commands to reproduce (optional).
+    validations:
+      required: false
+  - type: checkboxes
+    id: checkboxes
+    attributes:
+      label: Validations
+      options:
+        - label: Follow our [Code of Conduct]()
+          required: true
+        - label: Check that there isn't [already an issue](https://github.com/semantyk/semantyk/issues) for this performance work.
+          required: true

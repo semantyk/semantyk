@@ -1,0 +1,48 @@
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+# `chore.yaml`
+# @organization: Semantyk
+# @project: Ecosystem
+#
+# @file: GitHub issue template for 🧹 Chore.
+#
+# @created: 2026-08-30 19:51
+# @modified: 2026-08-30 19:51
+#
+# @since: 0.1.0-alpha.39
+# @version: 0.1.0-alpha.39
+#
+# @author: Semantyk Team
+# @maintainer: Daniel Bakas <daniel@semantyk.com>
+#
+# @copyright: Semantyk © 2026
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+name: 🧹 Chore
+title: "🧹 Chore | {Replace this with title}"
+description: Maintenance or housekeeping that is not a feature or bugfix
+type: "🧹 Chore"
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What needs to be done and why.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Paths, tools, or areas touched (optional).
+    validations:
+      required: false
+  - type: checkboxes
+    id: checkboxes
+    attributes:
+      label: Validations
+      options:
+        - label: Follow our [Code of Conduct]()
+          required: true
+        - label: Check that there isn't [already an issue](https://github.com/semantyk/semantyk/issues) for this work.
+          required: true
