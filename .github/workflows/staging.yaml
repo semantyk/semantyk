@@ -85,8 +85,8 @@ jobs:
         id: app-token
         name: 5. Generate App Token
         with:
-          client-id: ${{ vars.SEMANTYK_CI_APP_CLIENT_ID }}
-          private-key: ${{ secrets.SEMANTYK_CI_APP_PRIVATE_KEY }}
+          client-id: ${{ vars.SEMANTYK_ID }}
+          private-key: ${{ secrets.SEMANTYK_PK }}
           owner: ${{ github.repository_owner }}
       - run: bun run test
         name: 6. Run Tests
