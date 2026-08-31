@@ -1,0 +1,55 @@
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+# `initiative.yaml`
+# @organization: Semantyk
+# @project: Ecosystem
+#
+# @file: GitHub issue template for 💡 Initiative.
+#
+# @created: 2026-08-30 22:02
+# @modified: 2026-08-30 22:02
+#
+# @since: 0.1.0-alpha.40
+# @version: 0.1.0-alpha.40
+#
+# @author: Semantyk Team
+# @maintainer: Daniel Bakas <daniel@semantyk.com>
+#
+# @copyright: Semantyk © 2026
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+name: 💡 Initiative
+title: "💡 Initiative | "
+description: "Strategic goal spanning multiple features or deliverables"
+type: "💡 Initiative"
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What initiative is this and why now?
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome
+      description: What does done look like at initiative level?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Features, repos, or milestones this initiative spans (optional).
+    validations:
+      required: false
+  - type: checkboxes
+    id: checkboxes
+    attributes:
+      label: Validations
+      options:
+        - label: Follow our [Code of Conduct]()
+          required: true
+        - label: Check that there isn't [already an issue](https://github.com/semantyk/semantyk/issues) for this initiative.
+          required: true
