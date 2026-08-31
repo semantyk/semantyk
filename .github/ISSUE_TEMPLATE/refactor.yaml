@@ -19,8 +19,7 @@
 
 
 name: 🔧 Refactor
-title: "🔧 Refactor | {Replace this with title}"
-description: Internal restructuring without intentional behavior change
+description: ""
 type: "🔧 Refactor"
 body:
   - type: textarea
