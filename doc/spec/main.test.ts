@@ -6,7 +6,7 @@
 @file: This file defines the project-level specification requirements.
 
 @created: 2026-08-29 23:28
-@modified: 2026-08-31 11:38
+@modified: 2026-08-31 11:47
 
 @since: 0.1.0-alpha.6
 @version: 0.1.0-alpha.41
@@ -39,7 +39,7 @@ describe("EL PROYECTO", () => {
   });
 
   test("REQ.NF.01cf5 — DEBE tener una especificación de desarrollo", () => {
-    expect("doc/spec/development.test.ts").toExistInWorkspace();
+    expect("doc/spec/dev.test.ts").toExistInWorkspace();
   });
 });
 

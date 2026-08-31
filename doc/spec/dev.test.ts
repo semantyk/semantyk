@@ -1,12 +1,12 @@
 /*–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-# `development.test.ts`
+# `dev.test.ts`
 @organization: Semantyk
 @project: Ecosystem
 
 @file: This file defines the development specification requirements.
 
 @created: 2026-08-31 11:38
-@modified: 2026-08-31 11:38
+@modified: 2026-08-31 11:47
 
 @since: 0.1.0-alpha.40
 @version: 0.1.0-alpha.41
