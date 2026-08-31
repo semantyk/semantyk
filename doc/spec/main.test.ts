@@ -6,10 +6,10 @@
 @file: This file defines the project-level specification requirements.
 
 @created: 2026-08-29 23:28
-@modified: 2026-08-30 13:21
+@modified: 2026-08-30 20:22
 
 @since: 0.1.0-alpha.6
-@version: 0.1.0-alpha.36
+@version: 0.1.0-alpha.40
 
 @author: Semantyk Team
 @maintainer: Daniel Bakas <daniel@semantyk.com>
@@ -28,5 +28,13 @@ describe("EL PROYECTO", () => {
 
   test("REQ.NF.da742 — DEBE tener un MONOREPOSITORIO", () => {
     expect("doc/spec/repo.test.ts").toExistInWorkspace();
+  });
+
+  test("REQ.NF.b8e4f — DEBE tener un plan de trabajo", () => {
+    expect("doc/spec/plan.test.ts").toExistInWorkspace();
+  });
+
+  test("REQ.NF.6f1a3 — DEBE gestionar el trabajo con issues de GitHub", () => {
+    expect("doc/spec/issues.test.ts").toExistInWorkspace();
   });
 });

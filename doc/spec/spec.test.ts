@@ -6,7 +6,7 @@
 @file: This file defines the global specification requirements for Semantyk.
 
 @created: 2026-08-29 21:13
-@modified: 2026-08-30 13:21
+@modified: 2026-08-30 20:22
 
 @since: 0.1.0-alpha.6
 @version: 0.1.0-alpha.36
@@ -63,14 +63,9 @@ describe("LA ESPECIFICACIÓN", () => {
     }
   });
 
-  test("REQ.NF.08c47 — DEBE contener un triaje global", () => {
-    expect("doc/spec/TRIAGE.md").toExistInWorkspace();
-  });
-
   test("REQ.NF.14504 — PUEDE contener un triaje por módulo", async () => {
     for await (const path of new Glob("**/TRIAGE.md").scan({ cwd: workspaceRoot })) {
       const relativePath = path.replaceAll("\\", "/");
-      if (relativePath === "doc/spec/TRIAGE.md") continue;
       if (relativePath.includes("node_modules/") || relativePath.includes(".git/")) continue;
       expect(dirname(resolve(workspaceRoot, relativePath))).toHaveModuleSpec();
     }
