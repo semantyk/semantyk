@@ -19,6 +19,7 @@
 
 
 name: 🔧 Refactor
+title: "🔧 Refactor | "
 description: "Restructure code without changing intended behavior"
 type: "🔧 Refactor"
 body:
