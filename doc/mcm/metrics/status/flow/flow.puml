@@ -42,7 +42,6 @@ partition "ACTIVAS" {
 partition "FINALIZADAS" {
   :S7 · REALIZADO;
   :S8 · TERMINADO;
-  :S9 · ARCHIVADO;
 }
 
 stop

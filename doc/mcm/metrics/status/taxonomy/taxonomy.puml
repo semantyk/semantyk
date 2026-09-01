@@ -22,7 +22,7 @@
 '* Imports
 !include ../../../../../src/packages/ux/styles/main.styles.puml
 
-mainframe <<métricas>>\n**STATUS**\nS0–S9
+mainframe <<métricas>>\n**STATUS**\nS0–S8
 
 *
  * PENDIENTES
@@ -37,7 +37,6 @@ mainframe <<métricas>>\n**STATUS**\nS0–S9
  * FINALIZADAS
   * S7 · REALIZADO
   * S8 · TERMINADO
-  * S9 · ARCHIVADO
 
 footer <size:8>Semantyk © 2026</size>
 
