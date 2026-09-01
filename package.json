@@ -1,14 +1,15 @@
 {
   "name": "@semantyk/ecosystem",
-  "version": "0.1.0-alpha.41",
+  "version": "0.1.0-alpha.42",
   "private": true,
   "description": "Our ecosystem",
   "license": "CC-BY-NC-SA-4.0",
   "type": "module",
   "packageManager": "bun@1.4.0",
   "workspaces": [
-    "src/libs/*",
-    "src/packages/*"
+    "src/apps/**",
+    "src/libs/**",
+    "src/packages/**"
   ],
   "scripts": {
     "build": "nx run-many -t build --parallel=100%",

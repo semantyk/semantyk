@@ -23,6 +23,7 @@ const pkg = await workspace.readJson<{
   name: string;
   description: string;
   license?: string;
+  workspaces?: string[];
   scripts?: Record<string, string>;
   nx?: unknown;
 }>("package.json");
@@ -74,6 +75,14 @@ describe("EL MONOREPOSITORIO", () => {
     expect("src/apps").toExistInWorkspace();
     expect("src/libs").toExistInWorkspace();
     expect("src/packages").toExistInWorkspace();
+  });
+
+  test("REQ.NF.f4b8c — DEBE declarar workspaces para apps, libs y packages", () => {
+    expect(pkg.workspaces).toEqual([
+      "src/apps/**",
+      "src/libs/**",
+      "src/packages/**",
+    ]);
   });
 
   test("REQ.NF.7ba58 — DEBE tener un CÓDIGO FUENTE", () => {

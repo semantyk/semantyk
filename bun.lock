@@ -22,9 +22,13 @@
         "typescript": "^7.0.2",
       },
     },
+    "src/apps/sandbox/poc/www": {
+      "name": "@semantyk/www",
+      "version": "0.1.0-alpha.42",
+    },
     "src/libs/test": {
       "name": "@semantyk/test",
-      "version": "0.1.0-alpha.36",
+      "version": "0.1.0-alpha.40",
     },
     "src/packages/data": {
       "name": "@semantyk/data",
@@ -149,6 +153,8 @@
     "@semantyk/test": ["@semantyk/test@workspace:src/libs/test"],
 
     "@semantyk/ux": ["@semantyk/ux@workspace:src/packages/ux"],
+
+    "@semantyk/www": ["@semantyk/www@workspace:src/apps/sandbox/poc/www"],
 
     "@swc/helpers": ["@swc/helpers@0.5.23", "", { "dependencies": { "tslib": "^2.8.0" } }, "sha512-5lSsMOTXURePglDfvuAQUqkGek9Hg2kksOYay2m0+XR++b2NWYL/4sWyuvVBIs8oKnJaxkdi9whaL/sqN13afw=="],
 

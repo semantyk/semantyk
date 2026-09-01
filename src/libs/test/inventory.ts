@@ -30,7 +30,8 @@ export const ignoreVcsAndCaches: PathFilter = (relativePath) =>
   relativePath.includes("node_modules/") ||
   relativePath.includes(".git/") ||
   relativePath.includes(".nx/") ||
-  relativePath.endsWith(".gitkeep");
+  relativePath.endsWith(".gitkeep") ||
+  relativePath.endsWith("next-env.d.ts");
 
 export const ignoreThisLib: PathFilter = (relativePath) =>
   relativePath.startsWith("src/libs/test/");
