@@ -6,7 +6,7 @@
 # @file: This file contains the list of files and folders that are ignored by Git.
 #
 # @created: 2025-03-18 00:00
-# @modified: 2026-08-30 20:14
+# @modified: 2026-09-01 17:50
 #
 # @since: 0.1.0-alpha.0
 # @version: 0.1.0-alpha.0
@@ -17,8 +17,8 @@
 # @copyright: Semantyk © 2026
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
-# Created by https://www.toptal.com/developers/gitignore/api/git,macos,node,visualstudiocode
-# Edit at https://www.toptal.com/developers/gitignore?templates=git,macos,node,visualstudiocode
+# Created by https://www.toptal.com/developers/gitignore/api/git,node,macos,nextjs,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=git,node,macos,nextjs,visualstudiocode
 
 ### Git ###
 # Created by git for backups. To disable backups in Git:
@@ -68,13 +68,45 @@ Temporary Items
 # iCloud generated files
 *.icloud
 
+### NextJS ###
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
 ### Node ###
 # Logs
 logs
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 lerna-debug.log*
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
@@ -116,7 +148,6 @@ jspm_packages/
 web_modules/
 
 # TypeScript cache
-*.tsbuildinfo
 
 # Optional npm cache directory
 .npm
@@ -226,7 +257,7 @@ dist
 .history
 .ionide
 
-# End of https://www.toptal.com/developers/gitignore/api/git,macos,node,visualstudiocode
+# End of https://www.toptal.com/developers/gitignore/api/git,node,macos,nextjs,visualstudiocode
 
 ### Nx ###
 .nx/cache
