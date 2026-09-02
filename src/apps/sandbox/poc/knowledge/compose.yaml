@@ -6,10 +6,10 @@
 # @file: This file defines the Docker Compose services for the knowledge app.
 #
 # @created: 2026-09-02 11:06
-# @modified: 2026-09-02 12:36
+# @modified: 2026-09-02 13:23
 #
 # @since: 0.1.0-alpha.42
-# @version: 0.1.0-alpha.43
+# @version: 0.1.0-alpha.45
 #
 # @author: Semantyk Team
 # @maintainer: Daniel Bakas <daniel@semantyk.com>
@@ -30,7 +30,6 @@ services:
   knowledge:
     container_name: knowledge
     build: .
-    platform: linux/amd64
     env_file:
       - .env
     ports:

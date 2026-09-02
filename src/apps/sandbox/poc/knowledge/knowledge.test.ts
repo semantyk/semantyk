@@ -6,7 +6,7 @@
 @file: This file defines the knowledge product specification requirements under poc.
 
 @created: 2026-09-02 13:11
-@modified: 2026-09-02 13:11
+@modified: 2026-09-02 13:23
 
 @since: 0.1.0-alpha.42
 @version: 0.1.0-alpha.45
@@ -84,9 +84,12 @@ describe("KNOWLEDGE", () => {
       });
   });
 
-  test("REQ.F.a81e0 — DEBE incluir GeoSPARQL en `/fuseki-extra`", () => {
-    expect(dockerfile).toMatch(/\/fuseki-extra\/jena-fuseki-geosparql-/);
-    expect(dockerfile).toMatch(/jena-fuseki-geosparql\/\$\{JENA_VERSION\}\//);
+  test("REQ.F.a81e0 — DEBE usar Apache Jena Fuseki 6 con GeoSPARQL nativo", () => {
+    expect(dockerfile).toMatch(/FROM\s+eclipse-temurin:21-jre-alpine/);
+    expect(dockerfile).toMatch(/JENA_VERSION=6\.2\.0/);
+    expect(dockerfile).toMatch(/jena-fuseki-server-\$\{JENA_VERSION\}\.jar/);
+    expect(dockerfile).not.toMatch(/stain\/jena-fuseki/);
+    expect(dockerfile).not.toMatch(/fuseki-extra|jena-fuseki-geosparql/);
     expect(dockerfile).toMatch(/SIS_DATA=\/fuseki\/databases\/sis/);
   });
 
@@ -138,7 +141,7 @@ describe("KNOWLEDGE", () => {
     const shiro = resolve(here, "src/config/shiro.ini");
     expect(existsSync(shiro)).toBe(true);
     expect(statSync(shiro).isFile()).toBe(true);
-    expect(dockerfile).toMatch(/COPY\s+src\/config\/shiro\.ini\s+\/jena-fuseki\/shiro\.ini/);
+    expect(dockerfile).toMatch(/COPY\s+src\/config\/shiro\.ini\s+\/opt\/fuseki\/shiro\.ini/);
   });
 
   test("REQ.F.3c903 — Cada dataset DEBE declararse como `{nombre}.config.ttl`", () => {
@@ -162,7 +165,7 @@ describe("KNOWLEDGE", () => {
       expect(contents).toMatch(/\/fuseki\/logs\/requests\.log/);
       expect(contents).toMatch(/logger\.fuseki-request\.level\s*=\s*INFO/);
       expect(dockerfile).toMatch(
-        /COPY\s+src\/config\/log4j2\.properties\s+\/jena-fuseki\/log4j2\.properties/,
+        /COPY\s+src\/config\/log4j2\.properties\s+\/opt\/fuseki\/log4j2\.properties/,
       );
     });
   });
