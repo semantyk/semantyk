@@ -6,7 +6,7 @@
 @file: This file defines the sandbox apps module specification requirements.
 
 @created: 2026-08-30 13:38
-@modified: 2026-09-01 17:40
+@modified: 2026-09-02 11:22
 
 @since: 0.1.0-alpha.37
 @version: 0.1.0-alpha.42
@@ -22,29 +22,27 @@ import { existsSync, readdirSync, statSync } from "node:fs";
 import { resolve } from "node:path";
 
 const here = import.meta.dir;
-const maturity = ["poc", "proto", "pilot", "mvp", "gap"] as const;
+const productTypes = ["poc", "proto", "pilot", "mvp", "gap"] as const;
 const promotion = ["dev", "staging", "main"] as const;
 
 describe("SANDBOX", () => {
-  test("REQ.F.3c7b2 — DEBE contener los módulos de madurez `poc`, `proto`, `pilot`, `mvp` y `gap`", () => {
-    for (const name of maturity) {
+  test("REQ.F.3c7b2 — DEBE contener los tipos de producto `poc`, `proto`, `pilot`, `mvp` y `gap`", () => {
+    for (const name of productTypes) {
       const dir = resolve(here, name);
       expect(existsSync(dir)).toBe(true);
       expect(statSync(dir).isDirectory()).toBe(true);
     }
   });
 
-  test("REQ.F.9b3c7 — DEBE contener el producto `www` en `poc`", () => {
-    const www = resolve(here, "poc", "www");
-    expect(existsSync(www)).toBe(true);
-    expect(statSync(www).isDirectory()).toBe(true);
-  });
-
-  test("REQ.F.24c55 — PUEDE contener productos (aplicaciones, servicios, etc.) por módulo de madurez", () => {
-    for (const name of maturity) {
+  test("REQ.F.24c55 — PUEDE contener productos por tipo; cada tipo con productos DEBE tener su especificación", () => {
+    for (const name of productTypes) {
       const dir = resolve(here, name);
-      for (const entry of readdirSync(dir, { withFileTypes: true })) {
-        if (!entry.isDirectory() || entry.name.startsWith(".")) continue;
+      const products = readdirSync(dir, { withFileTypes: true }).filter(
+        (entry) => entry.isDirectory() && !entry.name.startsWith("."),
+      );
+      if (products.length === 0) continue;
+      expectModuleSpec(dir);
+      for (const entry of products) {
         expectModuleSpec(resolve(dir, entry.name));
       }
     }

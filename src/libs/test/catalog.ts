@@ -6,10 +6,10 @@
 @file: This file holds immutable specification patterns shared by tests (Flyweight).
 
 @created: 2026-08-30 13:11
-@modified: 2026-08-31 11:51
+@modified: 2026-09-02 11:37
 
 @since: 0.1.0-alpha.36
-@version: 0.1.0-alpha.41
+@version: 0.1.0-alpha.42
 
 @author: Semantyk Team
 @maintainer: Daniel Bakas <daniel@semantyk.com>
@@ -67,6 +67,7 @@ export const AUTHORED_FILE_GLOBS = [
   "**/*.yaml",
   "**/*.yml",
   "**/*.puml",
+  "**/*.ttl",
   "**/.gitignore",
   "**/.env*.example",
 ] as const;

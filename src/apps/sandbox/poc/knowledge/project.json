@@ -1,0 +1,35 @@
+{
+  "name": "@semantyk/knowledge",
+  "targets": {
+    "build": {
+      "command": "docker compose build",
+      "options": {
+        "cwd": "{projectRoot}"
+      }
+    },
+    "dev": {
+      "command": "docker compose up",
+      "options": {
+        "cwd": "{projectRoot}"
+      }
+    },
+    "start": {
+      "command": "docker compose up -d",
+      "options": {
+        "cwd": "{projectRoot}"
+      }
+    },
+    "stop": {
+      "command": "docker compose down",
+      "options": {
+        "cwd": "{projectRoot}"
+      }
+    },
+    "test": {
+      "command": "bun test",
+      "options": {
+        "cwd": "{projectRoot}"
+      }
+    }
+  }
+}

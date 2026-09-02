@@ -6,7 +6,7 @@
 @file: This file defines the monorepository specification requirements.
 
 @created: 2026-08-29 23:29
-@modified: 2026-09-02 09:35
+@modified: 2026-09-02 11:43
 
 @since: 0.1.0-alpha.6
 @version: 0.1.0-alpha.42
@@ -152,6 +152,21 @@ describe("EL MONOREPOSITORIO", () => {
   test("REQ.NF.e1085 — DEBE declarar los targets de nx del repositorio en `project.json`", () => {
     expect("project.json").toExistInWorkspace();
     expect(pkg.nx).toBeUndefined();
+  });
+
+  test("REQ.NF.392aa — DEBE tener un único `.gitignore` en la raíz del repositorio", async () => {
+    expect(".gitignore").toExistInWorkspace();
+    const nested: string[] = [];
+    for await (const path of new Glob("**/.gitignore").scan({
+      cwd: workspaceRoot,
+    })) {
+      const normalized = path.replaceAll("\\", "/");
+      if (normalized === ".gitignore") continue;
+      if (normalized.includes("node_modules/") || normalized.includes(".git/"))
+        continue;
+      nested.push(normalized);
+    }
+    expect(nested).toEqual([]);
   });
 
   test("REQ.NF.39503 — DEBE mostrar en el README el badge de compliance de la rama de entorno", async () => {

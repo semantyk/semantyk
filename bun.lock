@@ -22,6 +22,10 @@
         "typescript": "^7.0.2",
       },
     },
+    "src/apps/sandbox/poc/knowledge": {
+      "name": "@semantyk/knowledge",
+      "version": "0.1.0-alpha.42",
+    },
     "src/apps/sandbox/poc/www": {
       "name": "@semantyk/www",
       "version": "0.1.0-alpha.42",
@@ -147,6 +151,8 @@
     "@nx/nx-win32-x64-msvc": ["@nx/nx-win32-x64-msvc@23.1.2", "", { "os": "win32", "cpu": "x64" }, "sha512-7fAteEO6NSWLzrzy+QQoG6n78vKAcbOMgM/f7P1kIXzUWNzPNgCg4Svz2OuxkWEnZs8KGDcqw0YILggdQlqd8g=="],
 
     "@semantyk/data": ["@semantyk/data@workspace:src/packages/data"],
+
+    "@semantyk/knowledge": ["@semantyk/knowledge@workspace:src/apps/sandbox/poc/knowledge"],
 
     "@semantyk/logic": ["@semantyk/logic@workspace:src/packages/logic"],
 

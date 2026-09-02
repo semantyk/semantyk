@@ -1,14 +1,14 @@
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-# `compose.yaml`
+# `Dockerfile`
 # @organization: Semantyk
 # @project: Ecosystem
 #
-# @file: This file defines the Docker Compose services for the sandbox apps module.
+# @file: This file defines the Docker image for the knowledge app.
 #
-# @created: 2026-08-30 13:38
-# @modified: 2026-09-02 11:19
+# @created: 2026-09-02 11:48
+# @modified: 2026-09-02 12:16
 #
-# @since: 0.1.0-alpha.37
+# @since: 0.1.0-alpha.42
 # @version: 0.1.0-alpha.42
 #
 # @author: Semantyk Team
@@ -16,12 +16,16 @@
 # @copyright: Semantyk © 2026
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
-include:
-  - path: poc/knowledge/compose.yaml
+FROM stain/jena-fuseki:5.1.0
 
-networks:
-  sandbox:
-    name: sandbox
-    driver: bridge
+ENV FUSEKI_BASE=/fuseki
 
-services: {}
+EXPOSE 3030
+
+COPY entrypoint.sh /knowledge-entrypoint.sh
+COPY src/config/shiro.ini /jena-fuseki/shiro.ini
+COPY src/config/log4j2.properties /jena-fuseki/log4j2.properties
+COPY src/config/*.config.ttl /fuseki/configuration/
+
+ENTRYPOINT ["/sbin/tini", "--", "sh", "/knowledge-entrypoint.sh"]
+CMD ["/jena-fuseki/fuseki-server"]

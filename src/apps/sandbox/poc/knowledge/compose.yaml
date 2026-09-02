@@ -3,12 +3,12 @@
 # @organization: Semantyk
 # @project: Ecosystem
 #
-# @file: This file defines the Docker Compose services for the sandbox apps module.
+# @file: This file defines the Docker Compose services for the knowledge app.
 #
-# @created: 2026-08-30 13:38
-# @modified: 2026-09-02 11:19
+# @created: 2026-09-02 11:06
+# @modified: 2026-09-02 12:06
 #
-# @since: 0.1.0-alpha.37
+# @since: 0.1.0-alpha.42
 # @version: 0.1.0-alpha.42
 #
 # @author: Semantyk Team
@@ -16,12 +16,29 @@
 # @copyright: Semantyk © 2026
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
-include:
-  - path: poc/knowledge/compose.yaml
+name: semantyk
 
 networks:
-  sandbox:
-    name: sandbox
+  knowledge:
+    name: knowledge
+    driver: bridge
+  semantyk:
+    name: semantyk
     driver: bridge
 
-services: {}
+services:
+  knowledge:
+    container_name: knowledge
+    build: .
+    platform: linux/amd64
+    env_file:
+      - .env
+    ports:
+      - "3031:3030"
+    volumes:
+      - ./src/data:/fuseki/databases
+      - ./src/config:/fuseki/configuration
+      - ./src/logs:/fuseki/logs
+    networks:
+      - knowledge
+      - semantyk

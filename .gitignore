@@ -6,10 +6,10 @@
 # @file: This file contains the list of files and folders that are ignored by Git.
 #
 # @created: 2025-03-18 00:00
-# @modified: 2026-09-01 17:50
+# @modified: 2026-09-02 11:47
 #
 # @since: 0.1.0-alpha.0
-# @version: 0.1.0-alpha.0
+# @version: 0.1.0-alpha.42
 #
 # @author: Semantyk Team
 # @maintainer: Daniel Bakas <daniel@semantyk.com>
@@ -258,6 +258,13 @@ dist
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/git,node,macos,nextjs,visualstudiocode
+
+### Knowledge (Fuseki store) ###
+**/knowledge/src/data/*
+!**/knowledge/src/data/.gitkeep
+!**/knowledge/src/logs/
+**/knowledge/src/logs/*
+!**/knowledge/src/logs/.gitkeep
 
 ### Nx ###
 .nx/cache
