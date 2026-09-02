@@ -6,7 +6,7 @@
 @file: This file defines the www product specification requirements under poc.
 
 @created: 2026-09-01 17:35
-@modified: 2026-09-02 10:05
+@modified: 2026-09-02 10:22
 
 @since: 0.1.0-alpha.42
 @version: 0.1.0-alpha.42
@@ -59,5 +59,11 @@ describe("WWW", () => {
       expect(existsSync(dir)).toBe(true);
       expect(statSync(dir).isDirectory()).toBe(true);
     }
+  });
+
+  test("REQ.F.e2190 — DEBE exponer el BFF en `src/app/api`", () => {
+    const api = resolve(here, "src/app/api");
+    expect(existsSync(api)).toBe(true);
+    expect(statSync(api).isDirectory()).toBe(true);
   });
 });
