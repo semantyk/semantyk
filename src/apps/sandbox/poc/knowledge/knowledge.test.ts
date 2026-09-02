@@ -6,10 +6,10 @@
 @file: This file defines the knowledge product specification requirements under poc.
 
 @created: 2026-09-02 11:06
-@modified: 2026-09-02 14:03
+@modified: 2026-09-02 14:20
 
 @since: 0.1.0-alpha.42
-@version: 0.1.0-alpha.47
+@version: 0.1.0-alpha.48
 
 @author: Semantyk Team
 @maintainer: Daniel Bakas <daniel@semantyk.com>
@@ -131,6 +131,7 @@ describe("KNOWLEDGE", () => {
       expect(exampleText).toMatch(/^SEMANTYK_BASE_URI=/m);
       expect(exampleText).toMatch(/^JVM_ARGS=/m);
       expect(entrypointText).toMatch(/\bCREDENTIALS\b/);
+      expect(entrypointText).toMatch(/dataset\.reset\.ru/);
       expect(entrypointText).toMatch(/dataset\.trig/);
       expect(entrypointText).toMatch(/basename/);
       expect(shiroText).toMatch(/\/\*\/prefixes-rw\/\*\*/);
@@ -145,6 +146,7 @@ describe("KNOWLEDGE", () => {
       expect(statSync(dir).isDirectory()).toBe(true);
     }
     expect(existsSync(resolve(here, "src/seed/context.ttl"))).toBe(true);
+    expect(existsSync(resolve(here, "src/seed/dataset.reset.ru"))).toBe(true);
     expect(existsSync(resolve(here, "src/seed/dataset.trig"))).toBe(true);
   });
 

@@ -6,10 +6,10 @@
 # @file: This file defines the Docker Compose services for the knowledge app.
 #
 # @created: 2026-09-02 11:06
-# @modified: 2026-09-02 14:03
+# @modified: 2026-09-02 14:20
 #
 # @since: 0.1.0-alpha.42
-# @version: 0.1.0-alpha.47
+# @version: 0.1.0-alpha.48
 #
 # @author: Semantyk Team
 # @maintainer: Daniel Bakas <daniel@semantyk.com>
@@ -17,14 +17,6 @@
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 name: semantyk
-
-networks:
-  knowledge:
-    name: knowledge
-    driver: bridge
-  semantyk:
-    name: semantyk
-    driver: bridge
 
 services:
   knowledge:
@@ -46,4 +38,8 @@ services:
       - /fuseki/system_files:uid=1000,gid=1000,mode=0755
     networks:
       - knowledge
-      - semantyk
+
+networks:
+  knowledge:
+    name: knowledge
+    driver: bridge

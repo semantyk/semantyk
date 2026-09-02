@@ -7,10 +7,10 @@
 # @file: This file renders Shiro from CREDENTIALS, starts Fuseki, and seeds datasets.
 #
 # @created: 2026-09-02 12:16
-# @modified: 2026-09-02 14:03
+# @modified: 2026-09-02 14:20
 #
 # @since: 0.1.0-alpha.42
-# @version: 0.1.0-alpha.47
+# @version: 0.1.0-alpha.48
 #
 # @author: Semantyk Team
 # @maintainer: Daniel Bakas <daniel@semantyk.com>
@@ -69,6 +69,15 @@ seed_prefix_map() {
   done
 }
 
+reset_logical_model() {
+  dataset="$1"
+  export DATASET="${dataset}"
+  envsubst '${SEMANTYK_BASE_URI} ${DATASET}' < "${FUSEKI_SEED}/dataset.reset.ru" |
+    curl_admin -X POST "${FUSEKI_URL}/${dataset}/update" \
+      -H "Content-Type: application/sparql-update" \
+      --data-binary @- >/dev/null
+}
+
 seed_trig() {
   dataset="$1"
   export DATASET="${dataset}"
@@ -80,6 +89,7 @@ seed_trig() {
 
 seed_dataset() {
   dataset="$1"
+  reset_logical_model "${dataset}"
   seed_trig "${dataset}"
   seed_prefix_map "${dataset}"
 }
