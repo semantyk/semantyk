@@ -1,0 +1,21 @@
+---
+description: Development conventions for the Semantyk monorepo
+alwaysApply: true
+---
+
+# EL DESARROLLO
+
+## VERSIONAMIENTO
+
+Tras cada commit exitoso (salvo que el usuario diga explícitamente que no):
+
+1. Incrementar el pre-release en el `package.json` raíz: `0.1.0-alpha.N` → `0.1.0-alpha.(N+1)`.
+2. Alinear el `version` de los `package.json` de workspace tocados o creados en ese trabajo.
+3. Actualizar `@version` y `@modified` en los archivos con header Semantyk que se hayan tocado.
+4. Hacer un commit aparte: `🧹 Chore: Bump to 0.1.0-alpha.N`.
+
+## COMMITS
+
+- Estilo: `emoji Type: Subject` (p. ej. `✨ Feature: …`, `🧹 Chore: …`).
+- No pushear ni hacer force-push a menos que el usuario lo pida.
+- No commitear secretos (`.env`, credenciales, store/logs de knowledge).
