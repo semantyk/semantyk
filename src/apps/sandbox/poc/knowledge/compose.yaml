@@ -5,8 +5,8 @@
 #
 # @file: This file defines the Docker Compose services for the knowledge app.
 #
-# @created: 2026-09-02 13:38
-# @modified: 2026-09-02 13:38
+# @created: 2026-09-02 11:06
+# @modified: 2026-09-02 13:58
 #
 # @since: 0.1.0-alpha.42
 # @version: 0.1.0-alpha.46
@@ -37,7 +37,13 @@ services:
     volumes:
       - ./src/data:/fuseki/databases
       - ./src/config:/fuseki/configuration
+      - ./src/seed:/fuseki/seed
       - ./src/logs:/fuseki/logs
+    # Keep declarative *.config.ttl as the only service registry.
+    # Fuseki Full also persists services under system/; that duplicates names.
+    tmpfs:
+      - /fuseki/system:uid=1000,gid=1000,mode=0755
+      - /fuseki/system_files:uid=1000,gid=1000,mode=0755
     networks:
       - knowledge
       - semantyk

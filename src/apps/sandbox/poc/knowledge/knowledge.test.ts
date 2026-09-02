@@ -5,8 +5,8 @@
 
 @file: This file defines the knowledge product specification requirements under poc.
 
-@created: 2026-09-02 13:38
-@modified: 2026-09-02 13:38
+@created: 2026-09-02 11:06
+@modified: 2026-09-02 13:58
 
 @since: 0.1.0-alpha.42
 @version: 0.1.0-alpha.46
@@ -34,6 +34,7 @@ const compose = await workspace.readYaml<{
       environment?: Record<string, string> | string[];
       env_file?: string | string[] | { path?: string }[];
       volumes?: string[];
+      tmpfs?: string[];
     }
   >;
 }>("src/apps/sandbox/poc/knowledge/compose.yaml");
@@ -68,26 +69,37 @@ describe("KNOWLEDGE", () => {
     expect(compose.services?.knowledge?.build).toBeDefined();
   });
 
-  test("REQ.F.6c05c — DEBE declarar el dataset `sandbox` en `src/config`", () => {
-    const ttl = resolve(here, "src/config/sandbox.config.ttl");
-    expect(existsSync(ttl)).toBe(true);
+  test("REQ.F.6c05c — DEBE declarar los datasets `sandbox` y `system` en `src/config`", () => {
+    const sandbox = resolve(here, "src/config/sandbox.config.ttl");
+    const system = resolve(here, "src/config/system.config.ttl");
+    expect(existsSync(sandbox)).toBe(true);
+    expect(existsSync(system)).toBe(true);
     expect(dockerfile).not.toMatch(/\bFUSEKI_DATASET_/);
     expect(compose.services?.knowledge?.environment).toBeUndefined();
-    return Bun.file(ttl)
-      .text()
-      .then((contents) => {
-        expect(contents).toMatch(/fuseki:name\s+"sandbox"/);
-        expect(contents).toMatch(/tdb2:location\s+"\/fuseki\/databases\/sandbox"/);
-        expect(contents).toMatch(/geosparql:geosparqlDataset/);
-        expect(contents).toMatch(/fuseki:operation\s+fuseki:upload/);
-        expect(contents).toMatch(/fuseki:operation\s+fuseki:shacl/);
-      });
+    return Promise.all([Bun.file(sandbox).text(), Bun.file(system).text()]).then(
+      ([sandboxText, systemText]) => {
+        expect(sandboxText).toMatch(/fuseki:name\s+"sandbox"/);
+        expect(sandboxText).toMatch(/tdb2:location\s+"\/fuseki\/databases\/sandbox"/);
+        expect(sandboxText).toMatch(/geosparql:GeosparqlDataset/);
+        expect(sandboxText).not.toMatch(/geosparql:spatialIndexFile/);
+        expect(sandboxText).toMatch(/geosparql:inference\s+false/);
+        expect(sandboxText).toMatch(/fuseki:operation\s+fuseki:upload/);
+        expect(sandboxText).toMatch(/fuseki:operation\s+fuseki:shacl/);
+        expect(sandboxText).toMatch(/fuseki:operation\s+fuseki:prefixes-r/);
+        expect(systemText).toMatch(/fuseki:name\s+"system"/);
+        expect(systemText).toMatch(/geosparql:GeosparqlDataset/);
+        expect(systemText).not.toMatch(/geosparql:spatialIndexFile/);
+        expect(systemText).toMatch(/fuseki:operation\s+fuseki:prefixes-rw/);
+      },
+    );
   });
 
   test("REQ.F.a81e0 — DEBE usar Apache Jena Fuseki 6 con GeoSPARQL nativo", () => {
     expect(dockerfile).toMatch(/FROM\s+eclipse-temurin:21-jre-alpine/);
     expect(dockerfile).toMatch(/JENA_VERSION=6\.2\.0/);
-    expect(dockerfile).toMatch(/jena-fuseki-server-\$\{JENA_VERSION\}\.jar/);
+    expect(dockerfile).toMatch(/apache-jena-fuseki-\$\{JENA_VERSION\}\.tar\.gz/);
+    expect(dockerfile).toMatch(/CMD\s+\[\"\/jena-fuseki\/fuseki-server\"\]/);
+    expect(dockerfile).toMatch(/COPY\s+src\/seed\//);
     expect(dockerfile).not.toMatch(/stain\/jena-fuseki/);
     expect(dockerfile).not.toMatch(/fuseki-extra|jena-fuseki-geosparql/);
     expect(dockerfile).toMatch(/SIS_DATA=\/fuseki\/databases\/sis/);
@@ -116,32 +128,44 @@ describe("KNOWLEDGE", () => {
       Bun.file(entrypoint).text(),
     ]).then(([exampleText, shiroText, entrypointText]) => {
       expect(exampleText).toMatch(/^CREDENTIALS=/m);
+      expect(exampleText).toMatch(/^SEMANTYK_BASE_URI=/m);
+      expect(exampleText).toMatch(/^JVM_ARGS=/m);
       expect(entrypointText).toMatch(/\bCREDENTIALS\b/);
-      expect(shiroText).toMatch(/\$\{ADMIN_USER\}=\$\{ADMIN_PASSWORD\}/);
+      expect(entrypointText).toMatch(/dataset\.trig/);
+      expect(entrypointText).toMatch(/basename/);
+      expect(shiroText).toMatch(/\/\*\/prefixes-rw\/\*\*/);
       expect(shiroText).toMatch(/user\[\$\{ADMIN_USER\}\]/);
     });
   });
 
-  test("REQ.F.c464c — DEBE contener `src/config`, `src/data` y `src/logs`", () => {
-    for (const name of ["config", "data", "logs"] as const) {
+  test("REQ.F.c464c — DEBE contener `src/config`, `src/data`, `src/logs` y `src/seed`", () => {
+    for (const name of ["config", "data", "logs", "seed"] as const) {
       const dir = resolve(here, "src", name);
       expect(existsSync(dir)).toBe(true);
       expect(statSync(dir).isDirectory()).toBe(true);
     }
+    expect(existsSync(resolve(here, "src/seed/context.ttl"))).toBe(true);
+    expect(existsSync(resolve(here, "src/seed/dataset.trig"))).toBe(true);
   });
 
-  test("REQ.F.01f11 — DEBE montar `src/config`, `src/data` y `src/logs` en el servicio", () => {
+  test("REQ.F.01f11 — DEBE montar `src/config`, `src/data`, `src/seed` y `src/logs` en el servicio", () => {
     const volumes = compose.services?.knowledge?.volumes ?? [];
+    const tmpfs = compose.services?.knowledge?.tmpfs ?? [];
     expect(volumes.some((volume) => volume.includes("src/config"))).toBe(true);
     expect(volumes.some((volume) => volume.includes("src/data"))).toBe(true);
+    expect(volumes.some((volume) => volume.includes("src/seed"))).toBe(true);
     expect(volumes.some((volume) => volume.includes("src/logs"))).toBe(true);
+    expect(tmpfs.some((entry) => entry.includes("/fuseki/system:"))).toBe(true);
+    expect(tmpfs.some((entry) => entry.includes("/fuseki/system_files:"))).toBe(
+      true,
+    );
   });
 
   test("REQ.F.c23c8 — DEBE declarar `shiro.ini` en `src/config` y copiarlo en el `Dockerfile`", () => {
     const shiro = resolve(here, "src/config/shiro.ini");
     expect(existsSync(shiro)).toBe(true);
     expect(statSync(shiro).isFile()).toBe(true);
-    expect(dockerfile).toMatch(/COPY\s+src\/config\/shiro\.ini\s+\/opt\/fuseki\/shiro\.ini/);
+    expect(dockerfile).toMatch(/COPY\s+src\/config\/shiro\.ini\s+\/jena-fuseki\/shiro\.ini/);
   });
 
   test("REQ.F.3c903 — Cada dataset DEBE declararse como `{nombre}.config.ttl`", () => {
@@ -152,6 +176,7 @@ describe("KNOWLEDGE", () => {
       expect(name).toMatch(/^[a-z0-9]+(-[a-z0-9]+)*\.config\.ttl$/);
     }
     expect(existsSync(resolve(config, "sandbox.config.ttl"))).toBe(true);
+    expect(existsSync(resolve(config, "system.config.ttl"))).toBe(true);
     expect(dockerfile).toMatch(/COPY\s+src\/config\/\*\.config\.ttl\s+\/fuseki\/configuration\//);
   });
 
@@ -165,7 +190,7 @@ describe("KNOWLEDGE", () => {
       expect(contents).toMatch(/\/fuseki\/logs\/requests\.log/);
       expect(contents).toMatch(/logger\.fuseki-request\.level\s*=\s*INFO/);
       expect(dockerfile).toMatch(
-        /COPY\s+src\/config\/log4j2\.properties\s+\/opt\/fuseki\/log4j2\.properties/,
+        /COPY\s+src\/config\/log4j2\.properties\s+\/jena-fuseki\/log4j2\.properties/,
       );
     });
   });

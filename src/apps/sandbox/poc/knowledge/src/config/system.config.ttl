@@ -1,14 +1,14 @@
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-# `sandbox.config.ttl`
+# `system.config.ttl`
 # @organization: Semantyk
 # @project: Ecosystem
 #
-# @file: This file defines the assembler configuration for the sandbox dataset.
+# @file: This file defines the assembler configuration for the system dataset.
 #
-# @created: 2026-09-02 11:29
+# @created: 2026-09-02 13:43
 # @modified: 2026-09-02 13:58
 #
-# @since: 0.1.0-alpha.42
+# @since: 0.1.0-alpha.46
 # @version: 0.1.0-alpha.46
 #
 # @author: Semantyk Team
@@ -23,24 +23,22 @@ PREFIX geosparql: <http://jena.apache.org/geosparql#>
 PREFIX rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX tdb2:      <http://jena.apache.org/2016/tdb#>
 
-:sandbox_store  rdf:type  tdb2:DatasetTDB2 ;
-        tdb2:location  "/fuseki/databases/sandbox" .
+:system_store  rdf:type  tdb2:DatasetTDB2 ;
+        tdb2:location  "/fuseki/databases/system" .
 
 # GeoSPARQL without a persistent spatial.index file.
-:sandbox  rdf:type  geosparql:GeosparqlDataset ;
-        geosparql:dataset    :sandbox_store ;
+:system  rdf:type  geosparql:GeosparqlDataset ;
+        geosparql:dataset    :system_store ;
         geosparql:srsUri     <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ;
         geosparql:inference  false .
 
-:sandbox_service  rdf:type  fuseki:Service ;
-        fuseki:name     "sandbox" ;
-        fuseki:dataset  :sandbox ;
+:system_service  rdf:type  fuseki:Service ;
+        fuseki:name     "system" ;
+        fuseki:dataset  :system ;
         fuseki:endpoint [ fuseki:operation fuseki:query ; fuseki:name "sparql" ] ;
         fuseki:endpoint [ fuseki:operation fuseki:query ; fuseki:name "query" ] ;
         fuseki:endpoint [ fuseki:operation fuseki:update ; fuseki:name "update" ] ;
         fuseki:endpoint [ fuseki:operation fuseki:gsp-r ; fuseki:name "get" ] ;
         fuseki:endpoint [ fuseki:operation fuseki:gsp-rw ; fuseki:name "data" ] ;
-        fuseki:endpoint [ fuseki:operation fuseki:upload ; fuseki:name "upload" ] ;
-        fuseki:endpoint [ fuseki:operation fuseki:shacl ; fuseki:name "shacl" ] ;
         fuseki:endpoint [ fuseki:operation fuseki:prefixes-r ; fuseki:name "prefixes" ] ;
         fuseki:endpoint [ fuseki:operation fuseki:prefixes-rw ; fuseki:name "prefixes-rw" ] .

@@ -1,0 +1,31 @@
+# Semantyk logical-dataset seed (TriG).
+# Placeholders: SEMANTYK_BASE_URI, DATASET (Fuseki service name = logical graph name).
+# Rules:
+# - Logical graph = default graph (sd:Dataset / sd:GraphCollection).
+# - Named graphs = partitions only: {tbox, abox, vbox}.
+# - Never keep a named graph at the logical IRI itself.
+
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+
+{
+  <${SEMANTYK_BASE_URI}/${DATASET}> a sd:Dataset , sd:GraphCollection ;
+    sd:namedGraph
+      <${SEMANTYK_BASE_URI}/${DATASET}/tbox> ,
+      <${SEMANTYK_BASE_URI}/${DATASET}/abox> ,
+      <${SEMANTYK_BASE_URI}/${DATASET}/vbox> .
+}
+
+GRAPH <${SEMANTYK_BASE_URI}/${DATASET}/tbox> {
+  <${SEMANTYK_BASE_URI}/${DATASET}/tbox> a sd:NamedGraph ;
+    sd:name <${SEMANTYK_BASE_URI}/${DATASET}/tbox> .
+}
+
+GRAPH <${SEMANTYK_BASE_URI}/${DATASET}/abox> {
+  <${SEMANTYK_BASE_URI}/${DATASET}/abox> a sd:NamedGraph ;
+    sd:name <${SEMANTYK_BASE_URI}/${DATASET}/abox> .
+}
+
+GRAPH <${SEMANTYK_BASE_URI}/${DATASET}/vbox> {
+  <${SEMANTYK_BASE_URI}/${DATASET}/vbox> a sd:NamedGraph ;
+    sd:name <${SEMANTYK_BASE_URI}/${DATASET}/vbox> .
+}

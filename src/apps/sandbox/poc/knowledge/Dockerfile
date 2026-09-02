@@ -5,8 +5,8 @@
 #
 # @file: This file defines the Docker image for the knowledge app.
 #
-# @created: 2026-09-02 13:38
-# @modified: 2026-09-02 13:38
+# @created: 2026-09-02 11:48
+# @modified: 2026-09-02 13:58
 #
 # @since: 0.1.0-alpha.42
 # @version: 0.1.0-alpha.46
@@ -19,14 +19,13 @@
 FROM eclipse-temurin:21-jre-alpine
 
 ARG JENA_VERSION=6.2.0
-ARG MAVEN_BASE=https://repo1.maven.org/maven2
-ARG FUSEKI_JAR=jena-fuseki-server-${JENA_VERSION}.jar
+ARG APACHE_DIST=https://dlcdn.apache.org/jena/binaries
+ARG FUSEKI_SHA512=ba65f5867d2d4741b2ed9e2af5a0d4fbb447909894ab2a0c6bc4dac8997f4fe339c87b13c48d45d054977769f0f8bf763ea346b1f7792d5cdc458041bd43a132
 
-ENV FUSEKI_HOME=/opt/fuseki \
+ENV FUSEKI_HOME=/jena-fuseki \
     FUSEKI_BASE=/fuseki \
     SIS_DATA=/fuseki/databases/sis \
-    JVM_ARGS=-Xmx4G \
-    JAVA_OPTIONS=-Xmx4G
+    JVM_ARGS=-Xmx4G
 
 EXPOSE 3030
 
@@ -37,25 +36,27 @@ RUN apk add --no-cache curl gettext tini \
              "${FUSEKI_BASE}/configuration" \
              "${FUSEKI_BASE}/databases" \
              "${FUSEKI_BASE}/logs" \
- && curl -fsSL -o "${FUSEKI_HOME}/${FUSEKI_JAR}" \
-      "${MAVEN_BASE}/org/apache/jena/jena-fuseki-server/${JENA_VERSION}/${FUSEKI_JAR}" \
- && curl -fsSL -o /tmp/${FUSEKI_JAR}.sha1 \
-      "${MAVEN_BASE}/org/apache/jena/jena-fuseki-server/${JENA_VERSION}/${FUSEKI_JAR}.sha1" \
- && echo "$(cat /tmp/${FUSEKI_JAR}.sha1)  ${FUSEKI_HOME}/${FUSEKI_JAR}" | sha1sum -c - \
- && rm -f /tmp/${FUSEKI_JAR}.sha1 \
- && ln -sf "${FUSEKI_HOME}/${FUSEKI_JAR}" "${FUSEKI_HOME}/fuseki-server.jar" \
+             "${FUSEKI_BASE}/seed" \
+ && curl -fsSL -o /tmp/fuseki.tar.gz \
+      "${APACHE_DIST}/apache-jena-fuseki-${JENA_VERSION}.tar.gz" \
+ && echo "${FUSEKI_SHA512}  /tmp/fuseki.tar.gz" | sha512sum -c - \
+ && tar -xzf /tmp/fuseki.tar.gz -C /tmp \
+ && mv /tmp/apache-jena-fuseki-${JENA_VERSION}/* "${FUSEKI_HOME}/" \
+ && test -x "${FUSEKI_HOME}/fuseki-server" \
+ && rm -rf /tmp/fuseki.tar.gz /tmp/apache-jena-fuseki-${JENA_VERSION} \
  && chown -R fuseki:fuseki "${FUSEKI_HOME}" "${FUSEKI_BASE}"
 
 COPY entrypoint.sh /knowledge-entrypoint.sh
-COPY src/config/shiro.ini /opt/fuseki/shiro.ini
-COPY src/config/log4j2.properties /opt/fuseki/log4j2.properties
+COPY src/config/shiro.ini /jena-fuseki/shiro.ini
+COPY src/config/log4j2.properties /jena-fuseki/log4j2.properties
 COPY src/config/*.config.ttl /fuseki/configuration/
+COPY src/seed/ /fuseki/seed/
 
-RUN chown -R fuseki:fuseki /opt/fuseki /fuseki /knowledge-entrypoint.sh \
+RUN chown -R fuseki:fuseki /jena-fuseki /fuseki /knowledge-entrypoint.sh \
  && chmod +x /knowledge-entrypoint.sh
 
 USER fuseki
 WORKDIR /fuseki
 
 ENTRYPOINT ["/sbin/tini", "--", "sh", "/knowledge-entrypoint.sh"]
-CMD []
+CMD ["/jena-fuseki/fuseki-server"]
