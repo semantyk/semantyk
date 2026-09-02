@@ -6,7 +6,7 @@
 # @file: This file defines the TriG seed for each Fuseki logical dataset.
 #
 # @created: 2026-09-02 13:58
-# @modified: 2026-09-02 14:20
+# @modified: 2026-09-02 14:31
 #
 # @since: 0.1.0-alpha.47
 # @version: 0.1.0-alpha.49
@@ -17,7 +17,7 @@
 # @copyright: Semantyk © 2026
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 #
-# Placeholders: SEMANTYK_BASE_URI, DATASET (Fuseki service name = logical graph name).
+# Placeholders: SEMANTYK_NS, DATASET (Fuseki service name = logical graph name).
 # Rules:
 # - Logical graph = default graph (sd:Dataset / sd:GraphCollection).
 # - Named graphs = partitions only: {tbox, abox, vbox}.
@@ -26,24 +26,24 @@
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
 
 {
-  <${SEMANTYK_BASE_URI}/${DATASET}> a sd:Dataset , sd:GraphCollection ;
+  <${SEMANTYK_NS}/${DATASET}> a sd:Dataset , sd:GraphCollection ;
     sd:namedGraph
-      <${SEMANTYK_BASE_URI}/${DATASET}/tbox> ,
-      <${SEMANTYK_BASE_URI}/${DATASET}/abox> ,
-      <${SEMANTYK_BASE_URI}/${DATASET}/vbox> .
+      <${SEMANTYK_NS}/${DATASET}/tbox> ,
+      <${SEMANTYK_NS}/${DATASET}/abox> ,
+      <${SEMANTYK_NS}/${DATASET}/vbox> .
 }
 
-GRAPH <${SEMANTYK_BASE_URI}/${DATASET}/tbox> {
-  <${SEMANTYK_BASE_URI}/${DATASET}/tbox> a sd:NamedGraph ;
-    sd:name <${SEMANTYK_BASE_URI}/${DATASET}/tbox> .
+GRAPH <${SEMANTYK_NS}/${DATASET}/tbox> {
+  <${SEMANTYK_NS}/${DATASET}/tbox> a sd:NamedGraph ;
+    sd:name <${SEMANTYK_NS}/${DATASET}/tbox> .
 }
 
-GRAPH <${SEMANTYK_BASE_URI}/${DATASET}/abox> {
-  <${SEMANTYK_BASE_URI}/${DATASET}/abox> a sd:NamedGraph ;
-    sd:name <${SEMANTYK_BASE_URI}/${DATASET}/abox> .
+GRAPH <${SEMANTYK_NS}/${DATASET}/abox> {
+  <${SEMANTYK_NS}/${DATASET}/abox> a sd:NamedGraph ;
+    sd:name <${SEMANTYK_NS}/${DATASET}/abox> .
 }
 
-GRAPH <${SEMANTYK_BASE_URI}/${DATASET}/vbox> {
-  <${SEMANTYK_BASE_URI}/${DATASET}/vbox> a sd:NamedGraph ;
-    sd:name <${SEMANTYK_BASE_URI}/${DATASET}/vbox> .
+GRAPH <${SEMANTYK_NS}/${DATASET}/vbox> {
+  <${SEMANTYK_NS}/${DATASET}/vbox> a sd:NamedGraph ;
+    sd:name <${SEMANTYK_NS}/${DATASET}/vbox> .
 }

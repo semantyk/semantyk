@@ -6,7 +6,7 @@
 # @file: This file defines the Semantyk prefix map registered at Fuseki startup.
 #
 # @created: 2026-09-02 13:58
-# @modified: 2026-09-02 14:08
+# @modified: 2026-09-02 14:31
 #
 # @since: 0.1.0-alpha.47
 # @version: 0.1.0-alpha.48
@@ -18,9 +18,9 @@
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 # Substituted and registered via Fuseki prefixes-rw at startup.
-@prefix semantyk: <${SEMANTYK_BASE_URI}/> .
-@prefix system:   <${SEMANTYK_BASE_URI}/system/> .
-@prefix sandbox:  <${SEMANTYK_BASE_URI}/sandbox/> .
+@prefix semantyk: <${SEMANTYK_NS}/> .
+@prefix system:   <${SEMANTYK_NS}/system/> .
+@prefix sandbox:  <${SEMANTYK_NS}/sandbox/> .
 @prefix sd:       <http://www.w3.org/ns/sparql-service-description#> .
 @prefix formats:  <http://www.w3.org/ns/formats/> .
 @prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .

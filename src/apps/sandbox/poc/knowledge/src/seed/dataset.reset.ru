@@ -6,7 +6,7 @@
 # @file: This file clears the logical-dataset skeleton before TriG seed load.
 #
 # @created: 2026-09-02 14:20
-# @modified: 2026-09-02 14:20
+# @modified: 2026-09-02 14:31
 #
 # @since: 0.1.0-alpha.48
 # @version: 0.1.0-alpha.49
@@ -17,14 +17,14 @@
 # @copyright: Semantyk © 2026
 #––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 #
-# Placeholders: SEMANTYK_BASE_URI, DATASET.
+# Placeholders: SEMANTYK_NS, DATASET.
 # Makes TriG seed load idempotent across container restarts.
 
-DROP SILENT GRAPH <${SEMANTYK_BASE_URI}/${DATASET}> ;
-DROP SILENT GRAPH <${SEMANTYK_BASE_URI}/${DATASET}/tbox> ;
-DROP SILENT GRAPH <${SEMANTYK_BASE_URI}/${DATASET}/abox> ;
-DROP SILENT GRAPH <${SEMANTYK_BASE_URI}/${DATASET}/vbox> ;
+DROP SILENT GRAPH <${SEMANTYK_NS}/${DATASET}> ;
+DROP SILENT GRAPH <${SEMANTYK_NS}/${DATASET}/tbox> ;
+DROP SILENT GRAPH <${SEMANTYK_NS}/${DATASET}/abox> ;
+DROP SILENT GRAPH <${SEMANTYK_NS}/${DATASET}/vbox> ;
 
 DELETE WHERE {
-  <${SEMANTYK_BASE_URI}/${DATASET}> ?p ?o .
+  <${SEMANTYK_NS}/${DATASET}> ?p ?o .
 } ;

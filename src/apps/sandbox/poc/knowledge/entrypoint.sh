@@ -7,7 +7,7 @@
 # @file: This file renders Shiro from CREDENTIALS, starts Fuseki, and seeds datasets.
 #
 # @created: 2026-09-02 12:16
-# @modified: 2026-09-02 14:20
+# @modified: 2026-09-02 14:31
 #
 # @since: 0.1.0-alpha.42
 # @version: 0.1.0-alpha.49
@@ -31,7 +31,7 @@ ADMIN_PASSWORD="${CREDENTIALS#*:}"
 [ "${ADMIN_USER}" != "${CREDENTIALS}" ] || { echo "CREDENTIALS must be user:password" >&2; exit 1; }
 
 export ADMIN_USER ADMIN_PASSWORD
-export SEMANTYK_BASE_URI="${SEMANTYK_BASE_URI:-http://localhost:3031}"
+export SEMANTYK_NS="${SEMANTYK_NS:-http://localhost:3031}"
 
 FUSEKI_CONFIG="${FUSEKI_BASE}/configuration"
 FUSEKI_SEED="${FUSEKI_SEED:-${FUSEKI_BASE}/seed}"
@@ -43,7 +43,7 @@ mkdir -p "${FUSEKI_BASE}/databases" "${FUSEKI_BASE}/logs" "${FUSEKI_CONFIG}" \
 envsubst '${ADMIN_USER} ${ADMIN_PASSWORD}' \
   < "${FUSEKI_HOME}/shiro.ini" \
   > "${FUSEKI_BASE}/shiro.ini"
-envsubst '${SEMANTYK_BASE_URI}' < "${FUSEKI_SEED}/context.ttl" > "${FUSEKI_BASE}/context.ttl"
+envsubst '${SEMANTYK_NS}' < "${FUSEKI_SEED}/context.ttl" > "${FUSEKI_BASE}/context.ttl"
 
 curl_admin() {
   curl -sf -u "${ADMIN_USER}:${ADMIN_PASSWORD}" "$@"
@@ -72,7 +72,7 @@ seed_prefix_map() {
 reset_logical_model() {
   dataset="$1"
   export DATASET="${dataset}"
-  envsubst '${SEMANTYK_BASE_URI} ${DATASET}' < "${FUSEKI_SEED}/dataset.reset.ru" |
+  envsubst '${SEMANTYK_NS} ${DATASET}' < "${FUSEKI_SEED}/dataset.reset.ru" |
     curl_admin -X POST "${FUSEKI_URL}/${dataset}/update" \
       -H "Content-Type: application/sparql-update" \
       --data-binary @- >/dev/null
@@ -81,7 +81,7 @@ reset_logical_model() {
 seed_trig() {
   dataset="$1"
   export DATASET="${dataset}"
-  envsubst '${SEMANTYK_BASE_URI} ${DATASET}' < "${FUSEKI_SEED}/dataset.trig" |
+  envsubst '${SEMANTYK_NS} ${DATASET}' < "${FUSEKI_SEED}/dataset.trig" |
     curl_admin -X POST "${FUSEKI_URL}/${dataset}/data" \
       -H "Content-Type: application/trig" \
       --data-binary @- >/dev/null

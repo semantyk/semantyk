@@ -6,7 +6,7 @@
 @file: This file defines the knowledge product specification requirements under poc.
 
 @created: 2026-09-02 11:06
-@modified: 2026-09-02 14:20
+@modified: 2026-09-02 14:31
 
 @since: 0.1.0-alpha.42
 @version: 0.1.0-alpha.49
@@ -128,7 +128,7 @@ describe("KNOWLEDGE", () => {
       Bun.file(entrypoint).text(),
     ]).then(([exampleText, shiroText, entrypointText]) => {
       expect(exampleText).toMatch(/^CREDENTIALS=/m);
-      expect(exampleText).toMatch(/^SEMANTYK_BASE_URI=/m);
+      expect(exampleText).toMatch(/^SEMANTYK_NS=/m);
       expect(exampleText).toMatch(/^JVM_ARGS=/m);
       expect(entrypointText).toMatch(/\bCREDENTIALS\b/);
       expect(entrypointText).toMatch(/dataset\.reset\.ru/);
