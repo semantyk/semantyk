@@ -8,7 +8,7 @@
       "@semantyk/test": ["./src/libs/test/facade.ts"],
       "@semantyk/test/*": ["./src/libs/test/*"]
     },
-    "types": ["bun-types"]
+    "types": ["bun"]
   },
   "include": ["**/*.ts"]
 }

@@ -6,7 +6,7 @@
 @file: This file defines the www product specification requirements under poc.
 
 @created: 2026-09-01 17:35
-@modified: 2026-09-01 17:45
+@modified: 2026-09-02 10:05
 
 @since: 0.1.0-alpha.42
 @version: 0.1.0-alpha.42
@@ -18,7 +18,7 @@
 
 import { expect, workspace } from "@semantyk/test";
 import { describe, test } from "bun:test";
-import { existsSync } from "node:fs";
+import { existsSync, statSync } from "node:fs";
 import { resolve } from "node:path";
 
 const here = import.meta.dir;
@@ -45,5 +45,19 @@ describe("WWW", () => {
     expect(project.targets?.dev?.command).toMatch(/\bnext dev\b/);
     expect(project.targets?.start?.command).toMatch(/\bnext start\b/);
     expect(project.targets?.test?.command).toMatch(/\bbun test\b/);
+  });
+
+  test("REQ.F.7c4e2 — DEBE contener el código fuente en `src`", () => {
+    const src = resolve(here, "src");
+    expect(existsSync(src)).toBe(true);
+    expect(statSync(src).isDirectory()).toBe(true);
+  });
+
+  test("REQ.F.8d5f3 — DEBE contener los módulos `app`, `ux` y `logic` dentro de `src`", () => {
+    for (const name of ["app", "ux", "logic"] as const) {
+      const dir = resolve(here, "src", name);
+      expect(existsSync(dir)).toBe(true);
+      expect(statSync(dir).isDirectory()).toBe(true);
+    }
   });
 });
