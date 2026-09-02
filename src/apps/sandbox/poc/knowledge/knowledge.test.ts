@@ -6,10 +6,10 @@
 @file: This file defines the knowledge product specification requirements under poc.
 
 @created: 2026-09-02 11:06
-@modified: 2026-09-02 13:58
+@modified: 2026-09-02 14:03
 
 @since: 0.1.0-alpha.42
-@version: 0.1.0-alpha.46
+@version: 0.1.0-alpha.47
 
 @author: Semantyk Team
 @maintainer: Daniel Bakas <daniel@semantyk.com>
