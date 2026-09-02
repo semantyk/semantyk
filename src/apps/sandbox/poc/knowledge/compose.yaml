@@ -5,11 +5,11 @@
 #
 # @file: This file defines the Docker Compose services for the knowledge app.
 #
-# @created: 2026-09-02 11:06
-# @modified: 2026-09-02 13:23
+# @created: 2026-09-02 13:38
+# @modified: 2026-09-02 13:38
 #
 # @since: 0.1.0-alpha.42
-# @version: 0.1.0-alpha.45
+# @version: 0.1.0-alpha.46
 #
 # @author: Semantyk Team
 # @maintainer: Daniel Bakas <daniel@semantyk.com>
