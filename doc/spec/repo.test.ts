@@ -6,10 +6,10 @@
 @file: This file defines the monorepository specification requirements.
 
 @created: 2026-08-29 23:29
-@modified: 2026-08-30 13:21
+@modified: 2026-09-02 09:35
 
 @since: 0.1.0-alpha.6
-@version: 0.1.0-alpha.36
+@version: 0.1.0-alpha.42
 
 @author: Semantyk Team
 @maintainer: Daniel Bakas <daniel@semantyk.com>
@@ -17,6 +17,7 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
 import { expect, workspace, workspaceRoot } from "@semantyk/test";
+import { Glob } from "bun";
 import { describe, test } from "bun:test";
 
 const pkg = await workspace.readJson<{
@@ -24,6 +25,8 @@ const pkg = await workspace.readJson<{
   description: string;
   license?: string;
   workspaces?: string[];
+  dependencies?: Record<string, string>;
+  devDependencies?: Record<string, string>;
   scripts?: Record<string, string>;
   nx?: unknown;
 }>("package.json");
@@ -83,6 +86,30 @@ describe("EL MONOREPOSITORIO", () => {
       "src/libs/**",
       "src/packages/**",
     ]);
+  });
+
+  test("REQ.NF.a81d2 — DEBE declarar las dependencias del ecosistema en el `package.json` raíz", () => {
+    expect(Object.keys(pkg.dependencies ?? {}).length).toBeGreaterThan(0);
+    expect(Object.keys(pkg.devDependencies ?? {}).length).toBeGreaterThan(0);
+    expect(pkg.devDependencies?.["@types/node"]).toBeDefined();
+  });
+
+  test("REQ.NF.b9e3f — Los workspaces NO DEBEN declarar `dependencies` ni `devDependencies`", async () => {
+    for await (const path of new Glob("src/{apps,libs,packages}/**/package.json").scan({
+      cwd: workspaceRoot,
+    })) {
+      const normalized = path.replaceAll("\\", "/");
+      if (normalized.includes("node_modules/") || normalized.includes(".next/"))
+        continue;
+
+      const workspacePkg = await workspace.readJson<{
+        dependencies?: Record<string, string>;
+        devDependencies?: Record<string, string>;
+      }>(normalized);
+
+      expect(workspacePkg.dependencies, normalized).toBeUndefined();
+      expect(workspacePkg.devDependencies, normalized).toBeUndefined();
+    }
   });
 
   test("REQ.NF.7ba58 — DEBE tener un CÓDIGO FUENTE", () => {
