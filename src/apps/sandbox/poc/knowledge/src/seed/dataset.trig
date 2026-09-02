@@ -6,10 +6,10 @@
 # @file: This file defines the TriG seed for each Fuseki logical dataset.
 #
 # @created: 2026-09-02 13:58
-# @modified: 2026-09-02 14:07
+# @modified: 2026-09-02 14:08
 #
 # @since: 0.1.0-alpha.47
-# @version: 0.1.0-alpha.47
+# @version: 0.1.0-alpha.48
 #
 # @author: Semantyk Team
 # @maintainer: Daniel Bakas <daniel@semantyk.com>
