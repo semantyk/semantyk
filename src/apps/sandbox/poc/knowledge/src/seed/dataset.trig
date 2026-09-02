@@ -1,4 +1,22 @@
-# Semantyk logical-dataset seed (TriG).
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+# `dataset.trig`
+# @organization: Semantyk
+# @project: Ecosystem
+#
+# @file: This file defines the TriG seed for each Fuseki logical dataset.
+#
+# @created: 2026-09-02 13:58
+# @modified: 2026-09-02 14:07
+#
+# @since: 0.1.0-alpha.47
+# @version: 0.1.0-alpha.47
+#
+# @author: Semantyk Team
+# @maintainer: Daniel Bakas <daniel@semantyk.com>
+#
+# @copyright: Semantyk © 2026
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+#
 # Placeholders: SEMANTYK_BASE_URI, DATASET (Fuseki service name = logical graph name).
 # Rules:
 # - Logical graph = default graph (sd:Dataset / sd:GraphCollection).

@@ -1,4 +1,23 @@
-# Semantyk prefix map. Substituted and registered via Fuseki prefixes-rw at startup.
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+# `context.ttl`
+# @organization: Semantyk
+# @project: Ecosystem
+#
+# @file: This file defines the Semantyk prefix map registered at Fuseki startup.
+#
+# @created: 2026-09-02 13:58
+# @modified: 2026-09-02 14:07
+#
+# @since: 0.1.0-alpha.47
+# @version: 0.1.0-alpha.47
+#
+# @author: Semantyk Team
+# @maintainer: Daniel Bakas <daniel@semantyk.com>
+#
+# @copyright: Semantyk © 2026
+#––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+# Substituted and registered via Fuseki prefixes-rw at startup.
 @prefix semantyk: <${SEMANTYK_BASE_URI}/> .
 @prefix system:   <${SEMANTYK_BASE_URI}/system/> .
 @prefix sandbox:  <${SEMANTYK_BASE_URI}/sandbox/> .
