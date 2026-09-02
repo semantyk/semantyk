@@ -15,4 +15,7 @@ envsubst '${ADMIN_USER} ${ADMIN_PASSWORD}' \
   < /jena-fuseki/shiro.ini \
   > /fuseki/shiro.ini
 
+# Persist Apache SIS geodetic data under the databases volume.
+mkdir -p "${SIS_DATA:-/fuseki/databases/sis}"
+
 exec sh /docker-entrypoint.sh "$@"

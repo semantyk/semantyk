@@ -6,10 +6,10 @@
 # @file: This file defines the Docker image for the knowledge app.
 #
 # @created: 2026-09-02 11:48
-# @modified: 2026-09-02 12:36
+# @modified: 2026-09-02 13:08
 #
 # @since: 0.1.0-alpha.42
-# @version: 0.1.0-alpha.43
+# @version: 0.1.0-alpha.44
 #
 # @author: Semantyk Team
 # @maintainer: Daniel Bakas <daniel@semantyk.com>
@@ -18,9 +18,20 @@
 
 FROM stain/jena-fuseki:5.1.0
 
-ENV FUSEKI_BASE=/fuseki
+ARG JENA_VERSION=5.1.0
+ARG MAVEN_BASE=https://repo1.maven.org/maven2
+
+ENV FUSEKI_BASE=/fuseki \
+    SIS_DATA=/fuseki/databases/sis
 
 EXPOSE 3030
+
+USER root
+RUN mkdir -p /fuseki-extra \
+ && curl -fsSL -o /fuseki-extra/jena-fuseki-geosparql-${JENA_VERSION}.jar \
+      ${MAVEN_BASE}/org/apache/jena/jena-fuseki-geosparql/${JENA_VERSION}/jena-fuseki-geosparql-${JENA_VERSION}.jar \
+ && chown -R fuseki:fuseki /fuseki-extra
+USER fuseki
 
 COPY entrypoint.sh /knowledge-entrypoint.sh
 COPY src/config/shiro.ini /jena-fuseki/shiro.ini

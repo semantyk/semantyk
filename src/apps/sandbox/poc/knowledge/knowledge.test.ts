@@ -6,10 +6,10 @@
 @file: This file defines the knowledge product specification requirements under poc.
 
 @created: 2026-09-02 11:06
-@modified: 2026-09-02 12:36
+@modified: 2026-09-02 13:08
 
 @since: 0.1.0-alpha.42
-@version: 0.1.0-alpha.43
+@version: 0.1.0-alpha.44
 
 @author: Semantyk Team
 @maintainer: Daniel Bakas <daniel@semantyk.com>
@@ -78,7 +78,16 @@ describe("KNOWLEDGE", () => {
       .then((contents) => {
         expect(contents).toMatch(/fuseki:name\s+"sandbox"/);
         expect(contents).toMatch(/tdb2:location\s+"\/fuseki\/databases\/sandbox"/);
+        expect(contents).toMatch(/geosparql:geosparqlDataset/);
+        expect(contents).toMatch(/fuseki:operation\s+fuseki:upload/);
+        expect(contents).toMatch(/fuseki:operation\s+fuseki:shacl/);
       });
+  });
+
+  test("REQ.F.a81e0 — DEBE incluir GeoSPARQL en `/fuseki-extra`", () => {
+    expect(dockerfile).toMatch(/\/fuseki-extra\/jena-fuseki-geosparql-/);
+    expect(dockerfile).toMatch(/jena-fuseki-geosparql\/\$\{JENA_VERSION\}\//);
+    expect(dockerfile).toMatch(/SIS_DATA=\/fuseki\/databases\/sis/);
   });
 
   test("REQ.F.9a2e1 — DEBE cargar credenciales desde `CREDENTIALS` en `.env`", () => {
