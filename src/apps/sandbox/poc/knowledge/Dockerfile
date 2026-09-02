@@ -6,10 +6,10 @@
 # @file: This file defines the Docker image for the knowledge app.
 #
 # @created: 2026-09-02 11:48
-# @modified: 2026-09-02 12:16
+# @modified: 2026-09-02 12:36
 #
 # @since: 0.1.0-alpha.42
-# @version: 0.1.0-alpha.42
+# @version: 0.1.0-alpha.43
 #
 # @author: Semantyk Team
 # @maintainer: Daniel Bakas <daniel@semantyk.com>

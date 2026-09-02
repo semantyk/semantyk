@@ -9,7 +9,7 @@
 @modified: 2026-09-02 11:43
 
 @since: 0.1.0-alpha.6
-@version: 0.1.0-alpha.42
+@version: 0.1.0-alpha.43
 
 @author: Semantyk Team
 @maintainer: Daniel Bakas <daniel@semantyk.com>
