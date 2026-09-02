@@ -7,10 +7,10 @@
 # @file: This file renders Shiro from CREDENTIALS, starts Fuseki, and seeds datasets.
 #
 # @created: 2026-09-02 12:16
-# @modified: 2026-09-02 14:31
+# @modified: 2026-09-02 14:32
 #
 # @since: 0.1.0-alpha.42
-# @version: 0.1.0-alpha.49
+# @version: 0.1.0-alpha.50
 #
 # @author: Semantyk Team
 # @maintainer: Daniel Bakas <daniel@semantyk.com>
